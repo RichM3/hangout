@@ -1,33 +1,45 @@
 import React from 'react';
 import GreetingContainer from "./greeting/greeting_container";
-
-
-
+import NavbarContainer from "./navbar/navbar_container";
 import { Route, Redirect, Switch, Link, HashRouter } from 'react-router-dom';
-
 import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
-// import SearchContainer from './search/search_container';
-// import BenchShowContainer from './bench_show/bench_show_container';
-// import BenchFormContainer from './bench_form/bench_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
-
-
 
 
 const App = () => (
   <div>
-    <header>
-    <h1>Hangouts is Awesome!  Welcome to the App React Component!</h1>
-      <GreetingContainer />
-    </header>
+    <NavbarContainer />
+    <GreetingContainer />
+    
+    {/* <header className="header">
+      <nav className="header-nav">
+        <div>
+          <img src="/images/hangoutLogo.jpg" />
+            <script type="text/javascript">
+              window.brentURL = "<%= image_url('brent.png') %>";
+            </script>
+        </div>
+        <div className="navbar">
+          <h1>Hangouts is Awesome!  Welcome to the App React Component!</h1>
+           
+        </div>
+        <div className="navbar">
+        </div>
+      </nav>
+          <GreetingContainer />
+    </header> */}
+    
+    <div> This is the div going between the switch and the greeting container 
+    </div>
+    
     <Switch>
       <AuthRoute exact path="/login" component={LogInFormContainer} />
       <AuthRoute exact path="/signup" component={SignUpFormContainer} />
-      {/* <ProtectedRoute exact path="/benches/new" component={BenchFormContainer} /> */}
-      {/* <Route path="/benches/:benchId" component={BenchShowContainer} /> */}
-      {/* <Route exact path="/" component={SearchContainer} /> */}
     </Switch>
+    <footer>
+    <h1>This is my hangout footer!</h1>
+    </footer>
   </div>
 );
 
