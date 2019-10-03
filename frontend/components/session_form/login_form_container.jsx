@@ -7,7 +7,7 @@ import SessionForm from './session_form';
 const mapStateToProps = ({ errors }) => {
   return {
     errors: errors.session,
-    formType: 'LOGIN',
+    formType: 'Login',
     navLink: <Link to="/signup">Or Sign Up Here!</Link>,
   };
 };

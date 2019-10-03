@@ -14,10 +14,10 @@ body {
   border-bottom: 1px solid #ccc;
 }
 
-.header a {
+/* .header a {
   display: block;
   padding: 10px 20px;
-}
+} */
 
 .header-nav {
   display: flex;
@@ -60,3 +60,12 @@ body {
   width: 40%;
   height: auto;
 }
+
+.topLeft {
+  display: flexbox;
+  justify-content: left;
+}
+
+/* .body {
+  background-color: aqua;
+} */

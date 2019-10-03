@@ -1,0 +1,11 @@
+ .home-container {
+   display: flex;
+   justify-content: center;
+   margin-top: 100px;
+   margin-bottom: 100px;
+   background-image: url("panorama.png");
+
+   height: 500px;
+
+
+ }
