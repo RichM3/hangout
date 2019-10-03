@@ -9,16 +9,12 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
   <div>
+    {/* <GreetingContainer /> */}
     <NavbarContainer />
-    <GreetingContainer />
     
     {/* <header className="header">
       <nav className="header-nav">
-        <div>
-          <img src="/images/hangoutLogo.jpg" />
-            <script type="text/javascript">
-              window.brentURL = "<%= image_url('brent.png') %>";
-            </script>
+        <div> test
         </div>
         <div className="navbar">
           <h1>Hangouts is Awesome!  Welcome to the App React Component!</h1>
@@ -31,6 +27,9 @@ const App = () => (
     </header> */}
     
     <div> This is the div going between the switch and the greeting container 
+    </div>
+    <div className="header-img-ppl" >
+      <img src={window.peopleHangoutURL} />
     </div>
     
     <Switch>

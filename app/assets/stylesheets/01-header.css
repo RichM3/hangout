@@ -48,3 +48,15 @@ body {
 .header-list > li:hover {
   background: #000;
 }
+
+.header-img-logo {
+  display: block;
+  width: 10%;
+  height: auto;
+}
+
+.header-img-ppl {
+  display: block;
+  width: 40%;
+  height: auto;
+}
