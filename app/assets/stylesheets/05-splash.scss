@@ -5,9 +5,11 @@
    padding-top: 100px;
    /* padding-bottom: 50px; */
    /* margin-bottom: 100px; */
-   background-image: url("panorama.png");
+   /* background-image: url("panorama.png"); */
+
+    background: {
+      image: asset_url("panorama.png")
+    }
 
    height: 480px;
-
-
  }
