@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Group from './group';
+import Groups from './groups';
 
 const mapStateToProps = ({ session, entities: { users } }, ownProps) => {
     return {
@@ -11,4 +11,4 @@ const mapDispatchToProps = dispatch => ({
     fetchGroups: (userId) => dispatch(fetchGroups(userId))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Group);
+export default connect(mapStateToProps, mapDispatchToProps)(Groups);

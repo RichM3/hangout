@@ -7,6 +7,10 @@ bundle exec rails db:setup               ==> create the DB
 npm run webpack
 
 
+-- Drop the db
+rails db:drop
+
+
 
 
 npm redux-thunk ?????
