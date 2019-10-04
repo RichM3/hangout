@@ -2,6 +2,7 @@ import React from 'react';
 import NavbarContainer from "./navbar/navbar_container";
 import FooterContainer from "./footer/footer_container";
 import SplashContainer from "./splash/splash_container";
+import GroupsContainer from "./groups/groups_container";
 
 import { Route, Redirect, Switch, Link, HashRouter } from 'react-router-dom';
 import SignUpFormContainer from './session_form/signup_form_container';
@@ -14,6 +15,7 @@ const App = () => (
     <NavbarContainer />
     <Switch>
       <Route exact path="/" component={SplashContainer} />
+      <Route exact path="/groups" component={GroupsContainer} />
       <AuthRoute exact path="/login" component={LogInFormContainer} />
       <AuthRoute exact path="/signup" component={SignUpFormContainer} />
     </Switch>

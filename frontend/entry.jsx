@@ -30,7 +30,7 @@ if (window.currentUser) {
   // const store = configureStore();
 
   // ----------- just for testing! ----------- 
-  // window.store = store;
+  window.store = store;
   // window.login = sessionActions.login;
 
   // window.getState = store.getState;

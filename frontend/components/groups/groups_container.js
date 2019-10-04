@@ -2,9 +2,19 @@ import { connect } from 'react-redux';
 import Groups from './groups';
 
 const mapStateToProps = ({ session, entities: { users } }, ownProps) => {
-    return {
-        currentUser: users[session.id]
-    };
+    debugger
+    return ({
+        group: {
+            currentUser: users[session.id],
+            groupname: "",
+            description: "",
+            location: "",
+            // leaderId: ""
+            // leaderId: currentUser.id
+            // leaderId: currentUser.id
+            // leaderId: users[session.id],
+        }
+    });
 };
 
 const mapDispatchToProps = dispatch => ({
