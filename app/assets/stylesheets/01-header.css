@@ -61,11 +61,18 @@ body {
   height: auto;
 }
 
-.topLeft {
+.topRight {
   display: flexbox;
   justify-content: left;
+  /* margin-left: 10%; */
+  /* margin-left: 150px; */
 }
 
+.header-group {
+  display: flexbox;
+  /* justify-content: left; */
+  /* margin-left: 100px; */
+}
 /* .body {
   background-color: aqua;
 } */

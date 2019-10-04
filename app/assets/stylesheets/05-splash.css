@@ -1,0 +1,13 @@
+ .home-container {
+   display: flex;
+   justify-content: center;
+   /* margin-top: 100px; */
+   padding-top: 100px;
+   /* padding-bottom: 50px; */
+   /* margin-bottom: 100px; */
+   background-image: url("panorama.png");
+
+   height: 480px;
+
+
+ }
