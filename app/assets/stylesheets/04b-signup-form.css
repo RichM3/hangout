@@ -15,6 +15,16 @@ helvitica
 red button 
 #ed1c40 */
 
+/* 400
+28px font size
+
+color: rgba(0,0,0,.87);
+font-family: "Graphik Meetup",helvetica,arial,sans-serif;
+font-size: 16px;
+font-weight: 400;
+line-height: 1.45; */
+
+
 
 
 
@@ -35,6 +45,23 @@ red button
    flex-direction: column;
 }
 
+.sign-up-label {
+    font-family: helvetica, arial, sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+    width: 428px;
+    text-align: center;
+    /* 400
+    28px font size
+
+    color: rgba(0,0,0,.87);
+    font-family: "Graphik Meetup",helvetica,arial,sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.45; */
+
+}
+
 .signup-input {
     background-color: #fafafa;
     border-radius: 3px;
@@ -51,12 +78,13 @@ red button
 }
 
 .signup-form-box {
-     font-family: Arial, Helvetica, sans-serif;
+    font-family: helvetica, arial, sans-serif;
+     /* font-family: Arial, Helvetica, sans-serif; */
      /* width: 500px; */
 }
 
+
 .signup-submit {
-    transition: background .15s;
     border: 1px solid rgba(0,0,0,.12);
     border-radius: 3px;
     font-size: 16px;

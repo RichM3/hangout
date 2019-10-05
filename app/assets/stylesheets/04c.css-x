@@ -1,43 +1,93 @@
- .login-form-container {
+
+/* .reg-form-creds {
+428  762.562 -- 24, 16, 16, 8
+color rgba 0,0,0,0.87
+color: rgba(0, 0, 0, .87);
+font - family: "Graphik Meetup", helvetica, arial, sans - serif;
+font - size: 16px;
+font - weight: 400;
+line - height: 1.45;
+}
+
+labels fint 13px
+helvitica 
+
+red button 
+#ed1c40 */
+
+/* 400
+28px font size
+
+color: rgba(0,0,0,.87);
+font-family: "Graphik Meetup",helvetica,arial,sans-serif;
+font-size: 16px;
+font-weight: 400;
+line-height: 1.45; */
+
+
+
+
+
+.signup-form-container {
    display: flex;
    justify-content: center;
-   /* margin-top: 100px; */
    padding-top: 100px;
-   /* margin-bottom: 100px; */
    height: 480px;
    background-color: #fafafa;
- }
+   font-weight: 600;
+   font-size: 13px;
+}
 
- .login-form {
+.signup-form {
+    width: 428px;
    display: flex;
    justify-content: center;
    flex-direction: column;
- }
+}
 
- .login-input {
+.sign-up-label {
+    font-family: helvetica, arial, sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+    width: 428px;
+    text-align: center;
+    /* 400
+    28px font size
+
+    color: rgba(0,0,0,.87);
+    font-family: "Graphik Meetup",helvetica,arial,sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.45; */
+
+}
+
+.signup-input {
     background-color: #fafafa;
     border-radius: 3px;
     border: 1px solid rgba(0,0,0,.12);
     box-shadow: none;
     box-sizing: border-box;
-    margin: 0 0 4px;
+    margin: 4px 0px 10px;
     max-width: 100%;
     padding: 8px;
     width: 100%;
     height: 39.2px;
-    margin-bottom: 50px;
-    /* font-size: 24pt; */
-   /* margin-left: 20px; */
- }
+    /* margin-bottom: 16px; */
+    /* margin-top: 5px; */
+}
 
- .login-form-box {
-     font-family: Arial, Helvetica, sans-serif;
-     /* outline: 1px solid black; */
-     /* padding: 120px; */
-     width: 500px;
- }
+.signup-form-box {
+    font-family: helvetica, arial, sans-serif;
+     /* font-family: Arial, Helvetica, sans-serif; */
+     /* width: 500px; */
+}
 
-.session-submit {
+
+    font-size: 28px;
+
+
+.signup-submit {
     transition: background .15s;
     border: 1px solid rgba(0,0,0,.12);
     border-radius: 3px;
@@ -48,12 +98,7 @@
     outline: 0;
     vertical-align: middle;
     text-align: center;
-   /* text-transform: capitalize; */
-    /* width: 500px;
-    height: 39.2px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18pt; */
     background-color: #ed1c40;
     color: white;
-    margin-top: 70px;
- }
+    margin-top: 10px;
+}

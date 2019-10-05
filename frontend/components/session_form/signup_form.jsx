@@ -43,6 +43,13 @@ class SignupForm extends React.Component {
     return (
       <div className="signup-form-container">
         <form onSubmit={this.handleSubmit} className="signup-form-box">
+          {/* <label className="sign-up-label">Sign up</label> */}
+          {/* <h1 class="text--display3 align--center margin--bottom">
+            Sign up
+					</h1>         */}
+          <h1 class="sign-up-label align--center margin--bottom">
+            Sign up
+					</h1>        
           {this.renderErrors()}
           <div className="signup-form">
             <br/>
