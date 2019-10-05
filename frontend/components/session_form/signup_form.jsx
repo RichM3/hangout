@@ -47,7 +47,7 @@ class SignupForm extends React.Component {
           {/* <h1 class="text--display3 align--center margin--bottom">
             Sign up
 					</h1>         */}
-          <h1 class="sign-up-label align--center margin--bottom">
+          <h1 className="sign-up-label align--center margin--bottom">
             Sign up
 					</h1>        
           {this.renderErrors()}

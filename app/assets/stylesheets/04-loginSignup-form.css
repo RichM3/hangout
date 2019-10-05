@@ -1,9 +1,11 @@
- .login-form-container {
+/* dimensions of login object - form  458 x 530  -- less 164 */
+/* 1px solid rgba(0,0,0,.12)!important; */
+
+
+.login-form-container {
    display: flex;
    justify-content: center;
-   /* margin-top: 100px; */
    padding-top: 100px;
-   /* margin-bottom: 100px; */
    height: 480px;
    background-color: #fafafa;
  }
@@ -12,6 +14,34 @@
    display: flex;
    justify-content: center;
    flex-direction: column;
+ }
+
+ .login-top {
+   width: 100%;
+   display: flex;
+   align-items: baseline;
+   /* border: 1px solid black; */
+  /* border: 1px solid rgba(0,0,0,.12) !important;
+  border-bottom: 1px solid rgba(0,0,0,.26) !important; */
+  /* margin-left: 10px; */
+
+}
+
+h2.login-label {
+  /* margin-right: 10px; */
+   font-size: 34px;
+   font-weight: 700;
+   padding-bottom: 8px;
+}
+
+ .color-link {
+   color: #1F24CC;
+   font-weight: 600;
+ }
+
+ .small-bold {
+   font-size: 13px;
+   font-weight: 500;
  }
 
  .login-input {
@@ -23,19 +53,37 @@
     margin: 0 0 4px;
     max-width: 100%;
     padding: 8px;
-    width: 100%;
+    width: 425.14px;
     height: 39.2px;
     margin-bottom: 50px;
-    /* font-size: 24pt; */
-   /* margin-left: 20px; */
  }
 
- .login-form-box {
-     font-family: Arial, Helvetica, sans-serif;
-     /* outline: 1px solid black; */
-     /* padding: 120px; */
-     width: 500px;
- }
+.top-login {
+    border: 10px solid rgba(0,0,0,.12);
+    padding: 16px 16px 0px;
+}
+
+.bottom-login {
+    border: 10px solid rgba(0,0,0,.12);
+}
+
+
+.padlock {
+  width: 16px;
+  height: auto;
+  /* border-radius: 50px; */
+  /* margin-right: 10px; */
+}
+
+
+.login-form-box {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 456px;
+  border: 1px solid rgba(0,0,0,.26) !important;
+  margin-bottom: 10px; 
+  padding: 16px;
+}
 
 .session-submit {
     transition: background .15s;
@@ -48,11 +96,6 @@
     outline: 0;
     vertical-align: middle;
     text-align: center;
-   /* text-transform: capitalize; */
-    /* width: 500px;
-    height: 39.2px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18pt; */
     background-color: #ed1c40;
     color: white;
     margin-top: 70px;

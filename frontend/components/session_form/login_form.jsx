@@ -42,6 +42,17 @@ class LoginForm extends React.Component {
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
+          <div className="top-login">
+            <div className="login-top">
+              <h2 className="login-label">Log in</h2><img className="padlock" src={window.padlockURL} />
+            </div>
+            <div>
+              <p className="small-bold">
+                Not registered with us yet? <a href="http://" className="color-link">Sign up</a>
+              </p>
+            </div>
+          </div>
+          <div className="bottom-login">
           {this.renderErrors()}
           <div className="login-form">
             <br/>
@@ -62,6 +73,7 @@ class LoginForm extends React.Component {
             </label>
             <br/>
             <input className="session-submit" type="submit" value={this.props.formType} />
+          </div>
           </div>
         </form>
       </div>

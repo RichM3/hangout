@@ -15,7 +15,6 @@ const Greeting = ({ currentUser, logout }) => {
       <div className="manageLogout">
         <div className="showname" >Hi, {currentUser.username}!</div>
           <div className="dropdown">
-            {/* <button className="blankProfile"><img src={window.blankProfileURL} /></button> */}
             <img className="blankProfile" src={window.blankProfileURL} />
             <div className="dropdown-content">
               <button className="logoffButton" onClick={logout}>Log Out</button>
