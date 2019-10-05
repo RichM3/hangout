@@ -1,15 +1,10 @@
  .home-container {
    display: flex;
    justify-content: center;
-   /* margin-top: 100px; */
    padding-top: 100px;
-   /* padding-bottom: 50px; */
-   /* margin-bottom: 100px; */
+   height: 480px;
    /* background-image: url("panorama.png"); */
 
-    background: {
-      image: asset_url("panorama.png")
-    }
-
-   height: 480px;
+   //This sets the background image to the image mapped in the window - application.html.erb in views layouts
+    background: { image: asset_url("panorama.png") }
  }

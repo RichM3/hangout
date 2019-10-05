@@ -3,7 +3,6 @@ import React from 'react';
 class Groups extends React.Component {
     constructor(props) {
         super(props);
-        debugger
         this.state = this.props.group;
         this.state.leaderId = this.props.group.currentUser.id;
     }
@@ -11,9 +10,10 @@ class Groups extends React.Component {
     render() {
         return (
         <>
-        {/* <div className="showname" >Hi, {this.state.currentUser.username}!</div>
+        <div className="showname" >Hi, {this.state.currentUser.username}!</div>
         <div className="showname" >Hi, {this.state.currentUser.id}!</div>
-        <div className="showname" >Hi, {this.state.leaderId }!</div> */}
+        <div className="showname" >Hi, {this.state.leaderId }!</div>
+        <div className="showname" >Hi, {this.state.currentUser.email}!</div>
 
         <section id="groupInputs">
             <form className="group-form-box">

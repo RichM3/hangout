@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   # FIGVAPER
   validates :username, :session_token, presence: true, uniqueness: true
-  validates :password_digest, presence: true
+  validates :password_digest, :email, presence: true
   validates :password, length: { minimum: 6, allow_nil: true }  # password is never stored in DB (no column exists), so when we pull an existing user from DB, user.password returns nil
   after_initialize :ensure_session_token
   attr_reader :password

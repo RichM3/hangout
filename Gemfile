@@ -29,6 +29,8 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'mini_magick', '~> 4.8'
 
 gem "jquery-rails"
+# use pry-rails instead of irl
+gem 'pry-rails'
 
 
 # Use Capistrano for deployment

@@ -2,7 +2,6 @@ import { connect } from 'react-redux';
 import Groups from './groups';
 
 const mapStateToProps = ({ session, entities: { users } }, ownProps) => {
-    debugger
     return ({
         group: {
             currentUser: users[session.id],

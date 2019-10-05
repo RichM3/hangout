@@ -1,13 +1,18 @@
 import React from 'react';
 
-class SessionForm extends React.Component {
+class SignupForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       username: '',
+      email: '',
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  componentWillUnmount() {
+    this.props.clearErrors();
   }
 
   update(field) {
@@ -36,19 +41,24 @@ class SessionForm extends React.Component {
 
   render() {
     return (
-      <div className="login-form-container">
-        <form onSubmit={this.handleSubmit} className="login-form-box">
-          {/* Welcome to Hangout! */}
-          {/* <br/> */}
-          {/* ==> {this.props.formType} -- OR --------> {this.props.navLink} */}
+      <div className="signup-form-container">
+        <form onSubmit={this.handleSubmit} className="signup-form-box">
           {this.renderErrors()}
-          <div className="login-form">
+          <div className="signup-form">
             <br/>
             <label>Username:<br></br>
               <input type="text"
                 value={this.state.username}
                 onChange={this.update('username')}
-                className="login-input"
+                className="signup-input"
+              />
+            </label>
+            <br />
+            <label>Email:<br></br>
+              <input type="text"
+                value={this.state.email }
+                onChange={this.update('email')}
+                className="signup-input"
               />
             </label>
             <br/>
@@ -56,11 +66,11 @@ class SessionForm extends React.Component {
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
-                className="login-input"
+                className="signup-input"
               />
             </label>
             <br/>
-            <input className="session-submit" type="submit" value={this.props.formType} />
+            <input className="signup-submit" type="submit" value={this.props.formType} />
           </div>
         </form>
       </div>
@@ -68,4 +78,4 @@ class SessionForm extends React.Component {
   }
 }
 
-export default SessionForm;
+export default SignupForm;
