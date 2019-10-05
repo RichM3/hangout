@@ -1,3 +1,5 @@
+//-- This backup was made on Oct 4 11pm
+
 import React from 'react';
 
 class LoginForm extends React.Component {
@@ -40,10 +42,10 @@ class LoginForm extends React.Component {
 
   render() {
     return (
-      <div className="l-box">
-        
-        <div className="l-top">
-            <div className="wrapper-padlock">
+      <div className="login-form-container">
+        <form onSubmit={this.handleSubmit} className="login-form-box">
+          <div className="top-login">
+            <div className="login-top">
               <h2 className="login-label">Log in</h2><img className="padlock" src={window.padlockURL} />
             </div>
             <div>
@@ -51,41 +53,31 @@ class LoginForm extends React.Component {
                 Not registered with us yet? <a href="http://" className="color-link">Sign up</a>
               </p>
             </div>
-        </div>
-        {/* <div>  end of l-top ------------------------------</div> */}
-
-        <div className="l-bottom">
-
-          <form onSubmit={this.handleSubmit}>
-            {this.renderErrors()}
-            <label className="log-labels">Username:<br></br>
+          </div>
+          <div className="bottom-login">
+          {this.renderErrors()}
+          <div className="login-form">
+            <br/>
+            <label>Username:<br></br>
               <input type="text"
                 value={this.state.username}
                 onChange={this.update('username')}
                 className="login-input"
               />
             </label>
-            
-            <br />
-            <label className="log-labels">Password:&nbsp;<br></br>
+            <br/>
+            <label>Password:&nbsp;<br></br>
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
                 className="login-input"
               />
             </label>
-            <br />
+            <br/>
             <input className="session-submit" type="submit" value={this.props.formType} />
-
-          </form>
-
-
-        </div>
-        {/* <div>  end of l-bottom ------------------------------</div> */}
-        <div className="l-blue">
-        </div>
-
-        {/* <div>  end of l-blue ------------------------------</div> */}
+          </div>
+          </div>
+        </form>
       </div>
     );
   }

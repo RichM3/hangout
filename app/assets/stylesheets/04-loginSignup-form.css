@@ -1,4 +1,138 @@
-/* dimensions of login object - form  458 x 530  -- less 164 */
+.l-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #dcdcdc;
+    /* width: 460px;
+  height: 610px; */
+
+  /* justify-content: center; */
+  padding-top: 100px;
+  padding-top: 100px;
+  height: 610px;
+  background-color: #fafafa;
+}
+
+.l-blue {
+  width: 458px;
+
+  height: 168px;
+  box-sizing: border-box;
+  /* background-color: #ed1c40; */
+  background-color: #d8dfea;
+  border-top:1px solid #6279ad;
+}
+
+/* #d8dfea */
+/* 460 x 610 */
+
+/* .l-box {
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
+.l-top {
+  width: 458px;
+  padding: 16px 16px 16px;
+  box-sizing: border-box;
+  border: 1px solid #dcdcdc;
+}
+
+.l-bottom {
+  width: 458px;
+  padding: 16px 16px 0px;
+  box-sizing: border-box;
+  border: 1px solid #dcdcdc;
+  border-top: none;
+}
+
+
+.wrapper-padlock {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+}
+
+.padlock {
+  width: 16px;
+  height: auto;
+  /* border-radius: 50px; */
+  /* margin-right: 10px; */
+}
+
+h2.login-label {
+  /* margin-right: 10px; */
+   font-size: 34px;
+   font-weight: 600;
+   padding-bottom: 8px;
+}
+
+ .color-link {
+   color: #1F24CC;
+   font-weight: 600;
+ }
+
+ .small-bold {
+   font-size: 13px;
+   font-weight: 500;
+ }
+
+
+
+.session-submit {
+
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 600;
+    width: 82px;
+
+    margin-bottom: 16px;
+
+    line-height: 1.45;
+    min-height: 36px;
+
+
+    outline: 0;
+    vertical-align: middle;
+    text-align: center;
+    background-color: #ed1c40;
+    color: white;
+ }
+
+
+.log-labels {
+  font-family: helvetica, arial, sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  /* width: 428px; */
+  text-align: center;
+}
+
+.login-input {
+  background-color: #fafafa;
+  border-radius: 3px;
+  border: 1px solid rgba(0,0,0,.12);
+  box-shadow: none;
+  box-sizing: border-box;
+  margin: 0 0 4px;
+  max-width: 100%;
+  padding: 8px;
+  width: 425.14px;
+  height: 33px;
+  margin-bottom: 25px;
+  margin-top: 2px;
+  text-align: left;
+}
+
+.login-input:focus {
+  border: 1px solid blue;
+}
+
+
+
+/* dimensions of login object - form  458 x 610  -- less 164 */
 /* 1px solid rgba(0,0,0,.12)!important; */
 
 
@@ -27,8 +161,7 @@
 
 }
 
-h2.login-label {
-  /* margin-right: 10px; */
+/* h2.login-label {
    font-size: 34px;
    font-weight: 700;
    padding-bottom: 8px;
@@ -42,9 +175,9 @@ h2.login-label {
  .small-bold {
    font-size: 13px;
    font-weight: 500;
- }
+ } */
 
- .login-input {
+ /* .login-input {
     background-color: #fafafa;
     border-radius: 3px;
     border: 1px solid rgba(0,0,0,.12);
@@ -56,7 +189,7 @@ h2.login-label {
     width: 425.14px;
     height: 39.2px;
     margin-bottom: 50px;
- }
+ } */
 
 .top-login {
     border: 10px solid rgba(0,0,0,.12);
@@ -68,12 +201,10 @@ h2.login-label {
 }
 
 
-.padlock {
+/* .padlock {
   width: 16px;
   height: auto;
-  /* border-radius: 50px; */
-  /* margin-right: 10px; */
-}
+} */
 
 
 .login-form-box {
@@ -85,18 +216,3 @@ h2.login-label {
   padding: 16px;
 }
 
-.session-submit {
-    transition: background .15s;
-    border: 1px solid rgba(0,0,0,.12);
-    border-radius: 3px;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 1.45;
-    min-height: 36px;
-    outline: 0;
-    vertical-align: middle;
-    text-align: center;
-    background-color: #ed1c40;
-    color: white;
-    margin-top: 70px;
- }
