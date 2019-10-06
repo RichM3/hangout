@@ -11,6 +11,12 @@
 -- Had to create a action creator and an ajax action creator and a new case statment to my reducer and a componentWillUnmount method to the react component
 
 
+4) The headers and footer on my pages are not the same so I had to set the height dynamically passing using ownProps to identify the source of the render
+
+5) The signup page has missing props so I copied the logic of the greeting component to display the links 
+similar to the greeting component in BenchBNB -- they exist only if the page is NOT signup.
+
+
 
 
 

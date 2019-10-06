@@ -1,4 +1,5 @@
 import React from 'react';
+import NavbarContainer from "../navbar/navbar_container";
 
 class SignupForm extends React.Component {
   constructor(props) {
@@ -41,6 +42,9 @@ class SignupForm extends React.Component {
 
   render() {
     return (
+      <>
+      {/* <FooterContainer myType={"login"} /> */}
+      <NavbarContainer mySignUp={"signUpForm"} />
       <div className="signup-form-container">
         <form onSubmit={this.handleSubmit} className="signup-form-box">
           {/* <label className="sign-up-label">Sign up</label> */}
@@ -81,6 +85,7 @@ class SignupForm extends React.Component {
           </div>
         </form>
       </div>
+    </>
     );
   }
 }

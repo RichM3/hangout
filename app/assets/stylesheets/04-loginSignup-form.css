@@ -3,35 +3,19 @@
   flex-direction: column;
   align-items: center;
   border: 1px solid #dcdcdc;
-    /* width: 460px;
-  height: 610px; */
-
-  /* justify-content: center; */
   padding-top: 100px;
-  padding-top: 100px;
-  height: 610px;
+  padding-bottom: 15px;
+  height: 500px;
   background-color: #fafafa;
 }
 
 .l-blue {
   width: 458px;
-
   height: 168px;
   box-sizing: border-box;
-  /* background-color: #ed1c40; */
   background-color: #d8dfea;
   border-top:1px solid #6279ad;
 }
-
-/* #d8dfea */
-/* 460 x 610 */
-
-/* .l-box {
-  border: 2px solid black;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-} */
 
 .l-top {
   width: 458px;
@@ -48,7 +32,6 @@
   border-top: none;
 }
 
-
 .wrapper-padlock {
   width: 100%;
   display: flex;
@@ -58,12 +41,9 @@
 .padlock {
   width: 16px;
   height: auto;
-  /* border-radius: 50px; */
-  /* margin-right: 10px; */
 }
 
 h2.login-label {
-  /* margin-right: 10px; */
    font-size: 34px;
    font-weight: 600;
    padding-bottom: 8px;
@@ -82,18 +62,13 @@ h2.login-label {
 
 
 .session-submit {
-
     border-radius: 3px;
     font-size: 16px;
     font-weight: 600;
     width: 82px;
-
     margin-bottom: 16px;
-
     line-height: 1.45;
     min-height: 36px;
-
-
     outline: 0;
     vertical-align: middle;
     text-align: center;
@@ -106,7 +81,6 @@ h2.login-label {
   font-family: helvetica, arial, sans-serif;
   font-weight: 600;
   font-size: 13px;
-  /* width: 428px; */
   text-align: center;
 }
 

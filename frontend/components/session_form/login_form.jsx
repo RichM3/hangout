@@ -1,4 +1,7 @@
 import React from 'react';
+import NavbarContainer from "../navbar/navbar_container";
+import FooterContainer from "../footer/footer_container";
+    // ./footer/footer_container";
 
 class LoginForm extends React.Component {
   constructor(props) {
@@ -40,6 +43,8 @@ class LoginForm extends React.Component {
 
   render() {
     return (
+      <>
+      <NavbarContainer myType={"login"} />
       <div className="l-box">
         
         <div className="l-top">
@@ -84,9 +89,11 @@ class LoginForm extends React.Component {
         {/* <div>  end of l-bottom ------------------------------</div> */}
         <div className="l-blue">
         </div>
-
         {/* <div>  end of l-blue ------------------------------</div> */}
       </div>
+
+      <FooterContainer myType={"login"} />
+      </>
     );
   }
 }

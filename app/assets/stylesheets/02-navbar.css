@@ -4,15 +4,14 @@
     padding: 0;
     background-color: #ffffff;
     display: flex;
-    /* justify-content: space-between; */
     align-items: center;
-    /* padding: 20px 10%; */
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .logo {
     cursor: pointer;
     margin-right: auto;
+    height: 80px;
 }
 
 .nav__links {
@@ -22,19 +21,38 @@
     padding: 0px 20px;
 }
 
-
 .login-signup {
   margin-left: 20px;
 }
 
 .myLinks {
+    font-size: 14px;
     color: #0088a9;
     text-decoration: none;
-    margin-right: 30px;
+    /* margin-right: 10px; */
+    /* border-right: 1px solid #e6e7e9 */
 }
 
-.myLinks:hover {
+.myLinks-login {
+    font-size: 14px;
+    color:  #f64060;
+    text-decoration: none;
+}
+
+/* .myLinks:hover {
     color: red;
+    transition: all 0.3s ease 0s
+} */
+
+.myLinks_greet {
+    font-size: 14px;
+    color: #818b92;
+    text-decoration: none;
+    margin-right: 14px;
+}
+
+.myLinks_greet:hover {
+    color: #0088a9;
     transition: all 0.3s ease 0s
 }
 
