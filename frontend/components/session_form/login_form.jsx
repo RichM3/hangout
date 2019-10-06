@@ -11,11 +11,26 @@ class LoginForm extends React.Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDemo = this.handleDemo.bind(this);
   }
 
   componentWillUnmount() {
     this.props.clearErrors();
   }
+
+  handleDemo(e) {
+    e.preventDefault();
+    const demo = Object.assign({}, { username: 'DemoUser', password: 'password123' })
+    this.props.processForm(demo);
+  }
+  // demoState(e) {
+  //   e.preventDefault();
+  //   this.setState({ username: 'DemoUser' });
+  //   this.setState({ password: 'password123' });
+  //   debugger
+  //   // console.log()
+  //   this.handleSubmit(e);
+  // }
 
   update(field) {
     return e => this.setState({
@@ -61,7 +76,7 @@ class LoginForm extends React.Component {
 
         <div className="l-bottom">
 
-          <form onSubmit={this.handleSubmit}>
+          <form className="formClass" onSubmit={this.handleSubmit}>
             {this.renderErrors()}
             <label className="log-labels">Username:<br></br>
               <input type="text"
@@ -81,13 +96,15 @@ class LoginForm extends React.Component {
             </label>
             <br />
             <input className="session-submit" type="submit" value={this.props.formType} />
-
           </form>
 
 
         </div>
         {/* <div>  end of l-bottom ------------------------------</div> */}
         <div className="l-blue">
+            <form className="formClass" onSubmit={this.handleDemo}>
+              <input className="login-submit" type="submit" value="Demo User" />
+            </form>
         </div>
         {/* <div>  end of l-blue ------------------------------</div> */}
       </div>

@@ -16,8 +16,8 @@
 5) The signup page has missing props so I copied the logic of the greeting component to display the links 
 similar to the greeting component in BenchBNB -- they exist only if the page is NOT signup.
 
-
-
+6) Creating a Demo button -- forgot the     e.preventDefault();
+-- also mapped it through the handleSubmit - bad move - caused it to fail first time pressed but worked second time pressed????
 
 
 

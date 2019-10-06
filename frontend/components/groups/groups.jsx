@@ -12,8 +12,9 @@ class Groups extends React.Component {
         <>
         <div className="showname" >Hi, {this.state.currentUser.username}!</div>
         <div className="showname" >Hi, {this.state.currentUser.id}!</div>
-        <div className="showname" >Hi, {this.state.leaderId }!</div>
+        <div className="showname" >Hi, {this.state.leaderId}!</div>
         <div className="showname" >Hi, {this.state.currentUser.email}!</div>
+        {/* <div className="showname" >Pw, {this.state.group.password}!</div> */}
 
         <section id="groupInputs">
             <form className="group-form-box">

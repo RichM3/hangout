@@ -12,6 +12,7 @@
 .l-blue {
   width: 458px;
   height: 168px;
+  padding: 16px 16px 16px 18px;
   box-sizing: border-box;
   background-color: #d8dfea;
   border-top:1px solid #6279ad;
@@ -26,7 +27,7 @@
 
 .l-bottom {
   width: 458px;
-  padding: 16px 16px 0px;
+  padding: 16px 16px 16px;
   box-sizing: border-box;
   border: 1px solid #dcdcdc;
   border-top: none;
@@ -59,13 +60,38 @@ h2.login-label {
    font-weight: 500;
  }
 
+.formClass {
+  width: 424;
+}
 
+.login-submit {
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 600;
+  width: 100px;
+  height: 36px;
+  margin-bottom: 16px;
+  line-height: 1.45;
+  min-height: 36px;
+  outline: 0;
+  vertical-align: middle;
+  text-align: center;
+  background-color: #3b5998;
+  color: white;
+  justify-content: left;
+  /* margin-left: 240px; */
+  padding: 8px;
+}
 
 .session-submit {
     border-radius: 3px;
     font-size: 16px;
     font-weight: 600;
+    /* matches meetup button length */
     width: 82px;
+    height: 36px;
+    /* reset to 100 so demo user and login buttons are same length */
+    width: 100px;
     margin-bottom: 16px;
     line-height: 1.45;
     min-height: 36px;
