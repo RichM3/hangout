@@ -8,6 +8,10 @@ class Navbar extends React.Component {
 
   render() {
 
+    // Code for the logo big or small
+    let logoType = window.hangoutLogoURL;
+
+
 
     let myHeadClass = this.props.headClass;   //props are passed in from msp and must be included in Navbar = (props)
 
@@ -65,6 +69,7 @@ class Navbar extends React.Component {
         break;
       case "signUpForm":
         renderRightLinks = "";
+        logoType = window.hLogoURL
         break;    
       default:
         renderRightLinks =
@@ -81,7 +86,7 @@ class Navbar extends React.Component {
 
 
 
-    let mySignUp = this.props.isSignUp;   //props are passed in from msp and must be included in Navbar = (props)
+    // let mySignUp = this.props.isSignUp;   //props are passed in from msp and must be included in Navbar = (props)
 
     // let renderRightLinks = "";
     // switch (mySignUp) {
@@ -110,7 +115,7 @@ class Navbar extends React.Component {
         <header className="nbar">
           <div className="logo" >
             <a href="/">
-            <img src={window.hangoutLogoURL} />
+              <img src={logoType} />
             </a>
           </div>
 
