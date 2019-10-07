@@ -2,9 +2,80 @@
    display: flex;
    justify-content: center;
    padding-top: 100px;
+   //Old height when using image of city
    height: 480px;
+  //  //New Heigth to accomodate video
+  //   height: 460px;
    /* background-image: url("panorama.png"); */
 
    //This sets the background image to the image mapped in the window - application.html.erb in views layouts
+   // This tag is no longer used but is for the former city image
     background: { image: asset_url("panorama.png") }
  }
+
+
+.home-container-video {
+    position: relative;
+    height: 460px;            // this height setting works with the overflow and the rest of the video is covered by other objects
+    background: rgba(0, 0, 0, 0.2);
+    overflow: hidden;         // critical property overflow - specifies what should happen if content overflows an element box.
+    // clips the content at this point - and the rest of the content is invisible
+}
+
+
+// -1 z index allows all the other objects to rest on top.
+.home-video {
+  // min-height: 460px;
+  position: absolute;
+  /* // height: 460px; */
+  width: 100%; 
+  z-index: -1;  // Allows the text and link (fakebtn) to appear on top of splash page
+
+}
+
+
+
+.fake-btn-red {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 25.6px;
+    // background-color: rgb(241, 58, 89);
+    background: #f13a59;
+    margin-top: 36px;
+    padding: .75em 7em;
+    border-radius: 5px;
+}
+
+
+.home-text {
+        font-family: Helvetica, Arial, sans-serif;
+        color: white;
+        text-align: center;
+        font-weight: 600;
+        margin: 200px;
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        align-items: center;
+
+}
+
+
+h1.homeH1 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 60px;
+  font-weight: bolder;
+}
+
+
+@media only screen and (max-width: 1024px) {
+ .greeting-phone {  // change image to my image name - I have not .greeting-phone yet
+   display: none;
+ }
+}
+
+

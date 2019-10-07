@@ -13,7 +13,6 @@ const Greeting = ({ currentUser, logout }) => {
     return (
     <>
       <div className="manageLogout">
-        <div className="showname" >Hi, {currentUser.username}!</div>
           <div className="dropdown">
             <img className="blankProfile" src={window.blankProfileURL} />
             <div className="dropdown-content">

@@ -44,7 +44,7 @@ class SignupForm extends React.Component {
     return (
       <>
       {/* <FooterContainer myType={"login"} /> */}
-      <NavbarContainer mySignUp={"signUpForm"} />
+      <NavbarContainer navType={"signUpForm"} />
       <div className="signup-form-container">
         <form onSubmit={this.handleSubmit} className="signup-form-box">
           {/* <label className="sign-up-label">Sign up</label> */}

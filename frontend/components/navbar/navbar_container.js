@@ -4,8 +4,9 @@ import Navbar from './navbar';
 const mapStateToProps = (state, ownProps) => {
   let isSignUp = ownProps.mySignUp;
   let headClass = ownProps.myType;
+  let navType = ownProps.navType;
 
-  return { headClass, isSignUp };
+  return { headClass, isSignUp, navType };
 };
 
 const mapDispatchToProps = dispatch => {

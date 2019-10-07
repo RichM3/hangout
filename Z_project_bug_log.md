@@ -19,5 +19,6 @@ similar to the greeting component in BenchBNB -- they exist only if the page is 
 6) Creating a Demo button -- forgot the     e.preventDefault();
 -- also mapped it through the handleSubmit - bad move - caused it to fail first time pressed but worked second time pressed????
 
+7) still not sure why but placing mute on the video tag at the front allowed the video to play - not sure why?
 
-
+8) implementing a giant switch statement to define what buttons / links should appear in the nav bar - same implementation of the footer

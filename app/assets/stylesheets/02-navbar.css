@@ -16,7 +16,8 @@
 
 .nav__links {
     list-style: none;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: helvetica, arial, sans-serif;
     display: inline;
     padding: 0px 20px;
 }
@@ -57,10 +58,21 @@
 }
 
 .fakeButton {
+
+  background: #0098AB;
+  border-radius: 8px;
+  color: white;
+  /* float: right; */
+  font-size: 11px;
+  margin-left: 8px;
+  padding: 3px 4px 1px;
+
+
     text-decoration: none;
-    color: #ffffff;
-    padding: 9px 25px;
-    background-color: #0088a9;
+    /* color: #ffffff; */
+    /* padding: 9px 25px; */
+    /* padding: 9px 10px; */
+    /* background-color: #0088a9; */
     border: none;
     border-radius: 50px;
     cursor: pointer;

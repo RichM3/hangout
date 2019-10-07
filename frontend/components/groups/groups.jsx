@@ -1,4 +1,7 @@
 import React from 'react';
+import NavbarContainer from "../navbar/navbar_container";
+import FooterContainer from "../footer/footer_container";
+
 
 class Groups extends React.Component {
     constructor(props) {
@@ -9,7 +12,9 @@ class Groups extends React.Component {
 
     render() {
         return (
+        
         <>
+        <NavbarContainer navType={"groups"} myType={"login"} />
         <div className="showname" >Hi, {this.state.currentUser.username}!</div>
         <div className="showname" >Hi, {this.state.currentUser.id}!</div>
         <div className="showname" >Hi, {this.state.leaderId}!</div>
@@ -26,6 +31,7 @@ class Groups extends React.Component {
             </label> */}
             </form>
         </section>
+        <FooterContainer footType={"groups"} />
         </>
         );
     }

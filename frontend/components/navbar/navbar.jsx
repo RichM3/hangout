@@ -7,6 +7,8 @@ class Navbar extends React.Component {
   }
 
   render() {
+
+
     let myHeadClass = this.props.headClass;   //props are passed in from msp and must be included in Navbar = (props)
 
     let hClass = "";
@@ -19,29 +21,89 @@ class Navbar extends React.Component {
         break;
     }
 
-    let mySignUp = this.props.isSignUp;   //props are passed in from msp and must be included in Navbar = (props)
+
 
     let renderRightLinks = "";
-    switch (mySignUp) {
+    let navType = this.props.navType;
+    switch (navType) {
+      case "splash":
+        renderRightLinks =
+          <>
+            <div className="nav__links">
+              <a href="/" className={hClass}><b>Start a new group</b></a>
+              &nbsp;&nbsp;&nbsp;
+              <a href="/" className="myLinks">Experiences</a>
+              &nbsp;&nbsp;&nbsp;
+              <a href="/" className="fakeButton">NEW</a>
+              &nbsp;&nbsp;&nbsp;
+            </div>
+            <div className="topRight">
+              <GreetingContainer />
+            </div>
+          </>;
+        break;
+      case "groups":
+        renderRightLinks =
+          <>
+            <div className="nav__links">
+              <a href="/" className={hClass}><b>Start a new group</b></a>
+              &nbsp;&nbsp;&nbsp;
+              <a href="/" className="myLinks">Experiences</a>
+              &nbsp;&nbsp;&nbsp;
+              <a href="/" className="fakeButton">NEW</a>
+              &nbsp;&nbsp;&nbsp;
+              <a href="/" className="myLinks">Explore</a>
+              &nbsp;&nbsp;&nbsp;
+              <a href="/" className="myLinks">Messages</a>
+            &nbsp;&nbsp;&nbsp;
+              <a href="/" className="myLinks">Notifications</a>
+            </div>
+            <div className="topRight">
+              <GreetingContainer />
+            </div>
+          </>;
+        break;
       case "signUpForm":
         renderRightLinks = "";
-        break;
+        break;    
       default:
-        renderRightLinks = 
+        renderRightLinks =
           <>
-          <div className="nav__links">
-            <a href="/" className={hClass}><b>Start a new group</b></a>
-            {/* &nbsp;&nbsp;&nbsp;
-            <a href="/" className="myLinks">Experiences</a>
-            &nbsp;&nbsp;&nbsp;
-            <a href="/" className="fakeButton">NEW</a> */}
-          </div>
-          <div className="topRight">
-            <GreetingContainer />
-          </div>
-        </>;
+            <div className="nav__links">
+              <a href="/" className={hClass}><b>Start a new group</b></a>
+            </div>
+            <div className="topRight">
+              <GreetingContainer />
+            </div>
+          </>;
         break;
     }
+
+
+
+    let mySignUp = this.props.isSignUp;   //props are passed in from msp and must be included in Navbar = (props)
+
+    // let renderRightLinks = "";
+    // switch (mySignUp) {
+    //   case "signUpForm":
+    //     renderRightLinks = "";
+    //     break;
+    //   default:
+    //     renderRightLinks = 
+    //       <>
+    //       <div className="nav__links">
+    //         <a href="/" className={hClass}><b>Start a new group</b></a>
+    //         {/* &nbsp;&nbsp;&nbsp;
+    //         <a href="/" className="myLinks">Experiences</a>
+    //         &nbsp;&nbsp;&nbsp;
+    //         <a href="/" className="fakeButton">NEW</a> */}
+    //       </div>
+    //       <div className="topRight">
+    //         <GreetingContainer />
+    //       </div>
+    //     </>;
+    //     break;
+    // }
 
     return (
       <>
