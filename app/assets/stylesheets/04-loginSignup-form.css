@@ -4,7 +4,7 @@
   align-items: center;
   border: 1px solid #dcdcdc;
   padding-top: 100px;
-  padding-bottom: 15px;
+  padding-bottom: 30px;
   height: 500px;
   background-color: #fafafa;
 }
@@ -129,6 +129,7 @@ h2.login-label {
 
 .login-input:focus {
   border: 1px solid blue;
+  background-color: white;
 }
 
 

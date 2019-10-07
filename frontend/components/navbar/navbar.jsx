@@ -10,8 +10,7 @@ class Navbar extends React.Component {
 
     // Code for the logo big or small
     let logoType = window.hangoutLogoURL;
-
-
+    let logoCss = "logo"
 
     let myHeadClass = this.props.headClass;   //props are passed in from msp and must be included in Navbar = (props)
 
@@ -19,6 +18,7 @@ class Navbar extends React.Component {
     switch (myHeadClass) {
       case "login":
         hClass = "myLinks-login";
+        logoCss = "logo-login";
         break;
       default:
         hClass = "myLinks";
@@ -27,10 +27,12 @@ class Navbar extends React.Component {
 
 
 
+
     let renderRightLinks = "";
     let navType = this.props.navType;
     switch (navType) {
       case "splash":
+        logoCss = "logo-splash";
         renderRightLinks =
           <>
             <div className="nav__links">
@@ -68,6 +70,7 @@ class Navbar extends React.Component {
           </>;
         break;
       case "signUpForm":
+        logoCss = "logo-signup";
         renderRightLinks = "";
         logoType = window.hLogoURL
         break;    
@@ -85,35 +88,10 @@ class Navbar extends React.Component {
     }
 
 
-
-    // let mySignUp = this.props.isSignUp;   //props are passed in from msp and must be included in Navbar = (props)
-
-    // let renderRightLinks = "";
-    // switch (mySignUp) {
-    //   case "signUpForm":
-    //     renderRightLinks = "";
-    //     break;
-    //   default:
-    //     renderRightLinks = 
-    //       <>
-    //       <div className="nav__links">
-    //         <a href="/" className={hClass}><b>Start a new group</b></a>
-    //         {/* &nbsp;&nbsp;&nbsp;
-    //         <a href="/" className="myLinks">Experiences</a>
-    //         &nbsp;&nbsp;&nbsp;
-    //         <a href="/" className="fakeButton">NEW</a> */}
-    //       </div>
-    //       <div className="topRight">
-    //         <GreetingContainer />
-    //       </div>
-    //     </>;
-    //     break;
-    // }
-
     return (
       <>
         <header className="nbar">
-          <div className="logo" >
+          <div className={logoCss} >
             <a href="/">
               <img src={logoType} />
             </a>

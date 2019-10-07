@@ -6,9 +6,28 @@
     display: flex;
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
+    padding-left: 20px;
 }
 
 .logo {
+    cursor: pointer;
+    margin-right: auto;
+    height: 88px;
+}
+
+.logo-signup {
+    cursor: pointer;
+    margin-right: auto;
+    height: 64px;
+}
+
+.logo-login {
+    cursor: pointer;
+    margin-right: auto;
+    height: 70px;
+}
+
+.logo-splash {
     cursor: pointer;
     margin-right: auto;
     height: 87px;

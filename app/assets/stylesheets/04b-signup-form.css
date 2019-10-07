@@ -32,10 +32,11 @@ line-height: 1.45; */
    display: flex;
    justify-content: center;
    padding-top: 100px;
-   height: 480px;
+   height: 800px;
    background-color: #fafafa;
    font-weight: 600;
    font-size: 13px;
+  border-top: 1px solid #dcdcdc;
 }
 
 .signup-form {
