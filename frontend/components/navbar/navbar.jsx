@@ -32,7 +32,7 @@ class Navbar extends React.Component {
             <div className="nav__links">
               <a href="/" className={hClass}><b>Start a new group</b></a>
               &nbsp;&nbsp;&nbsp;
-              <a href="/" className="myLinks">Experiences</a>
+              <a href="/" className="experience">Experiences</a>
               &nbsp;&nbsp;&nbsp;
               <a href="/" className="fakeButton">NEW</a>
               &nbsp;&nbsp;&nbsp;

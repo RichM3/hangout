@@ -111,7 +111,8 @@ h2.login-label {
 }
 
 .login-input {
-  background-color: #fafafa;
+  /* background-color: #fafafa; */
+  background-color: rgba(0,0,0,.02);
   border-radius: 3px;
   border: 1px solid rgba(0,0,0,.12);
   box-shadow: none;

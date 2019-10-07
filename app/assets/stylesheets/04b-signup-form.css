@@ -63,7 +63,9 @@ line-height: 1.45; */
 }
 
 .signup-input {
-    background-color: #fafafa;
+    /* background-color: #fafafa; */
+    /* this makes the background grey */
+    background-color: rgba(0,0,0,.02);
     border-radius: 3px;
     border: 1px solid rgba(0,0,0,.12);
     box-shadow: none;
