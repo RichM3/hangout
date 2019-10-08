@@ -22,3 +22,12 @@ similar to the greeting component in BenchBNB -- they exist only if the page is 
 7) still not sure why but placing mute on the video tag at the front allowed the video to play - not sure why?
 
 8) implementing a giant switch statement to define what buttons / links should appear in the nav bar - same implementation of the footer
+-- The switch then implements classes depending on source the user navigates from- passing a property into each component (like header and footer)
+-- then uses a switch to identify what characteristics will be used in the component.  -- CSS styling classes like header size and what buttons appear on the page.
+
+9) forgot the import statement on the page - couldn't find that night but return next morning and fixed in 10 minutes.
+
+10) Using ownProps to extract the ID from URL and get the data required for the fetchGroups code
+
+11) 
+

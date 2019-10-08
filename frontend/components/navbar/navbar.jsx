@@ -48,21 +48,21 @@ class Navbar extends React.Component {
             </div>
           </>;
         break;
-      case "groups":
+      case "groups_index":
         renderRightLinks =
           <>
             <div className="nav__links">
               <a href="/" className={hClass}><b>Start a new group</b></a>
               &nbsp;&nbsp;&nbsp;
-              <a href="/" className="myLinks">Experiences</a>
+              <a href="/" className="experience">Experiences</a>
               &nbsp;&nbsp;&nbsp;
               <a href="/" className="fakeButton">NEW</a>
               &nbsp;&nbsp;&nbsp;
-              <a href="/" className="myLinks">Explore</a>
+              <a href="/" className="groups-index-links">Explore</a>
               &nbsp;&nbsp;&nbsp;
-              <a href="/" className="myLinks">Messages</a>
+              <a href="/" className="groups-index-links">Messages</a>
             &nbsp;&nbsp;&nbsp;
-              <a href="/" className="myLinks">Notifications</a>
+              <a href="/" className="groups-index-links">Notifications</a>
             </div>
             <div className="topRight">
               <GreetingContainer />

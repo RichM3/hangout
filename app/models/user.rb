@@ -6,7 +6,15 @@ class User < ApplicationRecord
   after_initialize :ensure_session_token
   attr_reader :password
 
-  has_many :groups
+  has_many :groups,
+    primary_key: :id,
+    foreign_key: :leader_id,
+    class_name: :Group
+
+  has_many :joined_groups,
+    primary_key: :id,
+    foreign_key: :user_id,
+    class_name: :UserGroup
 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)

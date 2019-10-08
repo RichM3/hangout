@@ -1,4 +1,14 @@
-.groups-form-box {
+
+.groups-index-links {
+    font-size: 14px;
+    color: #8a8a8a;    
+    text-decoration: none;
+}
+
+
+
+/* Not Currently in use */
+/* .groups-form-box {
     font-family: Arial, Helvetica, sans-serif;
     width: 500px;
     border: 3px solid black
@@ -18,8 +28,4 @@
     margin-bottom: 50px;
     /* font-size: 24pt; */
    /* margin-left: 20px; */
-}
-
-
-
-
+} */

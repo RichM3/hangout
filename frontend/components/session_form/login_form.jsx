@@ -23,14 +23,6 @@ class LoginForm extends React.Component {
     const demo = Object.assign({}, { username: 'DemoUser', password: 'password123' })
     this.props.processForm(demo);
   }
-  // demoState(e) {
-  //   e.preventDefault();
-  //   this.setState({ username: 'DemoUser' });
-  //   this.setState({ password: 'password123' });
-  //   debugger
-  //   // console.log()
-  //   this.handleSubmit(e);
-  // }
 
   update(field) {
     return e => this.setState({
