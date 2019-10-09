@@ -1,4 +1,11 @@
 json.extract! user, :id, :username, :email
+json.groupIds user.groups.pluck(:id)
+
+
+
+
+
+
 
 # json.joined_groups do 
 #     json.array! user.joined_groups.pluck(:id)

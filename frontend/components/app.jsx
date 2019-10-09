@@ -14,11 +14,11 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 const App = () => (
   <div>
     <Switch>
-      <Route exact path="/" component={SplashContainer} />
       <ProtectedRoute exact path="/groups" component={GroupsIndexContainer} />
       <ProtectedRoute exact path="/groups/:groupId" component={GroupsShowContainer} />
       <AuthRoute exact path="/login" component={LogInFormContainer} />
       <AuthRoute exact path="/signup" component={SignUpFormContainer} />
+      <AuthRoute exact path="/" component={SplashContainer} />
     </Switch>
   </div>  
 );

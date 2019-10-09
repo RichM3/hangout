@@ -1,8 +1,7 @@
-# json.extract! @groups, :id
-#, :groupname, :description, :location, :leaderId
-# json.extract! @groups
-#, :groupname
-# json.extract! user, :id, :username, :email
+# json.partial! "api/groups/group", user: @user
+
+
+
 
 json.groups do
         # debugger
@@ -15,6 +14,3 @@ json.groups do
         end
 end
 
-# json.joined_groups do 
-#     json.array! user.joined_groups.pluck(:id)
-# end

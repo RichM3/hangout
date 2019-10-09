@@ -14,7 +14,7 @@ class Api::GroupsController < ApplicationController
 
     def index
         @groups = Group.all
-        render "api/groups/index"   
+        render "api/groups/index"
     end
 
     def show

@@ -9,6 +9,9 @@ const Footer = (props) => {
         case "login":
             fClass = "footerLong";
             break;
+        case "groups":
+            fClass = "footerLong";
+            break;
         default:
             fClass = "footer";
             break;

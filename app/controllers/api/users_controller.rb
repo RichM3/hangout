@@ -1,6 +1,6 @@
 class Api::UsersController < ApplicationController
-  def create
 
+  def create
     @user = User.new(user_params)
 
     if @user.save
@@ -11,32 +11,14 @@ class Api::UsersController < ApplicationController
     end
   end
 
-  private
+  def show
+    @user = User.find(params[:id])
+    render "api/users/show"
+  end
 
+  private
   def user_params
     params.require(:user).permit(:username, :password, :email)
   end
 end
 
-
-
-
-# -- my code likely bad
-# class Api::UsersController < ApplicationController
-#   def create
-#     @user = User.new(user_params)
-#     # @user.password = params[:user][:password]
-#     if @user.save
-#       login!(@user)
-#       render json: ["successful"]
-#     else
-#       render json: @user.errors.full_messages, status: 422
-#     end
-#   end
-
-#   private 
-#   def user_params
-#     params.require(:user).permit(:username, :password)
-#   end
-
-# end
