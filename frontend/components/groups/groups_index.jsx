@@ -24,23 +24,30 @@ class GroupsIndex extends React.Component {
         })
 
         return (
-            
         <>
-        <NavbarContainer navType={"groups_index"} myType={"login"} />
         <div className="index-body">
+        <NavbarContainer navType={"groups_index"} myType={"login"} />
             <div className="c-page-lt">
                 <div className="member-home-bounds"><label htmlFor="">MEMBER HOME BOUNDS</label></div>
-                <form action="" className="searchForm">Search Form</form>
-            </div>
-            <div className="c-page-body">
-                <div className="unit-size5of7-full-width"  >
-                    <ul>First UL of User groups</ul>
-                    <h2>H2 seperating uls</h2>
-                    <ul>2nd UL of Suggested groups</ul>
-                    <div>Motivation Cards</div>
-                    <ul>Second half of suggested groups</ul>
-                    <button>More Button looks like divider with "More" as text</button>
+                <div className="find-navbar-wrap">
+                    <form action="" className="searchForm">Search Form</form>
+                    <div>last Unit</div>
                 </div>
+                <div className="c-page-body">
+                    <div className="unit-size5of7-full-width"  >
+                        <ul>First UL of User groups</ul>
+                        <h2>H2 seperating uls</h2>
+                        <ul>2nd UL of Suggested groups</ul>
+                        <div className="motivation-section" >Motivation Section</div>
+                        <ul>Second half of suggested groups</ul>
+                        <button className="button--showmore" >More Button looks like divider with "More" as text</button>
+                    </div>
+                </div>
+            </div>
+        <FooterContainer footType={"groups"} />
+        </div>
+
+
                 {/* <div className="unit-size5of7-full-width"  >
                     ul-your-meetups     (your meetups)
                     H2 between uls
@@ -49,9 +56,6 @@ class GroupsIndex extends React.Component {
                     ul-search-results-other-meetups (suggested)
                     button-more
                 </div> */}
-            </div>
-        </div>
-        <FooterContainer footType={"groups"} />
 
 
 

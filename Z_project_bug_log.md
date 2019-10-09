@@ -29,5 +29,5 @@ similar to the greeting component in BenchBNB -- they exist only if the page is 
 
 10) Using ownProps to extract the ID from URL and get the data required for the fetchGroups code
 
-11) 
+11) Sticky position to keep the search bar in place on the Groups index page
 

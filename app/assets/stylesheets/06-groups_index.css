@@ -1,9 +1,193 @@
+/* div {
+    display: block;
+} */
 
+.c-page-lt {
+    font-size: 16px;
+    line-height: 1.45;
+    font-family: "Graphik Meetup",helvetica,arial,sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    text-rendering: optimizeLegibility;
+    -moz-font-feature-settings: "liga","kern";
+    -moz-font-feature-settings: "liga=1, kern=1";
+    -ms-font-feature-settings: "liga","kern";
+    -o-font-feature-settings: "liga","kern";
+    -webkit-font-feature-settings: "liga","kern";
+    font-feature-settings: "liga","kern";
+
+    /* testing border */
+    border: 3px solid blue;
+}
+
+/* header link settings -- except one class experience */
 .groups-index-links {
     font-size: 14px;
     color: #8a8a8a;    
     text-decoration: none;
 }
+
+
+    /* member home header */
+    /* background: #00455d; */
+.member-home-bounds {
+    /* width: 950px; */
+    width: 1118px;
+    height: 69px;
+    padding: 32px 0 48px;
+    /* max-width: 950px; */
+    margin: 0 auto;
+    background-color: #00455d;
+    /* testing border */
+    border: 3px solid blue;
+}
+/* .inverted {
+    color: rgba(255,255,255,.7);
+} */
+
+
+/* opacity coding to use later */
+/* img {
+  opacity: 0.5;
+}
+
+img:hover {
+  opacity: 1.0;
+} */
+
+
+.find-navbar-wrap {
+    margin-top: -40px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    /* height: 50px; */
+    /* background-color: blue; */
+    /* border: 5px solid black; */
+    height: 69px;
+    width: 100%;
+    /* bottom: -42px;
+    z-index: 2; */
+    background: transparent;
+    /* testing border */
+    border: 3px solid blue;
+    opacity: 1;
+    color: rgba(255,255,255,.7);
+}
+
+
+.c-page-body {
+    margin: 0 auto;
+    color: rgba(0,0,0,.87);
+    font-size: 13px;
+    width: 986px;
+    /* width: 90%; */
+    min-height: 300px;
+
+    /* testing */
+    min-height: 1300px;
+
+    padding: 0 1em;
+    padding-top: 16px;
+    padding-bottom: 1.25em;
+
+    /* testing border */
+    border: 3px solid blue;
+}
+
+
+.unit-size5of7-full-width {
+    width: 976px;
+
+    /* testing border */
+    border: 3px solid blue;
+}
+
+
+.box-ul {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-size: 0;
+    margin: 0 -16px 0 0;
+    padding: 0;
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+ /* combination of UL and titleGrid */
+/* .tileGrid {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-size: 0;
+    margin: 0 -16px 0 0;
+    padding: 0;
+ }
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+} */
+
+
+.motivation-section {
+    padding-top: 48px;
+    padding-bottom: 32px;
+    margin-top: 32px;
+    margin-bottom: 48px;
+    border-top: 1px solid rgba(0,0,0,.12);
+    border-bottom: 1px solid rgba(0,0,0,.12);
+
+    /* testing border */
+    border: 3px solid blue;
+}
+
+
+
+
+
+/* .button--fullWidth, .button.full-width, .button.span-100 { */
+.button--showmore {
+    display: block!important;
+    width: 100%!important;
+    text-align: center!important;
+    padding: 9px!important;
+    user-select: none;
+    cursor: pointer;
+    text-decoration: none!important;
+
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 600;
+    min-height: 36px;
+    outline: 0;
+    padding: 0 16px;
+    /* ignored because diplay: block above */
+    /* vertical-align: middle; */
+    line-height: 1;
+    margin-bottom: 16px;
+    border: 1px solid rgba(0,0,0,.12);
+    stroke: transparent;
+    fill: rgba(0,0,0,.87);
+    background: #fff;
+    opacity: 1;
+}
+/* see above for opacity code */
+
 
 
 
@@ -26,6 +210,6 @@
     width: 100%;
     height: 39.2px;
     margin-bottom: 50px;
+} */
     /* font-size: 24pt; */
    /* margin-left: 20px; */
-} */
