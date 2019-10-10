@@ -90,7 +90,7 @@ img:hover {
 .find-navbar-wrap {
     display: flex;
     margin-top: -45px;
-    /* margin-left: 44px; */
+    margin-left: 15px;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
@@ -99,7 +99,8 @@ img:hover {
     /* border: 5px solid black; */
     height: 69px;
     /* width: 100%; */
-    width: 982px;
+    /* width: 982px; */
+    width: 932px;
     /* bottom: -42px;
     z-index: 2; */
     background: transparent;
@@ -270,7 +271,8 @@ img:hover {
 .myheader {
     height: 28px;
     color: rgba (0,0,0,0.87);
-    margin: 20px 0 16px;
+    /* margin: 20px 0 16px; */
+    margin: 20px 0 16px 15px;
     padding: 0 0 8px;
     font-size: 13px;
     line-height: 1.45;
@@ -386,6 +388,7 @@ ul {
 
 /* .button--fullWidth, .button.full-width, .button.span-100 { */
 .button--showmore {
+    margin-top: 500px;
     display: block!important;
     width: 100%!important;
     text-align: center!important;

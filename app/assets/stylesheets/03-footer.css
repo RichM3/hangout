@@ -55,7 +55,8 @@
     align-items: top;
     padding: 80px 10%;
     /* font-family: Arial, Helvetica, sans-serif; */
-    height: 306px;
+    /* height: 306px; */
+    height: 356px;
 }
 
 .footerLong a {

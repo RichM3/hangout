@@ -19,6 +19,7 @@ const Splash = () => {
                 <Link className="fake-btn-red" to="/signup">Come hangout!</Link>
             </div>
         </div>
+            <div className="spaceholder"></div>
         <FooterContainer myType={"splash"} />
     </>
     )

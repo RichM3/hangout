@@ -34,3 +34,8 @@ similar to the greeting component in BenchBNB -- they exist only if the page is 
 12) They have a proprietary font so it is hard to match but I did the best I could - I believe
 
 13) Mapped code from the backend switching data using unclude to map data to and from different arrays
+
+14) used clearfix CSS solution and FLOAT left to ensure the GroupIndex page held data vertically and did not travel outside of the containg div.
+
+15) 
+
