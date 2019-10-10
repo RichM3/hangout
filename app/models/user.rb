@@ -6,7 +6,7 @@ class User < ApplicationRecord
   after_initialize :ensure_session_token
   attr_reader :password
 
-  has_many :groups,
+  has_many :led_groups,
     primary_key: :id,
     foreign_key: :leader_id,
     class_name: :Group

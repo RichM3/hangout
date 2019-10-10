@@ -1,5 +1,5 @@
 json.extract! user, :id, :username, :email, :location_id
-json.groupIds user.groups.pluck(:group_id)
+json.groupIds user.led_groups.pluck(:group_id)
 
 
 

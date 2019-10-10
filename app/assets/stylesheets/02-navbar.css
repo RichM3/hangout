@@ -33,6 +33,12 @@
     height: 87px;
 }
 
+.logo-show {
+    cursor: pointer;
+    margin-right: auto;
+    height: 97px;
+}
+
 .nav__links {
     list-style: none;
     margin: 0px 5px 0px 0px;

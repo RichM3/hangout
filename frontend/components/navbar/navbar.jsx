@@ -10,7 +10,8 @@ class Navbar extends React.Component {
 
     // Code for the logo big or small
     let logoType = window.hangoutLogoURL;
-    let logoCss = "logo"
+    let logoCss = "logo";
+
 
     let myHeadClass = this.props.headClass;   //props are passed in from msp and must be included in Navbar = (props)
 
@@ -24,8 +25,6 @@ class Navbar extends React.Component {
         hClass = "myLinks";
         break;
     }
-
-
 
 
     let renderRightLinks = "";
@@ -62,6 +61,28 @@ class Navbar extends React.Component {
               &nbsp;&nbsp;&nbsp;
               <a href="/" className="groups-index-links">Messages</a>
             &nbsp;&nbsp;&nbsp;
+              <a href="/" className="groups-index-links">Notifications</a>
+            </div>
+            <div className="topRight">
+              <GreetingContainer />
+            </div>
+          </>;
+        break;
+      case "groups_show":
+        logoCss = "logo-show";
+        renderRightLinks =
+          <>
+            <div className="nav__links">
+              <a href="/" className={hClass}><b>Start a new group</b></a>
+              &nbsp;&nbsp;&nbsp;
+              <a href="/" className="experience">Experiences</a>
+              &nbsp;&nbsp;&nbsp;
+              <a href="/" className="fakeButton">NEW</a>
+              &nbsp;&nbsp;&nbsp;
+              <a href="/" className="groups-index-links">Explore</a>
+              &nbsp;&nbsp;&nbsp;
+              <a href="/" className="groups-index-links">Messages</a>
+              &nbsp;&nbsp;&nbsp;
               <a href="/" className="groups-index-links">Notifications</a>
             </div>
             <div className="topRight">

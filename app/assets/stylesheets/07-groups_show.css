@@ -1,0 +1,19 @@
+.header-stripe {
+    height: 377px;
+    border: 2px solid blue;
+}
+
+.menu-stripe {
+    height: 67px;
+    border: 2px solid blue;
+}
+
+.page-wrapper {
+    height: 2165px;
+    border: 2px solid blue;
+}
+
+.related-events {
+    height: 984px;
+    border: 2px solid blue;
+}
