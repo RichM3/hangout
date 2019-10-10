@@ -134,7 +134,17 @@ img:hover {
     height: auto;
 }
 
+.clearfix {
+    content: "";
+    clear: both;
+    display: table;
+}
+
 .fillerImg {
+
+    float: left;
+
+
     padding-top: 10px;
     /* cursor: pointer; */
     /* margin-right: auto; */
@@ -279,7 +289,10 @@ img:hover {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    display: flex;
+
+
+
+    /* display: flex; */
     /* display: block; */
     /* list-style-type: disc;
     margin-block-start: 1em;
@@ -296,6 +309,7 @@ img:hover {
     /* border: 3px solid blue; */
     /* align-items: flex-end; */
     /* margin-bottom: -30px; */
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 
     justify-content: flex-end;
     display: flex;

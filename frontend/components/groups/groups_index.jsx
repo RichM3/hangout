@@ -65,6 +65,7 @@ class GroupsIndex extends React.Component {
                         <h2 className="myheader">YOUR GROUPS</h2>
                         <ul className="box-ul">
                             {inGroups}
+                            <div className="clearfix"></div>
                         </ul>
                         <h2 className="myheader">SUGGESTED GROUPS</h2>
                         <ul className="box-ul">

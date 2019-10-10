@@ -9,7 +9,7 @@ const GroupsIndexItem = props => {
     <li className="li-formatting">
     {/* <label htmlFor="groupname">Group Name: </label> */}
     <Link to={`/groups/${props.group.id}`}>{props.group.groupname}</Link>
-    <p>{props.group.description}</p>
+    {/* <p>{props.group.description}</p> */}
     <p>{props.group.location}</p>
     {/* <img className="fillerImg" src={fillerImg} /> */}
     </li>
