@@ -38,82 +38,82 @@ Group1 = Group.create(
     groupname: "Coders For Css",
     description: "Coders who love CSS",
     location: "NYC",
-    leader_id: 1
+    leader_id: DemoUser.id
 )
 
 Group2 = Group.create(
     groupname: "The Coffee Spot",
     description: "For chocolate lovers and more",
     location: "Philly",
-    leader_id: 2
+    leader_id: DemoUser.id
 )
 
 Group3 = Group.create(
-    groupname: "Bronco fans of NYC",
-    description: "Denver Broncos fans in NYC",
-    location: "NY",
-    leader_id: 3
+    groupname: "Learning Chinese",
+    description: "Enthusiast of learning chinese in upstate NY",
+    location: "Upstate NY",
+    leader_id: MarieUser.id
 )
 
 Group4 = Group.create(
-    groupname: "Rails professional of North NJ",
+    groupname: "Rails Professionals",
     description: "We are the best of the NNJ area",
     location: "NJ",
-    leader_id: 4
+    leader_id: JeffUser.id
 )
 
 Group5 = Group.create(
     groupname: "Data Driven NYC",
     description: "A venture capital firm",
     location: "Connecticut",
-    leader_id: 1
+    leader_id: DemoUser.id
 )
 
 Group6 = Group.create(
-    groupname: "Flat Earthers NYC",
-    description: "We will prove the earth is flat",
+    groupname: "Green Earthers",
+    description: "We will save the earth",
     location: "NYC",
-    leader_id: 3
+    leader_id: JeffUser.id
 )
 
 Group7 = Group.create(
     groupname: "Mens Wellness",
     description: "Mens wellness and health community",
     location: "NJ",
-    leader_id: 1
+    leader_id: DemoUser.id
 )
 
 Group8 = Group.create(
     groupname: "Long Distance Runners",
     description: "5k and more is our motto",
     location: "Anywhere",
-    leader_id: 1
+    leader_id: DemoUser.id
 )
 
 Group9 = Group.create(
-    groupname: "Learning Chinese",
-    description: "Enthusiast of learnin chinese in upstate NY",
-    location: "Upstate NY",
-    leader_id: 1
+    groupname: "Bronco fans",
+    description: "Denver Broncos fans in NYC",
+    location: "NY",
+    leader_id: JeffUser.id
 )
 
 Group10 = Group.create(
-    groupname: "Subway riders NYC",
+    groupname: "Subway riders stories",
     description: "We message about our wonderful subway experiences",
     location: "NYC",
-    leader_id: 2
+    leader_id: EugeneUser.id
 )
 
 Group11 = Group.create(
     groupname: "Free NYC Photography Workshops",
     description: "We will teach you the best shots of NYC",
     location: "NYC",
-    leader_id: 2
+    leader_id: EugeneUser.id
 )
 
 Group12 = Group.create(
-    groupname: "Connecticut Soccor",
+    groupname: "New England Soccor",
     description: "Soccor - we meet all over Connecticut to play",
     location: "Connecticut",
-    leader_id: 3
+    leader_id: MarieUser.id
 )

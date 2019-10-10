@@ -154,14 +154,7 @@ img:hover {
     color: #ffffff;
     /* color: black; */
 
-    background-image: url('peopleHangout.png');
-
-
-    /* background-image: url('wafflejoke.png'); */
-    background-size: contain;
-
     margin-left: 15px;
-
 
     font-size: 22px;
     line-height: 1.45;
@@ -171,17 +164,12 @@ img:hover {
     /* opacity: 0.5; */
 
 
-
-    /* background: no-repeat; */
-
-    /* list-style-image: url('wafflejoke.png'); */
-
-    /* background-color: green */
-    /* background-image: url("https://imgur.com/t/fall/KJgCjI5"); */
-   /* background: url('http://www.martin.com/color/small/red305.1.gif') no-repeat bottom center; */
-   /* background: url('https://imgur.com/t/fall/KJgCjI5') no-repeat bottom center; */
-      /* window.magnifyURL = "<%= image_url('magnify.png') %>"; */
-/* <img className="fillerImg" src={fillerImg} /> */
+    /* background-image: url('peopleHangout.png'); */
+    
+    // This sets the background image to the image mapped in the window - application.html.erb in views layouts
+    // Also must change file extension to scss from css
+    background: { image: asset_url("peopleHangout.png") }
+    background-size: contain;
 }
  
 
