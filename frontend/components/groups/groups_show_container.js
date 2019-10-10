@@ -4,10 +4,11 @@ import { fetchGroup } from '../../actions/group_actions';
 
 const msp = (state, ownProps) => {
     let groupId = ownProps.match.params.groupId;
-    // debugger
+    let currentUser = state.entities.users[state.session.id];
 
     return({
-        group: state.entities.groups[groupId]
+        group: state.entities.groups[groupId],
+        currentUser: currentUser
     })
 }
 

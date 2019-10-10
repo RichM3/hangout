@@ -1,0 +1,169 @@
+/* ---------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------- */
+/* Header Section */
+/* ---------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------- */
+
+.header-stripe {
+    border-top: 2px solid #e6e7e9;
+    // height: 377px;
+    background-color: #ffffff;
+    // padding-bottom: 20px;
+
+    // border: 2px solid blue;
+}
+
+.header-inner {
+    margin-top: 20px;
+    // padding-bottom: 300px;
+    // padding-top: 20px;
+    width: 60%;
+    display: flex;
+    height: 356px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: content-box;
+
+    // border: 2px solid blue;
+}
+
+.header-left {
+    // border: 2px solid blue;
+
+    height: 377px;
+    padding-right: 55px;
+    // width: 50%;
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.header-left img {
+    margin-top: -50px;
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+    padding-bottom: 10px;
+}
+
+// @media only screen and (max-width: 1024px) {
+// @media only screen and (min-width: 840px) {
+    .header-right {
+        line-height: 1.45;
+        font-family: "Graphik Meetup",helvetica,arial,sans-serif;
+        font-weight: 900;
+        font-size: 38px;
+        width: 50%;
+        height: 377px;
+        // border: 2px solid blue;
+    }
+// }
+
+.header-right p {
+    line-height: 1.45;
+    font-family: "Graphik Meetup",helvetica,arial,sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+// .header-right-smallfont {
+//     line-height: 1.45;
+//     font-family: "Graphik Meetup",helvetica,arial,sans-serif;
+//     font-weight: 900;
+//     font-size: 14px;
+// }
+
+.group_show_icons {
+    width: 20px;
+    height: 20px;
+}
+
+.group_show_icons_wrapper {
+    display: flex;
+}
+
+.spacer {
+    height: 10px;
+}
+
+
+/* ---------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------- */
+/* Menu Section  - color scheme for page selected menu item: #2e3e48
+ - color scheme for non-selected menu item: #2aa8cb  */
+
+/* ---------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------- */
+.menu-stripe {
+    border-top: 1px solid #e6e7e9;
+    height: 67px;
+    background-color: #ffffff;
+
+
+    // border: 2px solid blue;
+}
+
+.menu-div {
+    width: 60%;
+    display: flex;
+    align-items: center;
+
+    margin-left: auto;
+    margin-right: auto;
+    height: 67px;
+}
+
+.menu-choices {
+    align-items: center;
+    padding: 10px 40px 10px 0;    
+    color: #2e3e48;
+}
+
+.menu-selected {
+    align-items: center;
+    padding: 10px 40px 10px 0;    
+    color: #2aa8cb;
+}
+
+
+
+/* ---------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------- */
+/* Wrapper Section - color scheme for page section #f6f7f8 */
+/* ---------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------- */
+.page-wrapper {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
+    // border: 2px solid blue;
+}
+
+.page-wrapper h1 {
+        line-height: 1.45;
+        font-family: "Graphik Meetup",helvetica,arial,sans-serif;
+        font-weight: 900;
+        font-size: 20px;
+}
+
+
+.page-wrapper p {
+        line-height: 1.45;
+        font-family: "Graphik Meetup",helvetica,arial,sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+}
+
+/* ---------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------- */
+/* Events Section - color scheme for page section #f6f7f8 */
+/* ---------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------- */
+.related-events {
+    height: 100px;
+    // border: 2px solid blue;
+}
+
