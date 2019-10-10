@@ -1,5 +1,5 @@
 class UserGroup < ApplicationRecord
-    validates :user_id, :group_id, pressence: true, uniqueness: true
+    validates :user_id, :group_id, presence: true, uniqueness: true
 
   has_many :joined_groups,
     primary_key: :id,
