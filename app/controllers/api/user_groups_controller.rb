@@ -1,6 +1,6 @@
 class Api::UserGroupsController < ApplicationController
 
-    before_action logged_in?
+    before_action :enusre_logged_in
 
     # def new
     #     @userGroup = @UserGroup.new
