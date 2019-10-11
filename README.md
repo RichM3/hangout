@@ -54,13 +54,16 @@ The Navbar was a point of focus because the height, the colors and the number of
 <p>
 To ensure that the error messages did not persist in the state the below code was applied to clear out the errors from the state.  The below method clearErrors would trigger an action creator that would cause the reducer to clear out the error messages from the sessions error reducer using a switch statement.
 </p>
-```
+
+```javascript
 componentWillUnmount() {
     this.props.clearErrors();
 }
 ```
+
 <br>
-```
+
+```javascript
 const sessionErrorsReducer = (state = _nullErrors, action) => {
   Object.freeze(state);
   switch (action.type) {
@@ -75,6 +78,7 @@ const sessionErrorsReducer = (state = _nullErrors, action) => {
   }
 };
 ```
+
 <br>
 <br>
 
@@ -83,10 +87,11 @@ const sessionErrorsReducer = (state = _nullErrors, action) => {
 
 <p>To get the page to autofocus in the login's username text input it required the use of a react ref.   React Refs are useful features that reference a DOM element or a class component from within a parent component, giving access to read or modify an element.  Below is the code implemented in the componentDidMount lifecycle method and the ref callback used in the html input.  An image of the login form is included below.</p>
 
+```javascript
 componentDidMount() {
     this.username.focus();
 }
-```
+
 <input type="text"
     name="username"
     ref={(input) => { this.username = input; }} />
