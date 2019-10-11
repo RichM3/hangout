@@ -18,6 +18,10 @@ class LoginForm extends React.Component {
     this.props.clearErrors();
   }
 
+  componentDidMount() {
+    this.username.focus();
+  }
+
   handleDemo(e) {
     e.preventDefault();
     const demo = Object.assign({}, { username: 'DemoUser', password: 'password123' })
@@ -75,6 +79,8 @@ class LoginForm extends React.Component {
                 value={this.state.username}
                 onChange={this.update('username')}
                 className="login-input"
+                name="username"
+                ref={(input) => { this.username = input; }}
               />
             </label>
             

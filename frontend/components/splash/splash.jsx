@@ -50,21 +50,21 @@ const Splash = () => {
                     </div>
                 </div></a>
                 <a href="#"><div className="splash-section-event">
-                    <div className="spl-evt-date">FRI, OCT 11, 1:30 PM</div>
-                    <div className="spl-evt-name">Financial Accounting Course Help- OPEN HOUSE</div>
-                    <div className="spl-evt-group">International Group of Learners and ...</div>
-                    <div className="spl-evt-location">Astor Place</div>
+                    <div className="spl-evt-date">SAT, OCT 12, 11:00 AM</div>
+                    <div className="spl-evt-name">Learning German in NYC</div>
+                    <div className="spl-evt-group">Language Learners and Enthusiasts of NYC</div>
+                    <div className="spl-evt-location">620 Madison Ave</div>
 
                     <div className="spl-evt-lower">
-                        <div className="spl-evt-attendees">7 attendees</div>
+                        <div className="spl-evt-attendees">16 attendees</div>
                         <div className="spl-evt-attend-btn">Attend</div>
                     </div>
                 </div></a>
                 <a href="#"><div className="splash-section-event">
-                    <div className="spl-evt-date">FRI, OCT 11, 1:30 PM</div>
-                    <div className="spl-evt-name">Financial Accounting Course Help- OPEN HOUSE</div>
-                    <div className="spl-evt-group">International Group of Learners and ...</div>
-                    <div className="spl-evt-location">Astor Place</div>
+                    <div className="spl-evt-date">SUN, OCT 13, 9:30 PM</div>
+                    <div className="spl-evt-name">Literature, Concepts, and Knowledge</div>
+                    <div className="spl-evt-group">Connecticut Book Club</div>
+                    <div className="spl-evt-location">Sacred Heart Bookstore</div>
 
                     <div className="spl-evt-lower">
                         <div className="spl-evt-attendees">7 attendees</div>
