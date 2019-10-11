@@ -46,6 +46,7 @@ The Navbar was a point of focus because the height, the colors and the number of
 
 ![NavbarFull](./ReadmeImages/NavbarFull.png)
 <br>
+<br>
 
 
 <h1>Ensure errors do not persist</h1>
@@ -71,6 +72,7 @@ const sessionErrorsReducer = (state = _nullErrors, action) => {
       return state;
   }
 };
+<br>
 <br>
 
 
