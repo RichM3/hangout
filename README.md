@@ -1,6 +1,6 @@
-<h1>Hangout - Cloned Meetup App</h1>
-
-<h1>August 2019 App Academy Cohort</h1>
+<h1>Hangout</h1>
+<p> Below is the description of the Hangout application, a clone of the meetup.com application.  The architecture and features of the application are discussed as well as areas of interest.  Code snippets and images are also supplied.  A link to the online application is here >> http://hangout-aa.herokuapp.com/ </p>
+<br>
 
 <h1>Architecture and Technologies</h1>
 Hangout implements the below technologies:
@@ -24,16 +24,18 @@ Hangout implements the below technologies:
 <p>
 Hangout is a single-page, full-stack web application modeled after MeetUp.  Hangout, mimics the same frontend UI features and matches the theme of the meetup website using matching hover effects, color schemes, font and placement of the html elements using React components.  The clone was implemented using Ruby on Rails, PostgresSQL, React and Redux.  
 </p>
+<br>
 
 <h1>Authorization</h1>
 <p>Hangout uses backend authentication through the use of a password disgest.  The password digest is hashed using BCrypt and stored in a DB.  There is also a persisted user state which allows a user to remain logged in through refresh with cookies. The approrate error messages will also appear when a user logs in incorrectly or enters an invalid sign up form.  The application allows the user to navigate to the sign in page and signup to the application assumming the user creates a password of at least 6 characters.  The login page allows the user to login if they have successfully signed up previously or use the DemoUser provided.
 </p>
+<br>
 
 <h1>Groups</h1>
 <p>The application currently sorts seeded database data based on whether the user is a leader of the group.  If they are a leader once logged in they are directed to a page that sorts groups they lead on top and suggests other groups to join, this is the group_index page.  Once on the group_index the user may view more group details by linking to the group_show page that displays all group related information.
 </p>
 
-<h1>Navbar</h2>
+<h1>Navbar</h1>
 
 ![Navbar](./ReadmeImages/Navbar.png)
 
@@ -44,8 +46,9 @@ This Navbar was a point of focus because the height, the colors and the number o
 ![NavbarFull](./ReadmeImages/NavbarFull.png)
 
 
+<br>
 
-<h3>Autofocus in React</h3>
+<h1>Autofocus in React</h1>
 
 <p>To get the page to autofocus in the login's username text input it required the use of a react ref.   React Refs are useful features that reference a DOM element or a class component from within a parent component, giving access to read or modify an element.  Below is the code implemented in the componentDidMount lifecycle method and the ref callback used in the html input.  An image of the login form is included below.</p>
 
