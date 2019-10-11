@@ -34,19 +34,45 @@ Hangout is a single-page, full-stack web application modeled after MeetUp.  Hang
 <h1>Groups</h1>
 <p>The application currently sorts seeded database data based on whether the user is a leader of the group.  If they are a leader once logged in they are directed to a page that sorts groups they lead on top and suggests other groups to join, this is the group_index page.  Once on the group_index the user may view more group details by linking to the group_show page that displays all group related information.
 </p>
+<br>
 
 <h1>Navbar</h1>
 
 ![Navbar](./ReadmeImages/Navbar.png)
 
 <p>
-This Navbar was a point of focus because the height, the colors and the number of right-side links would change on each page.  This required a switch statement that would modify the right-side of the navigation bar based on the page implementing it.  A property passed into the Navbar through the MapStateToProps called sourceType was the condition for the switch.
+The Navbar was a point of focus because the height, the colors and the number of right-side links would change on each page.  This required a switch statement that would modify the right-side of the navigation bar based on the page implementing it.  A property passed into the Navbar through the MapStateToProps called sourceType was the condition for the switch.
 </p>
 
 ![NavbarFull](./ReadmeImages/NavbarFull.png)
-
-
 <br>
+
+
+<h1>Ensure errors do not persist</h1>
+
+<p>
+To ensure that the error messages did not persist in the state the below code was applied to clear out the errors from the state.  The below method clearErrors would trigger an action creator that would cause the reducer to clear out the error messages from the sessions error reducer using a switch statement.
+</p>
+
+componentWillUnmount() {
+    this.props.clearErrors();
+}
+<br>
+const sessionErrorsReducer = (state = _nullErrors, action) => {
+  Object.freeze(state);
+  switch (action.type) {
+    case RECEIVE_SESSION_ERRORS:
+      return action.errors;
+    case RECEIVE_CURRENT_USER:
+      return _nullErrors;
+    case CLEAR_ERRORS:
+      return _nullErrors;
+    default:
+      return state;
+  }
+};
+<br>
+
 
 <h1>Autofocus in React</h1>
 
