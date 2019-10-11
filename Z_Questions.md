@@ -1,3 +1,18 @@
+--- Code to review for Readme
+<h3>Ensure errors do not persist</h3>
+
+componentWillUnmount() {
+    this.props.clearErrors();
+}
+
+<h3>Ensure Page Starts at top</h3>
+componentDidMount() {
+    window.scrollTo(0, 0)
+}
+
+
+
+
 
 - Why is this?
 <!-- <script type="text/javascript">

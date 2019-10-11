@@ -40,4 +40,16 @@ similar to the greeting component in BenchBNB -- they exist only if the page is 
 15) Div development for all pages - using divs to map all code
 
 
+--- Code to review for Readme
+<h3>Ensure errors do not persist</h3>
+
+componentWillUnmount() {
+    this.props.clearErrors();
+}
+
+<h3>Ensure Page Starts at top</h3>
+componentDidMount() {
+    window.scrollTo(0, 0)
+}
+
 

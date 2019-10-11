@@ -12,8 +12,17 @@ rails db:drop
 
 
 
+-- Tech versions of the application w commands
+JavaScript 
+Ruby 2.5.1      -- ruby -v
+React 16.10.2   -- npm list react
+Redux 4.0.4     -- npm list redux
+Ruby on Rails 5.2.3     -- rails -v
+PostgreSQL
+webpack 4.41.0          -- npm list webpack
 
-npm redux-thunk ?????
+
+
 
 rails routes                    ==> Show route information
 rails s                         ==> start rails
