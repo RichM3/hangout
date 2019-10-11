@@ -100,7 +100,16 @@ h2.login-label {
     text-align: center;
     background-color: #ed1c40;
     color: white;
- }
+  }
+
+.session-submit:hover {
+  background-color: #ca1635;
+  transition: all 0.3s ease 0s
+    /* background-color: #b90b29; */
+    /* background-color: #de1a3c; */
+}
+
+
 
 
 .log-labels {

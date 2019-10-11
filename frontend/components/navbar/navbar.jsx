@@ -43,7 +43,7 @@ class Navbar extends React.Component {
               &nbsp;&nbsp;&nbsp;
             </div>
             <div className="topRight">
-              <GreetingContainer />
+            <GreetingContainer sourceType={"splash"} />
             </div>
           </>;
         break;

@@ -37,5 +37,7 @@ similar to the greeting component in BenchBNB -- they exist only if the page is 
 
 14) used clearfix CSS solution and FLOAT left to ensure the GroupIndex page held data vertically and did not travel outside of the containg div.
 
-15) 
+15) Div development for all pages - using divs to map all code
+
+
 

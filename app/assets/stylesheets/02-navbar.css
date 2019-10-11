@@ -60,6 +60,10 @@
     border-left: 1px solid rgba(46,62,72,.12);
 }
 
+.experience:hover {
+  color: #0088a9;;
+}
+
 .myLinks {
     font-size: 14px;
     color: #0088a9;
@@ -92,8 +96,19 @@
     transition: all 0.3s ease 0s
 }
 
-.fakeButton {
+.myLinks_splash {
+    font-size: 14px;
+    color: #818b92;
+    text-decoration: none;
+    margin-right: 20px;
+}
 
+.myLinks_splash:hover {
+    color: #0088a9;
+    transition: all 0.3s ease 0s
+}
+
+.fakeButton {
   background: #0098AB;
   color: white;
   /* float: right; */
