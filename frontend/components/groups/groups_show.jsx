@@ -11,6 +11,7 @@ class GroupsShow extends React.Component {
 
         let groupId = this.props.match.params.groupId;
         this.props.fetchGroup(groupId);
+        // let leader_name = "";
     }
 
     render() {
@@ -56,7 +57,11 @@ class GroupsShow extends React.Component {
                             <div className="group_show_icons" >
                                 <img src={leader} />
                             </div>
-                            <p>&nbsp;&nbsp;&nbsp;Organized by: {this.props.currentUser.username}</p>
+                            <p>&nbsp;&nbsp;&nbsp;Organized by: {this.props.group.leaderName }</p>
+                            {/* <p>&nbsp;&nbsp;&nbsp;Organized by: {this.props.group.leader_id}</p> */}
+                            {/* <p>&nbsp;&nbsp;&nbsp;Organized by: {this.props.currentUser.username}</p> */}
+                            {/* <p>&nbsp;&nbsp;&nbsp;Organized by: {this.props.currentUser.id}</p> */}
+                            {/* <p>&nbsp;&nbsp;&nbsp;Organized by: {this.props.group.leader.username}</p> */}
                         </div>
 
                     </div>
@@ -81,6 +86,14 @@ class GroupsShow extends React.Component {
                     </div>
                     <div className="menu-choices">
                         More
+                    </div>
+                    <div className="join-button" >
+                        Join this group
+                    </div>
+                    <div className="grp-btn-spacer">
+                        <div className="report-button" >
+                            ...
+                        </div>
                     </div>
                 </div>
             </div>

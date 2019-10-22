@@ -30,7 +30,7 @@ class GroupsIndex extends React.Component {
 
         let inGroups = this.props.inGroups.map( group => {
             return (
-                <GroupsItemIndex group={group} key={group.id} />
+                <GroupsItemIndex group={group} key={group.id} member={group.leader_id}/>
             );
         })
 

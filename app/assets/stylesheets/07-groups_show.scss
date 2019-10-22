@@ -127,6 +127,47 @@
     color: #2aa8cb;
 }
 
+.join-button {
+    width: 100px;
+    height: 20px;
+
+    background-color: #f65858;
+    border: 1px solid #f65858;
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    padding: 10px 20px;
+//   padding: 4px 5px 3px 5px;
+}
+
+.report-button {
+    width: 20px;
+    height: 20px;
+
+    text-align: center;
+    background-color: #ffffff;
+    border: 1px solid #c5c4c4;
+    color: #757575;
+    font-size: 14px;
+    font-weight: 900;
+    text-decoration: none;
+
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    padding: 10px 10px 10px 10px;
+    // margin: 0px 0px 10px 10px;
+}
+
+.grp-btn-spacer {
+    padding: 0 0 0 18px;
+}
+
+// font for dots: 
 
 
 /* ---------------------------------------------------------------------------------------- */

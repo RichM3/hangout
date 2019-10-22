@@ -13,3 +13,10 @@ export const fetchGroup = (id) => {
     })
 }
 
+// export const fetchLeaderName = (leaderId) => {
+//     return $.ajax({
+//         method: "get",
+//         url: `api/users/${leaderId}`
+//     })
+// }
+
