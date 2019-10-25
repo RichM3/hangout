@@ -10,6 +10,8 @@ npm run webpack
 -- Drop the db
 rails db:drop
 
+-- include DB schema in each model
+bundle exec annotate
 
 
 -- Tech versions of the application w commands

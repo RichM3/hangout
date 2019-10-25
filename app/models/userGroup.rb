@@ -1,3 +1,12 @@
+# == Schema Information
+#
+# Table name: usergroups
+#
+#  id       :bigint           not null, primary key
+#  user_id  :integer          not null
+#  group_id :integer          not null
+#
+
 class Usergroup < ApplicationRecord
     validates :user_id, :group_id, presence: true
     # removed uniqueness constraint because on the user_id and group_id individually not together
