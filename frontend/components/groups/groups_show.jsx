@@ -11,7 +11,6 @@ class GroupsShow extends React.Component {
 
         let groupId = this.props.match.params.groupId;
         this.props.fetchGroup(groupId);
-        // let leader_name = "";
     }
 
     render() {
