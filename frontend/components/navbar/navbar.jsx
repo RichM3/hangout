@@ -1,5 +1,6 @@
 import React from 'react';
 import GreetingContainer from "../greeting/greeting_container";
+import { Link } from 'react-router-dom';
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -34,60 +35,63 @@ class Navbar extends React.Component {
         logoCss = "logo-splash";
         renderRightLinks =
           <>
-            <div className="nav__links">
-              <a href="/" className={hClass}><b>Start a new group</b></a>
-              &nbsp;&nbsp;&nbsp;
-              <a href="/" className="experience">Experiences</a>
-              &nbsp;&nbsp;&nbsp;
-              <a href="/" className="fakeButton">NEW</a>
-              &nbsp;&nbsp;&nbsp;
-            </div>
-            <div className="topRight">
-            <GreetingContainer sourceType={"splash"} />
-            </div>
+          <div className="nav__links">
+            <Link to={`/groups/create`} className={hClass}><b>Start a new group</b></Link>
+            {/* <a href="#/groups/create" className={hClass}><b>Start a new group</b></a> */}
+            &nbsp;&nbsp;&nbsp;
+            <a href="/" className="experience">Experiences</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="/" className="fakeButton">NEW</a>
+            &nbsp;&nbsp;&nbsp;
+          </div>
+          <div className="topRight">
+          <GreetingContainer sourceType={"splash"} />
+          </div>
           </>;
         break;
       case "groups_index":
         renderRightLinks =
           <>
-            <div className="nav__links">
-              <a href="/" className={hClass}><b>Start a new group</b></a>
-              &nbsp;&nbsp;&nbsp;
-              <a href="/" className="experience">Experiences</a>
-              &nbsp;&nbsp;&nbsp;
-              <a href="/" className="fakeButton">NEW</a>
-              &nbsp;&nbsp;&nbsp;
-              <a href="/" className="groups-index-links">Explore</a>
-              &nbsp;&nbsp;&nbsp;
-              <a href="/" className="groups-index-links">Messages</a>
+          <div className="nav__links">
+            <Link to={`/groups/create`} className={hClass}><b>Start a new group</b></Link>
+            {/* <a href="#/groups/create" className={hClass}><b>Start a new group</b></a> */}
             &nbsp;&nbsp;&nbsp;
-              <a href="/" className="groups-index-links">Notifications</a>
-            </div>
-            <div className="topRight">
-              <GreetingContainer />
-            </div>
+            <a href="/" className="experience">Experiences</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="/" className="fakeButton">NEW</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="/" className="groups-index-links">Explore</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="/" className="groups-index-links">Messages</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="/" className="groups-index-links">Notifications</a>
+          </div>
+          <div className="topRight">
+            <GreetingContainer />
+          </div>
           </>;
         break;
       case "groups_show":
         logoCss = "logo-show";
         renderRightLinks =
           <>
-            <div className="nav__links">
-              <a href="/" className={hClass}><b>Start a new group</b></a>
-              &nbsp;&nbsp;&nbsp;
-              <a href="/" className="experience">Experiences</a>
-              &nbsp;&nbsp;&nbsp;
-              <a href="/" className="fakeButton">NEW</a>
-              &nbsp;&nbsp;&nbsp;
-              <a href="/" className="groups-index-links">Explore</a>
-              &nbsp;&nbsp;&nbsp;
-              <a href="/" className="groups-index-links">Messages</a>
-              &nbsp;&nbsp;&nbsp;
-              <a href="/" className="groups-index-links">Notifications</a>
-            </div>
-            <div className="topRight">
-              <GreetingContainer />
-            </div>
+          <div className="nav__links">
+            <Link to={`/groups/create`} className={hClass}><b>Start a new group</b></Link>
+            {/* <a href="/groups/create" className={hClass}><b>Start a new group</b></a> */}
+            &nbsp;&nbsp;&nbsp;
+            <a href="/" className="experience">Experiences</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="/" className="fakeButton">NEW</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="/" className="groups-index-links">Explore</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="/" className="groups-index-links">Messages</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="/" className="groups-index-links">Notifications</a>
+          </div>
+          <div className="topRight">
+            <GreetingContainer />
+          </div>
           </>;
         break;
       case "signUpForm":
@@ -98,12 +102,13 @@ class Navbar extends React.Component {
       default:
         renderRightLinks =
           <>
-            <div className="nav__links">
-              <a href="/" className={hClass}><b>Start a new group</b></a>
-            </div>
-            <div className="topRight">
-              <GreetingContainer />
-            </div>
+          <div className="nav__links">
+            <Link to={`/groups/create`} className={hClass}><b>Start a new group</b></Link>
+            {/* <a href="/groups/create" className={hClass}><b>Start a new group</b></a> */}
+          </div>
+          <div className="topRight">
+            <GreetingContainer />
+          </div>
           </>;
         break;
     }
