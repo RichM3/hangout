@@ -2,8 +2,18 @@ import { connect } from 'react-redux';
 import GroupsCreate from './groups_create';
 
 const msp = (state, ownProps) => {
-    return({
+    let currentUser = state.entities.users[state.session.id];
+    const group = {
+        name: '',
+        description: '',
+        location_id: '',
+        organizer_id: currentUser.id 
+    }
+    // debugger
 
+    return({
+        group: group
+        //, currentUser: currentUser
     })
 }
 

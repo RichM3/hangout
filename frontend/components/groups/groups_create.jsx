@@ -4,8 +4,20 @@ import NavbarContainer from '../navbar/navbar_container';
 import FooterContainer from '../footer/footer_container';
 
 class GroupsCreate extends React.Component {
+    constructor(props) {
+        super(props);
+        // this.state = this.props;
+        this.state = {
+            name: '',
+            description: '',
+            location_id: '',
+            organizer_id: this.props.group.organizer_id
+        }
+        // debugger
+    }
 
-
+    
+    
 
 
     render() {
@@ -14,6 +26,7 @@ class GroupsCreate extends React.Component {
             <NavbarContainer navType={"groups_create"} myType={""} />
             <div className="create-banner">
                 <span className="create-text">Create a Group</span>
+                {/* {this.state.organizer_id } */}
             </div>
 
             <div className="group-create-container">
