@@ -6,6 +6,13 @@ bundle exec rails db:setup               ==> create the DB
 
 npm run webpack
 
+---- Notes
+Update footer links
+Save top icon in browser window local
+set text input to email on login page
+
+
+
 
 -- Drop the db
 rails db:drop

@@ -1,0 +1,92 @@
+.group-create-container {
+  /* bottom of header bar here  */
+  border: 1px solid #dcdcdc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  /* height: 500px; */
+  background-color: #fafafa;
+  font-family: "Graphik Meetup",helvetica,arial,sans-serif;
+}
+
+.create-banner{
+  /* border: 1px solid black; */
+  font-size: 42px;
+  height: 150px;
+  background-color:#00455d;
+  text-align: center;
+}
+
+.group-create-container form {
+  /* border: 1px solid black; */
+  width: 800px;
+  background-color: #fafafa;
+  line-height: 1.45;
+ }
+
+.create-text {
+  /* border: 1px solid black; */
+  position: relative;
+  top: 50px;
+  color: #fafafa;
+  font-weight: bold;
+}
+
+.group-create-container input[type="text"] {
+  border: 1px solid black;
+  margin: 10px 10px 10px 10px;
+  width: 1200px;
+}
+
+.group-create-container textarea {
+  border: 1px solid black;
+  margin: 10px 10px 10px 10px;
+  width: 1200px;
+  height: 200px;
+}
+
+.group-create-container label {
+  /* border: 1px solid black; */
+  width: 800px;
+  font-size: 30px;
+  margin: 10px 10px 10px 10px;
+  vertical-align: middle;
+}
+
+.create-submit {
+  width: 130px;
+  height: 50px;
+  text-align: center;
+  /* background: #0098AB; */
+  background: #00455d;
+  color: white;
+  font-size: 20px;
+  padding: 5px 5px 5px 5px;
+  text-decoration: none;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.create-submit:hover {
+  background: #017896;
+}
+
+.inner-form-container {
+  /* border: 1px solid black; */
+  font-size: 20px;
+}
+
+.inner-item-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inner-item-container-btn {
+  padding : 20px 0px 0px 0px;
+  text-align: center;
+}

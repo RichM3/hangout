@@ -94,6 +94,26 @@ class Navbar extends React.Component {
           </div>
           </>;
         break;
+      case "groups_create":
+        logoCss = "logo-splash";
+        renderRightLinks =
+          <>
+          <div className="nav__links">
+            <a href="/" className="experience">Experiences</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="/" className="fakeButton">NEW</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="/" className="groups-index-links">Explore</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="/" className="groups-index-links">Messages</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="/" className="groups-index-links">Notifications</a>
+          </div>
+          <div className="topRight">
+            <GreetingContainer />
+          </div>
+          </>;
+        break;
       case "signUpForm":
         logoCss = "logo-signup";
         renderRightLinks = "";
