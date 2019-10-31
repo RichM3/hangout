@@ -25,22 +25,6 @@ class GroupsCreate extends React.Component {
         });
     }
 
-    // handleSubmit(e) {
-    //     e.preventDefault();
-    //     const user = Object.assign({}, this.state);
-    //     this.props.processForm(user);
-    // }
-
-    // handleSubmit(e) {
-    //     e.preventDefault()
-    //     if (!this.props.currentUser) {
-    //         this.props.history.push('/login')
-    //     } else {
-    //         this.props.createGroup(this.state)
-    //             .then(() => this.props.history.push('/meetup'));
-    //     }
-    // }
-
     handleSubmit(e) {
         e.preventDefault()
         // debugger

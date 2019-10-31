@@ -14,6 +14,7 @@ class Api::GroupsController < ApplicationController
                 @usergroup = Usergroup.new(lastGroupId, @group.leader_id)
             end
             if @usergroup.save!
+                # debugger
                 render "api/groups/show"
             else
                 render json: @groups.errors.full_messages, status: 422

@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import GroupsIndex from './groups_index';
 import { fetchGroups } from '../../actions/group_actions';
+import { fetchUserInfo } from '../../actions/session_actions';
 
 const mapStateToProps = ({ session, entities: { users, groups } }, ownProps) => {
     let allGroups = Object.values(groups);
@@ -23,7 +24,8 @@ const mapStateToProps = ({ session, entities: { users, groups } }, ownProps) => 
 };
 
 const mapDispatchToProps = dispatch => ({
-    fetchGroups: () => dispatch(fetchGroups())
+    fetchGroups: () => dispatch(fetchGroups()),
+    fetchUserInfo: () => dispatch(fetchUserInfo())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(GroupsIndex);

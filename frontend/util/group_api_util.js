@@ -21,7 +21,7 @@ export const fetchGroup = (id) => {
 // }
 
 export const createGroup = (group) => {
-    debugger
+    // debugger
     return $.ajax({
         method: "post",
         url: `api/groups`,
