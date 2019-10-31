@@ -1,13 +1,14 @@
 import { connect } from 'react-redux';
 import GroupsCreate from './groups_create';
+import { createGroup } from '../../actions/group_actions';
 
 const msp = (state, ownProps) => {
     let currentUser = state.entities.users[state.session.id];
     const group = {
-        name: '',
+        groupname: '',
         description: '',
-        location_id: '',
-        organizer_id: currentUser.id 
+        location: '',
+        leaderId: currentUser.id 
     }
     // debugger
 
@@ -19,7 +20,7 @@ const msp = (state, ownProps) => {
 
 const mdp = (dispatch) => {
     return({
-
+        createGroup: (group) => dispatch(createGroup(group))
     })
 }
 

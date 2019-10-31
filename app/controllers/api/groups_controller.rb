@@ -3,14 +3,25 @@ class Api::GroupsController < ApplicationController
     # def new
     # end
 
-    # def create
-    #     @group = Group.new(group_params)
-    #     if @group.save! 
-    #         render "api/groups/show"
-    #     else
-    #         render json: @groups.errors.full_messages, status: 422
-    #     end        
-    # end
+    def create
+        @group = Group.new(group_params)
+        
+        if @group.save! 
+            if @group.id
+                @usergroup = Usergroup.new('user_id': @group.leader_id, 'group_id': @group.id)
+            else
+                lastGroupId = Group.last.id
+                @usergroup = Usergroup.new(lastGroupId, @group.leader_id)
+            end
+            if @usergroup.save!
+                render "api/groups/show"
+            else
+                render json: @groups.errors.full_messages, status: 422
+            end
+        else
+            render json: @groups.errors.full_messages, status: 422
+        end
+    end
 
     def index
         @groups = Group.all
@@ -45,7 +56,7 @@ class Api::GroupsController < ApplicationController
 
     private
     def group_params
-        params.require(:group).permit(:groupname, :description, :location, :leaderId)
+        params.require(:group).permit(:groupname, :description, :location, :leader_id)
     end
 
 end

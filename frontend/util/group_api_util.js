@@ -20,3 +20,32 @@ export const fetchGroup = (id) => {
 //     })
 // }
 
+export const createGroup = (group) => {
+    debugger
+    return $.ajax({
+        method: "post",
+        url: `api/groups`,
+        // data: { group }
+        data: {
+            group: {
+            groupname: group.groupname,
+            description: group.description,
+            location: group.location,
+            leader_id: group.leaderId
+            }
+        }
+    })
+}
+
+export const createUserGroup = (group) => {
+    debugger
+    return $.ajax({
+        method: "post",
+        url: `api/usergroups`,
+        // data: { group }
+        data: { 
+            ...group, 
+            leader_id: group.leaderId
+         }
+    })
+}
