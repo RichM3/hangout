@@ -10,8 +10,6 @@ class GroupsIndex extends React.Component {
         this.state = {
             search: ""
         }
-        // this.state = this.props.group;
-        // this.state.leaderId = this.props.group.currentUser.id;
     }
 
     update(field) {
@@ -22,21 +20,13 @@ class GroupsIndex extends React.Component {
 
     componentDidMount() {
         //In the CDM of index
-        debugger
+        // debugger
         window.scrollTo(0, 0)
         // window.scroll({ top: 0, left: 0, behavior: 'smooth' });
         this.props.fetchUserInfo();
         this.props.fetchGroups();
 
     }
-
-    // componentDidUpdate() {
-    // //     //In the CDM of index
-    //     debugger
-    //     window.scrollTo(0, 0)
-    //     // window.scroll({ top: 0, left: 0, behavior: 'smooth' });
-    //     this.props.fetchGroups();
-    // }
 
     render() {
         //In the Render of index
@@ -87,54 +77,12 @@ class GroupsIndex extends React.Component {
                         <ul className="box-ul">
                             {suggestedGroups}
                         </ul>
-                        {/* <div className="motivation-section" >Motivation Section</div>
-                        <ul>Second half of suggested groups</ul> */}
                         <button className="button--showmore" >Show more</button>
                     </div>
                 </div>
             </div>
             <FooterContainer myType={"groups"} />
         </div>
-
-
-                {/* <div className="unit-size5of7-full-width"  >
-                    ul-your-meetups     (your meetups)
-                    H2 between uls
-                    ul-search-results-other-meetups (suggested)
-                    div -- motivation cards
-                    ul-search-results-other-meetups (suggested)
-                    button-more
-                </div> */}
-
-
-
-        {/* <div className="showname" >Hi, {this.props.currentUser.username}!</div>
-
-        <div>
-        </div>
-
-        <section id="groupInputs">
-            <form className="group-form-box">
-                <ul>
-                {groups}
-                </ul>
-            </form>
-        </section>
- */}
-
-
-
-
-
-        {/* <div className="showname" >Hi, {this.state.currentUser.username}!</div> */}
-        {/* <div className="showname" >Hi, {this.state.currentUser.id}!</div>
-        <div className="showname" >Hi, {this.state.leaderId}!</div>
-        <div className="showname" >Hi, {this.state.currentUser.email}!</div>
-
-        <div className="showname" >groupname:, {this.state.groupdatahere }!</div>
-        <div className="showname" >Pw, {this.state.group.password}!</div> */}
-
-
         </>
         );
     }

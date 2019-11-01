@@ -47,6 +47,8 @@ export const logout = () => dispatch => (
   ))
 );
 
+// Added this method to update the user information on the groups index page so that on
+// componentDidMount the information is properly updated for current_user.groupsIn filter in MSP or groupIndex
 export const fetchUserInfo = () => dispatch => (
   APIUtil.fetchUserInfo().then(user => (
     dispatch(receiveCurrentUser(user))
