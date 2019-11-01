@@ -30,7 +30,7 @@ class GroupsIndex extends React.Component {
 
     render() {
         //In the Render of index
-        debugger
+        // debugger
 
         let inGroups = this.props.inGroups.map( group => {
             return (

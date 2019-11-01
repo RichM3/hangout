@@ -37,15 +37,29 @@ export const createGroup = (group) => {
     })
 }
 
-export const createUserGroup = (group) => {
-    debugger
+// export const createUserGroup = (group) => {
+//     // debugger
+//     return $.ajax({
+//         method: "post",
+//         url: `api/usergroups`,
+//         // data: { group }
+//         data: { 
+//             ...group, 
+//             leader_id: group.leaderId
+//          }
+//     })
+// }
+
+export const deleteGroup = (id) => {
     return $.ajax({
-        method: "post",
-        url: `api/usergroups`,
-        // data: { group }
-        data: { 
-            ...group, 
-            leader_id: group.leaderId
-         }
+        method: "delete",
+        url: `api/groups/${id}`
     })
 }
+
+// export const deleteUserGroup = (id) => {
+//     return $.ajax({
+//         method: "delete",
+//         url: `api/usergroups/${id}`
+//     })
+// }
