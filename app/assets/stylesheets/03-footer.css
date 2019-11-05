@@ -72,7 +72,18 @@
     margin-top: 15px;
 }
 
+.no-underline {
+    text-decoration: none !important;
+}
 
+.foot-link-text {
+    /* margin-bottom: 30px; */
+    padding-bottom: 30px;
+}
 
-
+.foot-link-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
 

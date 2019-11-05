@@ -86,14 +86,24 @@ class GroupsShow extends React.Component {
                     <div className="menu-choices">
                         More
                     </div>
-                    <div className="join-button" >
+                    <div>
+                        <Link to="/groups" className="join-button" >Join this group</Link>
+                    </div>
+                    {/* <div className="join-button" >
+                        <Link to="/groups" className="delete-button" >Join this group</Link>
                         Join this group
+                    </div> */}
+                    <div className="grp-btn-spacer"></div>
+                    <div>
+                        <Link to="/groups" className="delete-button" >Delete this group</Link>
                     </div>
-                    <div className="grp-btn-spacer">
-                        <div className="report-button" >
+                        {/* <div className="report-button" >
                             ...
-                        </div>
-                    </div>
+                        </div> */}
+                        {/* <div className="delete-buttonXXX"> */}
+                            {/* <Link to="/groups" className="delete-button" >Delete this group</Link> */}
+                            {/* <a href="" className="delete-buttonXXX"></a> */}
+                        {/* </div> */}
                 </div>
             </div>
             <div className="page-wrapper">
