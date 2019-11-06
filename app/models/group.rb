@@ -23,10 +23,13 @@ class Group < ApplicationRecord
         foreign_key: :leader_id,
         class_name: :User
         
-    has_many :joined_groups,
+    has_many :memberships,
         primary_key: :id,
         foreign_key: :group_id,
-        class_name: :UserGroup
+        class_name: :Usergroup
+
+    has_many :members,
+        through: :memberships
 
 end
 

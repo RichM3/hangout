@@ -7,7 +7,7 @@ json.groups do
                         # debugger
                         json.extract! group, :id, :groupname, :description, :location, :leader_id
                         #beginning of my changes on 11/6
-                        #json.memberIds group.joined_groups.pluck(:user_id)
+                        json.memberIds group.membership_ids   #pluck(:id)
                 end
         end
 end
