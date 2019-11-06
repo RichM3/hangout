@@ -181,7 +181,7 @@ UG10 = Usergroup.create!(
 
 UG11 = Usergroup.create!(
     user_id: EugeneUser.id,
-    group_id: Group10.id
+    group_id: Group11.id
 )
 
 UG12 = Usergroup.create!(
@@ -216,4 +216,21 @@ UG16 = Usergroup.create!(
 UG17 = Usergroup.create!(
     user_id: DemoUser.id,
     group_id: Group10.id
+)
+
+
+# Adding the JeffUser to DemoUser groups as a member
+UG18 = Usergroup.create!(
+    user_id: JeffUser.id,
+    group_id: Group1.id
+)
+
+UG19 = Usergroup.create!(
+    user_id: JeffUser.id,
+    group_id: Group2.id
+)
+
+UG20 = Usergroup.create!(
+    user_id: JeffUser.id,
+    group_id: Group3.id
 )

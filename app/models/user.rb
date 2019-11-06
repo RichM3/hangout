@@ -30,7 +30,8 @@ class User < ApplicationRecord
     class_name: :Usergroup
 
   has_many :groups,
-    through: :memberships
+    through: :memberships,
+    source: :group
 
 
 

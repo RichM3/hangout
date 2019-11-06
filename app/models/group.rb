@@ -29,7 +29,8 @@ class Group < ApplicationRecord
         class_name: :Usergroup
 
     has_many :members,
-        through: :memberships
+        through: :memberships,
+        source: :user
 
 end
 
