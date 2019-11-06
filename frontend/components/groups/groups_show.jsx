@@ -27,30 +27,47 @@ class GroupsShow extends React.Component {
         let members = window.membersURL;
         let leader = window.groupLeaderURL;
 
-        let deleteButton = "";
+
+        // Button options - Leave, Join or Delete only one of 3 options
+
+        // Delete button code
+        let optionButton = "";
+        let groupId = this.props.match.params.groupId;
+        let inGroups = this.props.currentUser.groupIds.includes(parseInt(groupId));
 
         if (this.props.currentUser.username === this.props.group.leaderName) {
-            deleteButton = (
+            optionButton = (
                 <div>
                     <Link to="/groups" className="delete-button" >Delete this group</Link>
                 </div>
             );
         }
-        else {
-            deleteButton = (
+        else if (inGroups) {
+            optionButton = (
                 <div>
+                    <Link to="/groups" className="join-button" >Leave this group</Link>
+                </div>
+            );
+        } else {
+            optionButton = (
+                <div>
+                    <Link to="/groups" className="join-button" >Join this group</Link>
                 </div>
             );
         }
 
 
+
         return(
             <>
-
-            <div>
+            {/* debugging code here ignore */}
+            {/* <div>
                 {this.props.currentUser.username}
                 {this.props.group.leaderName }
-            </div>
+                { inGroups.toString() }
+                { groupId }
+                {this.props.currentUser.groupIds}
+            </div> */}
 
 
             <NavbarContainer navType={"groups_show"} myType={""} />
@@ -81,20 +98,9 @@ class GroupsShow extends React.Component {
                             <p>&nbsp;&nbsp;&nbsp;Organized by: {this.props.group.leaderName }</p>
                         </div>
 
-                            <div className="spacer"> </div>
+                        <div className="spacer"> </div>
 
-                        <div>
-                            <Link to="/groups" className="join-button" >Join this group</Link>
-                        </div>
-                        <div className="grp-btn-spacer"></div>
-
-
-                        { deleteButton }
-                        {/* <div>
-                            <Link to="/groups" className="delete-button" >Delete this group</Link>
-                        </div> */}
-                        {/* <div className="report-button" >...</div> */}
-
+                        { optionButton }
                     </div>
                 </div>
             </div>
