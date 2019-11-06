@@ -27,9 +27,32 @@ class GroupsShow extends React.Component {
         let members = window.membersURL;
         let leader = window.groupLeaderURL;
 
+        let deleteButton = "";
+
+        if (this.props.currentUser.username === this.props.group.leaderName) {
+            deleteButton = (
+                <div>
+                    <Link to="/groups" className="delete-button" >Delete this group</Link>
+                </div>
+            );
+        }
+        else {
+            deleteButton = (
+                <div>
+                </div>
+            );
+        }
+
 
         return(
             <>
+
+            <div>
+                {this.props.currentUser.username}
+                {this.props.group.leaderName }
+            </div>
+
+
             <NavbarContainer navType={"groups_show"} myType={""} />
             <div className="header-stripe">
                 <div className="header-inner" >
@@ -39,7 +62,6 @@ class GroupsShow extends React.Component {
                     <div className="header-right">
 
                         <h2>{this.props.group.groupname}</h2>
-                        <div className="spacer"> </div>
                         <div className="spacer"> </div>
                         <div className="spacer"> </div>
 
@@ -58,6 +80,20 @@ class GroupsShow extends React.Component {
                             </div>
                             <p>&nbsp;&nbsp;&nbsp;Organized by: {this.props.group.leaderName }</p>
                         </div>
+
+                            <div className="spacer"> </div>
+
+                        <div>
+                            <Link to="/groups" className="join-button" >Join this group</Link>
+                        </div>
+                        <div className="grp-btn-spacer"></div>
+
+
+                        { deleteButton }
+                        {/* <div>
+                            <Link to="/groups" className="delete-button" >Delete this group</Link>
+                        </div> */}
+                        {/* <div className="report-button" >...</div> */}
 
                     </div>
                 </div>
@@ -82,14 +118,6 @@ class GroupsShow extends React.Component {
                     <div className="menu-choices">
                         More
                     </div>
-                    <div>
-                        <Link to="/groups" className="join-button" >Join this group</Link>
-                    </div>
-                    <div className="grp-btn-spacer"></div>
-                    <div>
-                        <Link to="/groups" className="delete-button" >Delete this group</Link>
-                    </div>
-                    {/* <div className="report-button" >...</div> */}
                 </div>
             </div>
             <div className="page-wrapper">
