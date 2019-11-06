@@ -17,8 +17,6 @@ class GroupsShow extends React.Component {
 
     render() {
 
-        // debugger
-
         // Needed if the page is returned before the component did mount got the value from the url -- on refresh
         if (!this.props.group) {
             return null
@@ -33,7 +31,6 @@ class GroupsShow extends React.Component {
         return(
             <>
             <NavbarContainer navType={"groups_show"} myType={""} />
-            {/* <script>window.scroll({top: 0, left: 0, behavior: 'smooth' });</script> */}
             <div className="header-stripe">
                 <div className="header-inner" >
                     <div className="header-left">
@@ -60,10 +57,6 @@ class GroupsShow extends React.Component {
                                 <img src={leader} />
                             </div>
                             <p>&nbsp;&nbsp;&nbsp;Organized by: {this.props.group.leaderName }</p>
-                            {/* <p>&nbsp;&nbsp;&nbsp;Organized by: {this.props.group.leader_id}</p> */}
-                            {/* <p>&nbsp;&nbsp;&nbsp;Organized by: {this.props.currentUser.username}</p> */}
-                            {/* <p>&nbsp;&nbsp;&nbsp;Organized by: {this.props.currentUser.id}</p> */}
-                            {/* <p>&nbsp;&nbsp;&nbsp;Organized by: {this.props.group.leader.username}</p> */}
                         </div>
 
                     </div>
@@ -92,21 +85,11 @@ class GroupsShow extends React.Component {
                     <div>
                         <Link to="/groups" className="join-button" >Join this group</Link>
                     </div>
-                    {/* <div className="join-button" >
-                        <Link to="/groups" className="delete-button" >Join this group</Link>
-                        Join this group
-                    </div> */}
                     <div className="grp-btn-spacer"></div>
                     <div>
                         <Link to="/groups" className="delete-button" >Delete this group</Link>
                     </div>
-                        {/* <div className="report-button" >
-                            ...
-                        </div> */}
-                        {/* <div className="delete-buttonXXX"> */}
-                            {/* <Link to="/groups" className="delete-button" >Delete this group</Link> */}
-                            {/* <a href="" className="delete-buttonXXX"></a> */}
-                        {/* </div> */}
+                    {/* <div className="report-button" >...</div> */}
                 </div>
             </div>
             <div className="page-wrapper">
