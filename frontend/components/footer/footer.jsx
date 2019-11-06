@@ -27,23 +27,23 @@ const Footer = (props) => {
         <footer className={fClass}>
             <div className="foot-link-container">
                 <div className="foot-link-text">My Github</div>
-                <div><a class="no-underline" target="_blank" href="https://github.com/RichM3"><i class="fa fa-github  fa-5x" ></i></a></div>
+                <div><a className="no-underline" target="_blank" href="https://github.com/RichM3"><i className="fa fa-github  fa-5x" ></i></a></div>
             </div>
             <div className="foot-link-container">
                 <div className="foot-link-text">My LinkedIn</div>
-                <div><a class="no-underline" target="_blank" href="https://www.linkedin.com/in/rich-meyer3/"><i class="fa fa-linkedin  fa-5x"></i></a></div>
+                <div><a className="no-underline" target="_blank" href="https://www.linkedin.com/in/rich-meyer3/"><i className="fa fa-linkedin  fa-5x"></i></a></div>
             </div>
             <div className="foot-link-container">
                 <div className="foot-link-text">My Angellist</div>
-                <div><a class="no-underline" target="_blank" href="https://angel.co/rich-meyer3"><i class="fa fa-angellist  fa-5x"></i></a></div>
+                <div><a className="no-underline" target="_blank" href="https://angel.co/rich-meyer3"><i className="fa fa-angellist  fa-5x"></i></a></div>
             </div>
             <div className="foot-link-container">
                 <div className="foot-link-text">My Personal Page</div>
-                <div><a class="no-underline" target="_blank" href="https://richm3.github.io"><i class="fa fa-link  fa-5x"></i></a></div>
+                <div><a className="no-underline" target="_blank" href="https://richm3.github.io"><i className="fa fa-link  fa-5x"></i></a></div>
             </div>
             <div className="foot-link-container">
                 <div className="foot-link-text">My Email</div>
-                <div><a class="no-underline" target="_blank" href="mailto:richmeyerjobs@gmail.com"><i class="fa fa-envelope  fa-5x"></i></a></div>
+                <div><a className="no-underline" target="_blank" href="mailto:richmeyerjobs@gmail.com"><i className="fa fa-envelope  fa-5x"></i></a></div>
             </div>
         </footer>
     </>

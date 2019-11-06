@@ -1,7 +1,3 @@
-# json.partial! "api/groups/group", user: @user
-
-
-
 
 json.groups do
         # debugger
@@ -10,6 +6,8 @@ json.groups do
                 json.set! group.id do
                         # debugger
                         json.extract! group, :id, :groupname, :description, :location, :leader_id
+                        #beginning of my changes on 11/6
+                        #json.memberIds group.joined_groups.pluck(:user_id)
                 end
         end
 end

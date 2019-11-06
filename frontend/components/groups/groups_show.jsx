@@ -13,10 +13,13 @@ class GroupsShow extends React.Component {
         this.props.fetchGroup(groupId);
     }
 
+
+
     render() {
 
         // debugger
 
+        // Needed if the page is returned before the component did mount got the value from the url -- on refresh
         if (!this.props.group) {
             return null
         }

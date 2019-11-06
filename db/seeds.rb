@@ -120,8 +120,8 @@ Group12 = Group.create!(
 )
 
 
-# Begin loading data Leader-Memberships to groups - (Groups must have leaders)
-# puts "here1"
+# Begin loading data Leader-Memberships to groups - (Groups must have leaders and those leaders are also group members)
+# Groups led by User1 (DemoUser)
 
 UG1 = Usergroup.create!(
     user_id: DemoUser.id,
@@ -142,12 +142,13 @@ UG4 = Usergroup.create!(
     user_id: DemoUser.id,
     group_id: Group4.id
 )
-# puts "here2"
 
 UG5 = Usergroup.create!(
     user_id: DemoUser.id,
     group_id: Group5.id
 )
+
+# Groups led by User2 (JeffUser)
 
 UG6 = Usergroup.create!(
     user_id: JeffUser.id,
@@ -164,17 +165,19 @@ UG8 = Usergroup.create!(
     group_id: Group8.id
 )
 
+# Groups led by User3 (EugeneUser)
+
 UG9 = Usergroup.create!(
     user_id: MarieUser.id,
     group_id: Group9.id
 )
 
-# puts "here3"
-
 UG10 = Usergroup.create!(
     user_id: MarieUser.id,
     group_id: Group10.id
 )
+
+# Groups led by User4 (MarieUser)
 
 UG11 = Usergroup.create!(
     user_id: EugeneUser.id,
@@ -186,9 +189,9 @@ UG12 = Usergroup.create!(
     group_id: Group12.id
 )
 
-# Begin loading data Memberships to groups - (not leaders)
-# puts "here4"
+# Begin loading memberships to groups - (not leaders)
 
+# Adding the DemoUser to JeffUser groups as a member
 UG13 = Usergroup.create!(
     user_id: DemoUser.id,
     group_id: Group6.id
@@ -204,4 +207,13 @@ UG15 = Usergroup.create!(
     group_id: Group8.id
 )
 
-# puts "here5"
+# Adding the DemoUser to EugeneUser groups as a member
+UG16 = Usergroup.create!(
+    user_id: DemoUser.id,
+    group_id: Group9.id
+)
+
+UG17 = Usergroup.create!(
+    user_id: DemoUser.id,
+    group_id: Group10.id
+)
