@@ -15,7 +15,6 @@ class GroupsCreate extends React.Component {
             leaderId: this.props.group.leaderId
         }
         this.handleSubmit = this.handleSubmit.bind(this);
-        // debugger
     }
 
     
@@ -27,7 +26,6 @@ class GroupsCreate extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault()
-        // debugger
         this.props.createGroup(this.state)
             .then(() => this.props.history.push('/groups'));
     }

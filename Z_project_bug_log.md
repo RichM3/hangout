@@ -39,6 +39,11 @@ similar to the greeting component in BenchBNB -- they exist only if the page is 
 
 15) Div development for all pages - using divs to map all code
 
+15) Using dependent destroy to delete assosciated usergroup memberships when the group is destroyed!!!!!
+-- https://guides.rubyonrails.org/association_basics.html
+
+
+
 
 --- Code to review for Readme
 <h3>Ensure errors do not persist</h3>

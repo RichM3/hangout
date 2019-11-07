@@ -10,7 +10,6 @@ const msp = (state, ownProps) => {
         location: '',
         leaderId: currentUser.id 
     }
-    // debugger
 
     return({
         group: group

@@ -17,8 +17,8 @@ class GroupsShow extends React.Component {
 
     deleteGroup(e) {
         e.preventDefault()
-        // this.props.createMembership(this.state.groupId)
-        //     .then(() => this.props.history.push('/groups'));
+        this.props.deleteGroup(this.state.groupId)
+            .then(() => this.props.history.push('/groups'));
     }
 
     leaveGroup(e) {
@@ -65,9 +65,13 @@ class GroupsShow extends React.Component {
 
         if (this.props.currentUser.username === this.props.group.leaderName) {
             optionButton = (
-                <div>
-                    <Link to="/groups" className="delete-button" >Delete this group</Link>
-                </div>
+                <form onSubmit={this.deleteGroup}>
+                    <input type="submit" value="Delete this group" className="delete-button" />
+                    {/* <Link to="/groups" className="delete-button" >Leave this group</Link> */}
+                </form>
+                // <div>
+                //     <Link to="/groups" className="delete-button" >Delete this group</Link>
+                // </div>
             );
         }
         else if (inGroups) {

@@ -26,7 +26,8 @@ class Group < ApplicationRecord
     has_many :memberships,
         primary_key: :id,
         foreign_key: :group_id,
-        class_name: :Usergroup
+        class_name: :Usergroup,
+        dependent: :destroy
 
     has_many :members,
         through: :memberships,

@@ -1,5 +1,4 @@
 export const fetchGroups = () => {
-    // debugger
     return $.ajax({
         method: "get",
         url: `api/groups`
@@ -13,19 +12,10 @@ export const fetchGroup = (id) => {
     })
 }
 
-// export const fetchLeaderName = (leaderId) => {
-//     return $.ajax({
-//         method: "get",
-//         url: `api/users/${leaderId}`
-//     })
-// }
-
 export const createGroup = (group) => {
-    // debugger
     return $.ajax({
         method: "post",
         url: `api/groups`,
-        // data: { group }
         data: {
             group: {
             groupname: group.groupname,
@@ -37,36 +27,16 @@ export const createGroup = (group) => {
     })
 }
 
-// export const createUserGroup = (group) => {
-//     // debugger
-//     return $.ajax({
-//         method: "post",
-//         url: `api/usergroups`,
-//         // data: { group }
-//         data: { 
-//             ...group, 
-//             leader_id: group.leaderId
-//          }
-//     })
-// }
-
-export const deleteGroup = (id) => {
+export const deleteCurrGroup = (id) => {
     return $.ajax({
         method: "delete",
         url: `api/groups/${id}`
     })
 }
 
-// export const deleteUserGroup = (id) => {
-//     return $.ajax({
-//         method: "delete",
-//         url: `api/usergroups/${id}`
-//     })
-// }
 
-
+// These are for joining and leaving a group
 export const createNewMembership = (groupId) => {
-    // debugger
     return $.ajax({
         method: "post",
         url: `api/groups/create_membership/${groupId}`

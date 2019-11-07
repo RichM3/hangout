@@ -13,7 +13,6 @@ const receiveGroups = (payload) => ({
 });
 
 const receiveSingleGroup = (payload) => {
-    // debugger
     return ({
     type: RECEIVE_SINGLE_GROUP,
     group: payload
@@ -63,7 +62,7 @@ export const createGroup = (group) => (dispatch) => (
 );
 
 export const deleteGroup = (id) => (dispatch) => (
-    GroupsApiUtil.deleteGroup(id).then(group => dispatch(removeGroup(group)))
+    GroupsApiUtil.deleteCurrGroup(id).then(group => dispatch(removeGroup(group)))
 );
 
 export const createMembership = (groupId) => (dispatch) => (
@@ -73,3 +72,7 @@ export const createMembership = (groupId) => (dispatch) => (
 export const deleteMembership = (groupId) => (dispatch) => (
     GroupsApiUtil.deleteCurrMembership(groupId).then(id => dispatch(removeMembership(id)))
 );
+
+
+
+

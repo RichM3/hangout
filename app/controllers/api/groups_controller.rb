@@ -14,7 +14,6 @@ class Api::GroupsController < ApplicationController
                 @usergroup = Usergroup.new(lastGroupId, @group.leader_id)
             end
             if @usergroup.save!
-                # debugger
                 render "api/groups/show"
             else
                 render json: @groups.errors.full_messages, status: 422
@@ -30,7 +29,6 @@ class Api::GroupsController < ApplicationController
     end
 
     def show
-        # debugger
         @group = Group.find(params[:id])
         # render "api/groups/show"
         render :show
@@ -50,10 +48,11 @@ class Api::GroupsController < ApplicationController
     #     end
     # end
 
-    # def destroy
-    #     @group = Group.find(params[:id])
-    #     @group.destroy
-    # end
+    def destroy
+        @group = Group.find(params[:id])
+        @group.destroy
+        # render :index
+    end
 
 
     # Custom Routes for the Usergroup memberships table - Add and Remove
@@ -64,11 +63,8 @@ class Api::GroupsController < ApplicationController
     end
 
     def remove_membership
-        # debugger
         @group = Group.find(params[:id])
-        # debugger
         @group.members.delete(current_user)
-        # debugger
         # render :show
     end
 
