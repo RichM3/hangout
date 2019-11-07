@@ -2,7 +2,9 @@
 <html>
   <head>
 
-    <link rel="shortcut icon" href="https://previews.123rf.com/images/mtkang/mtkang1108/mtkang110800012/10232896-fire-alphabets-in-flame-letter-h.jpg" type="image/x-icon">
+    <!-- This was the link for the favicon but appears to not be necessary -->
+    <!--  <link rel="shortcut icon" href="https://previews.123rf.com/images/mtkang/mtkang1108/mtkang110800012/10232896-fire-alphabets-in-flame-letter-h.jpg" type="image/x-icon"> -->
+    
 
     <!-- application.html.erb -->
     <script type="text/javascript">
@@ -17,6 +19,11 @@
       window.panoramaURL = "<%= image_url('panorama.png') %>";
       window.blankProfileURL = "<%= image_url('blankProfile.png') %>";
       window.padlockURL = "<%= image_url('padlock.png') %>";
+
+      //This is the image for the icon but has not been implemented either.  Stored here incase favicon stops working
+      //Stored in images so it is not lost from project
+      window.FireHURL = "<%= image_url('FireH.png') %>";
+
 
       // group_show icons
       window.mapMarkerURL = "<%= image_url('mapMarker.png') %>";

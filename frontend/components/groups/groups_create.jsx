@@ -46,17 +46,17 @@ class GroupsCreate extends React.Component {
                     <div className="inner-item-container" >
                         {/* <label htmlFor="groupname">Group Name:&nbsp;&nbsp; */}
                         <label htmlFor="groupname">Group Name:</label>
-                        <input type="text" name="groupname" id="groupname" onChange={this.update('groupname')} />
+                        <input type="text" autoComplete="off" name="groupname" id="groupname" onChange={this.update('groupname')} />
                     </div>
                     <div className="inner-item-container" >
                         {/* <label htmlFor="description">Description:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; */}
                         <label htmlFor="description">Description:</label>
-                            <textarea type="text" name="description" id="description" onChange={this.update('description')} />
+                        <textarea type="text" autoComplete="off" name="description" id="description" onChange={this.update('description')} />
                     </div>
                     <div className="inner-item-container">
                         {/* <label htmlFor="location">Location:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; */}
                         <label htmlFor="location">Location:</label>
-                        <input type="text" name="location" id="location" onChange={this.update('location')} />
+                        <input type="text" autoComplete="off" name="location" id="location" onChange={this.update('location')} />
                     </div>
                     <div className="inner-item-container-btn">
                         {/* <label htmlFor="">test</label>   */}
