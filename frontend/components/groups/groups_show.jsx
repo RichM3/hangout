@@ -4,6 +4,34 @@ import NavbarContainer from "../navbar/navbar_container";
 import FooterContainer from "../footer/footer_container";
 
 class GroupsShow extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            groupId: this.props.match.params.groupId,
+            userId: this.props.currentUser.id
+        }
+        this.deleteGroup = this.deleteGroup.bind(this);
+        this.leaveGroup = this.leaveGroup.bind(this);
+        this.joinGroup = this.joinGroup.bind(this);
+    }
+
+    deleteGroup(e) {
+        e.preventDefault()
+        // this.props.createMembership(this.state.groupId)
+        //     .then(() => this.props.history.push('/groups'));
+    }
+
+    leaveGroup(e) {
+        e.preventDefault()
+        this.props.deleteMembership(this.state.groupId)
+            .then(() => this.props.history.push('/groups'));
+    }
+
+    joinGroup(e) {
+        e.preventDefault()
+        this.props.createMembership(this.state.groupId)
+            .then(() => this.props.history.push('/groups'));
+    }
 
     componentDidMount() {
         window.scrollTo(0, 0)
@@ -44,15 +72,17 @@ class GroupsShow extends React.Component {
         }
         else if (inGroups) {
             optionButton = (
-                <div>
-                    <Link to="/groups" className="join-button" >Leave this group</Link>
-                </div>
+                <form onSubmit={this.leaveGroup}>
+                    <input type="submit" value="Leave this group" className="delete-button" />
+                    {/* <Link to="/groups" className="delete-button" >Leave this group</Link> */}
+                </form>
             );
         } else {
             optionButton = (
-                <div>
-                    <Link to="/groups" className="join-button" >Join this group</Link>
-                </div>
+                <form onSubmit={this.joinGroup}>
+                    <input type="submit" value="Join this group" className="delete-button" />
+                    {/* <Link to="/groups" className="delete-button" >Join this group</Link> */}
+                </form>
             );
         }
 
@@ -61,6 +91,11 @@ class GroupsShow extends React.Component {
         return(
             <>
             {/* debugging code here ignore */}
+
+            {this.state.userId}
+            <div> : </div>
+            {this.state.groupId}
+
             {/* <div>
                 {this.props.currentUser.username}
                 {this.props.group.leaderName }

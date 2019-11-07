@@ -55,6 +55,24 @@ class Api::GroupsController < ApplicationController
     #     @group.destroy
     # end
 
+
+    # Custom Routes for the Usergroup memberships table - Add and Remove
+    def create_membership
+        @group = Group.find(params[:id])
+        @group.members << current_user
+        # render :show
+    end
+
+    def remove_membership
+        # debugger
+        @group = Group.find(params[:id])
+        # debugger
+        @group.members.delete(current_user)
+        # debugger
+        # render :show
+    end
+
+
     private
     def group_params
         params.require(:group).permit(:groupname, :description, :location, :leader_id)

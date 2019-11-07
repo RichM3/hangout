@@ -63,3 +63,21 @@ export const deleteGroup = (id) => {
 //         url: `api/usergroups/${id}`
 //     })
 // }
+
+
+export const createNewMembership = (groupId) => {
+    // debugger
+    return $.ajax({
+        method: "post",
+        url: `api/groups/create_membership/${groupId}`
+    })
+}
+
+export const deleteCurrMembership = (groupId) => {
+    return $.ajax({
+        method: "delete",
+        url: `api/groups/remove_membership/${groupId}`
+    })
+}
+
+
