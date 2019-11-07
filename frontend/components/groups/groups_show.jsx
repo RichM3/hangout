@@ -96,9 +96,9 @@ class GroupsShow extends React.Component {
             <>
             {/* debugging code here ignore */}
 
-            {this.state.userId}
+            {/* {this.state.userId}
             <div> : </div>
-            {this.state.groupId}
+            {this.state.groupId} */}
 
             {/* <div>
                 {this.props.currentUser.username}
