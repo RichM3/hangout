@@ -39,9 +39,11 @@ similar to the greeting component in BenchBNB -- they exist only if the page is 
 
 15) Div development for all pages - using divs to map all code
 
-15) Using dependent destroy to delete assosciated usergroup memberships when the group is destroyed!!!!!
+16) Using dependent destroy to delete assosciated usergroup memberships when the group is destroyed!!!!!
 -- https://guides.rubyonrails.org/association_basics.html
 
+17) setState is an Asynchronous process so must pass a callback in if you need a function to work on that updated value immediately after the update
+-- https://stackoverflow.com/questions/38558200/react-setstate-not-updating-immediately
 
 
 

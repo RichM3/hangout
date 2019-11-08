@@ -13,7 +13,8 @@ Save top icon in browser window local
 set text input to email on login page
 
 
-
+-- Push to Heroku
+git push heroku master
 
 -- Drop the db
 rails db:drop

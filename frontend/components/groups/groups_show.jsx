@@ -8,11 +8,14 @@ class GroupsShow extends React.Component {
         super(props);
         this.state = {
             groupId: this.props.match.params.groupId,
-            userId: this.props.currentUser.id
+            userId: this.props.currentUser.id,
+            bottomComponent: 'About'
         }
         this.deleteGroup = this.deleteGroup.bind(this);
         this.leaveGroup = this.leaveGroup.bind(this);
         this.joinGroup = this.joinGroup.bind(this);
+        this.updateComponent = this.updateComponent.bind(this);
+        this.myAlert = this.myAlert.bind(this);
     }
 
     deleteGroup(e) {
@@ -41,7 +44,16 @@ class GroupsShow extends React.Component {
         this.props.fetchGroup(groupId);
     }
 
+    //You should invoke your second function as a callback to setState, as setState happens asynchronously
+    updateComponent(e) {
+        this.setState({
+            bottomComponent: e.target.innerText
+        });
+    }
 
+    myAlert(e) {
+        window.alert(this.state.bottomComponent);
+    }
 
     render() {
 
@@ -128,7 +140,7 @@ class GroupsShow extends React.Component {
                             <p>&nbsp;&nbsp;&nbsp;Location: {this.props.group.location}</p>
                         </div>
 
-                            <div className="spacer"> </div>
+                        <div className="spacer"> </div>
 
                         <div className="group_show_icons_wrapper" >
                             <div className="group_show_icons" >
@@ -143,37 +155,48 @@ class GroupsShow extends React.Component {
                     </div>
                 </div>
             </div>
+
+
+            {/* Menu stripe begins here */}
+
+
             <div className="menu-stripe">
                 <div className="menu-div">
-                    <div className="menu-selected">
-                        About
+                    <div className="menu-selected" onClick={this.myAlert}>
+                        <p className="fakeLink" >About</p>
                     </div>
-                    <div className="menu-choices">
-                        Events
+                    <div className="menu-choices" onClick={this.updateComponent} >
+                        <p className="fakeLink" >Events</p>
                     </div>
-                    <div className="menu-choices">
-                        Members
+                    <div className="menu-choices" onClick={this.updateComponent} >
+                        <p className="fakeLink" >Members</p>
                     </div>
-                    <div className="menu-choices">
-                        Photos
+                    <div className="menu-choices" onClick={this.updateComponent} >
+                        <p className="fakeLink" >Photos</p>
                     </div>
-                    <div className="menu-choices">
-                        Discussions
+                    <div className="menu-choices" onClick={this.updateComponent} >
+                        <p className="fakeLink" >Discussions</p>
                     </div>
-                    <div className="menu-choices">
-                        More
+                    <div className="menu-choices" onClick={this.updateComponent} >
+                        <p className="fakeLink" >More</p>
                     </div>
                 </div>
             </div>
+
+
+            {/* This needs to be the about component initially then change to different components based on state change */}
+
+
             <div className="page-wrapper">
-                    <div className="spacer"> </div>
-                    <div className="spacer"> </div>
+                <div className="spacer"> </div>
+                <div className="spacer"> </div>
                 <h1>What we are about: </h1>
-                    <div className="spacer"> </div>
-                    <div className="spacer"> </div>
-                <p>{this.props.group.description}</p>
+                <div className="spacer"> </div>
+                <div className="spacer"> </div>
+                <div><p>{this.props.group.description}</p></div>
             </div>
             <div className="related-events"></div>
+
             <FooterContainer myType={"groups"} />
             </>
         )
