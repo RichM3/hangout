@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import NavbarContainer from "../navbar/navbar_container";
 import FooterContainer from "../footer/footer_container";
+import LowerSectionContainer from "./show_components/lower_section/lower_section_container";
 
 class GroupsShow extends React.Component {
     constructor(props) {
@@ -9,7 +10,7 @@ class GroupsShow extends React.Component {
         this.state = {
             groupId: this.props.match.params.groupId,
             userId: this.props.currentUser.id,
-            bottomComponent: 'About'
+            lowerComponent: 'About'
         }
         this.deleteGroup = this.deleteGroup.bind(this);
         this.leaveGroup = this.leaveGroup.bind(this);
@@ -17,6 +18,13 @@ class GroupsShow extends React.Component {
         this.updateComponent = this.updateComponent.bind(this);
         this.myAlert = this.myAlert.bind(this);
     }
+
+    // Using this as a reference for updating state may not longer need this 11-8-2019
+    // update(field) {
+    //     return e => this.setState({
+    //         [field]: e.currentTarget.value
+    //     });
+    // }
 
     deleteGroup(e) {
         e.preventDefault()
@@ -47,12 +55,12 @@ class GroupsShow extends React.Component {
     //You should invoke your second function as a callback to setState, as setState happens asynchronously
     updateComponent(e) {
         this.setState({
-            bottomComponent: e.target.innerText
+            lowerComponent: e.target.innerText
         });
     }
 
     myAlert(e) {
-        window.alert(this.state.bottomComponent);
+        window.alert(this.state.lowerComponent);
     }
 
     render() {
@@ -196,6 +204,9 @@ class GroupsShow extends React.Component {
                 <div><p>{this.props.group.description}</p></div>
             </div>
             <div className="related-events"></div>
+
+
+            <LowerSectionContainer myType={"groups"} />
 
             <FooterContainer myType={"groups"} />
             </>

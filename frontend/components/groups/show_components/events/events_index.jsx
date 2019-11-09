@@ -13,7 +13,7 @@ class EventsIndex extends React.Component {
 
         return (
             <>
-            
+                <div>EVENT</div>
             </>
         )
     }
