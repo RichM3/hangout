@@ -13,10 +13,9 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
     return ({
-        // fetchGroup: (id) => dispatch(fetchGroup(id)),
-        // createMembership: (groupId) => dispatch(createMembership(groupId)),
-        // deleteMembership: (groupId) => dispatch(deleteMembership(groupId)),
-        // deleteGroup: (groupId) => dispatch(deleteGroup(groupId))
+        // this fetchEvent will require an action creator a thunk action creator and a ApiEventUtil
+        //Also need the reducer
+        fetchEvents: (groupId) => dispatch(fetchEvents(groupId)),
     })
 };
 
