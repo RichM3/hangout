@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import LowerSection from './lower_section';
 
 const mapStateToProps = (state, ownProps) => {
-    let type = ownProps.myType;
+    let type = ownProps.type;
     // let groupId = ownProps.match.params.groupId;
     // let currentUser = state.entities.users[state.session.id];
 
