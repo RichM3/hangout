@@ -206,7 +206,7 @@ class GroupsShow extends React.Component {
             <div className="related-events"></div>
 
 
-            <LowerSectionContainer myType={"groups"} />
+            <LowerSectionContainer myType={this.state.lowerComponent} />
 
             <FooterContainer myType={"groups"} />
             </>
