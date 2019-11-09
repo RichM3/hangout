@@ -10,6 +10,10 @@ Rails.application.routes.draw do
     post 'groups/create_membership/:id', to: 'groups#create_membership'
     delete 'groups/remove_membership/:id', to: 'groups#remove_membership'
 
+    resources :events, only: [:create, :index, :show, :edit, :update, :destroy]
+    # post 'events/create_event/:id', to: 'events#create_event'
+    # delete 'events/remove_event/:id', to: 'events#remove_event'
+
   end
 end
 
