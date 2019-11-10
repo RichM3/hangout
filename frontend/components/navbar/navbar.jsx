@@ -37,7 +37,6 @@ class Navbar extends React.Component {
           <>
           <div className="nav__links">
             <Link to={`/groups/create`} className={hClass}><b>Start a new group</b></Link>
-            {/* <a href="#/groups/create" className={hClass}><b>Start a new group</b></a> */}
             &nbsp;&nbsp;&nbsp;
             <a href="/" className="experience">Experiences</a>
             &nbsp;&nbsp;&nbsp;
@@ -54,7 +53,6 @@ class Navbar extends React.Component {
           <>
           <div className="nav__links">
             <Link to={`/groups/create`} className={hClass}><b>Start a new group</b></Link>
-            {/* <a href="#/groups/create" className={hClass}><b>Start a new group</b></a> */}
             &nbsp;&nbsp;&nbsp;
             <a href="/" className="experience">Experiences</a>
             &nbsp;&nbsp;&nbsp;
@@ -77,7 +75,6 @@ class Navbar extends React.Component {
           <>
           <div className="nav__links">
             <Link to={`/groups/create`} className={hClass}><b>Start a new group</b></Link>
-            {/* <a href="/groups/create" className={hClass}><b>Start a new group</b></a> */}
             &nbsp;&nbsp;&nbsp;
             <a href="/" className="experience">Experiences</a>
             &nbsp;&nbsp;&nbsp;
@@ -124,7 +121,6 @@ class Navbar extends React.Component {
           <>
           <div className="nav__links">
             <Link to={`/groups/create`} className={hClass}><b>Start a new group</b></Link>
-            {/* <a href="/groups/create" className={hClass}><b>Start a new group</b></a> */}
           </div>
           <div className="topRight">
             <GreetingContainer />
