@@ -8,7 +8,27 @@ class LowerSection extends React.Component {
         }
     }
 
+    // updateComponent(e) {
+    //     this.setState({
+    //         type: this.props.type
+    //     });
+    // }
+
+    handleUpdate() {
+        //by calling this method react re-renders the component
+        this.setState({
+            type: this.props.type
+        });
+    };
+
     render() {
+        // this.setState({
+        //     type: this.props.type
+        // });
+
+        // handleUpdate;
+
+        debugger
         let words = "test";
 
         if (this.state.type === "About") {
