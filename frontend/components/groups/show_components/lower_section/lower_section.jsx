@@ -14,12 +14,12 @@ class LowerSection extends React.Component {
     //     });
     // }
 
-    handleUpdate() {
+    // handleUpdate() {
         //by calling this method react re-renders the component
-        this.setState({
-            type: this.props.type
-        });
-    };
+        // this.setState({
+        //     type: this.props.type
+        // });
+    // };
 
     render() {
         // this.setState({
@@ -29,18 +29,18 @@ class LowerSection extends React.Component {
         // handleUpdate;
 
         debugger
-        let words = "test";
+        // let words = "test";
 
-        if (this.state.type === "About") {
-            words = "yes";
-        } else {
-            words = "fail";
-        }
+        // if (this.props.type === "About") {
+        //     words = "yes";
+        // } else {
+        //     words = "fail";
+        // }
 
         return (
             <>
                 <div>LOWER SECTION</div>
-                <div>{words}</div>
+                <div>{this.props.type}</div>
             </>
         )
     }
