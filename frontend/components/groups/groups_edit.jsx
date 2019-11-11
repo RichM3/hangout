@@ -55,7 +55,7 @@ class GroupsEdit extends React.Component {
                 <div className="group-create-container">
                     <form onSubmit={this.handleSubmit}>
                         <div className="inner-form-container">
-                            <div className="inner-item-container" >
+                            <div className="inner-item-disabled" >
                                 <label htmlFor="groupname">Group Name:</label>
                                 {/* <h2>{this.props.group.groupname}</h2> */}
                                 <input type="text" disabled value={this.props.group.groupname} autoComplete="off" name="groupname" id="groupname" onChange={this.update('groupname')} />
