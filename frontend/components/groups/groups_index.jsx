@@ -60,8 +60,8 @@ class GroupsIndex extends React.Component {
                             {/* <div>Within 5 miles of NYC</div> */}
                         </form>
                         <div className="button-div">
-                                <div className="left-button-option"><a href="http://" >Groups</a></div>
-                                <div className="right-button-option"><a href="http://">Calendar</a></div>
+                                <div className="left-button-option"><a href="#" >Groups</a></div>
+                                <div className="right-button-option"><a href="#">Calendar</a></div>
                         </div>
                     </div>
 {/* DIVIDES THE TOP OF PAGE FROM BOTTOM SEPERATES GROUPS A PERSON BELONGS TO */}

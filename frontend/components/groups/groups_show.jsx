@@ -81,6 +81,7 @@ class GroupsShow extends React.Component {
 
         // Delete button code
         let optionButton = "";
+        let editButton = "";
         let groupId = this.props.match.params.groupId;
         let inGroups = this.props.currentUser.groupIds.includes(parseInt(groupId));
 
@@ -94,6 +95,11 @@ class GroupsShow extends React.Component {
                 //     <Link to="/groups" className="delete-button" >Delete this group</Link>
                 // </div>
             );
+            editButton = (
+                <form onSubmit={this.editGroup}>
+                    <input type="submit" value="Edit this group" className="delete-button" />
+                </form>                
+            )
         }
         else if (inGroups) {
             optionButton = (
@@ -161,6 +167,7 @@ class GroupsShow extends React.Component {
                         <div className="spacer"> </div>
 
                         { optionButton }
+                        { editButton }
                     </div>
                 </div>
             </div>
@@ -196,7 +203,7 @@ class GroupsShow extends React.Component {
             {/* This needs to be the about component initially then change to different components based on state change */}
 
 
-            <div className="page-wrapper">
+            {/* <div className="page-wrapper">
                 <div className="spacer"> </div>
                 <div className="spacer"> </div>
                 <h1>What we are about: </h1>
@@ -204,10 +211,10 @@ class GroupsShow extends React.Component {
                 <div className="spacer"> </div>
                 <div><p>{this.props.group.description}</p></div>
             </div>
-            <div className="related-events"></div>
+            <div className="related-events"></div> */}
 
 
-            <LowerSectionContainer type={this.state.lowerComponent} />
+            <LowerSectionContainer type={this.state.lowerComponent} desc={this.props.group.description} />
 
             <FooterContainer myType={"groups"} />
             </>

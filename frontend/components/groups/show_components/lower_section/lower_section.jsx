@@ -2,9 +2,9 @@ import React from 'react';
 import AboutContainer from '../about/about_index_container';
 import MembersContainer from '../members/members_index_container';
 import EventsContainer from '../events/events_index_container';
-// import PhotosContainer from '../photos/photos_index_container';
-// import DiscussionsContainer from '../discussions/discussions_index_container';
-// import MoreContainer from '../more/more_index_container';
+import PhotosContainer from '../photos/photos_index_container';
+import DiscussionsContainer from '../discussions/discussions_index_container';
+import MoreContainer from '../more/more_index_container';
 
 
 class LowerSection extends React.Component {
@@ -55,22 +55,22 @@ class LowerSection extends React.Component {
 
         switch (this.props.type) {
             case "About":
-                myContainer = <AboutContainer />;
+                myContainer = <AboutContainer desc={this.props.desc}/>;
                 break;
             case "Events":
                 myContainer = <EventsContainer />;
                 break;
             case "Members":
-                myContainer = <MembersContainer />
+                myContainer = <MembersContainer />;
                 break;
             case "Photos":
-                myContainer = ""; //<AboutContainer />
+                myContainer = <PhotosContainer />;
                 break;
             case "Discussions":
-                myContainer = ""; //<AboutContainer />
+                myContainer = <DiscussionsContainer />;
                 break;
             case "More":
-                myContainer = ""; //<AboutContainer />
+                myContainer = <MoreContainer />;
                 break;
             default:
                 break;
@@ -80,7 +80,7 @@ class LowerSection extends React.Component {
 
         return (
             <>
-                <div>LOWER SECTION</div>
+                {/* <div>LOWER SECTION</div> */}
 
 
 

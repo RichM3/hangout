@@ -14,7 +14,16 @@ class EventsIndex extends React.Component {
 
         return (
             <>
-                <div>EVENTS</div>
+                {/* <div>EVENTS</div> */}
+                <div className="page-wrapper">
+                    <div className="spacer"> </div>
+                    <div className="spacer"> </div>
+                    <h1>Upcoming Events: </h1>
+                    <div className="spacer"> </div>
+                    <div className="spacer"> </div>
+                    {/* <div><p>{this.props.desc}</p></div> */}
+                </div>
+                <div className="related-events"></div>
             </>
         )
     }

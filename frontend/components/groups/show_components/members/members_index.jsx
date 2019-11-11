@@ -12,7 +12,16 @@ class MembersIndex extends React.Component {
 
         return (
             <>
-                <div>MEMBERS</div>
+                {/* <div>MEMBERS</div> */}
+                <div className="page-wrapper">
+                    <div className="spacer"> </div>
+                    <div className="spacer"> </div>
+                    <h1>Current Members: </h1>
+                    <div className="spacer"> </div>
+                    <div className="spacer"> </div>
+                    {/* <div><p>{this.props.desc}</p></div> */}
+                </div>
+                <div className="related-events"></div>
             </>
         )
     }
