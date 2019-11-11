@@ -1,24 +1,22 @@
-// import React from 'react';
+import React from 'react';
 
-// class EventsIndex extends React.Component {
-//     constructor(props) {
-//         super(props);
-//         this.state = {
-//             // groupId: this.props.match.params.groupId,
-//             // userId: this.props.currentUser.id
-//         }
-//         // this.handleSubmit = this.handleSubmit.bind(this);
-//     }
+class MembersIndex extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+        }
+    }
 
-//     render() {
 
-//         return (
-//             <>
-//                 <div>EVENT</div>
-//             </>
-//         )
-//     }
+    render() {
 
-// }
+        return (
+            <>
+                <div>Members</div>
+            </>
+        )
+    }
 
-// export default EventsIndex;
+}
+
+export default MembersIndex;
