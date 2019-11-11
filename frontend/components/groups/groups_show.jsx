@@ -16,7 +16,7 @@ class GroupsShow extends React.Component {
         this.leaveGroup = this.leaveGroup.bind(this);
         this.joinGroup = this.joinGroup.bind(this);
         this.updateComponent = this.updateComponent.bind(this);
-        this.myAlert = this.myAlert.bind(this);
+        // this.myAlert = this.myAlert.bind(this);
     }
 
     // Using this as a reference for updating state may not longer need this 11-8-2019
@@ -59,9 +59,9 @@ class GroupsShow extends React.Component {
         });
     }
 
-    myAlert(e) {
-        window.alert(this.state.lowerComponent);
-    }
+    // myAlert(e) {
+    //     window.alert(this.state.lowerComponent);
+    // }
 
     render() {
         // debugger
@@ -171,7 +171,7 @@ class GroupsShow extends React.Component {
 
             <div className="menu-stripe">
                 <div className="menu-div">
-                    <div className="menu-selected" onClick={this.myAlert}>
+                    <div className="menu-selected" onClick={this.updateComponent}>
                         <p className="fakeLink" >About</p>
                     </div>
                     <div className="menu-choices" onClick={this.updateComponent} >

@@ -1,7 +1,7 @@
 import React from 'react';
+import AboutContainer from '../about/about_index_container';
 import MembersContainer from '../members/members_index_container';
 import EventsContainer from '../events/events_index_container';
-import FooterContainer from "../../../footer/footer_container";
 
 
 class LowerSection extends React.Component {
@@ -52,7 +52,7 @@ class LowerSection extends React.Component {
 
         switch (this.props.type) {
             case "About":
-                myContainer = ""; //<AboutContainer />
+                myContainer = <AboutContainer />;
                 break;
             case "Events":
                 myContainer = <EventsContainer />;
