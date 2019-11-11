@@ -12,7 +12,7 @@ class MembersIndex extends React.Component {
 
         return (
             <>
-                <div>Members</div>
+                <div>MEMBERS</div>
             </>
         )
     }

@@ -1,5 +1,5 @@
 import React from 'react';
-import MembersComponent from '../members/members_index_container';
+import MembersContainer from '../members/members_index_container';
 import EventsContainer from '../events/events_index_container';
 import FooterContainer from "../../../footer/footer_container";
 
@@ -48,12 +48,47 @@ class LowerSection extends React.Component {
         // } else {
         //     words = "fail";
         // }
+        let myContainer = "";
+
+        switch (this.props.type) {
+            case "About":
+                myContainer = ""; //<AboutContainer />
+                break;
+            case "Events":
+                myContainer = <EventsContainer />;
+                break;
+            case "Members":
+                myContainer = <MembersContainer />
+                break;
+            case "Photos":
+                myContainer = ""; //<AboutContainer />
+                break;
+            case "Discussions":
+                myContainer = ""; //<AboutContainer />
+                break;
+            case "More":
+                myContainer = ""; //<AboutContainer />
+                break;
+            default:
+                break;
+        }
+
+        // let myContainer = <EventsContainer />
 
         return (
             <>
                 <div>LOWER SECTION</div>
-                <FooterContainer />
-                <div>{this.props.type}</div>
+
+
+
+                {/* < {myContainer} /> */}
+                
+                
+                
+                {/* <FooterContainer /> */}
+                {/* <EventsContainer /> */}
+                {myContainer}
+                {/* <div>{this.props.type}</div> */}
             </>
         )
     }
