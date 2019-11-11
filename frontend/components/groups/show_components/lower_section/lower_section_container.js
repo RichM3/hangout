@@ -3,7 +3,6 @@ import LowerSection from './lower_section';
 
 const mapStateToProps = (state, ownProps) => {
     let type = ownProps.type;
-    // debugger
     // let groupId = ownProps.match.params.groupId;
     // let currentUser = state.entities.users[state.session.id];
 

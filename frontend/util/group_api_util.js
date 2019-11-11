@@ -14,14 +14,14 @@ export const fetchGroup = (id) => {
 
 export const editGroup = (group) => {
     return $.ajax({
-        method: "post",
-        url: `api/groups`,
+        method: "patch",
+        url: `api/groups/${group.id}`,
         data: {
             group: {
-                // groupname: group.groupname,
+                groupname: group.groupname,
                 description: group.description,
-                location: group.location
-                // leader_id: group.leaderId
+                location: group.location,
+                leader_id: group.leaderId
             }
         }
     })

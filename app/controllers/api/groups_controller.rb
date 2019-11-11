@@ -41,7 +41,7 @@ class Api::GroupsController < ApplicationController
     def update
         @group = Group.find(params[:id])
 
-        if @group.update_attributes(link_params)
+        if @group.update_attributes(group_params)
             render "api/groups/show"
         else
             render json: @groups.errors.full_messages, status: 422

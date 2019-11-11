@@ -15,42 +15,12 @@ class LowerSection extends React.Component {
         }
     }
 
-    // updateComponent(e) {
-    //     this.setState({
-    //         type: this.props.type
-    //     });
-    // }
-
-    // handleUpdate() {
-        //by calling this method react re-renders the component
-        // this.setState({
-        //     type: this.props.type
-        // });
-    // };
 
     render() {
 
-        // STEPS
-        // 1) make shell component for members like shell events
-        // 2) test using if statement to see if dynamically load diff components
-        // 3) if successful fill in all other components
-        // 4) ID why MSP is not called and have to use props instead of state???
+        // NOTES!!!!!!!
+        // X) ID why MSP is not called and have to use props instead of state???
 
-
-        // this.setState({
-        //     type: this.props.type
-        // });
-
-        // handleUpdate;
-
-        // debugger
-        // let words = "test";
-
-        // if (this.props.type === "About") {
-        //     words = "yes";
-        // } else {
-        //     words = "fail";
-        // }
         let myContainer = "";
 
         switch (this.props.type) {

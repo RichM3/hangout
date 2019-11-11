@@ -4,15 +4,7 @@ import { editGroup, fetchGroup } from '../../actions/group_actions';
 
 const msp = (state, ownProps) => {
     let currentUser = state.entities.users[state.session.id];
-    // let groupId = 
-    // debugger
     let group = state.entities.groups[parseInt(ownProps.match.params.groupId)]
-    // const group = {
-        // groupname: '',
-        // description: '',
-        // location: '',
-        // leaderId: currentUser.id
-    // }
 
     return ({
         group: group

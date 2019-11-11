@@ -7,27 +7,23 @@ import FooterContainer from '../footer/footer_container';
 class GroupsEdit extends React.Component {
     constructor(props) {
         super(props);
-        debugger
-        this.state = this.props.group;
+        // this.state = this.props.group;
 
-
-        // this.state = {
-        //     // groupname: '',
-        //     description: '',
-        //     location: ''
-        //     // leaderId: this.props.group.leaderId
-        // }
-
+        this.state = {
+            id: this.props.group.id,
+            groupname: this.props.group.groupname,
+            description: this.props.group.description,
+            location: this.props.group.location,
+            leader_id: this.props.group.leader.id
+        }
 
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     componentDidMount() {
-        // debugger
         window.scrollTo(0, 0)
         let groupId = this.props.match.params.groupId;
         this.props.fetchGroup(parseInt(groupId));
-        debugger
     }
 
     update(field) {
@@ -44,7 +40,6 @@ class GroupsEdit extends React.Component {
 
 
     render() {
-        debugger
 
         if (!this.props.group) {
             return null
