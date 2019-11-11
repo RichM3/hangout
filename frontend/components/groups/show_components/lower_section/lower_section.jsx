@@ -1,4 +1,8 @@
 import React from 'react';
+import MembersComponent from '../members/members_index_container';
+import EventsContainer from '../events/events_index_container';
+import FooterContainer from "../../../footer/footer_container";
+
 
 class LowerSection extends React.Component {
     constructor(props) {
@@ -36,7 +40,7 @@ class LowerSection extends React.Component {
 
         // handleUpdate;
 
-        debugger
+        // debugger
         // let words = "test";
 
         // if (this.props.type === "About") {
@@ -48,6 +52,7 @@ class LowerSection extends React.Component {
         return (
             <>
                 <div>LOWER SECTION</div>
+                <FooterContainer />
                 <div>{this.props.type}</div>
             </>
         )
