@@ -14,7 +14,7 @@ class EventsIndex extends React.Component {
 
         return (
             <>
-                <div>EVENT</div>
+                <div>EVENTS</div>
             </>
         )
     }

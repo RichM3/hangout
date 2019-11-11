@@ -2,6 +2,9 @@ import React from 'react';
 import AboutContainer from '../about/about_index_container';
 import MembersContainer from '../members/members_index_container';
 import EventsContainer from '../events/events_index_container';
+// import PhotosContainer from '../photos/photos_index_container';
+// import DiscussionsContainer from '../discussions/discussions_index_container';
+// import MoreContainer from '../more/more_index_container';
 
 
 class LowerSection extends React.Component {
