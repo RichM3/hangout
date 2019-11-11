@@ -22,6 +22,14 @@ class LowerSection extends React.Component {
     // };
 
     render() {
+
+        // STEPS
+        // 1) make shell component for members like shell events
+        // 2) test using if statement to see if dynamically load diff components
+        // 3) if successful fill in all other components
+        // 4) ID why MSP is not called and have to use props instead of state???
+
+
         // this.setState({
         //     type: this.props.type
         // });
