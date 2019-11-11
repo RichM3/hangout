@@ -12,6 +12,21 @@ export const fetchGroup = (id) => {
     })
 }
 
+export const editGroup = (group) => {
+    return $.ajax({
+        method: "post",
+        url: `api/groups`,
+        data: {
+            group: {
+                // groupname: group.groupname,
+                description: group.description,
+                location: group.location
+                // leader_id: group.leaderId
+            }
+        }
+    })
+}
+
 export const createGroup = (group) => {
     return $.ajax({
         method: "post",

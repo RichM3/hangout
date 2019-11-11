@@ -12,6 +12,7 @@ class GroupsShow extends React.Component {
             userId: this.props.currentUser.id,
             lowerComponent: 'About'
         }
+        // this.editGroup = this.editGroup.bind(this);
         this.deleteGroup = this.deleteGroup.bind(this);
         this.leaveGroup = this.leaveGroup.bind(this);
         this.joinGroup = this.joinGroup.bind(this);
@@ -24,6 +25,12 @@ class GroupsShow extends React.Component {
     //     return e => this.setState({
     //         [field]: e.currentTarget.value
     //     });
+    // }
+
+    // editGroup(e) {
+    //     e.preventDefault()
+    //     this.props.editGroup(this.state.groupId)
+    //         .then(() => this.props.history.push('/groups'));
     // }
 
     deleteGroup(e) {
@@ -96,9 +103,12 @@ class GroupsShow extends React.Component {
                 // </div>
             );
             editButton = (
-                <form onSubmit={this.editGroup}>
-                    <input type="submit" value="Edit this group" className="delete-button" />
-                </form>                
+                <Link to={`/groups/${this.props.group.id}/edit`} className="delete-button" >Edit this group</Link>
+                // <Link to="/groups/:groupId/edit" className="delete-button" >Edit this group</Link>
+
+                // <form onSubmit={this.editGroup}>
+                //     <input type="submit" value="Edit this group" className="delete-button" />
+                // </form>                
             )
         }
         else if (inGroups) {

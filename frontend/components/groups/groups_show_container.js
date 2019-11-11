@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import GroupsShow from './groups_show';
-import { fetchGroup, createMembership, deleteMembership, deleteGroup } from '../../actions/group_actions';
+import { fetchGroup, editGroup, createMembership, deleteMembership, deleteGroup } from '../../actions/group_actions';
 
 const msp = (state, ownProps) => {
     let groupId = ownProps.match.params.groupId;
@@ -18,6 +18,7 @@ const msp = (state, ownProps) => {
 const mdp = (dispatch) => {
     return({
         fetchGroup: (id) => dispatch(fetchGroup(id)),
+        // editGroup: (id) => dispatch(editGroup(id)),
         createMembership: (groupId) => dispatch(createMembership(groupId)),
         deleteMembership: (groupId) => dispatch(deleteMembership(groupId)),
         deleteGroup: (groupId) => dispatch(deleteGroup(groupId))

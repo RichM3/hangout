@@ -38,15 +38,15 @@ class Api::GroupsController < ApplicationController
     #     @group = Group.find(params[:id])
     # end
 
-    # def update
-    #     @group = Group.find(params[:id])
+    def update
+        @group = Group.find(params[:id])
 
-    #     if @group.update_attributes(link_params)
-    #         render "api/groups/show"
-    #     else
-    #         render json: @groups.errors.full_messages, status: 422
-    #     end
-    # end
+        if @group.update_attributes(link_params)
+            render "api/groups/show"
+        else
+            render json: @groups.errors.full_messages, status: 422
+        end
+    end
 
     def destroy
         @group = Group.find(params[:id])
