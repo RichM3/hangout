@@ -3,7 +3,9 @@
 npm install webpack webpack-cli react react-dom react-redux redux redux-logger @babel/core @babel/preset-react @babel/preset-env babel-loader
 bundle install
 bundle exec rails db:setup               ==> create the DB
+
 bundle exec rails db:seed
+heroku run bundle exec rails db:seed
 
 npm run webpack
 
