@@ -10,10 +10,32 @@ class EventsIndex extends React.Component {
         // this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    componentDidMount() {
+        window.scrollTo(0, 0)
+        // this.props.fetchUserInfo();
+        // this.props.fetchGroups();
+        this.props.fetchEvents();
+    }
+
+
     render() {
+        debugger
+        let listEvents = this.props.allEvents.map(event => {
+            return (
+                <div>
+                {event.eventname}
+                </div>
+                // <GroupsItemIndex group={group} key={group.id} member={group.leader_id} />
+            );
+        })
 
         return (
             <>
+                <ul className="box-ul">
+                    {listEvents}
+                </ul>
+
+
                 {/* <div>EVENTS</div> */}
                 <div className="page-wrapper">
                     <div className="spacer"> </div>
