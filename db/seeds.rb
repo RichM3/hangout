@@ -6,7 +6,7 @@
 #   movies = Movie.create!([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create!(name: 'Luke', movie: movies.first)
 
-
+Event.destroy_all
 Usergroup.destroy_all
 User.destroy_all
 Group.destroy_all
@@ -234,3 +234,32 @@ UG20 = Usergroup.create!(
     user_id: JeffUser.id,
     group_id: Group3.id
 )
+
+
+Event1 = Event.create!(
+    eventname: "Animations and keysframes",
+    description: "Discussion of CSS animations and keyframes and other great tools",
+    location: "AWS downtown NYC",
+    starttime: '03/03/2020 09:30:00',
+    endtime: '03/03/2020 10:30:00',
+    group_id: Group1.id
+)
+
+Event2 = Event.create!(
+    eventname: "Hover effects",
+    description: "Hover effects and the many great uses",
+    location: "Holiday Inn Conference Center on 8th Ave",
+    starttime: '04/04/2020 07:30:00',
+    endtime: '04/04/2020 08:30:00',
+    group_id: Group1.id
+)
+
+Event3 = Event.create!(
+    eventname: "Coffee vs Espresso",
+    description: "Espresso or Coffee, which one is better?",
+    location: "Starbucks on 5th",
+    starttime: '12/03/2020 05:30:00',
+    endtime: '12/03/2020 11:30:00',
+    group_id: Group2.id
+)
+
