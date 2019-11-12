@@ -9,21 +9,32 @@ class GroupsEdit extends React.Component {
         super(props);
         // this.state = this.props.group;
 
-        this.state = {
-            id: this.props.group.id,
-            groupname: this.props.group.groupname,
-            description: this.props.group.description,
-            location: this.props.group.location,
-            leader_id: this.props.group.leader.id
-        }
-
+        // if (this.props.group)
+        // {
+        //     this.state = {
+        //         id: this.props.group.id,
+        //         groupname: this.props.group.groupname,
+        //         description: this.props.group.description,
+        //         location: this.props.group.location,
+        //         leader_id: this.props.group.leader.id
+        //     }
+        // }
+        // else {
+            this.state = {
+                id: "",
+                groupname: "",
+                description: "",
+                location: "",
+                leader_id: ""
+            }
+        // }
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     componentDidMount() {
         window.scrollTo(0, 0)
         let groupId = this.props.match.params.groupId;
-        this.props.fetchGroup(parseInt(groupId));
+        this.props.fetchGroup(parseInt(groupId)).then(() => this.setState(this.props.group));        
     }
 
     update(field) {
@@ -35,7 +46,7 @@ class GroupsEdit extends React.Component {
     handleSubmit(e) {
         e.preventDefault()
         this.props.editGroup(this.state)
-            .then(() => this.props.history.push('/groups'));
+            .then(() => this.props.history.push(`/groups/${this.props.match.params.groupId}`));
     }
 
 
