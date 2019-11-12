@@ -19,11 +19,14 @@ class EventsIndex extends React.Component {
 
 
     render() {
-        debugger
         let listEvents = this.props.allEvents.map(event => {
             return (
                 <div>
-                {event.eventname}
+                    {event.eventname}
+                    {/* {event.eventname}
+                    {event.eventname}
+                    {event.eventname}
+                    {event.eventname} */}
                 </div>
                 // <GroupsItemIndex group={group} key={group.id} member={group.leader_id} />
             );

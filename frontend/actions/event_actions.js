@@ -12,22 +12,11 @@ export const fetchEvents = () => (dispatch) => (
 );
 
 const receiveEvents = function(payload) {
-    debugger
     return {
     type: RECEIVE_EVENTS,
     events: payload.events
     }
 };
 
-
-// export const fetchEvents = () => {
-//     debugger
-    // return function(dispatch) {
-    //     debugger
-    //     return 
-    //         (EventsApiUtil.fetchEvents().then(payload => dispatch(receiveEvents(payload))))
-    //     }
-// }
-// ;
 
 

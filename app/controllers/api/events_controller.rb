@@ -24,7 +24,6 @@ class Api::EventsController < ApplicationController
     # end
 
     def index
-        debugger
         @events = Event.all
         render "api/events/index"
     end
