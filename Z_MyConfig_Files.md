@@ -7,6 +7,8 @@ bundle exec rails db:setup              ===> create the DB
 bundle exec rails db:seed               ===> seed the db
 npm run webpack                         ===> start webpack for this app
 
+rails routes                    ==> Show route information
+rails s                         ==> start rails
 
 -- Heroku commands
 git push heroku master
@@ -26,6 +28,10 @@ rails db:drop
 bundle exec annotate
 
 
+// adds routing to application
+npm install --save react-router-dom
+
+
 -- Tech versions of the application w commands
 JavaScript 
 Ruby 2.5.1      -- ruby -v
@@ -34,13 +40,4 @@ Redux 4.0.4     -- npm list redux
 Ruby on Rails 5.2.3     -- rails -v
 PostgreSQL
 webpack 4.41.0          -- npm list webpack
-
-
-
-rails routes                    ==> Show route information
-rails s                         ==> start rails
-
-
-// adds routing to application
-npm install --save react-router-dom
 
