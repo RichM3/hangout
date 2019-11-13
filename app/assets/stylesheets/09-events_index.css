@@ -62,6 +62,7 @@
 }
 
 .event-border-space:hover {
-    box-shadow: 11px 12px 16px red;
+    /* box-shadow: 11px 12px 16px red; */
     /* box-shadow: 11px 12px 16px #c5c4c4; */
+    box-shadow: 11px 12px 16px black;
 }
