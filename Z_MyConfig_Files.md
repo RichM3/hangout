@@ -2,15 +2,10 @@
 -- NPM Install Line
 npm install webpack webpack-cli react react-dom react-redux redux redux-logger @babel/core @babel/preset-react @babel/preset-env babel-loader
 bundle install
+
 bundle exec rails db:setup              ===> create the DB
 bundle exec rails db:seed               ===> seed the db
-
 npm run webpack                         ===> start webpack for this app
-
----- Notes
-Update footer links
-Save top icon in browser window local
-set text input to email on login page
 
 
 -- Heroku commands
