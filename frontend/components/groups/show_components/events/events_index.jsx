@@ -26,24 +26,20 @@ class EventsIndex extends React.Component {
             return (
                 <EventsItemIndex event={event} key={event.id} />
             );
-
-            // return (
-            //     <>
-            //     <EventsItemIndex event={event} key={event.id} />
-            //     {/* <div>
-            //         {event.eventname}
-            //         {event.description}
-            //         {event.starttime}
-            //         {event.endtime}
-            //     </div> */}
-            //     <div>  ------ </div>
-            //     <div className="spacer"> </div>
-            //     </>
-            // );
         })
 
         return (
             <>
+                <div className="spacer"> </div>
+                <div className="spacer"> </div>
+
+                <div className="page-wrapper">
+                <h1>Upcoming Events: </h1>
+                </div>
+
+                <div className="spacer"> </div>
+                <div className="spacer"> </div>
+
 
                 {/* <div>EVENTS</div> */}
                 {/* <div className="page-wrapper">
@@ -59,6 +55,7 @@ class EventsIndex extends React.Component {
                     {listEvents}
                 </ul>
                 <div className="related-events"></div>
+                <div className="spacer"> </div>
 
             </>
         )

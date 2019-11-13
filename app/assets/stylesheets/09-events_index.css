@@ -1,0 +1,87 @@
+.event-stripe {
+    border-top: 1px solid #e6e7e9;
+    /* height: 67px; */
+    background-color: #eeeeee;
+}
+
+.event-div {
+
+    width: 60%;
+    /* display: flex;
+    flex-direction: column;
+    align-items: flex-start; */
+
+    margin-left: auto;
+    margin-right: auto;
+    /* height: 67px; */
+}
+
+.event-wrapper {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+}
+
+.event-titles {
+    width: 25%;
+
+    font-family: "Graphik Meetup", helvetica, arial, sans - serif;
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 1.45;
+}
+
+.event-box {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    word-wrap: break-word;
+
+
+    /* display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    margin-left: auto;
+    margin-right: auto;
+    height: 67px; */
+}
+
+
+.event-spacer {
+    padding: 0px 0px 50px 0px;
+    margin: 0px 0px 5000px 0px;
+}
+
+/* .event-border-space {
+    border: 2px solid red;
+    border-radius: 10px;
+    background-color: #ffffff;
+} */
+
+.event-bottom-space {
+    padding: 0px 0px 50px 0px;
+}
+
+.event-data {
+    text-align: justify;
+    align-items: flex-start;
+    float: left;
+    float: right;
+}
+
+/* .event-section-event { */
+.event-border-space {
+    padding: 0px 100px 0px 0px;
+  /* height: 256px; */
+  /* width: 338px; */
+  border-radius: 6px;
+  /* border: 2px solid #eee; */
+  box-shadow: 1px 2px 6px blue;
+}
+
+/* .event-section-event:hover { */
+.event-border-space:hover {
+  box-shadow: 11px 12px 16px red;
+}
