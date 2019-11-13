@@ -5,7 +5,6 @@ bundle install
 bundle exec rails db:setup               ==> create the DB
 
 bundle exec rails db:seed
-heroku run bundle exec rails db:seed
 
 npm run webpack
 
@@ -15,8 +14,9 @@ Save top icon in browser window local
 set text input to email on login page
 
 
--- Push to Heroku
+-- Heroku commands
 git push heroku master
+heroku run bundle exec rails db:seed
 
 -- Drop the db
 rails db:drop
