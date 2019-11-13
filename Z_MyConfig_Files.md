@@ -17,10 +17,12 @@ heroku run bundle exec rails db:seed
 heroku run bundle exec rails c
 heroku logs --tail
 
+
 -- Drop the db
 rails db:drop
 
--- include DB schema in each model
+
+-- include DB schema in each model file
 bundle exec annotate
 
 
@@ -32,7 +34,6 @@ Redux 4.0.4     -- npm list redux
 Ruby on Rails 5.2.3     -- rails -v
 PostgreSQL
 webpack 4.41.0          -- npm list webpack
-
 
 
 
