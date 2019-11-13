@@ -18,6 +18,11 @@ set text input to email on login page
 git push heroku master
 heroku run bundle exec rails db:seed
 
+
+-- Heroku debugging cmds
+heroku run bundle exec rails c
+heroku logs --tail
+
 -- Drop the db
 rails db:drop
 
