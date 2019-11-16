@@ -49,6 +49,7 @@ class GroupsShow extends React.Component {
 
     joinGroup(e) {
         e.preventDefault()
+        // need to update the state for membership to cause state to re-render
         this.props.createMembership(this.state.groupId)
             .then(() => this.props.history.push('/groups'));
     }
