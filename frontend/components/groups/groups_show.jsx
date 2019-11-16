@@ -10,7 +10,8 @@ class GroupsShow extends React.Component {
         this.state = {
             groupId: this.props.match.params.groupId,
             userId: this.props.currentUser.id,
-            lowerComponent: 'About'
+            lowerComponent: 'About',
+            membership: false
         }
         // this.editGroup = this.editGroup.bind(this);
         this.deleteGroup = this.deleteGroup.bind(this);
@@ -41,6 +42,7 @@ class GroupsShow extends React.Component {
 
     leaveGroup(e) {
         e.preventDefault()
+        // need to update the state for membership to cause state to re-render
         this.props.deleteMembership(this.state.groupId)  //`/groups/${this.props.match.params.groupId}`  Need to get this page to refresh to this page and update the button
             .then(() => this.props.history.push('/groups'));
     }
