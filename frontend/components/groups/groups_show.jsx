@@ -41,7 +41,7 @@ class GroupsShow extends React.Component {
 
     leaveGroup(e) {
         e.preventDefault()
-        this.props.deleteMembership(this.state.groupId)
+        this.props.deleteMembership(this.state.groupId)  //`/groups/${this.props.match.params.groupId}`  Need to get this page to refresh to this page and update the button
             .then(() => this.props.history.push('/groups'));
     }
 

@@ -33,13 +33,14 @@ similar to the greeting component in BenchBNB -- they exist only if the page is 
 
 12) They have a proprietary font so it is hard to match but I did the best I could - I believe
 
-13) Mapped code from the backend switching data using unclude to map data to and from different arrays
+13) Mapped code from the backend switching data using include to map data to and from different arrays
 
 14) used clearfix CSS solution and FLOAT left to ensure the GroupIndex page held data vertically and did not travel outside of the containg div.
 
 15) Div development for all pages - using divs to map all code
 
 16) Using dependent destroy to delete assosciated usergroup memberships when the group is destroyed!!!!!
+-- by declaratively telling Rails that there is a connection between the two models
 -- https://guides.rubyonrails.org/association_basics.html
 
 17) setState is an Asynchronous process so must pass a callback in if you need a function to work on that updated value immediately after the update
