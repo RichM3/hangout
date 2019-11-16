@@ -43,7 +43,7 @@ class GroupsShow extends React.Component {
     leaveGroup(e) {
         e.preventDefault()
         // need to update the state for membership to cause state to re-render
-        this.setState({ membership: true });
+        // this.setState({ membership: true });
         this.props.deleteMembership(this.state.groupId)  //`/groups/${this.props.match.params.groupId}`  Need to get this page to refresh to this page and update the button
             .then(() => this.props.history.push('/groups'));
     }
@@ -51,7 +51,7 @@ class GroupsShow extends React.Component {
     joinGroup(e) {
         e.preventDefault()
         // need to update the state for membership to cause state to re-render
-        this.setState( {membership: true });
+        // this.setState( {membership: true });
         this.props.createMembership(this.state.groupId)
             .then(() => this.props.history.push('/groups'));
     }
