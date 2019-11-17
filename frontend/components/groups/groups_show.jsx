@@ -20,19 +20,6 @@ class GroupsShow extends React.Component {
         this.updateComponent = this.updateComponent.bind(this);
     }
 
-    // Using this as a reference for updating state may not longer need this 11-8-2019
-    // update(field) {
-    //     return e => this.setState({
-    //         [field]: e.currentTarget.value
-    //     });
-    // }
-
-    // editGroup(e) {
-    //     e.preventDefault()
-    //     this.props.editGroup(this.state.groupId)
-    //         .then(() => this.props.history.push('/groups'));
-    // }
-
     deleteGroup(e) {
         e.preventDefault()
         this.props.deleteGroup(this.state.groupId)
@@ -72,7 +59,7 @@ class GroupsShow extends React.Component {
             lowerComponent: e.target.innerText
         });
     }
-    
+
 
     render() {
 
