@@ -99,6 +99,9 @@ class GroupsShow extends React.Component {
         let groupId = this.props.match.params.groupId;
         let inGroups = this.props.currentUser.groupIds.includes(parseInt(groupId));
 
+        // if (inGroups) {
+            // this.setState({ isMember:true})
+        // }
 
         //Need to put code here to identify if the user is a member of the group already
 
