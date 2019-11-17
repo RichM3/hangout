@@ -109,11 +109,7 @@ class GroupsShow extends React.Component {
             optionButton = (
                 <form onSubmit={this.deleteGroup}>
                     <input type="submit" value="Delete this group" className="delete-button" />
-                    {/* <Link to="/groups" className="delete-button" >Leave this group</Link> */}
                 </form>
-                // <div>
-                //     <Link to="/groups" className="delete-button" >Delete this group</Link>
-                // </div>
             );
             editButton = (
                 <Link to={`/groups/${this.props.group.id}/edit`} className="delete-button" >Edit this group</Link>
