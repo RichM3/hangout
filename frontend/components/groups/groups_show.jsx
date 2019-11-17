@@ -120,7 +120,6 @@ class GroupsShow extends React.Component {
             optionButton = (
                 <form onSubmit={this.leaveGroup}>
                     <input type="submit" value="Leave this group" className="delete-button" />
-                    {/* <Link to="/groups" className="delete-button" >Leave this group</Link> */}
                 </form>
             );
         } else {
