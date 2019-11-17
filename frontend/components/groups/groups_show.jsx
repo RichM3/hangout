@@ -11,7 +11,7 @@ class GroupsShow extends React.Component {
             groupId: this.props.match.params.groupId,
             userId: this.props.currentUser.id,
             lowerComponent: 'About',
-            membership: false
+            isMember: null
         }
         // this.editGroup = this.editGroup.bind(this);
         this.deleteGroup = this.deleteGroup.bind(this);
@@ -43,15 +43,18 @@ class GroupsShow extends React.Component {
     leaveGroup(e) {
         e.preventDefault()
         // need to update the state for membership to cause state to re-render
-        // this.setState({ membership: true });
-        this.props.deleteMembership(this.state.groupId)  //`/groups/${this.props.match.params.groupId}`  Need to get this page to refresh to this page and update the button
-            .then(() => this.props.history.push('/groups'));
+        // this.setState({ isMember: false });
+        debugger
+        this.props.deleteMembership(this.state.groupId);  //`/groups/${this.props.match.params.groupId}`  Need to get this page to refresh to this page and update the button
+        // this.setState({ isMember: false });
+            // .then(() => this.props.history.push('/groups'));
+            // .then(() => this.props.history.push(`/groups/${this.props.match.params.groupId}`));
     }
 
     joinGroup(e) {
         e.preventDefault()
         // need to update the state for membership to cause state to re-render
-        // this.setState( {membership: true });
+        // this.setState( {isMember: true });
         this.props.createMembership(this.state.groupId)
             .then(() => this.props.history.push('/groups'));
     }
@@ -96,6 +99,9 @@ class GroupsShow extends React.Component {
         let groupId = this.props.match.params.groupId;
         let inGroups = this.props.currentUser.groupIds.includes(parseInt(groupId));
 
+
+        //Need to put code here to identify if the user is a member of the group already
+
         if (this.props.currentUser.username === this.props.group.leaderName) {
             optionButton = (
                 <form onSubmit={this.deleteGroup}>
@@ -116,6 +122,7 @@ class GroupsShow extends React.Component {
             )
         }
         else if (inGroups) {
+            // this.setState({ isMember: true });
             optionButton = (
                 <form onSubmit={this.leaveGroup}>
                     <input type="submit" value="Leave this group" className="delete-button" />
@@ -123,6 +130,7 @@ class GroupsShow extends React.Component {
                 </form>
             );
         } else {
+            // this.setState({ isMember: false });
             optionButton = (
                 <form onSubmit={this.joinGroup}>
                     <input type="submit" value="Join this group" className="delete-button" />
