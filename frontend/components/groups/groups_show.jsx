@@ -127,7 +127,6 @@ class GroupsShow extends React.Component {
             optionButton = (
                 <form onSubmit={this.joinGroup}>
                     <input type="submit" value="Join this group" className="delete-button" />
-                    {/* <Link to="/groups" className="delete-button" >Join this group</Link> */}
                 </form>
             );
         }
