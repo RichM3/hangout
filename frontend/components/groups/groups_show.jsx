@@ -18,7 +18,6 @@ class GroupsShow extends React.Component {
         this.leaveGroup = this.leaveGroup.bind(this);
         this.joinGroup = this.joinGroup.bind(this);
         this.updateComponent = this.updateComponent.bind(this);
-        // this.myAlert = this.myAlert.bind(this);
     }
 
     // Using this as a reference for updating state may not longer need this 11-8-2019
@@ -73,10 +72,7 @@ class GroupsShow extends React.Component {
             lowerComponent: e.target.innerText
         });
     }
-
-    // myAlert(e) {
-    //     window.alert(this.state.lowerComponent);
-    // }
+    
 
     render() {
 
