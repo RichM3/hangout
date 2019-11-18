@@ -104,7 +104,6 @@ class GroupsShow extends React.Component {
             )
         }
         else if (inGroups) {
-            // this.setState({ isMember: true });
             optionButton = (
                 <form onSubmit={this.leaveGroup}>
                     <input type="submit" value="Leave this group" className="delete-button" />
