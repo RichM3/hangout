@@ -11,13 +11,14 @@ class GroupsShow extends React.Component {
             groupId: this.props.match.params.groupId,
             userId: this.props.currentUser.id,
             lowerComponent: 'About',
-            isMember: null
+            isMember:""
         }
         // this.editGroup = this.editGroup.bind(this);
         this.deleteGroup = this.deleteGroup.bind(this);
         this.leaveGroup = this.leaveGroup.bind(this);
         this.joinGroup = this.joinGroup.bind(this);
         this.updateComponent = this.updateComponent.bind(this);
+        this.updateJoin = this.updateJoin.bind(this);
     }
 
     deleteGroup(e) {
@@ -30,17 +31,25 @@ class GroupsShow extends React.Component {
         e.preventDefault()
         // need to update the state for membership to cause state to re-render
         // this.setState({ isMember: false });
-        debugger
-        this.props.deleteMembership(this.state.groupId);  //`/groups/${this.props.match.params.groupId}`  Need to get this page to refresh to this page and update the button
+        this.props.deleteMembership(this.state.groupId)  //`/groups/${this.props.match.params.groupId}`  Need to get this page to refresh to this page and update the button
         // this.setState({ isMember: false });
-            // .then(() => this.props.history.push('/groups'));
+            .then(() => this.props.history.push('/groups'));
             // .then(() => this.props.history.push(`/groups/${this.props.match.params.groupId}`));
+    }
+
+
+    updateJoin(e) {
+        debugger
+        this.setState({ isMember: true });
+        debugger
     }
 
     joinGroup(e) {
         e.preventDefault()
         // need to update the state for membership to cause state to re-render
-        // this.setState( {isMember: true });
+        debugger
+        this.updateJoin(e);
+        debugger
         this.props.createMembership(this.state.groupId)
             .then(() => this.props.history.push('/groups'));
     }
