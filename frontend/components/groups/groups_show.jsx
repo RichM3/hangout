@@ -110,7 +110,6 @@ class GroupsShow extends React.Component {
                 </form>
             );
         } else {
-            // this.setState({ isMember: false });
             optionButton = (
                 <form onSubmit={this.joinGroup}>
                     <input type="submit" value="Join this group" className="delete-button" />
