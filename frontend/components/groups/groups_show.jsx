@@ -13,7 +13,6 @@ class GroupsShow extends React.Component {
             lowerComponent: 'About',
             isMember:""
         }
-        // this.editGroup = this.editGroup.bind(this);
         this.deleteGroup = this.deleteGroup.bind(this);
         this.leaveGroup = this.leaveGroup.bind(this);
         this.joinGroup = this.joinGroup.bind(this);
