@@ -38,11 +38,11 @@ class GroupsShow extends React.Component {
     }
 
 
-    updateJoin(e) {
-        debugger
-        this.setState({ isMember: true });
-        debugger
-    }
+    // updateJoin(e) {
+    //     debugger
+    //     this.setState({ isMember: true });
+    //     debugger
+    // }
 
     joinGroup(e) {
         e.preventDefault()
