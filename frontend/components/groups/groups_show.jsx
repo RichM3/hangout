@@ -20,7 +20,7 @@ class GroupsShow extends React.Component {
         this.updateJoin = this.updateJoin.bind(this);
     }
 
-    // Need 
+    // Need to
     deleteGroup(e) {
         e.preventDefault()
         this.props.deleteGroup(this.state.groupId)
