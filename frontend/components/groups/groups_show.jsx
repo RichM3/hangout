@@ -20,13 +20,13 @@ class GroupsShow extends React.Component {
         this.updateJoin = this.updateJoin.bind(this);
     }
 
-    // Need to add
     deleteGroup(e) {
         e.preventDefault()
         this.props.deleteGroup(this.state.groupId)
-            .then(() => this.props.history.push('/groups'));
+        .then(() => this.props.history.push('/groups'));
     }
-
+    
+    // Need to update state with button???
     leaveGroup(e) {
         e.preventDefault()
         // need to update the state for membership to cause state to re-render
