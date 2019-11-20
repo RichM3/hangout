@@ -17,7 +17,7 @@ class GroupsShow extends React.Component {
         this.leaveGroup = this.leaveGroup.bind(this);
         this.joinGroup = this.joinGroup.bind(this);
         this.updateComponent = this.updateComponent.bind(this);
-        this.updateJoin = this.updateJoin.bind(this);
+        // this.updateJoin = this.updateJoin.bind(this);
     }
 
     deleteGroup(e) {
