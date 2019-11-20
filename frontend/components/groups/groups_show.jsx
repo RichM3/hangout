@@ -26,8 +26,6 @@ class GroupsShow extends React.Component {
         .then(() => this.props.history.push('/groups'));
     }
     
-
-    
     // Need to update state with button???
     leaveGroup(e) {
         e.preventDefault()
