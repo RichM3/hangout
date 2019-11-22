@@ -51,7 +51,8 @@ class GroupsShow extends React.Component {
         // debugger
         // this.updateJoin(e);
         // debugger
-
+        debugger
+        // this.props.createMembership(parseInt(this.state.groupId));
         this.props.createMembership(this.state.groupId);
             // .then(() => this.props.history.push('/groups'));
     }
