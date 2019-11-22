@@ -79,7 +79,7 @@ export const deleteGroup = (id) => (dispatch) => (
 );
 
 
-
+//Need to restructure this to see why groupId is null in reducer
 
 // Replaced Save Group Membership with receiveSingleGroup
 export const createMembership = (groupId) => (dispatch) => (
