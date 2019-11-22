@@ -4,14 +4,16 @@ import NavbarContainer from "../navbar/navbar_container";
 import FooterContainer from "../footer/footer_container";
 import LowerSectionContainer from "./show_components/lower_section/lower_section_container";
 
+
 class GroupsShow extends React.Component {
     constructor(props) {
+        // debugger
         super(props);
         this.state = {
             groupId: this.props.match.params.groupId,
             userId: this.props.currentUser.id,
             lowerComponent: 'About',
-            isMember:""
+            isMember: ""
         }
         this.deleteGroup = this.deleteGroup.bind(this);
         this.leaveGroup = this.leaveGroup.bind(this);
@@ -51,9 +53,29 @@ class GroupsShow extends React.Component {
         // debugger
         // this.updateJoin(e);
         // debugger
-        debugger
         // this.props.createMembership(parseInt(this.state.groupId));
-        this.props.createMembership(this.state.groupId);
+        this.props.createMembership(this.state.groupId)
+            .then(() => this.props.fetchUserInfo());
+            // .then(() => this.setState({ isMember: "yes" }));
+
+        // debugger
+        // this.props.createMembership(this.state.groupId);
+
+        // debugger
+        // this.props.fetchUserInfo();
+
+        // debugger
+        // this.setState({isMember:"yes"});
+
+        //     // .then(()=> this.setState({isMember:"yes"}));
+        // debugger
+        // console.log("here");
+        // this.forceUpdate();
+        // debugger
+        // this.props.fetchGroup(this.state.groupId);
+
+            // .then(() => this.props.fetchGroup(this.state.groupId));
+        
             // .then(() => this.props.history.push('/groups'));
     }
 
@@ -62,11 +84,13 @@ class GroupsShow extends React.Component {
         // window.scroll({top: 0, left: 0, behavior: 'smooth' });
 
         let groupId = this.props.match.params.groupId;
+        // debugger
         this.props.fetchGroup(groupId);
     }
 
     //You should invoke your second function as a callback to setState, as setState happens asynchronously
     updateComponent(e) {
+        // debugger
         this.setState({
             lowerComponent: e.target.innerText
         });
@@ -74,6 +98,7 @@ class GroupsShow extends React.Component {
 
 
     render() {
+        // debugger
         // Needed if the page is returned before the component did mount got the value from the url -- on refresh
         if (!this.props.group) {
             return null
@@ -91,8 +116,10 @@ class GroupsShow extends React.Component {
         let optionButton = "";
         let editButton = "";
         let groupId = this.props.match.params.groupId;
+        // debugger
         let inGroups = this.props.currentUser.groupIds.includes(parseInt(groupId));
-
+        // debugger
+        
         //Need to put code here to identify if the user is a member of the group already
 
         if (this.props.currentUser.username === this.props.group.leaderName) {

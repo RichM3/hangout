@@ -29,9 +29,11 @@ class Api::GroupsController < ApplicationController
     end
 
     def show
+        # debugger
         @group = Group.find(params[:id])
         # render "api/groups/show"
         render :show
+        # debugger
     end
 
     # def edit
@@ -57,8 +59,10 @@ class Api::GroupsController < ApplicationController
 
     # Custom Routes for the Usergroup memberships table - Add and Remove
     def create_membership
+        # debugger
         @group = Group.find(params[:id])
         @group.members << current_user
+        # debugger
         # render :show
     end
 

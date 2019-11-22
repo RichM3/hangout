@@ -7,7 +7,7 @@ const groupsReducer = (oldState = {}, action) => {
         case RECEIVE_GROUPS: 
             return action.groups;
         case RECEIVE_SINGLE_GROUP:
-            debugger
+            // debugger
             // return Object.assign({}, state, { [action.groupData.group.id]: action.groupData.group })
             // return Object.assign({}, oldState, { [action.payload.group.id]: action.group })
             return Object.assign({}, oldState, { [action.group.id]: action.group})

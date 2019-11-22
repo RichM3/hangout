@@ -15,10 +15,10 @@ const receiveGroups = (payload) => ({
 });
 
 const receiveSingleGroup = (payload) => {
+    // debugger
     return ({
     type: RECEIVE_SINGLE_GROUP,
     group: payload
-    // group: payload.group
     })
 };
 
@@ -62,9 +62,15 @@ export const fetchGroups = () => (dispatch) => (
     GroupsApiUtil.fetchGroups().then(payload => dispatch(receiveGroups(payload)))
 );
 
-export const fetchGroup = (id) => (dispatch) => (
+export const fetchGroup = (id) => {
+    // debugger
+    return function(dispatch) { (
     GroupsApiUtil.fetchGroup(id).then(payload => dispatch(receiveSingleGroup(payload)))
-);
+)}};
+
+// export const fetchGroup = (id) => (dispatch) => (
+//     GroupsApiUtil.fetchGroup(id).then(payload => dispatch(receiveSingleGroup(payload)))
+// );
 
 export const editGroup = (group) => (dispatch) => (
     GroupsApiUtil.editGroup(group).then(payload => dispatch(updateGroup(payload)))
@@ -80,15 +86,20 @@ export const deleteGroup = (id) => (dispatch) => (
 
 
 //Need to restructure this to see why groupId is null in reducer
+// export const createMembership = (groupId) =>  {
+//     debugger
+//     return function(dispatch) { (
+//     GroupsApiUtil.createNewMembership(groupId).then(payload => dispatch(receiveSingleGroup(payload)))
+// )}};
 
-// Replaced Save Group Membership with receiveSingleGroup
-export const createMembership = (groupId) => (dispatch) => (
-    GroupsApiUtil.createNewMembership(groupId).then(payload => dispatch(receiveSingleGroup(payload)))
-);
-
+// // Replaced Save Group Membership with receiveSingleGroup
 // export const createMembership = (groupId) => (dispatch) => (
-//     GroupsApiUtil.createNewMembership(groupId).then(id => dispatch(saveMembership(id)))
+//     GroupsApiUtil.createNewMembership(groupId).then(payload => dispatch(receiveSingleGroup(payload)))
 // );
+
+export const createMembership = (groupId) => (dispatch) => (
+    GroupsApiUtil.createNewMembership(groupId).then(id => dispatch(saveMembership(id)))
+);
 
 export const deleteMembership = (groupId) => (dispatch) => (
     GroupsApiUtil.deleteCurrMembership(groupId).then(id => dispatch(removeMembership(id)))

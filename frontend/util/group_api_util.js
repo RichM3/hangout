@@ -52,6 +52,7 @@ export const deleteCurrGroup = (id) => {
 
 // These are for joining and leaving a group
 export const createNewMembership = (groupId) => {
+    // debugger
     return $.ajax({
         method: "post",
         url: `api/groups/create_membership/${groupId}`
