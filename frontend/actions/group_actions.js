@@ -78,9 +78,15 @@ export const deleteGroup = (id) => (dispatch) => (
     GroupsApiUtil.deleteCurrGroup(id).then(group => dispatch(removeGroup(group)))
 );
 
+
+// Replaced Save Group Membership with receiveSingleGroup
 export const createMembership = (groupId) => (dispatch) => (
-    GroupsApiUtil.createNewMembership(groupId).then(id => dispatch(saveMembership(id)))
+    GroupsApiUtil.createNewMembership(groupId).then(payload => dispatch(receiveSingleGroup(payload)))
 );
+
+// export const createMembership = (groupId) => (dispatch) => (
+//     GroupsApiUtil.createNewMembership(groupId).then(id => dispatch(saveMembership(id)))
+// );
 
 export const deleteMembership = (groupId) => (dispatch) => (
     GroupsApiUtil.deleteCurrMembership(groupId).then(id => dispatch(removeMembership(id)))
