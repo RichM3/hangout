@@ -19,6 +19,24 @@ class EventsCreate extends React.Component {
         <div className="create-banner">
             <span className="create-text">Create an Event</span>
         </div>
+
+
+            <div>
+
+                <form action="">
+
+                    <div>Event name</div>
+
+                    <div>Location</div>
+
+                    <div>Description</div>
+
+                </form>
+                
+            </div>
+
+
+
         <FooterContainer myType={"groups"} />
         </>
         )
