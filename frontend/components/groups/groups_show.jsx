@@ -48,12 +48,11 @@ class GroupsShow extends React.Component {
     }
 
     //You should invoke your second function as a callback to setState, as setState happens asynchronously
-    updateComponent(el) {
-        el;
-        debugger
-        // this.setState({
-        //     lowerComponent: e.target.innerText
-        // });
+    updateComponent(e) {
+        // myClassName = e.target.innerText;
+        this.setState({
+            lowerComponent: e.target.innerText
+        });
     }
 
     
@@ -173,16 +172,16 @@ class GroupsShow extends React.Component {
 
             <div className="menu-stripe">
                 <div className="menu-div">
-                        
-                        <div id="About" className={this.state.lowerComponent === Element.innerText ? "menu-selected" : "menu-choices"} onClick={() => this.updateComponent("About")}>
+{/*                         
+                    <div id="About" className={this.state.lowerComponent === document.getElementById("About").innerText ? "menu-selected" : "menu-choices"} onClick={this.updateComponent}>
                         <p>About</p>
-                    </div>
+                    </div> */}
                     {/* <div className="menu-selected" onClick={this.updateComponent}>
                         <p className="fakeLink" >About</p>
                     </div> */}
-                    {/* <div className="menu-choices" onClick={this.updateComponent}>
+                    <div className="menu-choices" onClick={this.updateComponent}>
                             <p className={this.state.lowerComponent === "About" ? "menu-selected" : "fakeLink"} >About</p>
-                    </div> */}
+                    </div>
                     <div className="menu-choices" onClick={this.updateComponent} >
                         <p className="fakeLink" >Events</p>
                     </div>
