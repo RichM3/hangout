@@ -28,7 +28,7 @@ class LowerSection extends React.Component {
                 myContainer = <AboutContainer desc={this.props.desc}/>;
                 break;
             case "Events":
-                myContainer = <EventsContainer />;
+                myContainer = <EventsContainer leaderName={this.props.leaderName}/>;
                 break;
             case "Members":
                 myContainer = <MembersContainer />;

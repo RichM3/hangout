@@ -3,14 +3,15 @@ import EventsIndex from './events_index';
 import { fetchEvents } from '../../../../actions/event_actions';
 
 const mapStateToProps = ({ session, entities: { users, groups, events } }, ownProps) => {
-    // let currentUser = state.entities.users[state.session.id];
+    let currentUser = users[session.id];
     // let groupId = ownProps.match.params.groupId;
     const allEvents = events ? Object.values(events) : []
 
     // let isEvent = currentUser.groupIds.includes(groupId)
 
     return ({
-        allEvents: allEvents
+        allEvents: allEvents,
+        currentUser: currentUser
     })
 };
 

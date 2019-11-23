@@ -17,6 +17,8 @@ class GroupsShow extends React.Component {
         this.leaveGroup = this.leaveGroup.bind(this);
         this.joinGroup = this.joinGroup.bind(this);
         this.updateComponent = this.updateComponent.bind(this);
+
+        // this.choose = this.choose.bind(this);
     }
 
     deleteGroup(e) {
@@ -46,18 +48,35 @@ class GroupsShow extends React.Component {
     }
 
     //You should invoke your second function as a callback to setState, as setState happens asynchronously
-    updateComponent(e) {
-        this.setState({
-            lowerComponent: e.target.innerText
-        });
+    updateComponent(el) {
+        el;
+        debugger
+        // this.setState({
+        //     lowerComponent: e.target.innerText
+        // });
     }
 
+    
+    myAlert() {
+        window.alert("here i am");
+    }
+
+    // choose(str) {
+    //     debugger
+    //     this.myInput.setAttribute("class", "highlight");
+    //     console.log(str);
+    //     console.log("testXXXXXX");
+    // }
 
     render() {
+        // debugger
         // Needed if the page is returned before the component did mount, gets the value from the url -- on refresh
         if (!this.props.group) {
             return null
         }
+
+        let selectedMenuItem = "menu-selected";
+        
 
         let people = window.peopleHangoutURL;
         let map = window.mapMarkerURL;
@@ -97,9 +116,22 @@ class GroupsShow extends React.Component {
             );
         }
 
+
+        // let elem = document.getElementById('About');
+        // console.log(elem);
+
+        // console.log(document.getElementById("About"));
+        // console.log(Element.innerText);
+        // console.log("TEST");
+
+
         return(
             <>
             <NavbarContainer navType={"groups_show"} myType={""} />
+
+                {/* <button onClick={(e) => this.choose(e.target.innerHTML)}>Apple</button> */}
+
+
             <div className="header-stripe">
                 <div className="header-inner" >
                     <div className="header-left">
@@ -141,9 +173,16 @@ class GroupsShow extends React.Component {
 
             <div className="menu-stripe">
                 <div className="menu-div">
-                    <div className="menu-selected" onClick={this.updateComponent}>
-                        <p className="fakeLink" >About</p>
+                        
+                        <div id="About" className={this.state.lowerComponent === Element.innerText ? "menu-selected" : "menu-choices"} onClick={() => this.updateComponent("About")}>
+                        <p>About</p>
                     </div>
+                    {/* <div className="menu-selected" onClick={this.updateComponent}>
+                        <p className="fakeLink" >About</p>
+                    </div> */}
+                    {/* <div className="menu-choices" onClick={this.updateComponent}>
+                            <p className={this.state.lowerComponent === "About" ? "menu-selected" : "fakeLink"} >About</p>
+                    </div> */}
                     <div className="menu-choices" onClick={this.updateComponent} >
                         <p className="fakeLink" >Events</p>
                     </div>
@@ -162,12 +201,13 @@ class GroupsShow extends React.Component {
                 </div>
             </div>
 
-            <LowerSectionContainer type={this.state.lowerComponent} desc={this.props.group.description} />
+            <LowerSectionContainer type={this.state.lowerComponent} desc={this.props.group.description} leaderName={this.props.group.leaderName} />
 
             <FooterContainer myType={"groups"} />
             </>
         )
     }
+
 }
 
 export default GroupsShow;
