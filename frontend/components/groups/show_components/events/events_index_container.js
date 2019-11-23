@@ -5,7 +5,6 @@ import { fetchEvents } from '../../../../actions/event_actions';
 const mapStateToProps = ({ session, entities: { users, groups, events } }, ownProps) => {
     // let currentUser = state.entities.users[state.session.id];
     // let groupId = ownProps.match.params.groupId;
-    // debugger
     const allEvents = events ? Object.values(events) : []
 
     // let isEvent = currentUser.groupIds.includes(groupId)

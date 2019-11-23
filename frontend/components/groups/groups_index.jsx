@@ -19,16 +19,13 @@ class GroupsIndex extends React.Component {
     }
 
     componentDidMount() {
-        //In the CDM of index
         window.scrollTo(0, 0)
         // window.scroll({ top: 0, left: 0, behavior: 'smooth' });
         this.props.fetchUserInfo();
         this.props.fetchGroups();
-
     }
 
     render() {
-        //In the Render of index
 
         let inGroups = this.props.inGroups.map( group => {
             return (
@@ -87,4 +84,3 @@ class GroupsIndex extends React.Component {
 }
 
 export default GroupsIndex;
-

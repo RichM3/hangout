@@ -46,6 +46,12 @@ similar to the greeting component in BenchBNB -- they exist only if the page is 
 17) setState is an Asynchronous process so must pass a callback in if you need a function to work on that updated value immediately after the update
 -- https://stackoverflow.com/questions/38558200/react-setstate-not-updating-immediately
 
+18) Needed to promise (.then) the fetchUserInfo so that the component props updated to re-render the component, otherwise without the rerender the inGroups on the Groups_Show page would return with an incorrect group list and therefore be show the incorrect join/leave button.
+        this.props.createMembership(this.state.groupId)
+            .then(() => this.props.fetchUserInfo());
+
+
+
 
 
 --- Code to review for Readme

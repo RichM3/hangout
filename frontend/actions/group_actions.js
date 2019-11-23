@@ -15,7 +15,6 @@ const receiveGroups = (payload) => ({
 });
 
 const receiveSingleGroup = (payload) => {
-    // debugger
     return ({
     type: RECEIVE_SINGLE_GROUP,
     group: payload
@@ -63,14 +62,9 @@ export const fetchGroups = () => (dispatch) => (
 );
 
 export const fetchGroup = (id) => {
-    // debugger
     return function(dispatch) { (
     GroupsApiUtil.fetchGroup(id).then(payload => dispatch(receiveSingleGroup(payload)))
 )}};
-
-// export const fetchGroup = (id) => (dispatch) => (
-//     GroupsApiUtil.fetchGroup(id).then(payload => dispatch(receiveSingleGroup(payload)))
-// );
 
 export const editGroup = (group) => (dispatch) => (
     GroupsApiUtil.editGroup(group).then(payload => dispatch(updateGroup(payload)))
@@ -84,19 +78,7 @@ export const deleteGroup = (id) => (dispatch) => (
     GroupsApiUtil.deleteCurrGroup(id).then(group => dispatch(removeGroup(group)))
 );
 
-
-//Need to restructure this to see why groupId is null in reducer
-// export const createMembership = (groupId) =>  {
-//     debugger
-//     return function(dispatch) { (
-//     GroupsApiUtil.createNewMembership(groupId).then(payload => dispatch(receiveSingleGroup(payload)))
-// )}};
-
-// // Replaced Save Group Membership with receiveSingleGroup
-// export const createMembership = (groupId) => (dispatch) => (
-//     GroupsApiUtil.createNewMembership(groupId).then(payload => dispatch(receiveSingleGroup(payload)))
-// );
-
+// saveMembership does nothing at this point - Originally planned to do something but used a workaround
 export const createMembership = (groupId) => (dispatch) => (
     GroupsApiUtil.createNewMembership(groupId).then(id => dispatch(saveMembership(id)))
 );
