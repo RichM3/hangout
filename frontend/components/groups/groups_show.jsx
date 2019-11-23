@@ -17,8 +17,6 @@ class GroupsShow extends React.Component {
         this.leaveGroup = this.leaveGroup.bind(this);
         this.joinGroup = this.joinGroup.bind(this);
         this.updateComponent = this.updateComponent.bind(this);
-
-        // this.choose = this.choose.bind(this);
     }
 
     deleteGroup(e) {
@@ -47,9 +45,8 @@ class GroupsShow extends React.Component {
         this.props.fetchGroup(groupId);
     }
 
-    //You should invoke your second function as a callback to setState, as setState happens asynchronously
+    //You should invoke your second function as a promise to setState, as setState happens asynchronously
     updateComponent(e) {
-        // myClassName = e.target.innerText;
         this.setState({
             lowerComponent: e.target.innerText
         });
@@ -60,15 +57,7 @@ class GroupsShow extends React.Component {
         window.alert("here i am");
     }
 
-    // choose(str) {
-    //     debugger
-    //     this.myInput.setAttribute("class", "highlight");
-    //     console.log(str);
-    //     console.log("testXXXXXX");
-    // }
-
     render() {
-        // debugger
         // Needed if the page is returned before the component did mount, gets the value from the url -- on refresh
         if (!this.props.group) {
             return null
@@ -115,21 +104,9 @@ class GroupsShow extends React.Component {
             );
         }
 
-
-        // let elem = document.getElementById('About');
-        // console.log(elem);
-
-        // console.log(document.getElementById("About"));
-        // console.log(Element.innerText);
-        // console.log("TEST");
-
-
         return(
             <>
             <NavbarContainer navType={"groups_show"} myType={""} />
-
-                {/* <button onClick={(e) => this.choose(e.target.innerHTML)}>Apple</button> */}
-
 
             <div className="header-stripe">
                 <div className="header-inner" >
@@ -191,7 +168,7 @@ class GroupsShow extends React.Component {
     
             <div className="menu-stripe">
                 <div className="menu-div">
-                    {/*                         
+                    {/* ---- Never able to make this code dynamically - in hindsight should code an enumeration array over the topics and text against index on render to assign selected className
                     <div id="About" className={this.state.lowerComponent === document.getElementById("About").innerText ? "menu-selected" : "menu-choices"} onClick={this.updateComponent}>
                         <p>About</p>
                     </div> */}
