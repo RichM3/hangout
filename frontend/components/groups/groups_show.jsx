@@ -170,9 +170,28 @@ class GroupsShow extends React.Component {
             {/* Menu stripe begins here */}
 
 
+{/* ------------------------------------------------------------------------- */}
+                {/* handleDateClick(check) {
+                    this.props.openCalendarModal(this.events)
+        let checkIn = document.getElementById("check-in-div");
+                let checkOut = document.getElementById("check-out-div");
+        if (check === "in") {
+                    this.selectingCheckIn = true;
+                checkOut.classList.remove("selecting-div");
+                checkIn.classList.add("selecting-div");
+        } else {
+                    this.selectingCheckIn = false;
+                checkOut.classList.add("selecting-div");
+                checkIn.classList.remove("selecting-div");
+            }
+        } */}
+{/* ------------------------------------------------------------------------- */}
+    
+    
+    
             <div className="menu-stripe">
                 <div className="menu-div">
-{/*                         
+                    {/*                         
                     <div id="About" className={this.state.lowerComponent === document.getElementById("About").innerText ? "menu-selected" : "menu-choices"} onClick={this.updateComponent}>
                         <p>About</p>
                     </div> */}
@@ -180,22 +199,22 @@ class GroupsShow extends React.Component {
                         <p className="fakeLink" >About</p>
                     </div> */}
                     <div className="menu-choices" onClick={this.updateComponent}>
-                            <p className={this.state.lowerComponent === "About" ? "menu-selected" : "fakeLink"} >About</p>
+                        <p className={this.state.lowerComponent === "About" ? "menu-selected" : "fakeLink"} >About</p>
                     </div>
                     <div className="menu-choices" onClick={this.updateComponent} >
-                        <p className="fakeLink" >Events</p>
+                        <p className={this.state.lowerComponent === "Events" ? "menu-selected" : "fakeLink"} >Events</p>
                     </div>
                     <div className="menu-choices" onClick={this.updateComponent} >
-                        <p className="fakeLink" >Members</p>
+                            <p className={this.state.lowerComponent === "Members" ? "menu-selected" : "fakeLink"} >Members</p>
                     </div>
                     <div className="menu-choices" onClick={this.updateComponent} >
-                        <p className="fakeLink" >Photos</p>
+                            <p className={this.state.lowerComponent === "Photos" ? "menu-selected" : "fakeLink"} >Photos</p>
                     </div>
                     <div className="menu-choices" onClick={this.updateComponent} >
-                        <p className="fakeLink" >Discussions</p>
+                            <p className={this.state.lowerComponent === "Discussions" ? "menu-selected" : "fakeLink"} >Discussions</p>
                     </div>
                     <div className="menu-choices" onClick={this.updateComponent} >
-                        <p className="fakeLink" >More</p>
+                            <p className={this.state.lowerComponent === "More" ? "menu-selected" : "fakeLink"} >More</p>
                     </div>
                 </div>
             </div>
