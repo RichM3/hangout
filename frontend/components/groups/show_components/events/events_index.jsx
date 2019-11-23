@@ -28,7 +28,7 @@ class EventsIndex extends React.Component {
         // debugger
         if (this.props.currentUser.username === this.props.leaderName) {
             optionButton = (
-                <Link to={`/#/`} className="create-event-btn" >Create an Event</Link>
+                <Link to={`/events/create`} className="create-event-btn" >Create an Event</Link>
             )
         }
 
