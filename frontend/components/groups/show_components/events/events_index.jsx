@@ -7,7 +7,7 @@ class EventsIndex extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            // groupId: this.props.match.params.groupId,
+            groupId: this.props.groupId
             // userId: this.props.currentUser.id
         }
         // this.handleSubmit = this.handleSubmit.bind(this);
@@ -28,7 +28,13 @@ class EventsIndex extends React.Component {
         // debugger
         if (this.props.currentUser.username === this.props.leaderName) {
             optionButton = (
-                <Link to={`/events/create`} className="create-event-btn" >Create an Event</Link>
+                <Link to={ {
+                    pathname: `/events/create`,
+                    state: {
+                        groupId: this.state.groupId
+                    }
+                } }
+                className="create-event-btn" >Create an Event</Link>
             )
         }
 

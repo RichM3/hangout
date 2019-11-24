@@ -7,11 +7,14 @@ import FooterContainer from '../../../footer/footer_container';
 class EventsCreate extends React.Component {
     constructor(props) {
         super(props);
+        // debugger
         this.state = {
+            groupId: this.props.groupId,
             eventname: '',
             description: '',
-            location: '',
-            leaderId: this.props.group.leaderId
+            location: ''
+            // ,
+            // leaderId: this.props.group.leaderId
         }
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -23,11 +26,12 @@ class EventsCreate extends React.Component {
         });
     }
 
-    // handleSubmit(e) {
-    //     e.preventDefault()
-    //     this.props.createEvent(this.state)
-    //         .then(() => this.props.history.push('/groups'));
-    // }
+    handleSubmit(e) {
+        debugger
+        e.preventDefault()
+        this.props.createEvent(this.state)
+            .then(() => this.props.history.push(`/groups/${this.props.match.params.groupId}`));
+    }
 
 
     render() {
@@ -37,6 +41,12 @@ class EventsCreate extends React.Component {
         <div className="event-create-banner">
             <span className="event-create-text">Create an Event</span>
         </div>
+
+{/* NEED TO GET THE STUPID GROUPID THROUGHT THE ROUTER!!! */}
+            <div>
+                test:   :
+                {this.state.groupId}
+            </div>
 
         <div className="event-create-container">
             <form onSubmit={this.handleSubmit}>

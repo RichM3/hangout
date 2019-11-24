@@ -1,22 +1,28 @@
 import * as EventsApiUtil from '../util/events_api_util';
 
 export const RECEIVE_EVENTS = 'RECEIVE_EVENTS';
+export const CREATE_EVENT = 'CREATE_EVENT';
 
-// const receiveEvents = (payload) => ({
-//     type: RECEIVE_EVENTS,
-//     events: payload.events
-// });
+const receiveEvents = function (payload) {
+    return {
+        type: RECEIVE_EVENTS,
+        events: payload.events
+    }
+};
 
 export const fetchEvents = () => (dispatch) => (
     EventsApiUtil.fetchEvents().then(payload => dispatch(receiveEvents(payload)))
 );
 
-const receiveEvents = function(payload) {
+const createNewEvent = function(payload) {
     return {
-    type: RECEIVE_EVENTS,
-    events: payload.events
+        type: CREATE_EVENT,
+        event: payload.event
     }
-};
+}
 
+export const createEvent = (event) => dispatch => (
+    EventsApiUtil.createEvent(event).then(payload => dispatch(createNewEvent(payload)))
+);
 
 
