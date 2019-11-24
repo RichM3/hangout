@@ -1,0 +1,95 @@
+.event-create-container {
+  border: 1px solid #dcdcdc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  background-color: #fafafa;
+  font-family: "Graphik Meetup",helvetica,arial,sans-serif;
+}
+
+.event-create-banner{
+  font-size: 42px;
+  height: 150px;
+  background-color:#00455d;
+  text-align: center;
+}
+
+.event-create-container form {
+  width: 800px;
+  background-color: #fafafa;
+  line-height: 1.45;
+ }
+
+.event-create-text {
+  position: relative;
+  top: 50px;
+  color: #fafafa;
+  font-weight: bold;
+}
+
+.event-create-container input[type="text"] {
+  border: 1px solid black;
+  margin: 10px 10px 10px 10px;
+  width: 1200px;
+}
+
+.event-create-container textarea {
+  border: 1px solid black;
+  margin: 10px 10px 10px 10px;
+  width: 1200px;
+  height: 200px;
+}
+
+.event-create-container label {
+  width: 800px;
+  font-size: 30px;
+  margin: 10px 10px 10px 10px;
+  vertical-align: middle;
+}
+
+.event-create-submit {
+  width: 130px;
+  height: 50px;
+  text-align: center;
+  background: #00455d;
+  color: white;
+  font-size: 20px;
+  padding: 5px 5px 5px 5px;
+  text-decoration: none;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.event-create-submit:hover {
+  background: #017896;
+}
+
+.event-inner-form-container {
+  font-size: 20px;
+}
+
+.event-inner-item-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.event-inner-item-container-btn {
+  padding : 20px 0px 0px 0px;
+  text-align: center;
+}
+
+/* .event-inner-item-disabled {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.event-inner-item-disabled input {
+  background-color: gray;
+} */
+
