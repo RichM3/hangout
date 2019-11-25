@@ -25,13 +25,12 @@ class EventsIndex extends React.Component {
     render() {
 
         let optionButton = "";
-        // debugger
         if (this.props.currentUser.username === this.props.leaderName) {
             optionButton = (
                 <Link to={ {
                     pathname: `/events/create`,
                     state: {
-                        XId: "test1" //this.state.groupId
+                        groupId: this.state.groupId
                     }
                 } }
                 className="create-event-btn" >Create an Event</Link>

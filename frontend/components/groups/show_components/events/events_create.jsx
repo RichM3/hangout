@@ -7,23 +7,10 @@ import FooterContainer from '../../../footer/footer_container';
 class EventsCreate extends React.Component {
     constructor(props) {
         super(props);
-        // debugger
         this.state = {
-            // groupId: this.props.groupId,
-            // eventname: '',
-            // description: '',
-            // location: ''
-            // ,
-            // leaderId: this.props.group.leaderId
+
         }
         this.handleSubmit = this.handleSubmit.bind(this);
-
-        //Working code here to use later!!!
-        // const { XId } = this.props.location.state;
-        // console.log("ID");
-        // console.log(XId);
-
-
     }
 
 
@@ -34,29 +21,17 @@ class EventsCreate extends React.Component {
     }
 
     handleSubmit(e) {
-        // debugger
         e.preventDefault()
         this.props.createEvent(this.state)
             .then(() => this.props.history.push(`/groups/${this.props.match.params.groupId}`));
     }
 
-    componentDidMount() {
-        // debugger
-        // console.log("gID");
-        // console.log(this.state.groupId);
-
-
-        // console.log("IN cdm");
-        // const { XId } = this.props.location.state;
-        // console.log("ID");
-        // console.log(XId);
-    }
-
-
     render() {
-        // let groupId = this.props.location.test;
-        // console.log("here");
-        // console.log(this.props);
+
+        //Working code here to use later!!!
+        const { groupId } = this.props.location.state;
+        console.log("ID");
+        console.log(groupId);
 
         return (
         <>
@@ -69,7 +44,7 @@ class EventsCreate extends React.Component {
     
             <div>
                 test:   :
-                {this.state.groupId}
+                {groupId}
             </div>
 
         <div className="event-create-container">
