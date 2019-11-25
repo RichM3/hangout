@@ -31,7 +31,7 @@ class EventsIndex extends React.Component {
                 <Link to={ {
                     pathname: `/events/create`,
                     state: {
-                        groupId: this.state.groupId
+                        XId: "test1" //this.state.groupId
                     }
                 } }
                 className="create-event-btn" >Create an Event</Link>

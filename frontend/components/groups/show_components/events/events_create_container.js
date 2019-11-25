@@ -11,8 +11,17 @@ import { createEvent } from '../../../../actions/event_actions';
 
 
 const msp = (state, ownProps) => {
+
+    //These dont work here!!! props.location.state is passed direcly to the path in link
+    // const { XId } = this.props.location.state;
+    // console.log("ID");
+    // console.log(XId);
+
+
     // debugger
-    // groupId = ownProps.groupId;
+    // let groupId = this.props.location.test;
+    // debugger
+    // console.log("test: " + ownProps);
     // const event = {
     //     eventname: '',
     //     description: '',

@@ -9,14 +9,21 @@ class EventsCreate extends React.Component {
         super(props);
         // debugger
         this.state = {
-            groupId: this.props.groupId,
-            eventname: '',
-            description: '',
-            location: ''
+            // groupId: this.props.groupId,
+            // eventname: '',
+            // description: '',
+            // location: ''
             // ,
             // leaderId: this.props.group.leaderId
         }
         this.handleSubmit = this.handleSubmit.bind(this);
+
+        //Working code here to use later!!!
+        // const { XId } = this.props.location.state;
+        // console.log("ID");
+        // console.log(XId);
+
+
     }
 
 
@@ -27,14 +34,30 @@ class EventsCreate extends React.Component {
     }
 
     handleSubmit(e) {
-        debugger
+        // debugger
         e.preventDefault()
         this.props.createEvent(this.state)
             .then(() => this.props.history.push(`/groups/${this.props.match.params.groupId}`));
     }
 
+    componentDidMount() {
+        // debugger
+        // console.log("gID");
+        // console.log(this.state.groupId);
+
+
+        // console.log("IN cdm");
+        // const { XId } = this.props.location.state;
+        // console.log("ID");
+        // console.log(XId);
+    }
+
 
     render() {
+        // let groupId = this.props.location.test;
+        // console.log("here");
+        // console.log(this.props);
+
         return (
         <>
         <NavbarContainer navType={"groups_create"} myType={""} />
@@ -43,6 +66,7 @@ class EventsCreate extends React.Component {
         </div>
 
 {/* NEED TO GET THE STUPID GROUPID THROUGHT THE ROUTER!!! */}
+    
             <div>
                 test:   :
                 {this.state.groupId}
