@@ -1,8 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import NavbarContainer from '../navbar/navbar_container';
 import FooterContainer from '../footer/footer_container';
-// import { withRouter, Route, Redirect } from 'react-router-dom';
 
 class GroupsCreate extends React.Component {
     constructor(props) {
