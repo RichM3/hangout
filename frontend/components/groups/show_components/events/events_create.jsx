@@ -8,7 +8,12 @@ class EventsCreate extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-
+            eventname: '',
+            description: '',
+            location: '',
+            starttime: '',
+            endtime: '',
+            groupId: ''
         }
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -22,16 +27,33 @@ class EventsCreate extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault()
+        debugger
         this.props.createEvent(this.state)
-            .then(() => this.props.history.push(`/groups/${this.props.match.params.groupId}`));
+            .then(() => this.props.history.push(`/groups/${this.state.groupId}`));
+    }
+
+
+    componentDidMount() {
+        // debugger
+        //Set GroupId for state
+        const { groupId } = this.props.location.state;
+        this.setState({ groupId: groupId});
+        // debugger
     }
 
     render() {
+        // debugger
+
+        if (!this.state.groupId) {
+            return null
+        }
+
 
         //Working code here to use later!!!
-        const { groupId } = this.props.location.state;
-        console.log("ID");
-        console.log(groupId);
+        // const { groupId } = this.props.location.state;
+        // console.log("ID");
+        // console.log(groupId);
+
 
         return (
         <>
@@ -42,17 +64,17 @@ class EventsCreate extends React.Component {
 
 {/* NEED TO GET THE STUPID GROUPID THROUGHT THE ROUTER!!! */}
     
-            <div>
+            {/* <div>
                 test:   :
                 {groupId}
-            </div>
+            </div> */}
 
         <div className="event-create-container">
             <form onSubmit={this.handleSubmit}>
                 <div className="event-inner-form-container">
                     <div className="event-inner-item-container" >
-                        <label htmlFor="groupname">Event Name:</label>
-                        <input type="text" autoComplete="off" name="groupname" id="groupname" onChange={this.update('groupname')} />
+                        <label htmlFor="eventname">Event Name:</label>
+                        <input type="text" autoComplete="off" name="eventname" id="eventname" onChange={this.update('eventname')} />
                     </div>
                     <div className="event-inner-item-container" >
                         <label htmlFor="description">Description:</label>
@@ -62,6 +84,18 @@ class EventsCreate extends React.Component {
                         <label htmlFor="location">Location:</label>
                         <input type="text" autoComplete="off" name="location" id="location" onChange={this.update('location')} />
                     </div>
+                    <div className="event-inner-item-container">
+                        <label htmlFor="starttime">Start Time:</label>
+                        <input type="text" autoComplete="off" name="starttime" id="starttime" onChange={this.update('starttime')} />
+                    </div>
+                    <div className="event-inner-item-container">
+                        <label htmlFor="endtime">End Time:</label>
+                        <input type="text" autoComplete="off" name="endtime" id="endtime" onChange={this.update('endtime')} />
+                    </div>
+                    {/* <div className="event-inner-item-container">
+                        <label htmlFor="groupId">GroupId:</label>
+                        <input type="text" autoComplete="off" name="groupId" id="groupId" onChange={this.update('groupId')} />
+                    </div> */}
                     <div className="event-inner-item-container-btn">
                         <input className="event-create-submit" type="submit" value="Submit" />
                     </div>

@@ -3,10 +3,14 @@ class Api::EventsController < ApplicationController
     # def new
     # end
 
-    # def create
-    #     @group = Group.new(group_params)
+    def create
+        debugger
+        @event = Event.new(event_params)
+        debugger
         
-    #     if @group.save! 
+        if @event.save!
+            debugger
+            render "api/events/show"     #{@event.group_id}
     #         if @group.id
     #             @usergroup = Usergroup.new('user_id': @group.leader_id, 'group_id': @group.id)
     #         else
@@ -18,10 +22,11 @@ class Api::EventsController < ApplicationController
     #         else
     #             render json: @groups.errors.full_messages, status: 422
     #         end
-    #     else
-    #         render json: @groups.errors.full_messages, status: 422
-    #     end
-    # end
+        else
+            debugger
+            render json: @event.errors.full_messages, status: 422
+        end
+    end
 
     def index
         @events = Event.all
@@ -69,9 +74,9 @@ class Api::EventsController < ApplicationController
     # end
 
 
-    # private
-    # def group_params
-    #     params.require(:group).permit(:groupname, :description, :location, :leader_id)
-    # end
+    private
+    def event_params
+        params.require(:event).permit(:eventname, :description, :location, :starttime, :endtime, :group_id)
+    end
 
 end

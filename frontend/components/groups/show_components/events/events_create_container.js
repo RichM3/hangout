@@ -18,7 +18,7 @@ const msp = (state, ownProps) => {
 
 const mdp = (dispatch) => {
     return ({
-        createEvent: (group) => dispatch(createEvent(group))
+        createEvent: (event) => dispatch(createEvent(event))
     })
 }
 

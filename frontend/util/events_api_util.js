@@ -15,6 +15,9 @@ export const createEvent = (event) => {
                 eventname: event.eventname,
                 description: event.description,
                 location: event.location,
+                starttime: event.starttime,
+                endtime: event.endtime,
+                group_id: event.groupId
             }
         }
     })
