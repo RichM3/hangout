@@ -51,11 +51,22 @@ class EventsIndex extends React.Component {
 
 
                 <div className="page-wrapper">
-                {optionButton}
-                {/* <Link to={`/groups/${this.props.group.id}/edit`} className="delete-button" >Create an Event</Link> */}
+                    <div>
+                    {optionButton}
+                    </div>
+
                     <div className="spacer"> </div>
                     <div className="spacer"> </div>
-                <h1>Upcoming Events: </h1>
+                    <div className="spacer"> </div>
+                    <div className="spacer"> </div>
+
+                    <div>
+                    <Link to={`/groups/calendartest`} className="create-event-btn"> <b>Calendar Testing</b></Link>
+                    </div>
+
+                    <div className="spacer"> </div>
+                    <div className="spacer"> </div>
+                    <h1>Upcoming Events: </h1>
                 </div>
 
                 <div className="spacer"> </div>

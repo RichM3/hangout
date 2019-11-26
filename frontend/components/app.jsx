@@ -14,10 +14,22 @@ import LogInFormContainer from './session_form/login_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 
+
+{/* for testing the calendar only - remove later after testing */ }
+import CalendarContainer from "./groups/calendartest";
+
+
+
 const App = () => (
   <div>
 
     <Switch>
+
+      {/* for testing the calendar only - remove later after testing */}
+      <ProtectedRoute exact path="/groups/calendartest" component={CalendarContainer} />
+
+
+
       <ProtectedRoute exact path="/events/create" component={EventsCreateContainer} />
       <ProtectedRoute exact path="/groups" component={GroupsIndexContainer} />
       <ProtectedRoute exact path="/groups/create" component={GroupsCreateContainer} />
