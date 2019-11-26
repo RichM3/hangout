@@ -4,26 +4,11 @@ class Api::EventsController < ApplicationController
     # end
 
     def create
-        debugger
         @event = Event.new(event_params)
-        debugger
         
         if @event.save!
-            debugger
-            render "api/events/show"     #{@event.group_id}
-    #         if @group.id
-    #             @usergroup = Usergroup.new('user_id': @group.leader_id, 'group_id': @group.id)
-    #         else
-    #             lastGroupId = Group.last.id
-    #             @usergroup = Usergroup.new(lastGroupId, @group.leader_id)
-    #         end
-    #         if @usergroup.save!
-    #             render "api/groups/show"
-    #         else
-    #             render json: @groups.errors.full_messages, status: 422
-    #         end
+            render "api/events/show"
         else
-            debugger
             render json: @event.errors.full_messages, status: 422
         end
     end

@@ -15,7 +15,6 @@ export const fetchEvents = () => (dispatch) => (
 );
 
 const createNewEvent = function(payload) {
-    debugger
     return {
         type: CREATE_EVENT,
         event: payload
