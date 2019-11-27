@@ -92,6 +92,8 @@ class EventsCreate extends React.Component {
                         <label htmlFor="location">Location:</label>
                         <input className="event-create-container-input" type="text" autoComplete="off" name="location" id="location" onChange={this.update('location')} />
                     </div>
+
+
                     {/* <div className="event-inner-item-container">
                         <label htmlFor="starttime">Start Time:</label>
                         <input className="event-create-container-input" type="text" autoComplete="off" name="starttime" id="starttime" onChange={this.update('starttime')} />
