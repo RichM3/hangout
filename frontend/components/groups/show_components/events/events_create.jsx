@@ -64,6 +64,11 @@ class EventsCreate extends React.Component {
                         <input className="event-create-container-input" type="text" autoComplete="off" name="eventname" id="eventname" onChange={this.update('eventname')} />
                     </div>
 
+                    <div className="event-inner-item-container" >
+                        <label htmlFor="description">Description:</label>
+                        <textarea type="text" autoComplete="off" name="description" id="description" onChange={this.update('description')} />
+                    </div>
+
                     <div className="event-inner-item-container-calendar" >
                         <div className="event-calendar-label">
                         <label htmlFor="eventname">Event Date:</label>
@@ -79,10 +84,6 @@ class EventsCreate extends React.Component {
                     </div>
 
 
-                    <div className="event-inner-item-container" >
-                        <label htmlFor="description">Description:</label>
-                        <textarea type="text" autoComplete="off" name="description" id="description" onChange={this.update('description')} />
-                    </div>
                     <div className="event-inner-item-container">
                         <label htmlFor="location">Location:</label>
                         <input className="event-create-container-input" type="text" autoComplete="off" name="location" id="location" onChange={this.update('location')} />
