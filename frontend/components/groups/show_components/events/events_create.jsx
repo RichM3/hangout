@@ -59,16 +59,20 @@ class EventsCreate extends React.Component {
         <div className="event-create-container">
             <form onSubmit={this.handleSubmit}>
                 <div className="event-inner-form-container">
+
+                    {/* Event Name Section */}
                     <div className="event-inner-item-container" >
                         <label htmlFor="eventname">Event Name:</label>
                         <input className="event-create-container-input" type="text" autoComplete="off" name="eventname" id="eventname" onChange={this.update('eventname')} />
                     </div>
 
+                    {/* Event Description Section */}
                     <div className="event-inner-item-container" >
                         <label htmlFor="description">Description:</label>
                         <textarea type="text" autoComplete="off" name="description" id="description" onChange={this.update('description')} />
                     </div>
 
+                    {/* Event Date Section (Calendar API - AirBnB) */}
                     <div className="event-inner-item-container-calendar" >
                         <div className="event-calendar-label">
                         <label htmlFor="eventname">Event Date:</label>
@@ -83,7 +87,7 @@ class EventsCreate extends React.Component {
                         </div>
                     </div>
 
-
+                    {/* Event Location Section (Map API - Google Maps)  */}
                     <div className="event-inner-item-container">
                         <label htmlFor="location">Location:</label>
                         <input className="event-create-container-input" type="text" autoComplete="off" name="location" id="location" onChange={this.update('location')} />
