@@ -3,6 +3,34 @@
 npm install webpack webpack-cli react react-dom react-redux redux redux-logger @babel/core @babel/preset-react @babel/preset-env babel-loader
 bundle install
 
+-- AirBnB Calendar code:
+- Install dependencies
+- Ensure packages are installed with correct version numbers by running:
+
+(
+  export PKG=react-dates;
+  npm info "$PKG" peerDependencies --json | command sed 's/[\{\},]//g ; s/: /@/g; s/ *//g' | xargs npm install --save "$PKG"
+)
+
+Then, run:
+
+npm install --save react-dates moment@>=#.## react@>=#.## react-dom@>=#.## react-addons-shallow-compare@>=#.##
+
+-----------------------------------------------
+
+Must add the css-loader and style-loader to webpack-config so you can ==> import 'react-dates/lib/css/_datepicker.css';
+
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader'
+        ]
+      }
+
+-----------------------------------------------
+
+
 bundle exec rails db:setup              ===> create the DB
 bundle exec rails db:seed               ===> seed the db
 npm run webpack                         ===> start webpack for this app

@@ -50,6 +50,10 @@ similar to the greeting component in BenchBNB -- they exist only if the page is 
         this.props.createMembership(this.state.groupId)
             .then(() => this.props.fetchUserInfo());
 
+19) installing the css-loader and style-loader so that the AirBnB calendar appears with styling in a user readable format was a new twist.
+
+
+
 
 
 

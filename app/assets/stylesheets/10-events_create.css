@@ -29,11 +29,17 @@
   font-weight: bold;
 }
 
-.event-create-container input[type="text"] {
+.event-create-container-input {
   border: 1px solid black;
   margin: 10px 10px 10px 10px;
   width: 1200px;
 }
+
+/* .event-create-container input[type="text"] {
+  border: 1px solid black;
+  margin: 10px 10px 10px 10px;
+  width: 1200px;
+} */
 
 .event-create-container textarea {
   border: 1px solid black;
@@ -76,6 +82,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.event-inner-item-container-calendar {
+  display: flex;
+  align-items: center;
+}
+
+.event-calendar-label {
+  width: 42%;
+}
+
+.event-calendar {
+  width: 17%;
+  border: 1px solid black;
+  background-color: #ffffff;
 }
 
 .event-inner-item-container-btn {
