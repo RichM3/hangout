@@ -4,9 +4,8 @@ import FooterContainer from '../../../footer/footer_container';
 
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
-// import moment from 'moment';
 import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'react-dates';
-
+// import moment from 'moment';
 
 class EventsCreate extends React.Component {
     constructor(props) {
@@ -27,7 +26,6 @@ class EventsCreate extends React.Component {
         this.createEvent = this.createEvent.bind(this);
     }
 
-
     update(field) {
         return e => this.setState({
             [field]: e.target.value
@@ -37,8 +35,9 @@ class EventsCreate extends React.Component {
     handleSubmit(e) {
         e.preventDefault()
 
+        // Error checking needs to use error on page not in alert format
         if (this.errorcheck() ) {
-            this.convertDates(); //.then(() => this.alert("test"));
+            this.convertDates();
         }
     }
     
@@ -128,27 +127,8 @@ class EventsCreate extends React.Component {
         let sTime = sDate.concat("-").concat(this.state.starttimevalue).concat(":00");
         let eTime = sDate.concat("-").concat(this.state.endtimevalue).concat(":00");
 
-        // alert("st: " + sTime);
-        // alert("et: " + eTime);
-        // debugger
-
-        // return () => 
-
-
-
         // the setState takes a callback here this ensures the state is correct for the submission
         this.setState({ starttime: sTime, endtime: eTime }, this.createEvent);
-        
-        
-        //     [field]: e.target.value
-        // });
-        // this.setState( { starttime: sTime } );
-
-        // this.setState({
-        //     starttime: sTime,
-        //     endtime: eTime
-        // });
-        // debugger
     }
 
     componentDidMount() {
@@ -160,7 +140,6 @@ class EventsCreate extends React.Component {
     }
 
     render() {
-        // debugger
         if (!this.state.groupId) {
             return null
         }
