@@ -37,26 +37,15 @@ class EventsCreate extends React.Component {
     handleSubmit(e) {
         e.preventDefault()
 
-        // debugger
         if (this.errorcheck() ) {
             this.convertDates(); //.then(() => this.alert("test"));
-
-            // alert(this.state.startDate);
-            // alert("Success");
-            // this.props.createEvent(this.state)
-            //     .then(() => this.props.history.push(`/groups/${this.state.groupId}`));
         }
-        // debugger
-        
-        
-        
     }
     
-    // JD's code
     createEvent(){
         // alert(this.state.starttime);
         // alert(this.state.endtime);
-        debugger
+        // debugger
         this.props.createEvent(this.state)
             .then(() => this.props.history.push(`/groups/${this.state.groupId}`));
     }
@@ -72,12 +61,11 @@ class EventsCreate extends React.Component {
     ensureEndGtrStart() {
         if (this.state.starttimevalue >= this.state.endtimevalue) {
             alert("End time is before start time");
-            alert(this.state.starttimevalue);
-            alert(this.state.endtimevalue);
+            // alert(this.state.starttimevalue);
+            // alert(this.state.endtimevalue);
             document.getElementById("endtimevalue").focus();
             return false;
         } else {
-            // alert("goodTimePeriod");
             return true;
         }
     }
