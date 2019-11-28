@@ -4,11 +4,15 @@ class Api::EventsController < ApplicationController
     # end
 
     def create
+        debugger
         @event = Event.new(event_params)
+        debugger
         
         if @event.save!
+        debugger
             render "api/events/show"
         else
+        debugger
             render json: @event.errors.full_messages, status: 422
         end
     end

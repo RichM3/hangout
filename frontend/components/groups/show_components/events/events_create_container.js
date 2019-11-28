@@ -4,8 +4,12 @@ import { createEvent } from '../../../../actions/event_actions';
 
 
 const msp = (state, ownProps) => {
+    // debugger
+    // const { groupId } = ownProps.location.state;
+    const { groupId } = ownProps.match.params;
+    // alert(groupId);
     return ({
-        // event: event
+        groupId: groupId
     })
 }
 

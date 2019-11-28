@@ -30,7 +30,7 @@ const App = () => (
 
 
 
-      <ProtectedRoute exact path="/events/create" component={EventsCreateContainer} />
+      <ProtectedRoute exact path="/events/create/:groupId" component={EventsCreateContainer} />
       <ProtectedRoute exact path="/groups" component={GroupsIndexContainer} />
       <ProtectedRoute exact path="/groups/create" component={GroupsCreateContainer} />
       <ProtectedRoute exact path="/groups/:groupId" component={GroupsShowContainer} />

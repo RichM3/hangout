@@ -6,6 +6,7 @@ export const fetchEvents = () => {
 }
 
 export const createEvent = (event) => {
+    debugger
     return $.ajax({
         method: "post",
         url: `api/events`,

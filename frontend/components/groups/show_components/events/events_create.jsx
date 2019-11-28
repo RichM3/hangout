@@ -2,7 +2,6 @@ import React from 'react';
 import NavbarContainer from '../../../navbar/navbar_container';
 import FooterContainer from '../../../footer/footer_container';
 
-
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
 // import moment from 'moment';
@@ -16,11 +15,16 @@ class EventsCreate extends React.Component {
             eventname: '',
             description: '',
             location: '',
-            starttime: '',
-            endtime: '',
+            startDate: '',
+            starttimevalue: '',
+            endtimevalue: '',
+            starttime: 'XXX',  //this is for the db insert value - concat time and date
+            endtime: '',    //this is for the db insert value
             groupId: ''
         }
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.convertDates = this.convertDates.bind(this);
+        this.createEvent = this.createEvent.bind(this);
     }
 
 
@@ -32,19 +36,143 @@ class EventsCreate extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault()
+
+        // debugger
+        if (this.errorcheck() ) {
+            this.convertDates(); //.then(() => this.alert("test"));
+
+            // alert(this.state.startDate);
+            // alert("Success");
+            // this.props.createEvent(this.state)
+            //     .then(() => this.props.history.push(`/groups/${this.state.groupId}`));
+        }
+        // debugger
+        
+        
+        
+    }
+    
+    // JD's code
+    createEvent(){
+        // alert(this.state.starttime);
+        // alert(this.state.endtime);
+        debugger
         this.props.createEvent(this.state)
             .then(() => this.props.history.push(`/groups/${this.state.groupId}`));
     }
 
+    errorcheck() {
+        if (this.verifyEventName() && this.verifyEventDesc() && this.verifyLocation() && this.verifyDate() && this.verifyStartTimeValue() && this.verifyEndTime() && this.ensureEndGtrStart() ) {
+            return true;
+        } else {
+            return false
+        }
+    }
+
+    ensureEndGtrStart() {
+        if (this.state.starttimevalue >= this.state.endtimevalue) {
+            alert("End time is before start time");
+            alert(this.state.starttimevalue);
+            alert(this.state.endtimevalue);
+            document.getElementById("endtimevalue").focus();
+            return false;
+        } else {
+            // alert("goodTimePeriod");
+            return true;
+        }
+    }
+    
+    verifyEventName() {
+        if (this.state.eventname.trim() === '') {
+            document.getElementById("eventname").focus();
+            return false;
+        }
+        return true;
+    }
+
+    verifyEventDesc() {
+        if (this.state.description.trim() === '') {
+            document.getElementById("description").focus();
+            return false;
+        }
+        return true;
+    }
+
+    verifyLocation() {
+        if (this.state.location.trim() === '') {
+            document.getElementById("location").focus();
+            return false;
+        }
+        return true;
+    }
+
+    verifyDate() {
+        if (typeof (this.state.date) === "undefined") {
+            // alert("All events require a date ");
+            document.getElementById("eventdate").focus();
+            window.scrollTo(0, 300)
+
+            return false;
+        }
+        return true;
+    }
+
+    verifyStartTimeValue() {
+        if (this.state.starttimevalue.trim() === '') {            
+            // alert("All events require a start time");
+            document.getElementById("starttimevalue").focus();
+            return false;
+        }
+        return true;
+    }
+
+    verifyEndTime() {
+        if (this.state.endtimevalue.trim() === '') {
+            // alert("All events require a start time");
+            document.getElementById("endtimevalue").focus();
+            return false;
+        }
+        return true;
+    }
+
+    convertDates() {
+        let sDate = this.state.startDate.format("YYYY/MM/DD");
+        let sTime = sDate.concat("-").concat(this.state.starttimevalue).concat(":00");
+        let eTime = sDate.concat("-").concat(this.state.endtimevalue).concat(":00");
+
+        // alert("st: " + sTime);
+        // alert("et: " + eTime);
+        // debugger
+
+        // return () => 
+
+
+
+        // the setState takes a callback here this ensures the state is correct for the submission
+        this.setState({ starttime: sTime, endtime: eTime }, this.createEvent);
+        
+        
+        //     [field]: e.target.value
+        // });
+        // this.setState( { starttime: sTime } );
+
+        // this.setState({
+        //     starttime: sTime,
+        //     endtime: eTime
+        // });
+        // debugger
+    }
 
     componentDidMount() {
         //Set GroupId for state
-        const { groupId } = this.props.location.state;
+        // const { groupId } = this.props.location.state;
+
+        const { groupId } = this.props;
         this.setState({ groupId: groupId});
     }
 
     render() {
-
+        // debugger
         if (!this.state.groupId) {
             return null
         }
@@ -72,37 +200,55 @@ class EventsCreate extends React.Component {
                         <textarea type="text" autoComplete="off" name="description" id="description" onChange={this.update('description')} />
                     </div>
 
-                    {/* Event Date Section (Calendar API - AirBnB) */}
-                    <div className="event-inner-item-container-calendar" >
-                        <div className="event-calendar-label">
-                        <label htmlFor="eventname">Event Date:</label>
-                        </div>
-                        <div className="event-calendar" >
-                        <SingleDatePicker
-                            date={this.state.date} // momentPropTypes.momentObj or null
-                            onDateChange={date => this.setState({ date })} // PropTypes.func.isRequired
-                            focused={this.state.focused} // PropTypes.bool
-                            onFocusChange={({ focused }) => this.setState({ focused })} // PropTypes.func.isRequired
-                        />
-                        </div>
-                    </div>
-
                     {/* Event Location Section (Map API - Google Maps)  */}
                     <div className="event-inner-item-container">
                         <label htmlFor="location">Location:</label>
                         <input className="event-create-container-input" type="text" autoComplete="off" name="location" id="location" onChange={this.update('location')} />
                     </div>
 
+                            <div className="spacer"> </div>
 
-                    {/* <div className="event-inner-item-container">
-                        <label htmlFor="starttime">Start Time:</label>
-                        <input className="event-create-container-input" type="text" autoComplete="off" name="starttime" id="starttime" onChange={this.update('starttime')} />
+                    {/* Event Date Section (Calendar API - AirBnB) */}
+                    <div className="event-inner-item-container-calendar" >
+                        <div className="event-calendar-label">
+                        <   label htmlFor="eventname">Event Date:</label>
+                        </div>
+                        {/* <div id="test" className="event-calendar" onFocus={window.scrollTo(0, 300)} > */}
+                        <div className="event-calendar">
+                            <SingleDatePicker
+                                id="eventdate"
+                                date={this.state.date} // momentPropTypes.momentObj or null
+                                focused={this.state.focused} // PropTypes.bool
+                                onFocusChange={({ focused }) => this.setState({ focused })} // PropTypes.func.isRequired
+                                onDateChange={(date) => this.setState({ date: date, startDate: date })}
+                            />
+                        </div>
                     </div>
-                    <div className="event-inner-item-container">
-                        <label htmlFor="endtime">End Time:</label>
-                        <input className="event-create-container-input" type="text" autoComplete="off" name="endtime" id="endtime" onChange={this.update('endtime')} />
-                    </div> */}
 
+                            <div className="spacer"> </div>
+                            <div className="spacer"> </div>
+
+
+                    <div className="event-inner-item-container-calendar">
+                        <div className="event-calendar-label">
+                            <label htmlFor="starttimevalue">Start Time:</label>
+                        </div>
+                        <div className="event-calendar" >
+                            <input id="starttimevalue" type="time" onChange={this.update('starttimevalue')} />
+                        </div>
+                    </div>
+
+                            <div className="spacer"> </div>
+                            <div className="spacer"> </div>
+
+                    <div className="event-inner-item-container-calendar">
+                        <div className="event-calendar-label">
+                            <label htmlFor="endtimevalue">End Time:</label>
+                        </div>
+                        <div className="event-calendar" >
+                            <input id="endtimevalue" type="time" onChange={this.update('endtimevalue')} />
+                        </div>
+                    </div>
 
                     <div className="event-inner-item-container-btn">
                         <input className="event-create-submit" type="submit" value="Submit" />

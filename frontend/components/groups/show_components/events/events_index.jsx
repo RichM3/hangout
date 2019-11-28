@@ -28,10 +28,10 @@ class EventsIndex extends React.Component {
         if (this.props.currentUser.username === this.props.leaderName) {
             optionButton = (
                 <Link to={ {
-                    pathname: `/events/create`,
-                    state: {
-                        groupId: this.state.groupId
-                    }
+                    pathname: `/events/create/${this.state.groupId}`,
+                    // state: {
+                    //     groupId: this.state.groupId
+                    // }
                 } }
                 className="create-event-btn" >Create an Event</Link>
             )
@@ -49,6 +49,9 @@ class EventsIndex extends React.Component {
                 <div className="spacer"> </div>
                 <div className="spacer"> </div>
 
+                <div className="spacer"> </div>
+                <div className="spacer"> </div>
+
 
                 <div className="page-wrapper">
                     <div>
@@ -57,12 +60,10 @@ class EventsIndex extends React.Component {
 
                     <div className="spacer"> </div>
                     <div className="spacer"> </div>
-                    <div className="spacer"> </div>
-                    <div className="spacer"> </div>
-
-                    <div>
+            
+                    {/* <div>
                     <Link to={`/groups/calendartest`} className="create-event-btn"> <b>Calendar Testing</b></Link>
-                    </div>
+                    </div> */}
 
                     <div className="spacer"> </div>
                     <div className="spacer"> </div>
