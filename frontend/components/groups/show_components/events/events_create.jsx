@@ -18,7 +18,7 @@ class EventsCreate extends React.Component {
             startDate: '',
             starttimevalue: '',
             endtimevalue: '',
-            starttime: 'XXX',  //this is for the db insert value - concat time and date
+            starttime: '',  //this is for the db insert value - concat time and date
             endtime: '',    //this is for the db insert value
             groupId: ''
         }
