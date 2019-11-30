@@ -8,18 +8,13 @@ class EventsIndex extends React.Component {
         super(props);
         this.state = {
             groupId: this.props.groupId
-            // userId: this.props.currentUser.id
         }
     }
 
     componentDidMount() {
         window.scrollTo(0, 0)
-        // this.props.fetchUserInfo();
-        // let groupId = ownProps.match.params.groupId;
-        // this.props.fetchGroups();
         this.props.fetchEvents();
     }
-
 
     render() {
 

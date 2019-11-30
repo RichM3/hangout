@@ -7,8 +7,6 @@ const mapStateToProps = ({ session, entities: { users, groups, events } }, ownPr
     let groupId = ownProps.groupId;
     const allEvents = events ? Object.values(events) : []
 
-    // let isEvent = currentUser.groupIds.includes(groupId)
-
     return ({
         allEvents: allEvents,
         currentUser: currentUser,
@@ -18,7 +16,6 @@ const mapStateToProps = ({ session, entities: { users, groups, events } }, ownPr
 
 const mapDispatchToProps = (dispatch) => {
     return ({
-        // fetchGroup: (id) => dispatch(fetchGroup(id)),
         fetchEvents: () => dispatch(fetchEvents())
     })
 };
