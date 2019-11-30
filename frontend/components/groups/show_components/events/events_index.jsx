@@ -10,7 +10,6 @@ class EventsIndex extends React.Component {
             groupId: this.props.groupId
             // userId: this.props.currentUser.id
         }
-        // this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     componentDidMount() {
@@ -48,10 +47,8 @@ class EventsIndex extends React.Component {
             <>
                 <div className="spacer"> </div>
                 <div className="spacer"> </div>
-
                 <div className="spacer"> </div>
                 <div className="spacer"> </div>
-
 
                 <div className="page-wrapper">
                     <div>
@@ -60,36 +57,20 @@ class EventsIndex extends React.Component {
 
                     <div className="spacer"> </div>
                     <div className="spacer"> </div>
-            
-                    {/* <div>
-                    <Link to={`/groups/calendartest`} className="create-event-btn"> <b>Calendar Testing</b></Link>
-                    </div> */}
+                    <div className="spacer"> </div>
+                    <div className="spacer"> </div>
 
-                    <div className="spacer"> </div>
-                    <div className="spacer"> </div>
                     <h1>Upcoming Events: </h1>
                 </div>
 
                 <div className="spacer"> </div>
                 <div className="spacer"> </div>
 
-
-                {/* <div>EVENTS</div> */}
-                {/* <div className="page-wrapper">
-                    <div className="spacer"> </div>
-                    <div className="spacer"> </div>
-                    <h1>Upcoming Events: </h1>
-                    <div className="spacer"> </div>
-                    <div className="spacer"> </div>
-                    <div><p>{this.props.desc}</p></div>
-                </div> */}
-
                 <ul className="box-ul">
                     {listEvents}
                 </ul>
                 <div className="related-events"></div>
                 <div className="spacer"> </div>
-
             </>
         )
     }

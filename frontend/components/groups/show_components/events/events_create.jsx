@@ -40,7 +40,7 @@ class EventsCreate extends React.Component {
             this.convertDates();
         }
     }
-    
+
     createEvent(){
         // alert(this.state.starttime);
         // alert(this.state.endtime);
@@ -56,7 +56,6 @@ class EventsCreate extends React.Component {
             return false
         }
     }
-
 
     ensureEndGtrStart() {
         if (this.state.starttimevalue >= this.state.endtimevalue) {
