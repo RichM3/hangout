@@ -31,6 +31,13 @@ Must add the css-loader and style-loader to webpack-config so you can ==> import
 -----------------------------------------------
 
 
+-- Date manipilation installs    
+npm install --save @types/moment-timezone
+npm install --save jstz
+
+
+
+
 bundle exec rails db:setup              ===> create the DB
 bundle exec rails db:seed               ===> seed the db
 npm run webpack                         ===> start webpack for this app

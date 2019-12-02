@@ -40,12 +40,12 @@ class EventsIndex extends React.Component {
 
         return (
             <>
-                <div className="spacer"> </div>
-                <div className="spacer"> </div>
-                <div className="spacer"> </div>
-                <div className="spacer"> </div>
+                <div className="event-stripe">
+                    <div className="spacer"> </div>
+                    <div className="spacer"> </div>
+                    <div className="spacer"> </div>
+                    <div className="spacer"> </div>
 
-                <div className="page-wrapper">
                     <div>
                     {optionButton}
                     </div>
@@ -56,17 +56,16 @@ class EventsIndex extends React.Component {
                     <div className="spacer"> </div>
 
                     <h1>Upcoming Events: </h1>
-                </div>
-
+ 
                 <div className="spacer"> </div>
                 <div className="spacer"> </div>
 
                 <ul className="box-ul">
                     {listEvents}
                 </ul>
-                <div className="related-events"></div>
                 <div className="spacer"> </div>
-            </>
+                </div>
+           </>
         )
     }
 

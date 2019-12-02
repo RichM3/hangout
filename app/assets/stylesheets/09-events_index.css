@@ -1,20 +1,30 @@
 .event-stripe {
-    border-top: 1px solid #e6e7e9;
-    /* height: 67px; */
-    background-color: #eeeeee;
-}
-
-.event-div {
-
     width: 60%;
-    /* display: flex;
-    flex-direction: column;
-    align-items: flex-start; */
-
     margin-left: auto;
     margin-right: auto;
-    /* height: 67px; */
+    height: auto;
 }
+
+.event-stripe h1 {
+        line-height: 1.45;
+        font-family: "Graphik Meetup",helvetica,arial,sans-serif;
+        font-weight: 900;
+        font-size: 20px;
+}
+
+
+.event-stripe p {
+        line-height: 1.45;
+        font-family: "Graphik Meetup",helvetica,arial,sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+}
+
+
+
+/* .event-list-div {
+    border: 1px solid #f65858;
+} */
 
 .event-wrapper {
     width: 60%;
@@ -25,27 +35,25 @@
 
 .event-titles {
     width: 25%;
-
     font-family: "Graphik Meetup", helvetica, arial, sans - serif;
     font-size: 16px;
     font-weight: 900;
     line-height: 1.45;
 }
 
+.event-date {
+    width: 25%;
+    font-family: "Graphik Meetup", helvetica, arial, sans - serif;
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 1.45;
+    color: #0098ab;
+}
+
 .event-box {
     display: flex;
     flex-direction: row;
-    /* justify-content: space-between; */
     word-wrap: break-word;
-}
-
-.event-spacer {
-    padding: 0px 0px 50px 0px;
-    margin: 0px 0px 5000px 0px;
-}
-
-.event-bottom-space {
-    padding: 0px 0px 50px 0px;
 }
 
 .event-data {
@@ -56,29 +64,31 @@
 }
 
 .event-border-space {
-    padding: 0px 100px 0px 0px;
+    padding: 10px 10px 50px 10px;
+    margin: 0px 0px 50px 0px;
     border-radius: 6px;
-    box-shadow: 1px 2px 6px blue;
+    /* box-shadow: 1px 1px 3px blue;
+    box-shadow: 1px 1px 3px #c5c4c4; */
+    background-color: #fff;
+    border: 2px solid #888888;
 }
 
 .event-border-space:hover {
-    /* box-shadow: 11px 12px 16px red; */
-    /* box-shadow: 11px 12px 16px #c5c4c4; */
     box-shadow: 11px 12px 16px black;
+    border: 2px solid #0098ab;
+    box-shadow: 11px 12px 16px #0098ab;
 }
 
 .create-event-btn {
     font-weight: 900;
     width: 120px;
     height: 20px;
-
     text-align: center;
     background-color: #f65858;
     border: 1px solid #f65858;
     color: white;
     font-size: 14px;
     text-decoration: none;
-
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
