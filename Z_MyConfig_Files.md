@@ -31,9 +31,28 @@ Must add the css-loader and style-loader to webpack-config so you can ==> import
 -----------------------------------------------
 
 
--- Date manipilation installs    
+------------------------------------------------
+-- Date manipilation installs
+-- Ended up not using these but very useful article may use in future
+
+import jstz from 'jstz';
+import momentTimeZone from 'moment-timezone';
+
 npm install --save @types/moment-timezone
 npm install --save jstz
+
+https://css-tricks.com/localizing-times-in-javascript/
+https://www.npmjs.com/package/jstz
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset
+https://github.com/datejs/Datejs
+https://stackoverflow.com/questions/3605214/javascript-add-leading-zeroes-to-date
+https://stackoverflow.com/questions/24998624/day-name-from-date-in-js/24998705
+https://www.npmjs.com/package/moment-timezone
+https://www.npmjs.com/package/@types/moment-timezone
+https://stackoverflow.com/questions/25139132/how-to-make-javascript-date-prototype-tostring-always-display-local-time-zone
+
+
+T------------------------------------------------
 
 
 

@@ -6,35 +6,22 @@
 }
 
 .event-stripe h1 {
-        line-height: 1.45;
-        font-family: "Graphik Meetup",helvetica,arial,sans-serif;
-        font-weight: 900;
-        font-size: 20px;
+    line-height: 1.45;
+    font-family: "Graphik Meetup",helvetica,arial,sans-serif;
+    font-weight: 900;
+    font-size: 20px;
 }
 
 
 .event-stripe p {
-        line-height: 1.45;
-        font-family: "Graphik Meetup",helvetica,arial,sans-serif;
-        font-weight: 400;
-        font-size: 16px;
-}
-
-
-
-/* .event-list-div {
-    border: 1px solid #f65858;
-} */
-
-.event-wrapper {
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    height: auto;
+    line-height: 1.45;
+    font-family: "Graphik Meetup",helvetica,arial,sans-serif;
+    font-weight: 400;
+    font-size: 16px;
 }
 
 .event-titles {
-    width: 25%;
+    /* width: 25%; */
     font-family: "Graphik Meetup", helvetica, arial, sans - serif;
     font-size: 16px;
     font-weight: 900;
@@ -42,7 +29,7 @@
 }
 
 .event-date {
-    width: 25%;
+    /* width: 25%; */
     font-family: "Graphik Meetup", helvetica, arial, sans - serif;
     font-size: 16px;
     font-weight: 900;
@@ -54,9 +41,18 @@
     display: flex;
     flex-direction: row;
     word-wrap: break-word;
+    padding: 0px 0px 10px 0px;
 }
 
 .event-data {
+    text-align: justify;
+    align-items: flex-start;
+    float: left;
+    float: right;
+}
+
+.event-loc {
+    color: #707070;
     text-align: justify;
     align-items: flex-start;
     float: left;
