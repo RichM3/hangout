@@ -55,6 +55,10 @@ https://stackoverflow.com/questions/25139132/how-to-make-javascript-date-prototy
 T------------------------------------------------
 
 
+-- for the little calendar not the date-picker tool
+npm install react-calendar
+
+
 
 
 bundle exec rails db:setup              ===> create the DB

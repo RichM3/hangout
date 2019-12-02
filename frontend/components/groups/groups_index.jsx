@@ -2,6 +2,8 @@ import React from 'react';
 import NavbarContainer from "../navbar/navbar_container";
 import FooterContainer from "../footer/footer_container";
 import GroupsItemIndex from "./groups_index_item";
+import { Link } from 'react-router-dom';
+
 
 
 class GroupsIndex extends React.Component {
@@ -43,6 +45,11 @@ class GroupsIndex extends React.Component {
         
         return (
         <>
+
+        <Link to="./groups/calendartest" className="create-event-btn" >Create Calendar </Link>
+
+
+
         <div className="index-body">
         <NavbarContainer navType={"groups_index"} myType={"login"} />
             <div className="c-page-lt">
