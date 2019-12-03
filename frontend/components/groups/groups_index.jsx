@@ -14,6 +14,13 @@ class GroupsIndex extends React.Component {
         }
     }
 
+//this is for the calendar testing
+    setNewDate(date) {
+        this.setState({ selectedDate: date })
+    }
+
+
+
     update(field) {
         return e => this.setState({
             [field]: e.currentTarget.value
@@ -46,12 +53,12 @@ class GroupsIndex extends React.Component {
         return (
         <>
 
-        <Link to="./groups/calendartest" className="create-event-btn" >Create Calendar </Link>
-
-
-
         <div className="index-body">
         <NavbarContainer navType={"groups_index"} myType={"login"} />
+
+            {/* this is for calendar testing */}
+            <Link to="./groups/calendartest" className="create-event-btn" >Create Calendar </Link>
+
             <div className="c-page-lt">
                 <div className="member-home-bounds"><label><a href="http://">Find your next event</a></label></div>
                 <div className="c-page-body">
