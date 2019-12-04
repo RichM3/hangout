@@ -14,6 +14,7 @@ import LogInFormContainer from './session_form/login_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 
+import HomeIndexContainer from "./home/home_index_container";
 
 {/* for testing the calendar only - remove later after testing */ }
 import CalendarContainer from "./groups/calendartest";
@@ -27,6 +28,17 @@ const App = () => (
 
       {/* for testing the calendar only - remove later after testing */}
       <ProtectedRoute exact path="/groups/calendartest" component={CalendarContainer} />
+
+
+      <ProtectedRoute exact path="/groups" myType={"calendar"} component={GroupsIndexContainer} />
+
+
+      {/* <ProtectedRoute exact path="/home" myType={"calendar"} component={HomeIndexContainer} /> */}
+      {/* <Route exact path="/home" render={(routeProps) => <HomeIndexContainer {...routeProps} myType={"calendar"} />} />
+      <Route exact path="/my-calendar" myType={"calendar"} component={HomeIndexContainer} />
+      <Route exact path="/my-groups" myType={"groups"} component={HomeIndexContainer} /> */}
+
+
 
 
 

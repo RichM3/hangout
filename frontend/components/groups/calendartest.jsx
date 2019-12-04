@@ -12,6 +12,7 @@ import Calendar from 'react-calendar';
 
 class Calendartest extends React.Component {
     constructor(props) {
+        // debugger
         super(props);
         this.state = {
             date: new Date(),
@@ -49,7 +50,7 @@ class Calendartest extends React.Component {
     // onChange = (date) => this.setState({ date });
 
     onChange(date) {
-        debugger
+        // debugger
         this.setState({ date }, this.updateRelatedEvents);
         // .then(() => this.updateRelatedEvents());
   
@@ -72,6 +73,7 @@ class Calendartest extends React.Component {
         <Calendar
             onChange={this.onChange}
             value={this.state.date}
+            calendarType="US"
             // onClickDay={() => this.onClickDay()}
             // onChange={() => this.onChange()}
             // onChange={() => this.myAlert(this.state.date)}

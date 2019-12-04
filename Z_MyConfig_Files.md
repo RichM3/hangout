@@ -4,6 +4,7 @@ npm install webpack webpack-cli react react-dom react-redux redux redux-logger @
 bundle install
 
 -- AirBnB Calendar code:
+- https://github.com/airbnb/react-dates
 - Install dependencies
 - Ensure packages are installed with correct version numbers by running:
 
@@ -57,8 +58,8 @@ T------------------------------------------------
 
 -- for the little calendar not the date-picker tool
 npm install react-calendar
-
-
+https://github.com/wojtekmaj/react-calendar/blob/master/README.md
+https://www.npmjs.com/package/react-calendar
 
 
 bundle exec rails db:setup              ===> create the DB

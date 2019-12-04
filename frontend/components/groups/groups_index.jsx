@@ -14,12 +14,6 @@ class GroupsIndex extends React.Component {
         }
     }
 
-//this is for the calendar testing
-    setNewDate(date) {
-        this.setState({ selectedDate: date })
-    }
-
-
 
     update(field) {
         return e => this.setState({
