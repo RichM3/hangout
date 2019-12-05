@@ -1,3 +1,10 @@
+import { connect } from 'react-redux';
+// import GroupsIndex from './groups_index';
+import { fetchGroups } from '../../actions/group_actions';
+import { fetchUserInfo } from '../../actions/session_actions';
+
+
+
 import React from 'react';
 import NavbarContainer from "../navbar/navbar_container";
 import FooterContainer from "../footer/footer_container";
@@ -22,13 +29,20 @@ class GroupsIndex extends React.Component {
     }
 
     componentDidMount() {
+        debugger
         window.scrollTo(0, 0)
         // window.scroll({ top: 0, left: 0, behavior: 'smooth' });
         this.props.fetchUserInfo();
         this.props.fetchGroups();
+        debugger
     }
 
     render() {
+        debugger
+
+        if (!this.props.inGroups) {
+            return null;
+        }
 
         let inGroups = this.props.inGroups.map( group => {
             return (
@@ -91,4 +105,39 @@ class GroupsIndex extends React.Component {
     }
 }
 
+
+
+const mapStateToProps = ({ session, entities: { users, groups } }, ownProps) => {
+    debugger
+    let allGroups = Object.values(groups);
+    let currentUser = users[session.id];
+
+    let inGroups = allGroups.filter((group) => {
+        return (currentUser.groupIds.includes(group.id))
+    })
+
+    let suggestedGroups = allGroups.filter((group) => {
+        return (!currentUser.groupIds.includes(group.id))
+    })
+
+
+    return ({
+        inGroups: inGroups,
+        suggestedGroups: suggestedGroups,
+        currentUser: currentUser
+    })
+};
+
+const mapDispatchToProps = dispatch => ({
+    fetchGroups: () => dispatch(fetchGroups()),
+    fetchUserInfo: () => dispatch(fetchUserInfo())
+});
+
+
+
+
+
 export default GroupsIndex;
+
+
+

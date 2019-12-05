@@ -30,13 +30,14 @@ const App = () => (
       <ProtectedRoute exact path="/groups/calendartest" component={CalendarContainer} />
 
 
-      <ProtectedRoute exact path="/groups" myType={"calendar"} component={GroupsIndexContainer} />
+      {/* <ProtectedRoute exact path="/groups" myType={"calendar"} component={GroupsIndexContainer} /> */}
 
 
-      {/* <ProtectedRoute exact path="/home" myType={"calendar"} component={HomeIndexContainer} /> */}
-      {/* <Route exact path="/home" render={(routeProps) => <HomeIndexContainer {...routeProps} myType={"calendar"} />} />
-      <Route exact path="/my-calendar" myType={"calendar"} component={HomeIndexContainer} />
-      <Route exact path="/my-groups" myType={"groups"} component={HomeIndexContainer} /> */}
+      {/* <Route exact path="/home" render={(routeProps) => <HomeIndexContainer {...routeProps} myType={"calendar"} />} /> */}
+      
+      <ProtectedRoute exact path="/home" myType={"calendar"} component={HomeIndexContainer} />
+      <ProtectedRoute exact path="/my-calendar" myType={"calendar"} component={HomeIndexContainer} />
+      <ProtectedRoute exact path="/my-groups" myType={"groups"} component={HomeIndexContainer} />
 
 
 
