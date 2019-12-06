@@ -68,7 +68,7 @@ class Calendartest extends React.Component {
     render() {
         return(
         <>
-        <NavbarContainer navType={"groups_create"} myType={""} />
+        {/* <NavbarContainer navType={"groups_create"} myType={""} /> */}
 
         <Calendar
             onChange={this.onChange}
@@ -82,9 +82,9 @@ class Calendartest extends React.Component {
             // value={this.state.date}
         />
 
-        <button className="button--showmore" onClick={() => this.myAlert()} >Press Me</button>
+        {/* <button className="button--showmore" onClick={() => this.myAlert()} >Press Me</button> */}
 
-        <FooterContainer myType={"groups"} />
+        {/* <FooterContainer myType={"groups"} /> */}
 
         </>
         )

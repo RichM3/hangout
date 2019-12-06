@@ -28,7 +28,7 @@ class GroupsShow extends React.Component {
     leaveGroup(e) {
         e.preventDefault()
         this.props.deleteMembership(this.state.groupId)  
-            .then(() => this.props.history.push('/groups'));
+            .then(() => this.props.history.push('/home'));
     }
 
     joinGroup(e) {
