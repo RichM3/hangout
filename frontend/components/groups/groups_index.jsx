@@ -62,27 +62,27 @@ class GroupsIndex extends React.Component {
         <>
 
         <div className="index-body">
-        <NavbarContainer navType={"groups_index"} myType={"login"} />
+        {/* <NavbarContainer navType={"groups_index"} myType={"login"} /> */}
 
             {/* this is for calendar testing */}
-            <Link to="./groups/calendartest" className="create-event-btn" >Create Calendar </Link>
+            {/* <Link to="./groups/calendartest" className="create-event-btn" >Create Calendar </Link> */}
 
             <div className="c-page-lt">
-                <div className="member-home-bounds"><label><a href="http://">Find your next event</a></label></div>
+                {/* <div className="member-home-bounds"><label><a href="http://">Find your next event</a></label></div> */}
                 <div className="c-page-body">
-                    <div className="find-navbar-wrap">
+                    {/* <div className="find-navbar-wrap">
                         <form action="" className="searchForm">
                             <div className="wrapper-magnify" >
                                 <input className="group-input" type="text" name="search" id="search" value="" onChange={this.update('search')} />
                                 <img className="magnify-icon" src={magnify} />
                             </div>
-                            {/* <div>Within 5 miles of NYC</div> */}
+
                         </form>
                         <div className="button-div">
                                 <div className="left-button-option"><a href="#" >Groups</a></div>
                                 <div className="right-button-option"><a href="#">Calendar</a></div>
                         </div>
-                    </div>
+                    </div> */}
 {/* DIVIDES THE TOP OF PAGE FROM BOTTOM SEPERATES GROUPS A PERSON BELONGS TO */}
                     <div className="unit-size5of7-full-width" >
                         <h2 className="myheader">YOUR GROUPS</h2>
