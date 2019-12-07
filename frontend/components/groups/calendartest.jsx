@@ -82,8 +82,6 @@ class Calendartest extends React.Component {
             // value={this.state.date}
         />
 
-
-
         {/* <button className="button--showmore" onClick={() => this.myAlert()} >Press Me</button> */}
 
         {/* <FooterContainer myType={"groups"} /> */}
