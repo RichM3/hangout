@@ -35,7 +35,6 @@ const receiveGroupEvents = function(payload) {
     }
 }
 
-
 export const fetchGroupEvents = (groupId) => (dispatch) => (
     EventsApiUtil.fetchGroupEvents(groupId).then(payload => dispatch(receiveGroupEvents(payload)))
 );
