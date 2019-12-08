@@ -6,7 +6,7 @@ export const fetchEvents = () => {
 }
 
 export const createEvent = (event) => {
-    debugger
+    // debugger
     return $.ajax({
         method: "post",
         url: `api/events`,
@@ -22,3 +22,11 @@ export const createEvent = (event) => {
         }
     })
 }
+
+export const fetchGroupEvents = (groupId) => {
+    return $.ajax({
+        method: "get",
+        url: `api/events`
+    })
+}
+

@@ -9,22 +9,30 @@ class Api::EventsController < ApplicationController
         debugger
         
         if @event.save!
-        debugger
+        # debugger
             render "api/events/show"
         else
-        debugger
+        # debugger
             render json: @event.errors.full_messages, status: 422
         end
     end
 
     def index
+        debugger
         @events = Event.all
+        debugger
         render "api/events/index"
     end
 
     # def show
-    #     @group = Group.find(params[:id])
+    #     # debugger
+    #     # group_id = Group.find(params[:id])
+    #     # group_id2 = Group.find(get_group_id)
+    #     # puts get_group_id
+    #     debugger
+    #     @events = Event.all
     #     # render "api/groups/show"
+    #     # debugger
     #     render :show
     # end
 
@@ -66,6 +74,10 @@ class Api::EventsController < ApplicationController
     private
     def event_params
         params.require(:event).permit(:eventname, :description, :location, :starttime, :endtime, :group_id)
+    end
+
+    def get_group_id
+        params.require(:event).permit(:groupId)
     end
 
 end

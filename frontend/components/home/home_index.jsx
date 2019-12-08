@@ -46,13 +46,13 @@ class HomeIndex extends React.Component {
 
     showCalendar(e) {
         e.preventDefault();
-        console.log("showCal");
+        // console.log("showCal");
         this.setState({calendarSelected:true})
     }
 
     showGroups(e) {
         e.preventDefault();
-        console.log("showGrps");
+        // console.log("showGrps");
         this.setState({ calendarSelected: false })
     }
 

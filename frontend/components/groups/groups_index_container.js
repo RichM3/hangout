@@ -4,7 +4,7 @@ import { fetchGroups } from '../../actions/group_actions';
 import { fetchUserInfo } from '../../actions/session_actions';
 
 const mapStateToProps = ({ session, entities: { users, groups } }, ownProps) => {
-    debugger
+    // debugger
     let allGroups = Object.values(groups);
     let currentUser = users[session.id];
 
