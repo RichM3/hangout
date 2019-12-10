@@ -1,7 +1,3 @@
-/* div {
-    display: block;
-} */
-
 .c-page-lt {
     background-color: #fafafa;
     font-size: 16px;
@@ -17,9 +13,6 @@
     -o-font-feature-settings: "liga","kern";
     -webkit-font-feature-settings: "liga","kern";
     font-feature-settings: "liga","kern";
-
-    /* testing border */
-    /* border: 3px solid blue; */
 }
 
 /* header link settings -- except one class experience */
@@ -29,36 +22,19 @@
     text-decoration: none;
 }
 
-
-    /* member home header */
-    /* background: #00455d; */
 .member-home-bounds {
     color: white;
     text-align: center;
-
-
     font-size: 32px;
     line-height: 1.45;
     font-family: "Graphik Meetup",helvetica,arial,sans-serif;
     font-weight: 600;
-
-
-    /* width: 950px; */
-    /* width: 1118px; */
     width: 100%;
     height: 88px;
     padding: 32px 0 48px;
-    /* max-width: 950px; */
     margin: 0 auto;
     background-color: #00455d;
-    
-    /* testing border */
-    /* border: 3px solid blue; */
 }
-/* .inverted {
-    color: rgba(255,255,255,.7);
-} */
-
 
 .member-home-little {
     color: white;
@@ -94,43 +70,29 @@ img:hover {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    /* height: 50px; */
-    /* background-color: blue; */
-    /* border: 5px solid black; */
     height: 69px;
-    /* width: 100%; */
-    /* width: 982px; */
     width: 932px;
-    /* bottom: -42px;
-    z-index: 2; */
     background: transparent;
-    /* testing border */
-    /* border: 3px solid blue; */
     opacity: 1;
     color: rgba(255,255,255,.7);
 }
 
 .searchForm {
-    /* margin: 0 auto; */
     width: 709px;
-
     padding: 10px 10px 10px 10px;
     background-color:#0e1721;
 }
 
-
 .wrapper-magnify {
-  width: 40%;
+    width: 40%;
     height: 45px;
-  display: flex;
-  align-items: baseline;
-  background-color: #ffffff;
+    display: flex;
+    align-items: baseline;
+    background-color: #ffffff;
 }
 
 .magnify-icon {
     padding-top: 10px;
-    /* cursor: pointer; */
-    /* margin-right: auto; */
     width: 30px;
     height: auto;
 }
@@ -142,29 +104,16 @@ img:hover {
 }
 
 .fillerImg {
-
     float: left;
-
-
     padding-top: 10px;
-    /* cursor: pointer; */
-    /* margin-right: auto; */
     width: 300px;
     height: 150px;
     color: #ffffff;
-    /* color: black; */
-
     margin-left: 15px;
-
     font-size: 22px;
     line-height: 1.45;
     font-family: "Graphik Meetup",helvetica,arial,sans-serif;
     font-weight: 900;
-
-    /* opacity: 0.5; */
-
-
-    /* background-image: url('peopleHangout.png'); */
     
     // This sets the background image to the image mapped in the window - application.html.erb in views layouts
     // Also must change file extension to scss from css
@@ -172,22 +121,15 @@ img:hover {
     background-size: contain;
 }
  
-
 .button-div {
     padding: 10px;
     font-size: 16px;
     line-height: 1.45;
     font-family: "Graphik Meetup",helvetica,arial,sans-serif;
     font-weight: 600;
-
     background-color:#0e1721;
-
     display: flex;
-
     width: 274px;
-    /* border: #8a8a8a solid 1px; */
-    /* background-color: red; */
-    /* selected button #3f454e */
 }
 
 .left-button-option {
@@ -208,10 +150,6 @@ img:hover {
     height: 43px; */
 }
 
-/* .left-button-option a {
-    margin: 0 auto;
-} */
-
 .right-button-option {
     border: #8a8a8a solid 1px;
     display: flex;
@@ -220,9 +158,6 @@ img:hover {
     width: 50%;
     text-align: center;
     background-color:#0e1721;
-
-    /* width: 122.5px;
-    height: 43px; */
 }
 
 .c-page-body {
@@ -230,36 +165,23 @@ img:hover {
     color: rgba(0,0,0,.87);
     font-size: 13px;
     width: 986px;
-    /* width: 90%; */
     min-height: 300px;
-
-    /* testing */
     min-height: 1300px;
-
     padding: 0 1em;
     padding-top: 16px;
     padding-bottom: 1.25em;
-
-    /* testing border */
-    /* border: 3px solid blue; */
 }
-
 
 .unit-size5of7-full-width {
     width: 976px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    /* display: flex; */
-
-    /* testing border */
-    /* border: 3px solid blue; */
 }
 
 .myheader {
     height: 28px;
     color: rgba (0,0,0,0.87);
-    /* margin: 20px 0 16px; */
     margin: 20px 0 16px 15px;
     padding: 0 0 8px;
     font-size: 13px;
@@ -268,95 +190,28 @@ img:hover {
     font-weight: 600;
 }
 
-
 .box-ul {
-    /* box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    font-size: 0;
-    margin: 0 -16px 0 0;
-    padding: 0; */
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-
-
-
-    /* display: flex; */
-    /* display: block; */
-    /* list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px; */
-    /* min-height: 182; */
 }
 
 .li-formatting {
-    /* list-style-image: url('wafflejoke.png'); */
-    /* testing border */
-    /* border: 3px solid blue; */
-    /* align-items: flex-end; */
-    /* margin-bottom: -30px; */
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-
     justify-content: flex-end;
     display: flex;
     flex-direction: column;
     text-align: left;
-    /* vertical-align: bottom; */
-    /* justify-content:  */
-
     min-width: 308px;
-    /* min-width: 325.33px; */
-    /* min-height: 182; */
     height: 182px;
     margin-bottom: 16px;
-    /* padding-right: 16px; */
     margin-right: 16px;
     margin-left: 3px;
-
-    /* background: #39b17f; */
-
-
-    /* background: image-url('https://imgur.com/t/fall/KJgCjI5'); */
-
-    /* background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), image-url('https://imgur.com/t/fall/KJgCjI5'); */
-        /* background-image: image('../images/magnify.png')  */
-    /* background: image('magnify.png'); */
-
-    /* background-image: url("https://imgur.com/t/fall/KJgCjI5"); */
-    /* background-image: image('magnify.png') */
-    /* image_url('magnify.png'); */
-          /* window.magnifyURL = "<%= image_url('magnify.png') %>"; */
-
 }
 
 .li-formatting p:last-child {
     margin-bottom: 50px;
 }
-
- /* combination of UL and titleGrid */
-/* .tileGrid {
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    font-size: 0;
-    margin: 0 -16px 0 0;
-    padding: 0;
- }
-
-ul {
-    display: block;
-    list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
-} */
-
 
 .motivation-section {
     padding-top: 48px;
@@ -365,16 +220,9 @@ ul {
     margin-bottom: 48px;
     border-top: 1px solid rgba(0,0,0,.12);
     border-bottom: 1px solid rgba(0,0,0,.12);
-
-    /* testing border */
-    /* border: 3px solid blue; */
 }
 
 
-
-
-
-/* .button--fullWidth, .button.full-width, .button.span-100 { */
 .button--showmore {
     margin-top: 500px;
     display: block!important;
@@ -384,7 +232,6 @@ ul {
     user-select: none;
     cursor: pointer;
     text-decoration: none!important;
-
     box-sizing: border-box;
     -webkit-appearance: none;
     border-radius: 3px;
@@ -393,8 +240,6 @@ ul {
     min-height: 36px;
     outline: 0;
     padding: 0 16px;
-    /* ignored because diplay: block above */
-    /* vertical-align: middle; */
     line-height: 1;
     margin-bottom: 16px;
     border: 1px solid rgba(0,0,0,.12);
@@ -406,15 +251,6 @@ ul {
 /* see above for opacity code */
 
 
-
-
-/* Not Currently in use */
-.groups-form-box {
-    font-family: "Graphik Meetup",helvetica,arial,sans-serif;
-    width: 500px;
-    border: 3px solid black
-}
-
 .group-input {
     color: black;
     background-color: #fafafa;
@@ -424,10 +260,7 @@ ul {
     box-sizing: border-box;
     margin: 0 0 4px;
     max-width: 100%;
-    /* padding: 8px; */
     width: 280px;
-    /* height: 45px; */
     margin-bottom: 50px;
 }
-    /* font-size: 24pt; */
-   /* margin-left: 20px; */
+
