@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     delete 'groups/remove_membership/:id', to: 'groups#remove_membership'
 
     resources :events, only: [:create, :index, :show, :edit, :update, :destroy]
+    get 'events/group_events/:groupId', to: 'events#group_events'
     # post 'events/create_event/:id', to: 'events#create_event'
     # delete 'events/remove_event/:id', to: 'events#remove_event'
 

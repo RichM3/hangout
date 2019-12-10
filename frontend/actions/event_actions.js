@@ -29,8 +29,8 @@ export const createEvent = (event) => dispatch => (
 const receiveGroupEvents = function(payload) {
     debugger
     return {
-        // type: RECEIVE_GROUP_EVENTS,
-        type: RECEIVE_EVENTS,
+        type: RECEIVE_GROUP_EVENTS,
+        // type: RECEIVE_EVENTS,
         events: payload.events
     }
 }
@@ -38,9 +38,4 @@ const receiveGroupEvents = function(payload) {
 export const fetchGroupEvents = (groupId) => (dispatch) => (
     EventsApiUtil.fetchGroupEvents(groupId).then(payload => dispatch(receiveGroupEvents(payload)))
 );
-
-// export const fetchGroupEvents = function(groupId) {
-//     debugger
-//     return EventsApiUtil.fetchGroupEvents(groupId).then(payload => dispatch(receiveGroupEvents(payload)))
-// };
 

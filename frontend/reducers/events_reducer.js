@@ -8,8 +8,8 @@ const eventsReducer = (oldState = {}, action) => {
         case RECEIVE_EVENTS:
             return action.events;
         case RECEIVE_GROUP_EVENTS:
-            return oldState;
-            // return action.events;
+            // return oldState;
+            return action.events;
         case CREATE_EVENT:
             return Object.assign({}, oldState, { [action.event.id]: action.event })
         default:
