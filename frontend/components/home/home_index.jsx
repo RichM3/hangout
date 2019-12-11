@@ -96,7 +96,7 @@ class HomeIndex extends React.Component {
 
                                 </form>
                                 <div className="button-div">
-                                    <div className="left-button-option"><a href="#" onClick={this.showGroups} >Groups</a></div>
+                                    <div className="selected-button-option"><a href="#" onClick={this.showGroups} >Groups</a></div>
                                     <div className="right-button-option"><a href="#" onClick={this.showCalendar}>Calendar</a></div>
                                 </div>
                             </div>
