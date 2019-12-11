@@ -185,7 +185,7 @@ class HomeIndex extends React.Component {
                                 </form>
                                 <div className="button-div">
                                     <div className="selected-button-option"><a href="#" onClick={this.showGroups} >Groups</a></div>
-                                    <div className="right-button-option"><a href="#" onClick={this.showCalendar}>Calendar</a></div>
+                                    <div className="deselected-button-option"><a href="#" onClick={this.showCalendar}>Calendar</a></div>
                                     {/* <button onClick={this.myAlert()}>Test </button> */}
                                     {/* <a href="#" onClick={this.myAlert()} >Groups</a></div> */}
                                 </div>
