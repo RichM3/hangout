@@ -3,7 +3,7 @@ import NavbarContainer from "../navbar/navbar_container";
 import FooterContainer from "../footer/footer_container";
 import GroupsItemIndex from "../groups/groups_index_item";
 import { Link } from 'react-router-dom';
-import Calendar from '../groups/calendartest';
+import Calendar from '../groups/calendar';
 import Groups from '../groups/groups_index';
 
 class HomeIndex extends React.Component {
@@ -170,7 +170,7 @@ class HomeIndex extends React.Component {
                     <NavbarContainer navType={"groups_index"} myType={"login"} />
 
                     {/* this is for calendar testing */}
-                    <Link to="./groups/calendartest" className="create-event-btn" >Create Calendar </Link>
+                    <Link to="./groups/calendar" className="create-event-btn" >Create Calendar </Link>
 
                     <div className="c-page-lt">
                         <div className="member-home-bounds"><label><a href="http://">Find your next event</a></label></div>

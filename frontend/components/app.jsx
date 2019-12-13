@@ -17,7 +17,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import HomeIndexContainer from "./home/home_index_container";
 
 {/* for testing the calendar only - remove later after testing */ }
-import CalendarContainer from "./groups/calendartest";
+import CalendarContainer from "./groups/calendar";
 
 
 
@@ -27,7 +27,7 @@ const App = () => (
     <Switch>
 
       {/* for testing the calendar only - remove later after testing */}
-      <ProtectedRoute exact path="/groups/calendartest" component={CalendarContainer} />
+      <ProtectedRoute exact path="/groups/calendar" component={CalendarContainer} />
 
 
       {/* <ProtectedRoute exact path="/groups" myType={"calendar"} component={GroupsIndexContainer} /> */}

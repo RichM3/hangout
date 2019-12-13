@@ -1,7 +1,7 @@
 import React from 'react';
 import NavbarContainer from "../navbar/navbar_container";
 import FooterContainer from "../footer/footer_container";
-import Calendar from '../groups/calendartest';
+import Calendar from '../groups/calendar';
 import Groups from '../groups/groups_index_container';
 
 class HomeIndex extends React.Component {

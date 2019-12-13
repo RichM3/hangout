@@ -51,7 +51,7 @@ class GroupsIndex extends React.Component {
         <NavbarContainer navType={"groups_index"} myType={"login"} />
 
             {/* this is for calendar testing */}
-            <Link to="./groups/calendartest" className="create-event-btn" >Create Calendar </Link>
+            <Link to="./groups/calendar" className="create-event-btn" >Create Calendar </Link>
 
             <div className="c-page-lt">
                 <div className="member-home-bounds"><label><a href="http://">Find your next event</a></label></div>
