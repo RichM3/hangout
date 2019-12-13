@@ -23,7 +23,6 @@ class HomeIndex extends React.Component {
             calendarSelected: calendarSelected,
             myType: this.props.myType
         }
-        // this.toggleSelected = this.toggleSelected.bind(this)
         this.showCalendar = this.showCalendar.bind(this);
         this.showGroups = this.showGroups.bind(this);
     }
@@ -38,21 +37,13 @@ class HomeIndex extends React.Component {
         }
     }
 
-    // toggleSelected(selectedCalendar) {
-    //     return e => {
-    //         this.setState({ calendarSelected: selectedCalendar })
-    //     }
-    // }
-
     showCalendar(e) {
         e.preventDefault();
-        // console.log("showCal");
         this.setState({calendarSelected:true})
     }
 
     showGroups(e) {
         e.preventDefault();
-        // console.log("showGrps");
         this.setState({ calendarSelected: false })
     }
 
@@ -96,8 +87,8 @@ class HomeIndex extends React.Component {
 
                                 </form>
                                 <div className="button-div">
-                                    <div className="selected-button-option"><a href="#" onClick={this.showGroups} >Groups</a></div>
-                                    <div className="deselected-button-option"><a href="#" onClick={this.showCalendar}>Calendar</a></div>
+                                    <div className={this.state.calendarSelected ? 'deselected-button-option' : 'selected-button-option'}><a href="#" onClick={this.showGroups} >Groups</a></div>
+                                    <div className={this.state.calendarSelected ? 'selected-button-option' : 'deselected-button-option'}><a href="#" onClick={this.showCalendar}>Calendar</a></div>
                                 </div>
                             </div>
                             
