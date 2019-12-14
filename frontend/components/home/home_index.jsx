@@ -3,6 +3,8 @@ import NavbarContainer from "../navbar/navbar_container";
 import FooterContainer from "../footer/footer_container";
 import Calendar from '../groups/calendar';
 import Groups from '../groups/groups_index_container';
+import EventsItemIndex from "../groups/show_components/events/events_index_item";
+
 
 class HomeIndex extends React.Component {
     constructor(props) {
@@ -57,11 +59,29 @@ class HomeIndex extends React.Component {
         window.scrollTo(0, 0)
         this.props.fetchUserInfo();
         this.props.fetchGroups();
+        this.props.fetchEvents();
     }
 
     render() {
+        let listEvents = this.props.allEvents.map(event => {
+            return (
+                <div key={event.id} >
+                    <EventsItemIndex event={event} key={event.id} />
+                </div>
+            );
+        })
+
         const contentComp = this.state.calendarSelected ? (
-            <Calendar />
+            <>
+            <div className="page-container">
+                <div className="page-events">
+                    <ul className="box-ul">
+                        {listEvents}
+                    </ul>
+                </div>
+                <div className="page-calendar"><Calendar /></div>                
+            </div>
+            </>
         ) : (
             <Groups />
         )

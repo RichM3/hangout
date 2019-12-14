@@ -33,6 +33,10 @@ class User < ApplicationRecord
     through: :memberships,
     source: :group
 
+  has_many :events,
+    through: :groups,
+    source: :events
+
 
 
 

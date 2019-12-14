@@ -27,10 +27,8 @@ export const createEvent = (event) => dispatch => (
 );
 
 const receiveGroupEvents = function(payload) {
-    debugger
     return {
         type: RECEIVE_GROUP_EVENTS,
-        // type: RECEIVE_EVENTS,
         events: payload.events
     }
 }

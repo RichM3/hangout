@@ -14,8 +14,13 @@ class Api::EventsController < ApplicationController
     end
 
     def index
-        @events = Event.all
+        # debugger
+        # @events = Event.all
+        # @events = current_user.groups.events
+        @events = current_user.events
+        # debugger
         render "api/events/index"
+        # debugger
     end
 
     # def show

@@ -12,9 +12,9 @@ class EventsIndex extends React.Component {
     }
 
     componentDidMount() {
-        debugger
+        // debugger
         this.props.fetchGroupEvents(parseInt(this.state.groupId));
-        debugger
+        // debugger
         window.scrollTo(0, 0)
         // this.props.fetchEvents();
     }

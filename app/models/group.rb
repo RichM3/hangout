@@ -15,7 +15,11 @@ class Group < ApplicationRecord
     validates :groupname, presence: true, uniqueness: true
     validates :leader_id, presence: true
 
-    has_many :events
+    has_many :events,
+        primary_key: :id,
+        foreign_key: :group_id,
+        class_name: :Event
+
 
 
     belongs_to :leader,

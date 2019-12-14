@@ -1,0 +1,16 @@
+.page-container {
+    display: flex;
+}
+
+.page-events {
+    width: 70%;
+    margin-top: 20px;
+    margin-right: 10px;
+    /* background-color: blue; */
+}
+
+.page-calendar {
+    width: 30%;
+    margin-top: 20px;
+    /* background-color: red; */
+}
