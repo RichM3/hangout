@@ -24,7 +24,8 @@ class HomeIndex extends React.Component {
             search: "",
             calendarSelected: calendarSelected,
             myType: this.props.myType,
-            listDataFromChild: "12/14/19"
+            listDataFromChild: new Date(),
+            doublePress: false
         }
         this.showCalendar = this.showCalendar.bind(this);
         this.showGroups = this.showGroups.bind(this);
@@ -32,8 +33,9 @@ class HomeIndex extends React.Component {
     }
 
     dateCallback(dataFromChild) {
-        debugger
-        this.setState({ listDataFromChild: dataFromChild }, () => alert(this.state.listDataFromChild));
+        // debugger
+        // this.setState({ listDataFromChild: dataFromChild }, () => alert(this.state.listDataFromChild));
+        this.setState({ listDataFromChild: dataFromChild }, () => this.props.fetchEvents(this.state.listDataFromChild));
     }
 
     componentDidUpdate(prevProps, prevState) {
@@ -48,7 +50,15 @@ class HomeIndex extends React.Component {
 
     showCalendar(e) {
         e.preventDefault();
-        this.setState({calendarSelected:true})
+        if (this.state.calendarSelected === true ) {
+            // This is for the double press of calendar button
+            this.setState({ doublePress: !this.state.doublePress});
+            this.setState({ listDataFromChild: this.state.listDataFromChild }, () => this.props.fetchEvents(this.state.listDataFromChild));
+        } else {
+            // This is when user comes from groups >> calendar on top buttons
+            this.setState({calendarSelected:true});
+            this.setState({ listDataFromChild: new Date() }, () => this.props.fetchEvents(this.state.listDataFromChild));
+        }
     }
 
     showGroups(e) {
@@ -66,7 +76,7 @@ class HomeIndex extends React.Component {
         window.scrollTo(0, 0)
         this.props.fetchUserInfo();
         this.props.fetchGroups();
-        this.props.fetchEvents();
+        this.props.fetchEvents(this.state.listDataFromChild);
     }
 
     render() {

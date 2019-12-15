@@ -11,8 +11,8 @@ const receiveEvents = function(payload) {
     }
 };
 
-export const fetchEvents = () => (dispatch) => (
-    EventsApiUtil.fetchEvents().then(payload => dispatch(receiveEvents(payload)))
+export const fetchEvents = (date) => (dispatch) => (
+    EventsApiUtil.fetchEvents(date).then(payload => dispatch(receiveEvents(payload)))
 );
 
 const createNewEvent = function(payload) {

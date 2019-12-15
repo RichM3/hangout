@@ -5,15 +5,18 @@ import { fetchGroups } from '../../actions/group_actions';
 import { fetchUserInfo } from '../../actions/session_actions';
 
 const mapStateToProps = ({ session, entities: { users, groups, events } }, ownProps) => {
-    const allEvents = events ? Object.values(events) : []
+    let allEvents = events ? Object.values(events) : []
+    // debugger
+    let sorted = allEvents.sort((a, b) => (a.starttime > b.starttime) ? 1 : -1)
+    // let sorted = allEvents.sort((a, b) => (a.eventname > b.eventname) ? 1 : -1)
 
     return ({
-        allEvents: allEvents
+        allEvents: sorted
     })
 };
 
 const mapDispatchToProps = dispatch => ({
-    fetchEvents: () => dispatch(fetchEvents()),
+    fetchEvents: (date) => dispatch(fetchEvents(date)),
     fetchGroups: () => dispatch(fetchGroups()),
     fetchUserInfo: () => dispatch(fetchUserInfo())
 });

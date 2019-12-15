@@ -1,7 +1,12 @@
-export const fetchEvents = () => {
+export const fetchEvents = (date) => {
     return $.ajax({
         method: "get",
-        url: `api/events`
+        url: `api/events`,
+        data: {
+            event: {
+                date: date
+            }
+        }
     })
 }
 
