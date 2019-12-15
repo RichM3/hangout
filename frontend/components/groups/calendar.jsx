@@ -11,8 +11,12 @@ class Calendar extends React.Component {
     }
 
     onChange(date) {
+        debugger
         this.setState({ date });
+        debugger
         // this.setState({ date }, this.updateRelatedEvents);
+        this.props.callbackFromParent(date);
+        debugger
     }
 
     render() {

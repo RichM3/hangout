@@ -23,10 +23,17 @@ class HomeIndex extends React.Component {
         this.state = { 
             search: "",
             calendarSelected: calendarSelected,
-            myType: this.props.myType
+            myType: this.props.myType,
+            listDataFromChild: "12/14/19"
         }
         this.showCalendar = this.showCalendar.bind(this);
         this.showGroups = this.showGroups.bind(this);
+        this.dateCallback = this.dateCallback.bind(this);
+    }
+
+    dateCallback(dataFromChild) {
+        debugger
+        this.setState({ listDataFromChild: dataFromChild }, () => alert(this.state.listDataFromChild));
     }
 
     componentDidUpdate(prevProps, prevState) {
@@ -79,7 +86,7 @@ class HomeIndex extends React.Component {
                         {listEvents}
                     </ul>
                 </div>
-                <div className="page-calendar"><Calendar /></div>                
+                    <div className="page-calendar"><Calendar callbackFromParent={(dataFromChild) => this.dateCallback(dataFromChild)}/></div>                
             </div>
             </>
         ) : (

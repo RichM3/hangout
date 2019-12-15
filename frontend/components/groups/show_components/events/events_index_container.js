@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import EventsIndex from './events_index';
-import { fetchGroupEvents, fetchEvents} from '../../../../actions/event_actions';
+import { fetchGroupEvents } from '../../../../actions/event_actions';
 
 const mapStateToProps = ({ session, entities: { users, groups, events } }, ownProps) => {
     let currentUser = users[session.id];
@@ -16,8 +16,7 @@ const mapStateToProps = ({ session, entities: { users, groups, events } }, ownPr
 
 const mapDispatchToProps = (dispatch) => {
     return ({
-        fetchGroupEvents: (groupId) => dispatch(fetchGroupEvents(groupId)),
-        fetchEvents: () => dispatch(fetchEvents())
+        fetchGroupEvents: (groupId) => dispatch(fetchGroupEvents(groupId))
     })
 };
 
