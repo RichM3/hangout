@@ -52,7 +52,10 @@ similar to the greeting component in BenchBNB -- they exist only if the page is 
 
 19) installing the css-loader and style-loader so that the AirBnB calendar appears with styling in a user readable format was a new twist.
 
-
+20) Passing values to sibling components:
+-- required passing a callback to child component
+-- assigning that callback value to state
+-- using that state value as a property to other child component
 
 
 
