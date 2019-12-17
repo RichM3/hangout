@@ -19,9 +19,7 @@ class Api::EventsController < ApplicationController
     # Custom method for getting group events
     def group_events
         @group = Group.find(params[:groupId])
-        # debugger
         @events = @group.events
-        # debugger
         render "api/events/group_events"
     end
 

@@ -1,5 +1,4 @@
 json.events do
-    # debugger
     # show page not the index
     @events.each do |event|
         json.set! event.id do

@@ -16,15 +16,12 @@ class GroupsIndex extends React.Component {
     }
 
     componentDidMount() {
-        // debugger
         window.scrollTo(0, 0)
         this.props.fetchUserInfo();
         this.props.fetchGroups();
-        // debugger
     }
 
     render() {
-        // debugger
 
         if (!this.props.inGroups) {
             return null;

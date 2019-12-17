@@ -6,9 +6,7 @@ import { fetchUserInfo } from '../../actions/session_actions';
 
 const mapStateToProps = ({ session, entities: { users, groups, events } }, ownProps) => {
     let allEvents = events ? Object.values(events) : []
-    // debugger
     let sorted = allEvents.sort((a, b) => (a.starttime > b.starttime) ? 1 : -1)
-    // let sorted = allEvents.sort((a, b) => (a.eventname > b.eventname) ? 1 : -1)
 
     return ({
         allEvents: sorted

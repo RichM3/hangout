@@ -42,9 +42,6 @@ class EventsCreate extends React.Component {
     }
 
     createEvent(){
-        // alert(this.state.starttime);
-        // alert(this.state.endtime);
-        // debugger
         this.props.createEvent(this.state)
             .then(() => this.props.history.push(`/groups/${this.state.groupId}`));
     }
@@ -60,8 +57,6 @@ class EventsCreate extends React.Component {
     ensureEndGtrStart() {
         if (this.state.starttimevalue >= this.state.endtimevalue) {
             alert("End time is before start time");
-            // alert(this.state.starttimevalue);
-            // alert(this.state.endtimevalue);
             document.getElementById("endtimevalue").focus();
             return false;
         } else {

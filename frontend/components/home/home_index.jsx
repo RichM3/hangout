@@ -33,8 +33,6 @@ class HomeIndex extends React.Component {
     }
 
     dateCallback(dataFromChild) {
-        // debugger
-        // this.setState({ listDataFromChild: dataFromChild }, () => alert(this.state.listDataFromChild));
         this.setState({ listDataFromChild: dataFromChild }, () => this.props.fetchEvents(this.state.listDataFromChild));
     }
 

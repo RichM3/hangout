@@ -10,7 +10,6 @@ class EventsShow extends React.Component {
     }
 
     render() {
-        debugger
         return (
             <>
                 <NavbarContainer navType={"groups_create"} myType={""} />

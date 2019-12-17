@@ -34,7 +34,6 @@ class GroupsEdit extends React.Component {
     componentDidMount() {
         window.scrollTo(0, 0)
         let groupId = this.props.match.params.groupId;
-        debugger
         // this.props.fetchGroup(parseInt(groupId)).then(() => this.setState(this.props.group));
         this.props.fetchGroup(parseInt(groupId));
         this.setState(this.props.group);

@@ -2,7 +2,6 @@ import { RECEIVE_EVENTS, RECEIVE_GROUP_EVENTS, CREATE_EVENT } from "../actions/e
 
 
 const eventsReducer = (oldState = {}, action) => {
-    // debugger
     Object.freeze(oldState);
     
     switch (action.type) {
@@ -14,8 +13,6 @@ const eventsReducer = (oldState = {}, action) => {
                 return action.events;
             }
         case RECEIVE_GROUP_EVENTS:
-            // return oldState;
-            // debugger
             if (typeof (action.events) === "undefined") {
                 return null;
             } else {
