@@ -7,16 +7,14 @@ import GroupsCreateContainer from "./groups/groups_create_container";
 import GroupsEditContainer from "./groups/groups_edit_container";
 
 import EventsCreateContainer from "./groups/show_components/events/events_create_container";
+import EventsShowContainer from "./groups/show_components/events/events_show_container";
 
 import { Route, Redirect, Switch, Link, HashRouter } from 'react-router-dom';
 import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
-
 import HomeIndexContainer from "./home/home_index_container";
-
-{/* for testing the calendar only - remove later after testing */ }
 import CalendarContainer from "./groups/calendar";
 
 
@@ -25,25 +23,12 @@ const App = () => (
   <div>
 
     <Switch>
-
-      {/* for testing the calendar only - remove later after testing */}
-      <ProtectedRoute exact path="/groups/calendar" component={CalendarContainer} />
-
-
-      {/* <ProtectedRoute exact path="/groups" myType={"calendar"} component={GroupsIndexContainer} /> */}
-
-
-      {/* <Route exact path="/home" render={(routeProps) => <HomeIndexContainer {...routeProps} myType={"calendar"} />} /> */}
-      
+      <ProtectedRoute exact path="/groups/calendar" component={CalendarContainer} />      
       <ProtectedRoute exact path="/home" myType={"calendar"} component={HomeIndexContainer} />
       <ProtectedRoute exact path="/my-calendar" myType={"calendar"} component={HomeIndexContainer} />
       <ProtectedRoute exact path="/my-groups" myType={"groups"} component={HomeIndexContainer} />
-
-
-
-
-
       <ProtectedRoute exact path="/events/create/:groupId" component={EventsCreateContainer} />
+      <ProtectedRoute exact path="/events/show/" component={EventsShowContainer} />
       <ProtectedRoute exact path="/groups" component={GroupsIndexContainer} />
       <ProtectedRoute exact path="/groups/create" component={GroupsCreateContainer} />
       <ProtectedRoute exact path="/groups/:groupId" component={GroupsShowContainer} />

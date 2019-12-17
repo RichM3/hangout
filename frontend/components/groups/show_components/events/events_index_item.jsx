@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const EventsIndexItem = props => {
 
@@ -45,12 +46,14 @@ const EventsIndexItem = props => {
     return (
         <>
         <li>
+                <Link to={`/events/show`} >
                 <div className="event-border-space" > 
                     <div className="event-box">
                         <div className="event-date" >{dayName + ' ' + month + ' ' + day + ' ' + year + ' ' + hour + ' ' + mins + ' ' + meridiem}</div>
                     </div>
 
                     <div className="event-box">
+                        {/* <Link to={`/evens/${this.props.event.id}/edit`} className="delete-button" >Edit this event</Link> */}
                         <div className="event-titles" >{props.event.eventname}</div>
                     </div>
 
@@ -65,6 +68,7 @@ const EventsIndexItem = props => {
                         <div className="event-loc" >&nbsp;&nbsp;{props.event.location}</div>
                     </div>
                 </div>
+                </Link>
         </li>
         </>
     )
