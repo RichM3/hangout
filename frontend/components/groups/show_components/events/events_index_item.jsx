@@ -46,7 +46,11 @@ const EventsIndexItem = props => {
     return (
         <>
         <li>
-                <Link to={`/events/show`} >
+                {/* <Link to={`/events/show/${props.event.id}`} > */}
+                <Link to={{
+                    pathname:`/events/show/${props.event.id}`,
+                    eventProps: {event: props.event},
+                }} >
                 <div className="event-border-space" > 
                     <div className="event-box">
                         <div className="event-date" >{dayName + ' ' + month + ' ' + day + ' ' + year + ' ' + hour + ' ' + mins + ' ' + meridiem}</div>

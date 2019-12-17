@@ -10,10 +10,12 @@ class EventsShow extends React.Component {
     }
 
     render() {
+        debugger
         return (
             <>
                 <NavbarContainer navType={"groups_create"} myType={""} />
                 <div>Here is the Event show page</div>
+                {this.props.event.eventname}
                 <FooterContainer myType={"groups"} />
             </>
         )

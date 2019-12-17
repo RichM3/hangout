@@ -15,7 +15,12 @@ const eventsReducer = (oldState = {}, action) => {
             }
         case RECEIVE_GROUP_EVENTS:
             // return oldState;
-            return action.events;
+            // debugger
+            if (typeof (action.events) === "undefined") {
+                return null;
+            } else {
+                return action.events;
+            }
         case CREATE_EVENT:
             return Object.assign({}, oldState, { [action.event.id]: action.event })
         default:

@@ -3,8 +3,11 @@ import EventsShow from '../../../groups/show_components/events/events_show';
 import {fetchEvent} from '../../../../actions/event_actions';
 
 const msp = (state, ownProps) => {
-    return ({
+    debugger
+    let event = ownProps.location.eventProps.event;
 
+    return ({
+        event: event
     })
 }
 
