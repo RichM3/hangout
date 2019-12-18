@@ -3,10 +3,16 @@ import EventsShow from '../../../groups/show_components/events/events_show';
 import {fetchEvent} from '../../../../actions/event_actions';
 
 const msp = (state, ownProps) => {
-    let event = ownProps.location.eventProps.event;
-
+    // debugger
+    let group = {};
+    let event = {};
+    if (typeof (ownProps.location.eventProps) !== "undefined") {
+        event = ownProps.location.eventProps.event;
+        group = state.entities.groups[ownProps.location.eventProps.event.group_id];
+    }
     return ({
-        event: event
+        event: event,
+        group: group
     })
 }
 

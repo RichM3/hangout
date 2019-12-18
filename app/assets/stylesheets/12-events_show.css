@@ -1,0 +1,56 @@
+.event-show-banner {
+    display: flex;
+    /* height: 46px; ????? */
+  border: 1px solid #878787;
+  /* font-size: 42px; */
+  /* height: 120px; */
+  background-color:  #ffffff;
+  /* background-color:#00455d; */
+  text-align: center;
+  /* color: #fafafa; */
+  padding: 50px;
+  font-weight: bold;
+}
+
+/* #ced2d4 - calendar img border color */
+
+.event-calendar-date-image {
+    border: 1px solid #ced2d4;
+    border-radius: 5px;
+    background-color: #f6f7f8;
+    color: #f13a59;
+    margin-right: 10px;
+    height: 55px;
+    width: 55px;
+    font-size: 20px;
+    /* font-size: 12px; -- this is for the second text (month) */
+}
+/* 32px for the name
+16 for the date and question are going?
+14 for rest
+ */
+
+.event-details-container {
+    text-align: left;
+    font-size: 32px;
+
+    border: 1px solid green;
+}
+
+.event-attending {
+    font-size: 16px;
+    background-color: #868786;  
+    /* the button background */
+    
+    border: 1px solid green;
+}
+
+
+.event-show-body {
+  background-color:  #f5f5f5;
+}
+
+/* Border #878787 */
+/* .green for buttons: #0097ab */
+/* date: #575757 */
+

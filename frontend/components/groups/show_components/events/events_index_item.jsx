@@ -46,18 +46,16 @@ const EventsIndexItem = props => {
     return (
         <>
         <li>
-                {/* <Link to={`/events/show/${props.event.id}`} > */}
                 <Link to={{
                     pathname:`/events/show/${props.event.id}`,
                     eventProps: {event: props.event},
                 }} >
                 <div className="event-border-space" > 
                     <div className="event-box">
-                        <div className="event-date" >{dayName + ' ' + month + ' ' + day + ' ' + year + ' ' + hour + ' ' + mins + ' ' + meridiem}</div>
+                        <div className="event-date" >{dayName + ' ' + month + ' ' + day + ' ' + year + ' ' + hour + ':' + mins + ' ' + meridiem}</div>
                     </div>
 
                     <div className="event-box">
-                        {/* <Link to={`/evens/${this.props.event.id}/edit`} className="delete-button" >Edit this event</Link> */}
                         <div className="event-titles" >{props.event.eventname}</div>
                     </div>
 

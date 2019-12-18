@@ -63,12 +63,9 @@ class GroupsShow extends React.Component {
             return null
         }
 
-        let selectedMenuItem = "menu-selected";
-        
-
         let people = window.peopleHangoutURL;
         let map = window.mapMarkerURL;
-        let members = window.membersURL;
+        // let members = window.membersURL;
         let leader = window.groupLeaderURL;
 
 
