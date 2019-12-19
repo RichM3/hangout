@@ -1,0 +1,141 @@
+.event-show-banner-full {
+    background-color:  #ffffff;
+    border: 1px solid #878787;
+}
+
+.event-show-banner {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    background-color:  #ffffff;
+    text-align: center;
+    padding: 25px 50px 25px 100px;
+    /* border: 5px solid green; */
+}
+
+.event-calendar-date-image {
+    width: 10%;
+    border: 1px solid #ced2d4;
+    border-radius: 5px;
+    background-color: #f6f7f8;
+    color: #f13a59;
+    margin-right: 10px;
+    height: 55px;
+    width: 55px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 0px 0px 0px;
+    margin: 0px 20px 0px 0px;
+}
+
+.event-details-container {
+    width: 55%;
+    text-align: left;
+    padding: 0px 60px 0px 0px;
+    /* border: 5px solid red; */
+}
+
+.event-details-date {
+    font-family: "Graphik Meetup", helvetica, arial, sans - serif;
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 1.45;
+    color: #0098ab;
+}
+
+.event-details-title {
+    font-weight: bold;
+    /* keeps the text from line breaking */
+    white-space: nowrap;
+    font-size: 32px;
+    padding: 0px 0px 20px 0px;
+}
+
+.event-details-description {
+    font-size: 14px;    
+}
+
+.event-details-location {
+    font-size: 16px;
+}
+
+.event-show-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.event-show-icon-wrapper {
+    display: flex;
+    padding: 0px 0px 10px 0px;
+}
+
+.event-loc-img {
+    color: #707070;
+}
+
+.event-edit-link {
+    color: #0098ab;
+    font-size: 16px;
+    padding: 0px 0px 50px 0px;
+    margin: 0px 0px 50px 0px;
+}
+
+.event-delete-link {
+    color: #f13a59;
+    font-size: 14px;
+    padding: 50px 0px 20px 0px;
+}
+
+.event-attending-container {
+    width: 35%;
+
+    font-size: 16px;
+    margin: 0px 0px 0px 40px;
+}
+
+.event-attending-title {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    padding: 0px 0px 10px 0px;
+}
+
+.event-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.event-button-selected {
+    width: 160px;
+    height: 17px;
+    background-color: #0098ab;
+    border: 1px solid #ced2d4;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 10px 10px 10px;
+    /* margin: 10px 0px 10px 0px; */
+}
+
+.event-button-unselected {
+    width: 160px;
+    height: 17px;
+    background-color: #f5f5f5;
+    border: 1px solid #ced2d4;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 10px 10px 10px;
+    /* margin: 10px 0px 10px 0px; */
+}
+
+.event-attending-status {
+    font-size: 14px;
+    text-align: left;
+    padding: 10px 0px 0px 0px;
+}
+
+.event-show-body {
+  background-color:  #f5f5f5;
+}
+

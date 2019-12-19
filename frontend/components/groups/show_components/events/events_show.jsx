@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import NavbarContainer from '../../../navbar/navbar_container';
 import FooterContainer from '../../../footer/footer_container';
 
@@ -9,7 +10,6 @@ class EventsShow extends React.Component {
     }
 
     render() {
-
 
         const dt = new Date(this.props.event.starttime);
         const currentTimeZoneOffsetInHours = dt.getTimezoneOffset() / 60;
@@ -48,67 +48,50 @@ class EventsShow extends React.Component {
 
         hour = ('0' + hour).slice(-2);
 
+        let map = window.mapMarkerURL;
 
-
-        
-        // const eventDateTime = new Date(this.props.event.starttime.split("T"));
-        // const eventDate = new Date(eventDateTime[0]);
-        // const eventTime = new Date(eventDateTime[1]);
-        // console.log(eventDateTime);
-
-        // let month = eventDateTime.getMonth();
-        // console.log(month);
-
-        // console.log("Date: " + eventDate);
-        // console.log("Time: " + eventTime);
-
-        // console.log(typeof this.props.event.starttime);
-
-        // if (this.props.event.starttime instanceof Object) {
-        //     console.log("Is a date");
-        // } else {
-        //     console.log("NOT date");
-        // }
-
-
-        // let testDate = Date.parse(this.props.event.starttime);
-
-
-        // console.log(testDate);
-        // console.log(this.props.event.starttime);
-
-        // const eventDate = new Date('July 20, 69 00:20:18');
-        // console.log(eventDate);
-        // let month = eventDate.getMonth();
-        // console.log(month);
-
-        // let month = Date.parse(this.props.event.starttime).getMonth();
-        // console.log(month);
-        // debugger
         return (
             <>
                 <NavbarContainer navType={"groups_create"} myType={""} />
+                <div className="event-show-banner-full">
                 <div className="event-show-banner">
                     <div className="event-calendar-date-image">
                         <div>{day}</div>
                         <div>{month}</div>
                     </div>
                     <div className="event-details-container">
-                        <div className="event-date" >{dayName + ' ' + month + ' ' + day + ' ' + year + ' ' + hour + ':' + mins + ' ' + meridiem}</div>
-                        <div>{this.props.event.eventname}</div>
-                    </div>
-                    <div className="event-attending">Attending</div>
+                        <div className="event-details-date" >{dayName + ' ' + month + ' ' + day + ' ' + year + ' ' + hour + ':' + mins + ' ' + meridiem}</div>
+                        <div className="event-details-title">{this.props.event.eventname}</div>
+                        <div className="event-show-icon-wrapper" >
+                            <div className="event-show-icon" >
+                                <img src={map} />
+                            </div>
+                            <div className="event-loc-img" >&nbsp;&nbsp;{this.props.event.location}</div>
+                        </div>
 
-                    {/* <div>{this.props.event.starttime}</div> */}
-                    {/* <div>{this.props.event.eventname}</div> */}
-                    {/* <div>Details for: {this.props.group.groupname} <p>Event: {this.props.event.eventname}</p></div> */}
-                
-                
+                        <div>Hosted by <Link to={`/groups/${this.props.group.id}/`} className="event-edit-link" >{this.props.group.groupname}</Link></div>
+                        <div><Link to={`/events/${this.props.group.id}/edit`} className="event-edit-link" >Edit Event</Link></div>
+                        <div><Link to={`/groups/${this.props.group.id}/`} className="event-delete-link" >Delete Event</Link></div>
+                    </div>
+                    <div className="event-attending-container">
+                        <div className="event-attending-title">Are you attending?</div>
+                        <div className="event-button-container">
+                            <div className="event-button-selected">checked</div>
+                            <div className="event-button-unselected"></div>
+                            </div>
+                        <div className="event-attending-status">You are currently attending</div>
+                    </div>
+                </div>
                 </div>
 
 
-                <div className="event-show-body">EVENT BANNER</div>
+                {/* <div>{this.props.event.starttime}</div> */}
+                {/* <div>{this.props.event.eventname}</div> */}
+                {/* <div>Details for: {this.props.group.groupname} <p>Event: {this.props.event.eventname}</p></div> */}
 
+                <div className="event-show-body">EVENT BANNER
+                <div>{this.props.event.description}</div>
+                </div>
                 {/* <p>
                 {this.props.event.eventname}
                 </p><p>
