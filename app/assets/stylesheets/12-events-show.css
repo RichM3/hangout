@@ -49,7 +49,7 @@
     /* keeps the text from line breaking */
     white-space: nowrap;
     font-size: 32px;
-    padding: 0px 0px 20px 0px;
+    padding: 0px 0px 10px 0px;
 }
 
 .event-details-description {
@@ -67,18 +67,26 @@
 
 .event-show-icon-wrapper {
     display: flex;
-    padding: 0px 0px 10px 0px;
+    padding: 0px 0px 20px 0px;
 }
 
 .event-loc-img {
     color: #707070;
 }
 
+.event-edit-link-div { 
+    font-size: 14px;
+    padding: 0px 0px 5px 0px;
+    margin: 0px 0px 0px 0px;
+    /* border: 5px solid green; */
+}
+
 .event-edit-link {
     color: #0098ab;
-    font-size: 16px;
-    padding: 0px 0px 50px 0px;
-    margin: 0px 0px 50px 0px;
+    font-size: 14px;
+    /* padding: 0px 0px 20px 0px; */
+    /* margin: 0px 0px 0px 0px; */
+    /* border: 5px solid green; */
 }
 
 .event-delete-link {
