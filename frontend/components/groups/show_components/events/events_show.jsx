@@ -76,6 +76,9 @@ class EventsShow extends React.Component {
                     <div className="event-attending-container">
                         <div className="event-attending-title">Are you attending?</div>
                         <div className="event-button-container">
+                            {/* NEED TO ADD LOGIC TO ID IF THE USER HAS AN RSVP (EVENTID & USERID) */}
+                            {/* When i create an event I should add the user to the event immediately
+                            then if they come to event page they can delete the rsvp by pressing cancel button */}
                             <div className="event-button-selected">checked</div>
                             <div className="event-button-unselected"></div>
                             </div>
@@ -89,9 +92,22 @@ class EventsShow extends React.Component {
                 {/* <div>{this.props.event.eventname}</div> */}
                 {/* <div>Details for: {this.props.group.groupname} <p>Event: {this.props.event.eventname}</p></div> */}
 
-                <div className="event-show-body">EVENT BANNER
-                <div>{this.props.event.description}</div>
+                {/* ----------------------------------------------------------------------------------------------------------------- */}
+                {/* --   Body start here -------------------------------------------------------------------------------------------- */}
+                {/* ----------------------------------------------------------------------------------------------------------------- */}
+                <div className="event-show-body-full">
+
+                    <div className="event-show-body">
+                        <div className="event-data-section">
+                            <div className="event-data-title">Details</div>
+                            <div>{this.props.event.description}</div>
+                        </div>
+                        <div className="event-map-section">map goes here</div>
+                    </div>
                 </div>
+                
+                
+                
                 {/* <p>
                 {this.props.event.eventname}
                 </p><p>
