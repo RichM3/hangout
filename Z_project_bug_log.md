@@ -31,7 +31,6 @@ similar to the greeting component in BenchBNB -- they exist only if the page is 
 
 11) Sticky position to keep the search bar in place on the Groups index page
 
-
 12) They have a proprietary font so it is hard to match but I did the best I could - I believe
 
 13) Mapped code from the backend switching data using include to map data to and from different arrays
