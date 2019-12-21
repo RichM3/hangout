@@ -1,6 +1,7 @@
 class Api::EventsController < ApplicationController
 
     def create
+        debugger
         @event = Event.new(event_params)
         
         if @event.save!
@@ -16,7 +17,28 @@ class Api::EventsController < ApplicationController
         render "api/events/index"
     end
 
+    def edit
+        debugger
+        @event = Event.find(params[:id])
+        render :show
+    end
+
+    def update
+        @event = Event.find(params[:id])
+        if !(@event.update_attributes(event_params))
+            flash.now[:errors] = @event.error.full_messages
+        end
+
+        # if @event.update_attributes(event_params)
+        #     render: show
+        # else
+        #     flash.now[:errors] = @event.error.full_messages
+        #     render: show
+        # end
+    end
+
     def destroy
+        debugger
         @event = Event.find(params[:id])
         @event.destroy
         render :show

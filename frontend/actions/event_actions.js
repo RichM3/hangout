@@ -1,6 +1,7 @@
 import * as EventsApiUtil from '../util/events_api_util';
 
 export const RECEIVE_EVENTS = 'RECEIVE_EVENTS';
+export const RECEIVE_EVENT = 'RECEIVE_EVENT';
 export const CREATE_EVENT = 'CREATE_EVENT';
 export const RECEIVE_GROUP_EVENTS = 'RECEIVE_GROUP_EVENTS';
 export const REMOVE_EVENT = 'REMOVE_EVENT';
@@ -17,18 +18,20 @@ export const fetchEvents = (date) => (dispatch) => (
     EventsApiUtil.fetchEvents(date).then(payload => dispatch(receiveEvents(payload)))
 );
 
-const receiveEvent = function(payload) {
+const receiveEvent = function(event) {
+    debugger
     return {
-        type: RECEIVE_EVENTS,
-        events: payload.event
+        type: RECEIVE_EVENT,
+        event: event
     }
 }
 
 export const fetchEvent = (eventId) => (dispatch) => (
-    Events.ApiUtil.fetchEvent(eventId).then(payload => dispatch(receiveEvent(payload)))
+    EventsApiUtil.fetchEvent(eventId).then(event => dispatch(receiveEvent(event)))
 )
 
 const createNewEvent = function(payload) {
+    debugger
     return {
         type: CREATE_EVENT,
         event: payload

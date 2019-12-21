@@ -70,8 +70,20 @@ class EventsShow extends React.Component {
                         </div>
 
                         <div className="event-edit-link-div">Hosted by <Link to={`/groups/${this.props.group.id}/`} className="event-edit-link" >{this.props.group.groupname}</Link></div>
-                        <div className="event-edit-link-div"><Link to={`/events/${this.props.event.id}/edit`} className="event-edit-link" >Edit Event</Link></div>
-                        <div><Link to={`/groups/${this.props.group.id}/`} className="event-delete-link" onClick={() => this.props.deleteEvent(this.props.event.id)} >Delete Event</Link></div>
+                        <div className="event-edit-link-div">
+                        <Link to={`/events/${this.props.event.id}/edit`} className="event-edit-link" >Edit Event</Link>
+                        {/* <Link to={{
+                            pathname: `/events/edit/${this.props.event.id}/`,
+                            eventProps: { action: this.props.action,
+                                          event: this.props.event,
+                                          formType: "UpdateEvent"
+                                        }
+                        }}
+                        className="event-edit-link"                
+                        >Edit Event
+                        </Link> */}
+                        </div>
+                        {/* <div><Link to={`/groups/${this.props.group.id}/`} className="event-delete-link" onClick={() => this.props.deleteEvent(this.props.event.id)} >Delete Event</Link></div> */}
                     </div>
                     <div className="event-attending-container">
                         <div className="event-attending-title">Are you attending?</div>

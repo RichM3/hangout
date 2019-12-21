@@ -13,14 +13,15 @@ export const fetchEvents = (date) => {
 export const fetchEvent = (eventId) => {
     return $.ajax({
         method: "get",
-        url: `api/event`,
-        data: {
-            event: { event }
-        }
+        url: `api/events/${eventId}/edit`,
+        // data: {
+        //     event: { event }
+        // }
     })
 }
 
 export const createEvent = (event) => {
+    debugger
     return $.ajax({
         method: "post",
         url: `api/events`,
@@ -50,6 +51,7 @@ export const fetchGroupEvents = (groupId) => {
 }
 
 export const deleteEvent = (eventId) => {
+    debugger
     return $.ajax({
         method: "delete",
         url: `api/events/${eventId}`,

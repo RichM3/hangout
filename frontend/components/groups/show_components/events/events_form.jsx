@@ -44,6 +44,7 @@ class EventsCreate extends React.Component {
     }
 
     createEvent(){
+        debugger
         // this.props.createEvent(this.state)
         this.props.action(this.state)
             .then(() => this.props.history.push(`/groups/${this.state.groupId}`));
@@ -138,9 +139,18 @@ class EventsCreate extends React.Component {
     // }
 
     render() {
+        debugger
         // if (!this.state.groupId) {
         //     return null
         // }
+
+        // if (typeof (this.state.date) === "undefined") {
+        //     return null
+        // }
+
+        if (this.state === null) {
+            return null
+        }
 
         return (
         <>
@@ -171,7 +181,7 @@ class EventsCreate extends React.Component {
                         <input className="event-create-container-input" type="text" autoComplete="off" name="location" id="location" onChange={this.update('location')} />
                     </div>
 
-                            <div className="spacer"> </div>
+                    <div className="spacer"> </div>
 
                     {/* Event Date Section (Calendar API - AirBnB) */}
                     <div className="event-inner-item-container-calendar" >

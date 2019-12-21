@@ -29,7 +29,7 @@ const App = () => (
       <ProtectedRoute exact path="/my-calendar" myType={"calendar"} component={HomeIndexContainer} />
       <ProtectedRoute exact path="/my-groups" myType={"groups"} component={HomeIndexContainer} />
       <ProtectedRoute exact path="/events/create/:groupId" component={EventsCreateContainer} />
-      <ProtectedRoute exact path="/events/edit/:eventId" component={EventsEditContainer} />
+      <ProtectedRoute exact path="/events/:eventId/edit" component={EventsEditContainer} />
       <ProtectedRoute exact path="/events/show/:eventId" component={EventsShowContainer} />
       <ProtectedRoute exact path="/groups" component={GroupsIndexContainer} />
       <ProtectedRoute exact path="/groups/create" component={GroupsCreateContainer} />
