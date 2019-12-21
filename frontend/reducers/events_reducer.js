@@ -1,9 +1,8 @@
-import { RECEIVE_EVENTS, RECEIVE_GROUP_EVENTS, CREATE_EVENT } from "../actions/event_actions";
+import { RECEIVE_EVENTS, RECEIVE_GROUP_EVENTS, CREATE_EVENT, REMOVE_EVENT } from "../actions/event_actions";
 
 
 const eventsReducer = (oldState = {}, action) => {
     Object.freeze(oldState);
-    
     switch (action.type) {
         case RECEIVE_EVENTS:
             if (typeof action.events === "undefined") {
@@ -20,6 +19,10 @@ const eventsReducer = (oldState = {}, action) => {
             }
         case CREATE_EVENT:
             return Object.assign({}, oldState, { [action.event.id]: action.event })
+        case REMOVE_EVENT:
+            let newState = Object.assign({}, oldState);
+            delete newState[action.eventId];
+            return newState;
         default:
             return oldState;
     }

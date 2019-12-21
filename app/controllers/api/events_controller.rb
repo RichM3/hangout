@@ -16,6 +16,12 @@ class Api::EventsController < ApplicationController
         render "api/events/index"
     end
 
+    def destroy
+        @event = Event.find(params[:id])
+        @event.destroy
+        render :show
+    end
+
     # Custom method for getting group events
     def group_events
         @group = Group.find(params[:groupId])
@@ -30,6 +36,10 @@ class Api::EventsController < ApplicationController
 
     def get_event_date
         params.require(:event).permit(:date)
+    end
+
+    def get_event_id
+        params.require(:event).permit(:eventId)
     end
 
 end

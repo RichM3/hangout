@@ -47,3 +47,12 @@ export const fetchGroupEvents = (groupId) => {
     })
 }
 
+export const deleteEvent = (eventId) => {
+    return $.ajax({
+        method: "delete",
+        url: `api/events/${eventId}`,
+        data: {
+            event: {eventId}
+        }
+    })
+}
