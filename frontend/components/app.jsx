@@ -6,7 +6,7 @@ import GroupsShowContainer from "./groups/groups_show_container";
 import GroupsCreateContainer from "./groups/groups_create_container";
 import GroupsEditContainer from "./groups/groups_edit_container";
 
-import EventsCreateContainer from "./groups/show_components/events/events_create_container";
+import EventsCreateContainer from "./groups/show_components/events/events_create_form_container";
 import EventsShowContainer from "./groups/show_components/events/events_show_container";
 
 import { Route, Redirect, Switch, Link, HashRouter } from 'react-router-dom';
