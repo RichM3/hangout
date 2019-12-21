@@ -7,6 +7,7 @@ import GroupsCreateContainer from "./groups/groups_create_container";
 import GroupsEditContainer from "./groups/groups_edit_container";
 
 import EventsCreateContainer from "./groups/show_components/events/events_create_form_container";
+import EventsEditContainer from "./groups/show_components/events/events_edit_form_container";
 import EventsShowContainer from "./groups/show_components/events/events_show_container";
 
 import { Route, Redirect, Switch, Link, HashRouter } from 'react-router-dom';
@@ -28,7 +29,7 @@ const App = () => (
       <ProtectedRoute exact path="/my-calendar" myType={"calendar"} component={HomeIndexContainer} />
       <ProtectedRoute exact path="/my-groups" myType={"groups"} component={HomeIndexContainer} />
       <ProtectedRoute exact path="/events/create/:groupId" component={EventsCreateContainer} />
-      {/* <ProtectedRoute exact path="/events/show/" component={EventsShowContainer} /> */}
+      <ProtectedRoute exact path="/events/edit/:eventId" component={EventsEditContainer} />
       <ProtectedRoute exact path="/events/show/:eventId" component={EventsShowContainer} />
       <ProtectedRoute exact path="/groups" component={GroupsIndexContainer} />
       <ProtectedRoute exact path="/groups/create" component={GroupsCreateContainer} />

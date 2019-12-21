@@ -16,7 +16,6 @@ const msp = (state, ownProps) => {
         groupId: groupId
     }
 
-
     return ({
         event: event,
         // groupId: groupId,

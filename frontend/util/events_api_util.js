@@ -10,6 +10,16 @@ export const fetchEvents = (date) => {
     })
 }
 
+export const fetchEvent = (eventId) => {
+    return $.ajax({
+        method: "get",
+        url: `api/event`,
+        data: {
+            event: { event }
+        }
+    })
+}
+
 export const createEvent = (event) => {
     return $.ajax({
         method: "post",
@@ -30,18 +40,10 @@ export const createEvent = (event) => {
 export const fetchGroupEvents = (groupId) => {
     return $.ajax({
         method: "get",
-        // url: `api/events`
         url: `api/events/group_events/${groupId}`,
         data: {
             event: {
                 group_id: groupId
-
-        //         eventname: event.eventname,
-        //         description: event.description,
-        //         location: event.location,
-        //         starttime: event.starttime,
-        //         endtime: event.endtime,
-        //         group_id: event.groupId
             }
         }
     })
@@ -53,6 +55,16 @@ export const deleteEvent = (eventId) => {
         url: `api/events/${eventId}`,
         data: {
             event: {eventId}
+        }
+    })
+}
+
+export const updateEvent = (event) => {
+    return $.ajax({
+        method: "patch",
+        url: `api/events/${eventId}`,
+        data: {
+            event: {event}
         }
     })
 }

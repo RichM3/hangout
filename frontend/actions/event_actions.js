@@ -4,6 +4,7 @@ export const RECEIVE_EVENTS = 'RECEIVE_EVENTS';
 export const CREATE_EVENT = 'CREATE_EVENT';
 export const RECEIVE_GROUP_EVENTS = 'RECEIVE_GROUP_EVENTS';
 export const REMOVE_EVENT = 'REMOVE_EVENT';
+export const MODIFY_EVENT = 'MODIFY_EVENT';
 
 const receiveEvents = function(payload) {
     return {
@@ -15,6 +16,17 @@ const receiveEvents = function(payload) {
 export const fetchEvents = (date) => (dispatch) => (
     EventsApiUtil.fetchEvents(date).then(payload => dispatch(receiveEvents(payload)))
 );
+
+const receiveEvent = function(payload) {
+    return {
+        type: RECEIVE_EVENTS,
+        events: payload.event
+    }
+}
+
+export const fetchEvent = (eventId) => (dispatch) => (
+    Events.ApiUtil.fetchEvent(eventId).then(payload => dispatch(receiveEvent(payload)))
+)
 
 const createNewEvent = function(payload) {
     return {
@@ -47,4 +59,15 @@ const removeEvent = function(eventId) {
 
 export const deleteEvent = (eventId) => (dispatch) => (
     EventsApiUtil.deleteEvent(eventId).then(eventId => dispatch(removeEvent(eventId)))
+)
+
+const modifyEvent = function(event) {
+    return {
+        type: MODIFY_EVENT,
+        event
+    }
+}
+
+export const updateEvent = (event) => (dispatch) => (
+    EventsApiUtil.updateEvent(event).then(event => dispatch(modifyEvent(event)))
 )
