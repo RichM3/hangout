@@ -260,7 +260,8 @@ class EventsCreate extends React.Component {
                         <div className="event-calendar">
                             <SingleDatePicker
                                 id="eventdate"
-                                        date={moment("01/29/2020")}
+                                date={moment(this.state.date)}
+                                // date={moment("01/29/2020")}
                                 // date={this.state.date} // momentPropTypes.momentObj or null
                                 focused={this.state.focused} // PropTypes.bool
                                 onFocusChange={({ focused }) => this.setState({ focused })} // PropTypes.func.isRequired
