@@ -3,7 +3,6 @@ import EventsShow from '../../../groups/show_components/events/events_show';
 import {fetchEvent, deleteEvent} from '../../../../actions/event_actions';
 
 const msp = (state, ownProps) => {
-    // debugger
     let group = {};
     let event = {};
     if (typeof (ownProps.location.eventProps) !== "undefined") {

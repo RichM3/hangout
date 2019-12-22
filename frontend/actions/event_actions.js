@@ -19,7 +19,6 @@ export const fetchEvents = (date) => (dispatch) => (
 );
 
 const receiveEvent = function(event) {
-    debugger
     return {
         type: RECEIVE_EVENT,
         event: event
@@ -31,7 +30,6 @@ export const fetchEvent = (eventId) => (dispatch) => (
 )
 
 const createNewEvent = function(payload) {
-    debugger
     return {
         type: CREATE_EVENT,
         event: payload

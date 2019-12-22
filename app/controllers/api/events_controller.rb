@@ -1,7 +1,6 @@
 class Api::EventsController < ApplicationController
 
     def create
-        debugger
         @event = Event.new(event_params)
         
         if @event.save!
@@ -18,7 +17,6 @@ class Api::EventsController < ApplicationController
     end
 
     def edit
-        debugger
         @event = Event.find(params[:id])
         render :show
     end
@@ -38,7 +36,6 @@ class Api::EventsController < ApplicationController
     end
 
     def destroy
-        debugger
         @event = Event.find(params[:id])
         @event.destroy
         render :show

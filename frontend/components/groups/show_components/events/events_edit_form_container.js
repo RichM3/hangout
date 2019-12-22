@@ -4,11 +4,8 @@ import EventsForm from './events_form';
 import {updateEvent, fetchEvent} from '../../../../actions/event_actions';
 
 const msp = (state, ownProps) => {
-    debugger
     let eventId = parseInt(ownProps.match.params.eventId);
-    debugger
     let event = state.entities.events[eventId];
-    debugger
     return ({
         event: event,
         // group: group,
@@ -26,11 +23,8 @@ const mdp = (dispatch) => {
 class EventsEditForm extends React.Component {
     
     componentDidMount() {
-        // debugger
         let eventId = parseInt(this.props.match.params.eventId);
-        debugger
         this.props.fetchEvent(eventId);
-        debugger
     }
 
     render() {
