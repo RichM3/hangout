@@ -5,7 +5,7 @@ import FooterContainer from '../../../footer/footer_container';
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
 import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'react-dates';
-// import moment from 'moment';
+import moment from 'moment';
 
 class EventsCreate extends React.Component {
     constructor(props) {
@@ -165,9 +165,9 @@ class EventsCreate extends React.Component {
 
 
     componentDidMount() {
-        debugger
+        // debugger
         this.formatDate(this.props.event.starttime);
-        debugger
+        // debugger
         // alert(inputDate);
     //     //Set GroupId for state
     //     // const { groupId } = this.props.location.state;
@@ -260,7 +260,7 @@ class EventsCreate extends React.Component {
                         <div className="event-calendar">
                             <SingleDatePicker
                                 id="eventdate"
-                                date={new Date(this.state.date)}
+                                        date={moment("01/29/2020")}
                                 // date={this.state.date} // momentPropTypes.momentObj or null
                                 focused={this.state.focused} // PropTypes.bool
                                 onFocusChange={({ focused }) => this.setState({ focused })} // PropTypes.func.isRequired
