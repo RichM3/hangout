@@ -2,7 +2,7 @@ import React from 'react';
 import NavbarContainer from '../../../navbar/navbar_container';
 import FooterContainer from '../../../footer/footer_container';
 
-import { withRouter } from 'react-router-dom';
+// import { withRouter } from 'react-router-dom';
 
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';

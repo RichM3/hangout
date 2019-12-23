@@ -13,7 +13,7 @@ const msp = (state, ownProps) => {
         endtimevalue: '',
         starttime: '',  //this is for the db insert value - concat time and date
         endtime: '',    //this is for the db insert value
-        groupId: groupId
+        group_id: groupId
     }
 
     return ({

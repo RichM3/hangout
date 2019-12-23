@@ -8,10 +8,13 @@ const msp = (state, ownProps) => {
     // let history = ownProps.history;
     let eventId = parseInt(ownProps.match.params.eventId);
     let event = state.entities.events[eventId];
+    // const groupId = event.group_id;
+    debugger
+
     return ({
         event: event,
         // history,
-        // group: group,
+        // groupId: groupId,
         formType: "UpdateEvent"
     })
 }
