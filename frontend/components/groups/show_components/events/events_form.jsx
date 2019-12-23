@@ -47,6 +47,7 @@ class EventsCreate extends React.Component {
 
     createEvent(){
         debugger
+        
         // this.props.createEvent(this.state)
         this.props.action(this.state)
             .then(() => this.props.history.push(`/groups/${this.state.group_id}`));
