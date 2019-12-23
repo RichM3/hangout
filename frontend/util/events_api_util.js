@@ -60,9 +60,10 @@ export const deleteEvent = (eventId) => {
 }
 
 export const updateEvent = (event) => {
+    debugger
     return $.ajax({
         method: "patch",
-        url: `api/events/${eventId}`,
+        url: `api/events/${event.id}`,
         data: {
             event: {event}
         }

@@ -52,11 +52,6 @@ class GroupsShow extends React.Component {
         });
     }
 
-    
-    myAlert() {
-        window.alert("here i am");
-    }
-
     render() {
         // Needed if the page is returned before the component did mount, gets the value from the url -- on refresh
         if (!this.props.group) {
