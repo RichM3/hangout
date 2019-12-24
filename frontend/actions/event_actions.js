@@ -63,6 +63,7 @@ export const deleteEvent = (eventId) => (dispatch) => (
 )
 
 const modifyEvent = function(event) {
+    debugger
     return {
         type: MODIFY_EVENT,
         event

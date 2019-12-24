@@ -22,7 +22,9 @@ class Api::EventsController < ApplicationController
 
     def update
         @event = Event.find(params[:id])
-        if !(@event.update_attributes(event_params))
+        if (@event.update_attributes(event_params))
+            render "api/events/show"
+        else
             flash.now[:errors] = @event.error.full_messages
         end
     end

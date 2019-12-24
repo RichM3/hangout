@@ -46,12 +46,17 @@ class EventsCreate extends React.Component {
     }
 
     createEvent(){
+        this.props.action(this.state)
+            .then(() => this.props.history.push(`/events/show/${this.props.event.id}`));
+
+
+
         // debugger
 
-        // this.props.createEvent(this.state)
-        this.props.action(this.state)
-            .then(() => this.props.history.push(`/groups/${this.state.group_id}`));
-            // .then(() => this.props.router.push(`/groups/${this.state.group_id}`));
+        // // this.props.createEvent(this.state)
+        // this.props.action(this.state)
+        //     .then(() => this.props.history.push(`/groups/${this.state.group_id}`));
+        //     // .then(() => this.props.router.push(`/groups/${this.state.group_id}`));
     }
 
     errorcheck() {
