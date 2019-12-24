@@ -14,14 +14,13 @@ export const fetchEvent = (eventId) => {
     return $.ajax({
         method: "get",
         url: `api/events/${eventId}/edit`,
-        // data: {
-        //     event: { event }
-        // }
     })
 }
 
 export const createEvent = (event) => {
-    debugger
+    // let start = moment(event.starttime).format('YYYY-MM-DD-HH:mm:ss');
+    // let end = moment(event.endtime).format('YYYY-MM-DD-HH:mm:ss');
+
     return $.ajax({
         method: "post",
         url: `api/events`,
@@ -32,7 +31,9 @@ export const createEvent = (event) => {
                 location: event.location,
                 starttime: event.starttime,
                 endtime: event.endtime,
-                group_id: event.groupId
+                // starttime: start,
+                // endtime: end,
+                group_id: event.group_id
             }
         }
     })
@@ -61,12 +62,18 @@ export const deleteEvent = (eventId) => {
 }
 
 export const updateEvent = (event) => {
-    debugger
     return $.ajax({
         method: "patch",
         url: `api/events/${event.id}`,
         data: {
-            event: {event}
+            event: {
+                eventname: event.eventname,
+                description: event.description,
+                location: event.location,
+                starttime: event.starttime,
+                endtime: event.endtime,
+                group_id: event.group_id
+            }
         }
     })
 }

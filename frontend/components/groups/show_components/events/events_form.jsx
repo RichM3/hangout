@@ -2,7 +2,7 @@ import React from 'react';
 import NavbarContainer from '../../../navbar/navbar_container';
 import FooterContainer from '../../../footer/footer_container';
 
-// import { withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
@@ -46,8 +46,8 @@ class EventsCreate extends React.Component {
     }
 
     createEvent(){
-        debugger
-        
+        // debugger
+
         // this.props.createEvent(this.state)
         this.props.action(this.state)
             .then(() => this.props.history.push(`/groups/${this.state.group_id}`));
@@ -126,26 +126,10 @@ class EventsCreate extends React.Component {
     }
 
     convertDates() {
-        // debugger
-
         let dt = new Date(this.state.startDate);
-        // let origDate = new Date((dt.getMonth() + 1) + "/" + dt.getDate() + "/" + dt.getFullYear());
-
-        // // let sDate = dt.format("YYYY/MM/DD");
-
-        // debugger
-
-        // let sDate = this.state.startDate.format("YYYY/MM/DD");
-
         let sDate = dt.getFullYear() + "-" +  (dt.getMonth() + 1) + "-" + dt.getDate();
-        // debugger
-
-
-
         let sTime = sDate.concat("-").concat(this.state.starttimevalue).concat(":00");
         let eTime = sDate.concat("-").concat(this.state.endtimevalue).concat(":00");
-        // debugger
-
         // the setState takes a callback here this ensures the state is correct for the submission
         this.setState({ starttime: sTime, endtime: eTime }, this.createEvent);
     }
@@ -188,19 +172,11 @@ class EventsCreate extends React.Component {
     render() {
         // debugger
         let bannerText = "Create an Event";
-        // let inputEvent = "";
-        // let inputDescription = "";
-        // let inputLocation = "";
-        // let inputStartTime = "";
-        // let inputEndTime = "";
+        let name = <input className="event-create-container-input" type="text" autoComplete="off" name="eventname" id="eventname" onChange={this.update('eventname')} value={this.state.eventname} />;
+
 
         if (this.props.formType === "UpdateEvent") {
             bannerText = "Update the Event";
-            // inputEvent = this.props.event.eventname;
-            // inputDescription = this.props.event.description;
-            // inputLocation = this.props.event.location;
-            // inputStartTime = this.formatTime(this.props.event.starttime);
-            // inputEndTime = this.formatTime(this.props.event.endtime);
         }
 
         return (
@@ -217,7 +193,8 @@ class EventsCreate extends React.Component {
                     {/* Event Name Section */}
                     <div className="event-inner-item-container" >
                         <label htmlFor="eventname">Event Name:</label>
-                        <input className="event-create-container-input" type="text" autoComplete="off" name="eventname" id="eventname" onChange={this.update('eventname')} value={this.state.eventname} />
+                        {name}
+                        {/* <input className="event-create-container-input" type="text" autoComplete="off" name="eventname" id="eventname" onChange={this.update('eventname')} value={this.state.eventname} /> */}
                     </div>
 
                     {/* Event Description Section */}
@@ -289,5 +266,5 @@ class EventsCreate extends React.Component {
 
 }
 
-export default EventsCreate;
-// export default withRouter(componentName)
+// export default EventsCreate;
+export default withRouter(EventsCreate);

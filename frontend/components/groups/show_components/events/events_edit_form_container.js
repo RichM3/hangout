@@ -4,17 +4,11 @@ import EventsForm from './events_form';
 import {updateEvent, fetchEvent} from '../../../../actions/event_actions';
 
 const msp = (state, ownProps) => {
-    debugger
-    // let history = ownProps.history;
     let eventId = parseInt(ownProps.match.params.eventId);
     let event = state.entities.events[eventId];
-    // const groupId = event.group_id;
-    debugger
 
     return ({
         event: event,
-        // history,
-        // groupId: groupId,
         formType: "UpdateEvent"
     })
 }

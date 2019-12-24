@@ -18,7 +18,6 @@ const msp = (state, ownProps) => {
 
     return ({
         event: event,
-        // groupId: groupId,
         formType: "CreateEvent"
     })
 }

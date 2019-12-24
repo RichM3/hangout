@@ -2,7 +2,6 @@ class Api::EventsController < ApplicationController
 
     def create
         @event = Event.new(event_params)
-        
         if @event.save!
             render "api/events/show"
         else
@@ -26,13 +25,6 @@ class Api::EventsController < ApplicationController
         if !(@event.update_attributes(event_params))
             flash.now[:errors] = @event.error.full_messages
         end
-
-        # if @event.update_attributes(event_params)
-        #     render: show
-        # else
-        #     flash.now[:errors] = @event.error.full_messages
-        #     render: show
-        # end
     end
 
     def destroy
