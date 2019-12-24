@@ -28,7 +28,6 @@ const eventsReducer = (oldState = {}, action) => {
             delete newState[action.eventId];
             return newState;
         case MODIFY_EVENT:
-            debugger
             return Object.assign({}, oldState, { [action.event.id]: action.event });
         default:
             return oldState;
