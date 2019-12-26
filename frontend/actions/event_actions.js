@@ -1,4 +1,4 @@
-import * as EventsApiUtil from '../util/events_api_util';
+import * as EventsApiUtil from '../util/event_api_util';
 
 export const RECEIVE_EVENTS = 'RECEIVE_EVENTS';
 export const RECEIVE_EVENT = 'RECEIVE_EVENT';

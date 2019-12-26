@@ -29,6 +29,11 @@ class User < ApplicationRecord
     foreign_key: :user_id,
     class_name: :Usergroup
 
+  has_many :rsvps
+    primary_key: :id,
+    foreign_key: :user_id,
+    class_name: :Rsvp
+
   has_many :groups,
     through: :memberships,
     source: :group
@@ -36,8 +41,6 @@ class User < ApplicationRecord
   has_many :events,
     through: :groups,
     source: :events
-
-
 
 
   def self.find_by_credentials(username, password)

@@ -245,6 +245,12 @@ Event1 = Event.create!(
     group_id: Group1.id
 )
 
+Rsvp1 = Rsvp.create!(
+    user_id: DemoUser.id,
+    event_id: Event1.id,
+    attending: true
+)
+
 Event2 = Event.create!(
     eventname: "Hover effects",
     description: "Hover effects and the many great uses; -- Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
@@ -254,6 +260,12 @@ Event2 = Event.create!(
     group_id: Group1.id
 )
 
+Rsvp2 = Rsvp.create!(
+    user_id: DemoUser.id,
+    event_id: Event2.id,
+    attending: true
+)
+
 Event3 = Event.create!(
     eventname: "Coffee vs Espresso",
     description: "Espresso or Coffee, which one is better? -- Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
@@ -261,6 +273,12 @@ Event3 = Event.create!(
     starttime: '12/03/2020 05:30:00',
     endtime: '12/03/2020 11:30:00',
     group_id: Group2.id
+)
+
+Rsvp3 = Rsvp.create!(
+    user_id: DemoUser.id,
+    event_id: Event3.id,
+    attending: true
 )
 
 # Non-leader groups for testing events index
@@ -273,6 +291,12 @@ Event4 = Event.create!(
     group_id: Group8.id
 )
 
+Rsvp4 = Rsvp.create!(
+    user_id: JeffUser.id,
+    event_id: Event4.id,
+    attending: true
+)
+
 Event5 = Event.create!(
     eventname: "After Superbowl 2020",
     description: "Nursing the hangover? A discussion of Superbowl 2020 events-- Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
@@ -280,4 +304,10 @@ Event5 = Event.create!(
     starttime: '02/05/2020 18:30:00',
     endtime: '02/05/2020 21:30:00',
     group_id: Group8.id
+)
+
+Rsvp5 = Rsvp.create!(
+    user_id: JeffUser.id,
+    event_id: Event5.id,
+    attending: true
 )
