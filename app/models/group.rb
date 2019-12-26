@@ -20,8 +20,6 @@ class Group < ApplicationRecord
         foreign_key: :group_id,
         class_name: :Event
 
-
-
     belongs_to :leader,
         primary_key: :id,
         foreign_key: :leader_id,

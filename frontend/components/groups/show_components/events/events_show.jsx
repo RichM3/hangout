@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import NavbarContainer from '../../../navbar/navbar_container';
 import FooterContainer from '../../../footer/footer_container';
+import { fetchRsvp } from '../../../../actions/rsvp_actions';
 
 class EventsShow extends React.Component {
     constructor(props) {
@@ -9,7 +10,20 @@ class EventsShow extends React.Component {
         this.state = {}
     }
 
+    componentDidMount() {
+        this.props.fetchRsvp(this.props.event.id);
+    }
+
+
     render() {
+
+        // let inGroups = this.props.inGroups.map(group => {
+        //     return (
+        //         <GroupsItemIndex group={group} key={group.id} member={group.leader_id} />
+        //     );
+        // })
+
+
 
         const dt = new Date(this.props.event.starttime);
         const currentTimeZoneOffsetInHours = dt.getTimezoneOffset() / 60;

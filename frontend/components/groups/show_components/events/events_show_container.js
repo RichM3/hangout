@@ -1,9 +1,18 @@
 import {connect} from 'react-redux';
 import EventsShow from '../../../groups/show_components/events/events_show';
 import {fetchEvent, deleteEvent} from '../../../../actions/event_actions';
-import {fetchRsvp} from '../../../../actions/rsvp_actions';
+import {fetchAllRsvps} from '../../../../actions/rsvp_actions';
 
 const msp = (state, ownProps) => {
+
+    // let allGroups = Object.values(groups);
+    // let currentUser = users[session.id];
+
+    // let inGroups = allGroups.filter((group) => {
+    //     return (currentUser.groupIds.includes(group.id))
+    // })
+
+    
     let group = {};
     let event = {};
     if (typeof (ownProps.location.eventProps) !== "undefined") {
@@ -28,7 +37,7 @@ const msp = (state, ownProps) => {
 const mdp = (dispatch) => {
     return ({
         deleteEvent: (eventId) => dispatch(deleteEvent(eventId)),
-        fetchRsvp: (eventId) => dispatch(fetchRsvp(eventId))
+        fetchAllRsvps: (eventId) => dispatch(fetchAllRsvps(eventId))
     })
 }
 

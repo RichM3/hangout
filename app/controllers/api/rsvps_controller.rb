@@ -5,12 +5,16 @@ class Api::RsvpsController < ApplicationController
     def create
         @rsvp = Rsvp.new(rsvp_params)
 
-        if @rsvp.save!
-            render "api/rsvps/show"
-        else
+        if !(@rsvp.save!)
             flash.now[:errors] = @rsvp.error.full_messages
-            # render json: @rsvp.errors.full_messages, status: 422
         end
+
+        # if @rsvp.save!
+        #     render "api/rsvps/show"
+        # else
+        #     flash.now[:errors] = @rsvp.error.full_messages
+        #     # render json: @rsvp.errors.full_messages, status: 422
+        # end
     end
 
     def index

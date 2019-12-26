@@ -5,4 +5,3 @@ json.rsvps do
         json.extract! rsvp, :id, :user_id, :event_id, :attending
     end
 end
-
