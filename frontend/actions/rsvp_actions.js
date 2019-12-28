@@ -1,4 +1,4 @@
-import * as RsvpsApiUtil from '../util/rsvp_api_util';
+import * as RsvpApiUtil from '../util/rsvp_api_util';
 
 export const RECEIVE_ALL_RSVPS = 'RECEIVE_ALL_RSVPS';
 export const RECEIVE_RSVP = 'RECEIVE_RSVP';

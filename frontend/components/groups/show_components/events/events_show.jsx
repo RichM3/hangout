@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import NavbarContainer from '../../../navbar/navbar_container';
 import FooterContainer from '../../../footer/footer_container';
-import { fetchRsvp } from '../../../../actions/rsvp_actions';
 
 class EventsShow extends React.Component {
     constructor(props) {
@@ -11,7 +10,7 @@ class EventsShow extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchRsvp(this.props.event.id);
+        this.props.fetchAllRsvps(this.props.event.id);
     }
 
 
