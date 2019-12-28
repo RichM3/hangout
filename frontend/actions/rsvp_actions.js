@@ -45,6 +45,10 @@ const modifyRsvp = function (rsvp) {
     }
 }
 
+
+
+
+
 export const updateRsvp = (rsvp) => dispatch => {
     RsvpsApiUtil.updateRsvp(rsvp).then(rsvp => dispatch(modifyRsvp(rsvp)))
 }
