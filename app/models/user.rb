@@ -29,7 +29,7 @@ class User < ApplicationRecord
     foreign_key: :user_id,
     class_name: :Usergroup
 
-  has_many :rsvps
+  has_many :rsvps,
     primary_key: :id,
     foreign_key: :user_id,
     class_name: :Rsvp
