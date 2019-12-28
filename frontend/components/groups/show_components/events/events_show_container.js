@@ -11,7 +11,6 @@ const msp = (state, ownProps) => {
     // let inGroups = allGroups.filter((group) => {
     //     return (currentUser.groupIds.includes(group.id))
     // })
-    // debugger
     
     let group = {};
     let event = {};
@@ -19,9 +18,7 @@ const msp = (state, ownProps) => {
         event = ownProps.location.eventProps.event;
         group = state.entities.groups[ownProps.location.eventProps.event.group_id];
     } else if (ownProps.match.params.eventId !== "undefined") {
-        // debugger
         let eventId = parseInt(ownProps.match.params.eventId);
-        // debugger
         event = state.entities.events[eventId];
         group = state.entities.groups[event.group_id];
     } else {

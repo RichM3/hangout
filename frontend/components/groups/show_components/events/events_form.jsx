@@ -49,8 +49,6 @@ class EventsCreate extends React.Component {
         this.props.action(this.state)
             .then(() => this.props.history.push(`/events/show/${this.props.event.id}`));
 
-        // debugger
-
         // // this.props.createEvent(this.state)
         // this.props.action(this.state)
         //     .then(() => this.props.history.push(`/groups/${this.state.group_id}`));
@@ -158,8 +156,6 @@ class EventsCreate extends React.Component {
 
 
     componentDidMount() {
-        // debugger
-
         if (this.props.event.starttime === "") {
             const newDt = new Date();
             this.formatDate(newDt);
@@ -173,7 +169,6 @@ class EventsCreate extends React.Component {
     }
 
     render() {
-        // debugger
         let bannerText = "Create an Event";
         let name = <input className="event-create-container-input" type="text" autoComplete="off" name="eventname" id="eventname" onChange={this.update('eventname')} value={this.state.eventname} />;
 
@@ -239,7 +234,7 @@ class EventsCreate extends React.Component {
                             <label htmlFor="starttimevalue">Start Time:</label>
                         </div>
                         <div className="event-calendar" >
-                            <input id="starttimevalue" type="time" onChange={this.update('starttimevalue')} value={this.state.starttimevalue}/>
+                            <input id="starttimevalue" type="time" onChange={this.update('starttimevalue')} defaultValue={this.state.starttimevalue}/>
                         </div>
                     </div>
 
@@ -251,7 +246,7 @@ class EventsCreate extends React.Component {
                             <label htmlFor="endtimevalue">End Time:</label>
                         </div>
                         <div className="event-calendar" >
-                            <input id="endtimevalue" type="time" onChange={this.update('endtimevalue')} value={this.state.endtimevalue}/>
+                            <input id="endtimevalue" type="time" onChange={this.update('endtimevalue')} defaultValue={this.state.endtimevalue}/>
                         </div>
                     </div>
 
