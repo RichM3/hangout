@@ -14,41 +14,33 @@
     background: { image: asset_url("panorama.png") }
  }
 
-
 .home-container-video {
-    position: relative;
-    height: 460px;            // this height setting works with the overflow and the rest of the video is covered by other objects
-    background: rgba(0, 0, 0, 0.2);
-    overflow: hidden;         // critical property overflow - specifies what should happen if content overflows an element box.
-    // clips the content at this point - and the rest of the content is invisible
+  position: relative;
+  height: 460px;            // this height setting works with the overflow and the rest of the video is covered by other objects
+  background: rgba(0, 0, 0, 0.2);
+  overflow: hidden;         // critical property overflow - specifies what should happen if content overflows an element box.
+  // clips the content at this point - and the rest of the content is invisible
 }
-
 
 // -1 z index allows all the other objects to rest on top.
 .home-video {
-  // min-height: 460px;
   position: absolute;
-  /* // height: 460px; */
   width: 100%; 
   z-index: -1;  // Allows the text and link (fakebtn) to appear on top of splash page
-
 }
 
-
-
 .fake-btn-red {
-    display: inline-block;
-    text-decoration: none;
-    color: white;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 25.6px;
-    // background-color: rgb(241, 58, 89);
-    background: #f13a59;
-    margin-top: 36px;
-    padding: .75em 7em;
-    border-radius: 5px;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 25.6px;
+  background: #f13a59;
+  margin-top: 36px;
+  padding: .75em 7em;
+  border-radius: 5px;
 }
 
 .fake-btn-red:hover {
@@ -57,18 +49,15 @@
 }
 
 .home-text {
-        font-family: Helvetica, Arial, sans-serif;
-        color: white;
-        text-align: center;
-        font-weight: 600;
-        margin: 170px;
-        display: flex;
-        flex-direction: column;
-        // justify-content: center;
-        align-items: center;
-
+  font-family: Helvetica, Arial, sans-serif;
+  color: white;
+  text-align: center;
+  font-weight: 600;
+  margin: 170px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
 
 h1.homeH1 {
   font-family: Helvetica, Arial, sans-serif;
@@ -76,30 +65,17 @@ h1.homeH1 {
   font-weight: bolder;
 }
 
-
-
-// .spaceholder {
-//   min-height: 100px;
-// }
-
-
-
 @media only screen and (max-width: 1024px) {
  .greeting-phone {  // change image to my image name - I have not .greeting-phone yet
    display: none;
  }
 }
 
-
 .splash-menu-container {
   width: 100%;
   height: 73px;  
   background-color: #ffffff;
-
   border-bottom: 1px solid #e6e7e9;
-
-  // testing code
-  // border: 2px solid blue;
 }
 
 .splash-menu-bar {
@@ -109,38 +85,23 @@ h1.homeH1 {
   margin-right: auto;
   box-sizing: content-box;
   height: 73px;
-
   align-items: center;
   justify-content: space-around;
-
   background-color: #ffffff;
-
-
-  // testing code
-  // border: 2px solid blue;
 }
 
 .splash-menu-button {
-
   padding: 4px 8px 4px 8px;
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.3s ease 0s;
-
   background: #f6f7f8;
   color: #757575;
   border: 1px solid #c5c4c4;
-
-
   line-height: 1.45;
   font-family: "Graphik Meetup",helvetica,arial,sans-serif;
   font-weight: 600;
   font-size: 14px;
-
-
-  // testing code
-  // width: 20px;
-  // height: 20px;  
 }
 
 
@@ -151,12 +112,9 @@ h1.homeH1 {
   padding-bottom: 30px;
 }
 
-
-
 .splash-section-bar {
   height: 338px;
   width: 63%;
-  // display: flex;
   margin-left: auto;
   margin-right: auto;
   box-sizing: content-box;
@@ -164,9 +122,6 @@ h1.homeH1 {
   justify-content: space-around;
   background-color: #ffffff;
   padding-top: 40px;
-
-  // testing code
-  // border: 2px solid blue;
 }
 
 .splash-section-bar h2 {
@@ -175,10 +130,6 @@ h1.homeH1 {
   font-weight: 600;
   font-size: 20px;
   color: #212121;
-
-  // testing code
-  // border: 2px solid blue;
-
 }
 
 .splash-section-bar p {
@@ -188,11 +139,7 @@ h1.homeH1 {
   font-size: 16px;
   color: #212121;
   padding-bottom: 20px;
-
-  // testing code
-  // border: 2px solid blue;
 }
-
 
 .splash-section-event-bar {
   display: flex;
@@ -206,11 +153,9 @@ h1.homeH1 {
   background-color: #ffffff;
 }
 
-
 .splash-section-event {
   height: 256px;
   width: 338px;
-  // width: 33.33%;
   border-radius: 6px;
   border: 2px solid #edeeef;
 }
@@ -218,11 +163,6 @@ h1.homeH1 {
 .splash-section-event:hover {
   box-shadow: 1px 2px 6px #c5c4c4;
 }
-
-
-
-
-
 
 .spl-evt-date {
   padding: 20px 10px 0px 20px;
@@ -264,13 +204,10 @@ h1.homeH1 {
 .spl-evt-lower {
   padding: 0px 30px 0px 20px;
   margin-top: 15px;
-  // margin-bottom: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
-
 
 .spl-evt-attendees {
   padding: 10px 0px 0px 10px;
@@ -282,27 +219,18 @@ h1.homeH1 {
 }
 
 .spl-evt-attend-btn {
-  // padding: 10px 0px 0px 10px;
   padding: 10px 20px 10px 20px;
-
   border: 1px solid #0088a9;
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.3s ease 0s;
-
-
   background: #ffffff;
   color: #0088a9;
-
-
-
   line-height: 1.45;
   font-family: "Graphik Meetup",helvetica,arial,sans-serif;
   font-weight: 600;
   font-size: 14px;
-
 }
-
 
 .spl-evt-attend-btn:hover {
   background: #0088a9;

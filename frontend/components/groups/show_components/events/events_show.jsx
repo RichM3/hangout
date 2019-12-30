@@ -10,28 +10,19 @@ class EventsShow extends React.Component {
     }
 
     componentDidMount() {
-        // debugger
         this.props.fetchAllRsvps(this.props.event.id);
-        // debugger
     }
 
 
     render() {
 
         let rsvp = this.props.rsvp;
-        debugger
-
 
         let attending;
 
         if (typeof(rsvp) === "undefined") {
             attending = (
                 <>
-                    {/* <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css" /> */}
-                    {/* <link rel="stylesheet"
-                        href="https://use.fontawesome.com/releases/v5.0.12/css/all.css"
-                        type="text/css" 
-                    /> */}
                     <div className="event-button-unselected"><i className="fas fa-check"></i></div>
                     <div className="event-button-selected"><i className="far fa-times-circle"></i></div>
                 </>
@@ -54,38 +45,6 @@ class EventsShow extends React.Component {
             )
             // alert("not attending");
         }
-
-
-        // const attending = (
-        //     <>
-        //         <div className="event-button-selected">checked</div>
-        //         <div className="event-button-unselected"></div>
-        //     </>
-        // )
-
-        // const contentComp = this.state.calendarSelected ? (
-        //     <>
-        //         <div className="page-container">
-        //             <div className="page-events">
-        //                 <ul className="box-ul">
-        //                     {listEvents}
-        //                 </ul>
-        //             </div>
-        //             <div className="page-calendar"><Calendar callbackFromParent={(dataFromChild) => this.dateCallback(dataFromChild)} /></div>
-        //         </div>
-        //     </>
-        // ) : (
-        //         <Groups />
-        //     )
-
-
-
-
-
-
-
-
-
 
         const dt = new Date(this.props.event.starttime);
         const currentTimeZoneOffsetInHours = dt.getTimezoneOffset() / 60;
