@@ -23,27 +23,27 @@ const Footer = (props) => {
 
     return (
     <>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css" />
+        {/* <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css" /> */}
         <footer className={fClass}>
             <div className="foot-link-container">
-                <div className="foot-link-text">My Github</div>
-                <div><a className="no-underline" target="_blank" href="https://github.com/RichM3"><i className="fa fa-github  fa-5x" ></i></a></div>
+                {/* <div className="foot-link-text">My Github</div> */}
+                <div><a className="icons-format" target="_blank" href="https://github.com/RichM3"><i className="fab fa-github  fa-5x" ></i></a></div>
             </div>
             <div className="foot-link-container">
-                <div className="foot-link-text">My LinkedIn</div>
-                <div><a className="no-underline" target="_blank" href="https://www.linkedin.com/in/rich-meyer3/"><i className="fa fa-linkedin  fa-5x"></i></a></div>
+                {/* <div className="foot-link-text">My LinkedIn</div> */}
+                <div><a className="icons-format" target="_blank" href="https://www.linkedin.com/in/rich-meyer3/"><i className="fab fa-linkedin-in  fa-5x"></i></a></div>
             </div>
             <div className="foot-link-container">
-                <div className="foot-link-text">My Angellist</div>
-                <div><a className="no-underline" target="_blank" href="https://angel.co/rich-meyer3"><i className="fa fa-angellist  fa-5x"></i></a></div>
+                {/* <div className="foot-link-text">My Angellist</div> */}
+                <div><a className="icons-format" target="_blank" href="https://angel.co/rich-meyer3"><i className="fab fa-angellist  fa-5x"></i></a></div>
             </div>
             <div className="foot-link-container">
-                <div className="foot-link-text">My Personal Page</div>
-                <div><a className="no-underline" target="_blank" href="https://richm3.github.io"><i className="fa fa-link  fa-5x"></i></a></div>
+                {/* <div className="foot-link-text">My Personal Page</div> */}
+                <div><a className="icons-format" target="_blank" href="https://richm3.github.io"><i className="fa fa-link  fa-5x"></i></a></div>
             </div>
             <div className="foot-link-container">
-                <div className="foot-link-text">My Email</div>
-                <div><a className="no-underline" target="_blank" href="mailto:richmeyerjobs@gmail.com"><i className="fa fa-envelope  fa-5x"></i></a></div>
+                {/* <div className="foot-link-text">My Email</div> */}
+                <div><a className="icons-format" target="_blank" href="mailto:richmeyerjobs@gmail.com"><i className="fa fa-envelope  fa-5x"></i></a></div>
             </div>
         </footer>
     </>

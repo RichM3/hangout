@@ -21,13 +21,71 @@ class EventsShow extends React.Component {
         let rsvp = this.props.rsvp;
         debugger
 
+
+        let attending;
+
         if (typeof(rsvp) === "undefined") {
-            alert("null");
+            attending = (
+                <>
+                    {/* <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css" /> */}
+                    {/* <link rel="stylesheet"
+                        href="https://use.fontawesome.com/releases/v5.0.12/css/all.css"
+                        type="text/css" 
+                    /> */}
+                    <div className="event-button-unselected"><i className="fas fa-check"></i></div>
+                    <div className="event-button-selected"><i className="far fa-times-circle"></i></div>
+                </>
+            )
+            // alert("null");
         } else if (rsvp.attending === true) {
-            alert("attending");
+            attending = (
+                <>
+                    <div className="event-button-selected"><i className="fas fa-check"></i></div>
+                    <div className="event-button-unselected"><i className="far fa-times-circle"></i></div>
+                </>
+            )
+            // alert("attending");
         } else {
-            alert("not attending");
+            attending = (
+                <>
+                    <div className="event-button-unselected"><i className="fas fa-check"></i></div>
+                    <div className="event-button-selected"><i className="far fa-times-circle"></i></div>
+                </>
+            )
+            // alert("not attending");
         }
+
+
+        // const attending = (
+        //     <>
+        //         <div className="event-button-selected">checked</div>
+        //         <div className="event-button-unselected"></div>
+        //     </>
+        // )
+
+        // const contentComp = this.state.calendarSelected ? (
+        //     <>
+        //         <div className="page-container">
+        //             <div className="page-events">
+        //                 <ul className="box-ul">
+        //                     {listEvents}
+        //                 </ul>
+        //             </div>
+        //             <div className="page-calendar"><Calendar callbackFromParent={(dataFromChild) => this.dateCallback(dataFromChild)} /></div>
+        //         </div>
+        //     </>
+        // ) : (
+        //         <Groups />
+        //     )
+
+
+
+
+
+
+
+
+
 
         const dt = new Date(this.props.event.starttime);
         const currentTimeZoneOffsetInHours = dt.getTimezoneOffset() / 60;
@@ -97,8 +155,14 @@ class EventsShow extends React.Component {
                             {/* NEED TO ADD LOGIC TO ID IF THE USER HAS AN RSVP (EVENTID & USERID) */}
                             {/* When i create an event I should add the user to the event immediately
                             then if they come to event page they can delete the rsvp by pressing cancel button */}
-                            <div className="event-button-selected">checked</div>
-                            <div className="event-button-unselected"></div>
+
+                            {attending}
+                            {/* <div className={this.state.checked}>checked</div>
+                            <div className={this.state.checked}></div> */}
+
+                            {/* <div className="event-button-selected">checked</div>
+                            <div className="event-button-unselected"></div> */}
+
                             </div>
                         <div className="event-attending-status">You are currently attending</div>
                     </div>

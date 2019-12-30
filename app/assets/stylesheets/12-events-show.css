@@ -130,7 +130,8 @@
     width: 160px;
     height: 17px;
     background-color: #f5f5f5;
-    border: 1px solid #ced2d4;
+    color: #c5c4c4;
+    border: 1px solid #c5c4c4;
     border-radius: 5px;
     cursor: pointer;
     padding: 10px 10px 10px 10px;
@@ -145,6 +146,7 @@
 
 .event-show-body-full {
     width: 100%;
+    min-height: 300px;
     /* border: 1px solid #878787; */
     /* background-color:  #ffffff; */
     background-color:  #f5f5f5;

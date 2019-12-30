@@ -72,12 +72,12 @@
     margin-top: 15px;
 }
 
-.no-underline {
+.icons-format {
+    font-weight: normal;
     text-decoration: none !important;
 }
 
 .foot-link-text {
-    /* margin-bottom: 30px; */
     padding-bottom: 30px;
 }
 

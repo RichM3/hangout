@@ -4,11 +4,9 @@
 
     <!-- This was the link for the favicon but appears to not be necessary -->
     <!--  <link rel="shortcut icon" href="https://previews.123rf.com/images/mtkang/mtkang1108/mtkang110800012/10232896-fire-alphabets-in-flame-letter-h.jpg" type="image/x-icon"> -->
-    
 
     <!-- application.html.erb -->
     <script type="text/javascript">
-
 
       window.wafflesURL = "<%= image_url('wafflejoke.png') %>";
       window.magnifyURL = "<%= image_url('magnify.png') %>";
@@ -39,6 +37,15 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+
+
+    <!-- This is the code required to use the current font-awesome icons  -->
+    <link rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.0.12/css/all.css"
+          type="text/css"
+          integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9"
+          crossorigin="anonymous" >
+
   </head>
 
   <body>
