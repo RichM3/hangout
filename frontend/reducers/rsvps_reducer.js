@@ -5,7 +5,7 @@ const rsvpsReducer = (oldState = {}, action) => {
     let newState = {};
     switch (action.type) {
         case RECEIVE_ALL_RSVPS:
-            return action.rsvps
+            return action.rsvps;
         case RECEIVE_RSVP:
             newState = Object.assign({}, oldState, { [action.rsvp.id]: action.rsvp });
             return newState;

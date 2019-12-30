@@ -5,15 +5,17 @@ export const RECEIVE_RSVP = 'RECEIVE_RSVP';
 export const CREATE_RSVP = 'CREATE_RSVP';
 export const MODIFY_RSVP = 'MODIFY_RSVP';
 
-const receiveAllRsvps = function (rsvp) {
+// Passing a payload in here and then passing payload.rsvp gives all the RSVPs in an array 
+// and not an extra layer of abstraction of one index with many objects in that one array element
+const receiveAllRsvps = function (payload) {
     return {
         type: RECEIVE_ALL_RSVPS,
-        rsvp
+        rsvps: payload.rsvps
     }
 }
 
 export const fetchAllRsvps = () => (dispatch) => (
-    RsvpApiUtil.fetchAllRsvps().then(rsvp => dispatch(receiveAllRsvps(rsvp)))
+    RsvpApiUtil.fetchAllRsvps().then(payload => dispatch(receiveAllRsvps(payload)))
 )
 
 const receiveRsvp = function (rsvp) {

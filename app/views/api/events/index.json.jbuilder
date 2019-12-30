@@ -6,8 +6,7 @@ json.events do
             checkDate = event.starttime.strftime("%F")
             if @inDate <= checkDate
                 json.extract! event, :id, :eventname, :description, :location, :starttime, :endtime, :group_id
-            # else
-            #     json.extract! []
+                # json.rsvpIds event.rsvps, :user_id, :event_id, :attending
             end
         end
     end

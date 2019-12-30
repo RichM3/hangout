@@ -10,19 +10,24 @@ class EventsShow extends React.Component {
     }
 
     componentDidMount() {
+        // debugger
         this.props.fetchAllRsvps(this.props.event.id);
+        // debugger
     }
 
 
     render() {
 
-        // let inGroups = this.props.inGroups.map(group => {
-        //     return (
-        //         <GroupsItemIndex group={group} key={group.id} member={group.leader_id} />
-        //     );
-        // })
+        let rsvp = this.props.rsvp;
+        debugger
 
-
+        if (typeof(rsvp) === "undefined") {
+            alert("null");
+        } else if (rsvp.attending === true) {
+            alert("attending");
+        } else {
+            alert("not attending");
+        }
 
         const dt = new Date(this.props.event.starttime);
         const currentTimeZoneOffsetInHours = dt.getTimezoneOffset() / 60;

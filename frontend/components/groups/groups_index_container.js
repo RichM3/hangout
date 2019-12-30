@@ -4,13 +4,16 @@ import { fetchGroups } from '../../actions/group_actions';
 import { fetchUserInfo } from '../../actions/session_actions';
 
 const mapStateToProps = ({ session, entities: { users, groups } }, ownProps) => {
+    debugger
     let allGroups = Object.values(groups);
     let currentUser = users[session.id];
 
+    debugger
     let inGroups = allGroups.filter((group) => {
+        debugger
         return (currentUser.groupIds.includes(group.id))
     })
-
+    debugger
     let suggestedGroups = allGroups.filter((group) => {
         return (!currentUser.groupIds.includes(group.id))
     })
