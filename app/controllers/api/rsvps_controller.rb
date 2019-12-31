@@ -15,7 +15,6 @@ class Api::RsvpsController < ApplicationController
 
     def update
         @rsvp = Rsvp.find(params[:id])
-
         if !(@rsvp.update_attributes!(rsvp_params))
             flash.now[:errors] = @rsvp.errors.full_messages
         end

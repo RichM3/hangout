@@ -24,6 +24,7 @@ class EventsShow extends React.Component {
     componentDidMount() {
         this.props.fetchAllRsvps(this.props.event.id)
             .then(() => this.checkRsvps());
+        // this.props.fetchGroups();
     }
 
     // Scenarios: If I create the event, I automatically am attending
@@ -66,35 +67,53 @@ class EventsShow extends React.Component {
 
         // Buttons for RSVP info
         let attending;
+        let attendingText;
 
-        if (typeof(rsvp) === "undefined") {
-            attending = (
-                <>
-                    <div id="attendEvent" className={this.state.attending ? "event-button-selected" : "event-button-unselected"}
-                    onClick={this.attendEvent}><i className="fas fa-check"></i></div>
-                    <div id="declineEvent" className={this.state.attending ? "event-button-unselected" : "event-button-selected"}
-                    onClick={this.declineEvent}><i className="far fa-times-circle"></i></div>
-                </>
-            )
-        } else if (rsvp.attending === true) {
-            attending = (
-                <>
-                    <div id="attendEvent" className={this.state.attending ? "event-button-selected" : "event-button-unselected"}
+        if (this.state.attending) {
+            attendingText = (<p>You are attending</p>)
+        } else {
+            attendingText = (<p>You are not currently attending</p>)
+        }
+
+        if (this.props.isMember) {
+            if (typeof(rsvp) === "undefined") {
+                attending = (
+                    <>
+                        <div id="attendEvent" className={this.state.attending ? "event-button-selected" : "event-button-unselected"}
                         onClick={this.attendEvent}><i className="fas fa-check"></i></div>
-                    <div id="declineEvent" className={this.state.attending ? "event-button-unselected" : "event-button-selected"}
+                        <div id="declineEvent" className={this.state.attending ? "event-button-unselected" : "event-button-selected"}
                         onClick={this.declineEvent}><i className="far fa-times-circle"></i></div>
-                </>
-            )
+                    </>
+                )
+            } else if (rsvp.attending === true) {
+                attending = (
+                    <>
+                        <div id="attendEvent" className={this.state.attending ? "event-button-selected" : "event-button-unselected"}
+                            onClick={this.attendEvent}><i className="fas fa-check"></i></div>
+                        <div id="declineEvent" className={this.state.attending ? "event-button-unselected" : "event-button-selected"}
+                            onClick={this.declineEvent}><i className="far fa-times-circle"></i></div>
+                    </>
+                )
+            } else {
+                attending = (
+                    <>
+                        <div id="attendEvent" className={this.state.attending ? "event-button-selected" : "event-button-unselected"}
+                            onClick={this.attendEvent}><i className="fas fa-check"></i></div>
+                        <div id="declineEvent" className={this.state.attending ? "event-button-unselected" : "event-button-selected"}
+                            onClick={this.declineEvent}><i className="far fa-times-circle"></i></div>
+                    </>
+                )
+            }
         } else {
             attending = (
                 <>
-                    <div id="attendEvent" className={this.state.attending ? "event-button-selected" : "event-button-unselected"}
-                        onClick={this.attendEvent}><i className="fas fa-check"></i></div>
-                    <div id="declineEvent" className={this.state.attending ? "event-button-unselected" : "event-button-selected"}
-                        onClick={this.declineEvent}><i className="far fa-times-circle"></i></div>
+                    <div id="attendEvent" className="event-button-disabled"><i className="fas fa-check"></i></div>
+                    <div id="declineEvent" className="event-button-disabled"><i className="far fa-times-circle"></i></div>
                 </>
             )
+            attendingText = (<p>You must be a group member to attend events</p>)
         }
+        
 
         const dt = new Date(this.props.event.starttime);
         const currentTimeZoneOffsetInHours = dt.getTimezoneOffset() / 60;
@@ -163,7 +182,7 @@ class EventsShow extends React.Component {
                         <div className="event-button-container">
                             {attending}
                         </div>
-                        <div className="event-attending-status">You are currently attending</div>
+                        <div className="event-attending-status">{attendingText}</div>
                     </div>
                 </div>
                 </div>

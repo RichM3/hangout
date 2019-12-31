@@ -1,6 +1,7 @@
 import {connect} from 'react-redux';
 import EventsShow from '../../../groups/show_components/events/events_show';
 import {deleteEvent} from '../../../../actions/event_actions';
+import {fetchGroups} from '../../../../actions/group_actions';
 import {fetchAllRsvps, createRsvp, updateRsvp } from '../../../../actions/rsvp_actions';
 
 const msp = (state, ownProps) => {
@@ -24,7 +25,7 @@ const msp = (state, ownProps) => {
         let eventId = parseInt(ownProps.match.params.eventId);
         event = state.entities.events[eventId];
         group = state.entities.groups[event.group_id];
-        thisRsvp = rsvps.filter((rsvp) => {
+        thisRsvp = rsvps.find((rsvp) => {
             return rsvp.event_id === event.id && rsvp.user_id === currentUser.id
         })
     } else {
@@ -36,11 +37,25 @@ const msp = (state, ownProps) => {
             return rsvp.event_id === event.id && rsvp.user_id === currentUser.id
         })
     }
+
+    // isMember logic here
+    let allGroups = Object.values(state.entities.groups);
+    let inGroups = allGroups.filter((group) => {
+        return (currentUser.groupIds.includes(group.id))
+    })
+
+
+    let isMember = false;
+    if (inGroups.includes(group)) {
+        isMember = true;
+    }
+
     return ({
         currentUser: currentUser,
         event: event,
         group: group,
-        rsvp: thisRsvp
+        rsvp: thisRsvp,
+        isMember
     })
 }
 
@@ -49,7 +64,8 @@ const mdp = (dispatch) => {
         deleteEvent: (eventId) => dispatch(deleteEvent(eventId)),
         fetchAllRsvps: (eventId) => dispatch(fetchAllRsvps(eventId)),
         createRsvp: (rsvp) => dispatch(createRsvp(rsvp)),
-        updateRsvp: (rsvp) => dispatch(updateRsvp(rsvp))
+        updateRsvp: (rsvp) => dispatch(updateRsvp(rsvp)),
+        fetchGroups: () => dispatch(fetchGroups())
     })
 }
 
