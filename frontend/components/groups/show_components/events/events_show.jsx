@@ -63,6 +63,9 @@ class EventsShow extends React.Component {
         }
     }
 
+
+
+    
     declineEvent() {
         debugger
         // alert("decline pressed");
