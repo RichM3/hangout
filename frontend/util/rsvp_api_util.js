@@ -14,7 +14,6 @@ export const fetchRsvp = (eventId) => {
 }
 
 export const createRsvp = (rsvp) => {
-    debugger
     return $.ajax({
         method: "post",
         url: `api/rsvps`,
@@ -29,7 +28,6 @@ export const createRsvp = (rsvp) => {
 }
 
 export const updateRsvp = (rsvp) => {
-    debugger
     return $.ajax({
         method: "patch",
         url: `api/rsvps/${rsvp.id}`,

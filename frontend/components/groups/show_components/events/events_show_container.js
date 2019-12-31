@@ -9,7 +9,6 @@ const msp = (state, ownProps) => {
     let group = {};
     let event = {};
     let rsvps = Object.values(state.entities.rsvps);
-    // debugger
     let thisRsvp = {};
 
     if (typeof (ownProps.location.eventProps) !== "undefined") {
@@ -17,17 +16,9 @@ const msp = (state, ownProps) => {
         event = ownProps.location.eventProps.event;
         group = state.entities.groups[ownProps.location.eventProps.event.group_id];
 
-        debugger
         thisRsvp = ownProps.location.eventProps.event.rsvpIds.find((rsvp) => {
-            debugger
             return rsvp.event_id === event.id && rsvp.user_id === currentUser.id
         })
-
-        // debugger
-
-        // thisRsvp = rsvps.find((rsvp) => {
-        //     return rsvp.event_id === event.id && rsvp.user_id === currentUser.id
-        // })
     } else if (ownProps.match.params.eventId !== "undefined") {
         // Edit an event condition
         let eventId = parseInt(ownProps.match.params.eventId);
@@ -41,13 +32,10 @@ const msp = (state, ownProps) => {
         let last = Object.keys(state.entities.events);
         event = state.entities.events[last[last.length - 1]];
         group = state.entities.groups[event.group_id];
-        // debugger
         thisRsvp = rsvps.find((rsvp) => {
-            // debugger
             return rsvp.event_id === event.id && rsvp.user_id === currentUser.id
         })
     }
-    debugger
     return ({
         currentUser: currentUser,
         event: event,

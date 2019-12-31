@@ -9,7 +9,7 @@
 #
 
 class Rsvp < ApplicationRecord
-    validates :user_id, :event_id, :attending, presence: true
+    # validates :user_id, :event_id, :attending, presence: true
 
     belongs_to :user,
         primary_key: :id,

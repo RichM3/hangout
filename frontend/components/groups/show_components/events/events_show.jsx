@@ -13,15 +13,8 @@ class EventsShow extends React.Component {
         this.declineEvent = this.declineEvent.bind(this);
     }
 
-    // toggleClass() {
-    //     const currentState = this.state.attending;
-    //     this.setState({ attending: !currentState });
-    // };
-
     checkRsvps() {
-        // debugger
         if (typeof (this.props.rsvp) !== "undefined") {
-            // debugger
             if (this.props.rsvp.attending === true) {
                 this.setState({ attending: true });
             }
@@ -29,68 +22,45 @@ class EventsShow extends React.Component {
     }
 
     componentDidMount() {
-        // debugger
         this.props.fetchAllRsvps(this.props.event.id)
             .then(() => this.checkRsvps());
-
-
-
-
-        // this.props.fetchAllRsvps(this.props.event.id);
-        // debugger
-        // if (typeof (this.props.rsvp) !== "undefined") {
-        //     debugger
-        //     if (this.props.rsvp.attending === true) { 
-        //         this.setState({ attending: true });
-        //     }
-        // }
     }
 
+    // Scenarios: If I create the event, I automatically am attending
+    // then I can use the RSVP ID to update to not attend
+
+    // If I want to attend an event that I have not created the rsvp Id will be null 
+    // therefore create and rsvp
+
+    // If I decide to attend an event after declining the evert the RSVP.ID will exist and I will need to update
+
     attendEvent() {
-        debugger
-        // alert("attend pressed");
-        let rsvp = { userId: this.props.currentUser.id, eventId: this.props.event.id, attending: true };
         if (this.state.attending !== true) {
-            this.setState({ attending: true});
+            this.setState({ attending: true });
             if (typeof (this.props.rsvp) === "undefined") {
-                alert("undefined");
-                debugger
+                let rsvp = { userId: this.props.currentUser.id, eventId: this.props.event.id, attending: true };
                 this.props.createRsvp(rsvp);
             } else {
-                alert("defined");
-                // this.props.updateRsvp(rsvp);
+                let rsvp = { id: this.props.rsvp.id, userId: this.props.rsvp.user_id, eventId: this.props.rsvp.event_id, attending: true };
+                this.props.updateRsvp(rsvp);
             }
         }
     }
 
     declineEvent() {
-        debugger
-        // alert("decline pressed");
-        
-        // let rsvp = this.props.rsvp;
-
-        let rsvp = { id: this.props.rsvp.id, userId: this.props.rsvp.user_id, eventId: this.props.rsvp.event_id, attending: false };
-
-        // let rsvp = { id: this.props.rsvp.id, userId: this.props.currentUser.id, eventId: this.props.event.id, attending: false };
-
         if (this.state.attending !== false) {
             this.setState({ attending: false });
-
-            // this.props.updateRsvp(rsvp);
-
-
-            // if (typeof (this.props.rsvp) === "undefined") {
-            //     alert("undefined");
-            //     // this.props.createRsvp();
-            // } else {
-            //     alert("defined");
-            //     // this.props.updateRsvp();
-            // }
+            if (typeof (this.props.rsvp) === "undefined") {
+                let rsvp = { userId: this.props.currentUser.id, eventId: this.props.event.id, attending: false };
+                this.props.createRsvp(rsvp);
+            } else {
+                let rsvp = { id: this.props.rsvp.id, userId: this.props.rsvp.user_id, eventId: this.props.rsvp.event_id, attending: false };
+                this.props.updateRsvp(rsvp);
+            }
         }
     }
 
     render() {
-        // debugger
 
         let rsvp = this.props.rsvp;
 
@@ -98,7 +68,6 @@ class EventsShow extends React.Component {
         let attending;
 
         if (typeof(rsvp) === "undefined") {
-            // debugger
             attending = (
                 <>
                     <div id="attendEvent" className={this.state.attending ? "event-button-selected" : "event-button-unselected"}
@@ -107,33 +76,24 @@ class EventsShow extends React.Component {
                     onClick={this.declineEvent}><i className="far fa-times-circle"></i></div>
                 </>
             )
-            // alert("null");
         } else if (rsvp.attending === true) {
-            // debugger
             attending = (
                 <>
                     <div id="attendEvent" className={this.state.attending ? "event-button-selected" : "event-button-unselected"}
                         onClick={this.attendEvent}><i className="fas fa-check"></i></div>
                     <div id="declineEvent" className={this.state.attending ? "event-button-unselected" : "event-button-selected"}
                         onClick={this.declineEvent}><i className="far fa-times-circle"></i></div>
-                    {/* <div className="event-button-selected" onClick={this.updateRsvp}><i className="fas fa-check"></i></div>
-                    <div className="event-button-unselected" onClick={this.updateRsvp}><i className="far fa-times-circle"></i></div> */}
                 </>
             )
-            // alert("attending");
         } else {
-            // debugger
             attending = (
                 <>
                     <div id="attendEvent" className={this.state.attending ? "event-button-selected" : "event-button-unselected"}
                         onClick={this.attendEvent}><i className="fas fa-check"></i></div>
                     <div id="declineEvent" className={this.state.attending ? "event-button-unselected" : "event-button-selected"}
                         onClick={this.declineEvent}><i className="far fa-times-circle"></i></div>
-                    {/* <div className="event-button-unselected" onClick={this.updateRsvp}><i className="fas fa-check"></i></div>
-                    <div className="event-button-selected" onClick={this.updateRsvp}><i className="far fa-times-circle"></i></div> */}
                 </>
             )
-            // alert("not attending");
         }
 
         const dt = new Date(this.props.event.starttime);
@@ -201,27 +161,12 @@ class EventsShow extends React.Component {
                     <div className="event-attending-container">
                         <div className="event-attending-title">Are you attending?</div>
                         <div className="event-button-container">
-                            {/* NEED TO ADD LOGIC TO ID IF THE USER HAS AN RSVP (EVENTID & USERID) */}
-                            {/* When i create an event I should add the user to the event immediately
-                            then if they come to event page they can delete the rsvp by pressing cancel button */}
-
                             {attending}
-                            {/* <div className={this.state.checked}>checked</div>
-                            <div className={this.state.checked}></div> */}
-
-                            {/* <div className="event-button-selected">checked</div>
-                            <div className="event-button-unselected"></div> */}
-
-                            </div>
+                        </div>
                         <div className="event-attending-status">You are currently attending</div>
                     </div>
                 </div>
                 </div>
-
-
-                {/* <div>{this.props.event.starttime}</div> */}
-                {/* <div>{this.props.event.eventname}</div> */}
-                {/* <div>Details for: {this.props.group.groupname} <p>Event: {this.props.event.eventname}</p></div> */}
 
                 {/* ----------------------------------------------------------------------------------------------------------------- */}
                 {/* --   Body start here -------------------------------------------------------------------------------------------- */}
@@ -236,23 +181,6 @@ class EventsShow extends React.Component {
                         <div className="event-map-section">map goes here</div>
                     </div>
                 </div>
-                
-                
-                
-                {/* <p>
-                {this.props.event.eventname}
-                </p><p>
-                {this.props.event.description}
-                </p><p>
-                {this.props.event.starttime}
-                </p><p>
-                {this.props.event.endtime}
-                </p><p>
-                {this.props.event.location}
-                </p><p>
-                {this.props.event.group_id}
-                </p> */}
-
 
                 <FooterContainer myType={"groups"} />
             </>
