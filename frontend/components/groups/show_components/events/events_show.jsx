@@ -6,41 +6,131 @@ import FooterContainer from '../../../footer/footer_container';
 class EventsShow extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {}
+        this.state = {
+            attending: false
+        };
+        this.attendEvent = this.attendEvent.bind(this);
+        this.declineEvent = this.declineEvent.bind(this);
+    }
+
+    // toggleClass() {
+    //     const currentState = this.state.attending;
+    //     this.setState({ attending: !currentState });
+    // };
+
+    checkRsvps() {
+        // debugger
+        if (typeof (this.props.rsvp) !== "undefined") {
+            // debugger
+            if (this.props.rsvp.attending === true) {
+                this.setState({ attending: true });
+            }
+        }
     }
 
     componentDidMount() {
-        this.props.fetchAllRsvps(this.props.event.id);
+        // debugger
+        this.props.fetchAllRsvps(this.props.event.id)
+            .then(() => this.checkRsvps());
+
+
+
+
+        // this.props.fetchAllRsvps(this.props.event.id);
+        // debugger
+        // if (typeof (this.props.rsvp) !== "undefined") {
+        //     debugger
+        //     if (this.props.rsvp.attending === true) { 
+        //         this.setState({ attending: true });
+        //     }
+        // }
     }
 
+    attendEvent() {
+        debugger
+        // alert("attend pressed");
+        let rsvp = { userId: this.props.currentUser.id, eventId: this.props.event.id, attending: true };
+        if (this.state.attending !== true) {
+            this.setState({ attending: true});
+            if (typeof (this.props.rsvp) === "undefined") {
+                alert("undefined");
+                debugger
+                this.props.createRsvp(rsvp);
+            } else {
+                alert("defined");
+                // this.props.updateRsvp(rsvp);
+            }
+        }
+    }
+
+    declineEvent() {
+        debugger
+        // alert("decline pressed");
+        
+        // let rsvp = this.props.rsvp;
+
+        let rsvp = { id: this.props.rsvp.id, userId: this.props.rsvp.user_id, eventId: this.props.rsvp.event_id, attending: false };
+
+        // let rsvp = { id: this.props.rsvp.id, userId: this.props.currentUser.id, eventId: this.props.event.id, attending: false };
+
+        if (this.state.attending !== false) {
+            this.setState({ attending: false });
+
+            // this.props.updateRsvp(rsvp);
+
+
+            // if (typeof (this.props.rsvp) === "undefined") {
+            //     alert("undefined");
+            //     // this.props.createRsvp();
+            // } else {
+            //     alert("defined");
+            //     // this.props.updateRsvp();
+            // }
+        }
+    }
 
     render() {
+        // debugger
 
         let rsvp = this.props.rsvp;
 
+        // Buttons for RSVP info
         let attending;
 
         if (typeof(rsvp) === "undefined") {
+            // debugger
             attending = (
                 <>
-                    <div className="event-button-unselected"><i className="fas fa-check"></i></div>
-                    <div className="event-button-selected"><i className="far fa-times-circle"></i></div>
+                    <div id="attendEvent" className={this.state.attending ? "event-button-selected" : "event-button-unselected"}
+                    onClick={this.attendEvent}><i className="fas fa-check"></i></div>
+                    <div id="declineEvent" className={this.state.attending ? "event-button-unselected" : "event-button-selected"}
+                    onClick={this.declineEvent}><i className="far fa-times-circle"></i></div>
                 </>
             )
             // alert("null");
         } else if (rsvp.attending === true) {
+            // debugger
             attending = (
                 <>
-                    <div className="event-button-selected"><i className="fas fa-check"></i></div>
-                    <div className="event-button-unselected"><i className="far fa-times-circle"></i></div>
+                    <div id="attendEvent" className={this.state.attending ? "event-button-selected" : "event-button-unselected"}
+                        onClick={this.attendEvent}><i className="fas fa-check"></i></div>
+                    <div id="declineEvent" className={this.state.attending ? "event-button-unselected" : "event-button-selected"}
+                        onClick={this.declineEvent}><i className="far fa-times-circle"></i></div>
+                    {/* <div className="event-button-selected" onClick={this.updateRsvp}><i className="fas fa-check"></i></div>
+                    <div className="event-button-unselected" onClick={this.updateRsvp}><i className="far fa-times-circle"></i></div> */}
                 </>
             )
             // alert("attending");
         } else {
+            // debugger
             attending = (
                 <>
-                    <div className="event-button-unselected"><i className="fas fa-check"></i></div>
-                    <div className="event-button-selected"><i className="far fa-times-circle"></i></div>
+                    <div id="attendEvent" className={this.state.attending ? "event-button-selected" : "event-button-unselected"}
+                        onClick={this.attendEvent}><i className="fas fa-check"></i></div>
+                    <div id="declineEvent" className={this.state.attending ? "event-button-unselected" : "event-button-selected"}
+                        onClick={this.declineEvent}><i className="far fa-times-circle"></i></div>
+                    {/* <div className="event-button-unselected" onClick={this.updateRsvp}><i className="fas fa-check"></i></div>
+                    <div className="event-button-selected" onClick={this.updateRsvp}><i className="far fa-times-circle"></i></div> */}
                 </>
             )
             // alert("not attending");

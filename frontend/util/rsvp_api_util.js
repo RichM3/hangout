@@ -5,6 +5,7 @@ export const fetchAllRsvps = () => {
     })
 }
 
+// Never use a show for RSVPs (or delete for that matter)
 export const fetchRsvp = (eventId) => {
     return $.ajax({
         method: "get",
@@ -13,9 +14,10 @@ export const fetchRsvp = (eventId) => {
 }
 
 export const createRsvp = (rsvp) => {
+    debugger
     return $.ajax({
         method: "post",
-        url: `api/rsvp`,
+        url: `api/rsvps`,
         data: {
             rsvp: {
                 event_id: rsvp.eventId,
@@ -27,9 +29,10 @@ export const createRsvp = (rsvp) => {
 }
 
 export const updateRsvp = (rsvp) => {
+    debugger
     return $.ajax({
         method: "patch",
-        url: `api/rsvp/${rsvp.id}`,
+        url: `api/rsvps/${rsvp.id}`,
         data: {
             rsvp: {
                 user_id: rsvp.userId,

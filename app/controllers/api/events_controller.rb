@@ -3,6 +3,15 @@ class Api::EventsController < ApplicationController
     def create
         @event = Event.new(event_params)
         if @event.save!
+            # debugger
+            @rsvp1 = Rsvp.new(user_id: current_user.id, event_id: @event.id, attending: true)
+            # debugger
+            if !(@rsvp1.save!)
+                render json: @rsvp.errors.full_messages, status: 422
+            end
+            # @rsvp2 = Rsvp.create(user_id: current_user.id, event_id: @event.id, attending: true)
+            # puts @event.id
+            # debugger
             render "api/events/show"
         else
             render json: @event.errors.full_messages, status: 422

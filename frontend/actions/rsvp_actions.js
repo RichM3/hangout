@@ -36,8 +36,8 @@ const createNewRsvp = function (rsvp) {
     }
 }
 
-export const createRsvp = () => dispatch => {
-    RsvpsApiUtil.createRsvp().then(rsvp => dispatch(createNewRsvp(rsvp)))
+export const createRsvp = (rsvp) => dispatch => {
+    RsvpApiUtil.createRsvp(rsvp).then(rsvp => dispatch(createNewRsvp(rsvp)))
 }
 
 const modifyRsvp = function (rsvp) {
@@ -48,6 +48,6 @@ const modifyRsvp = function (rsvp) {
 }
 
 export const updateRsvp = (rsvp) => dispatch => {
-    RsvpsApiUtil.updateRsvp(rsvp).then(rsvp => dispatch(modifyRsvp(rsvp)))
+    RsvpApiUtil.updateRsvp(rsvp).then(rsvp => dispatch(modifyRsvp(rsvp)))
 }
 

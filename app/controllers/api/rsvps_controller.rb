@@ -6,7 +6,7 @@ class Api::RsvpsController < ApplicationController
         @rsvp = Rsvp.new(rsvp_params)
 
         if !(@rsvp.save!)
-            flash.now[:errors] = @rsvp.error.full_messages
+            flash.now[:errors] = @rsvp.errors.full_messages
         end
 
         # if @rsvp.save!
@@ -51,9 +51,20 @@ class Api::RsvpsController < ApplicationController
 
     # Will update once created and user selects the attending / not attending flags
     def update
+        debugger
         @rsvp = Rsvp.find(params[:id])
-        if !(@rsvp.update_attributes(rsvp_params))
-            flash.now[:errors] = @rsvp.error.full_messages
+        debugger
+
+        # if !(@rsvp.update_attributes!(attending: "false"))
+        #     flash.now[:errors] = @rsvp.errors.full_messages
+        # end
+
+
+        if @rsvp.update_attributes!(rsvp_params)
+            debugger
+            puts "wtf"
+        else
+            flash.now[:errors] = @rsvp.errors.full_messages
         end
 
         # if (@rsvp.update_attributes(rsvp_params))

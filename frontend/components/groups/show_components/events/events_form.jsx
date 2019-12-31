@@ -45,7 +45,9 @@ class EventsCreate extends React.Component {
         }
     }
 
-    createEvent(){
+    createEvent() {
+        // Code if action is CreateEvent - Create an RSVP too
+        // Code nothing new for an RSVP if edit event
         this.props.action(this.state)
             .then(() => this.props.history.push(`/events/show/${this.props.event.id}`));
 
