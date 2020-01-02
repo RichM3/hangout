@@ -21,6 +21,10 @@ class EventsShow extends React.Component {
         }
     }
 
+
+
+    
+
     componentDidMount() {
         this.props.fetchAllRsvps(this.props.event.id)
             .then(() => this.checkRsvps());
@@ -113,7 +117,7 @@ class EventsShow extends React.Component {
             )
             attendingText = (<p>You must be a group member to attend events</p>)
         }
-        
+
 
         const dt = new Date(this.props.event.starttime);
         const currentTimeZoneOffsetInHours = dt.getTimezoneOffset() / 60;
