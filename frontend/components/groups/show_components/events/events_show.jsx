@@ -21,13 +21,6 @@ class EventsShow extends React.Component {
         }
     }
 
-
-
-
-
-
-    
-
     componentDidMount() {
         this.props.fetchAllRsvps(this.props.event.id)
             .then(() => this.checkRsvps());
