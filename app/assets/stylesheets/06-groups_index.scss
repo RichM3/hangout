@@ -56,28 +56,13 @@
     background-color: #00455d;
 }
 
-
-
-
-/* opacity coding to use later */
-/* img {
-  opacity: 0.5;
-}
-
-img:hover {
-  opacity: 1.0;
-} */
-
-
 .find-navbar-wrap {
     display: flex;
     margin-top: -45px;
-    // margin-left: 15px;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
     height: 69px;
-    // width: 932px;
     background: transparent;
     opacity: 1;
     color: rgba(255,255,255,.7);
@@ -147,14 +132,7 @@ img:hover {
     justify-content: center;
     width: 50%;
     text-align: center;
-
-    /* selected button #3f454e */
     background-color:#3f454e;
-    /* background-color:#0e1721; */
-    /* padding: 4px 5px 3px 5px; */
-
-    /* width: 122.5px;
-    height: 43px; */
 }
 
 //This should be the de-selected featuers
@@ -231,7 +209,6 @@ img:hover {
     border-bottom: 1px solid rgba(0,0,0,.12);
 }
 
-
 .button--showmore {
     margin-top: 500px;
     display: block!important;
@@ -257,8 +234,6 @@ img:hover {
     background: #fff;
     opacity: 1;
 }
-/* see above for opacity code */
-
 
 .group-input {
     color: black;

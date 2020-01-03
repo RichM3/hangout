@@ -42,10 +42,8 @@
 .nav__links {
     list-style: none;
     margin: 0px 5px 0px 0px;
-    /* font-family: Arial, Helvetica, sans-serif; */
     font-family: helvetica, arial, sans-serif;
     display: inline;
-    /* padding: 0px 1px; */
 }
 
 .login-signup {
@@ -75,10 +73,7 @@
 .myLinks {
     font-size: 14px;
     color: #0088a9;
-    /* color: #818b92; */
     text-decoration: none;
-    /* margin-right: 10px; */
-    /* border-right: 1px solid #e6e7e9 */
 }
 
 .myLinks-login {
@@ -86,11 +81,6 @@
     color:  #f64060;
     text-decoration: none;
 }
-
-/* .myLinks:hover {
-    color: red;
-    transition: all 0.3s ease 0s
-} */
 
 .myLinks_greet {
     font-size: 14px;
@@ -119,49 +109,31 @@
 .fakeButton {
   background: #0098AB;
   color: white;
-  /* float: right; */
   font-size: 11px;
-  /* margin-left: 8px; */
   padding: 4px 5px 3px 5px;
-
-
-    text-decoration: none;
-    /* color: #ffffff; */
-    /* padding: 9px 25px; */
-    /* padding: 9px 10px; */
-    /* background-color: #0088a9; */
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
+  text-decoration: none;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
 }
 
-/* button:hover {
-    background-color: rgba(0, 136, 169, 0.8)
-} */
-
 .showname {
-    color: #0088a9;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    vertical-align: middle;
-    /* border: 4px solid black; */
-    margin-right: 30px;
+  color: #0088a9;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  vertical-align: middle;
+  margin-right: 30px;
 }
 
 
 .manageLogout {
   align-items: center;
-  /* margin-left: 30px; */
   display: flex;
   justify-content: space-between;
   vertical-align: middle;
   text-align: center;
-  /* border: 3px solid  */
 }
-
-
-
 
 .blankProfile {
   width: 60px;
@@ -170,25 +142,9 @@
   margin-right: 10px;
 }
 
-/*
-  border-radius: 50px;
-
-  text-decoration: none;
-    color: #ffffff;
-    padding: 20px 25px;
-    background-color: #0088a9;
-    border: none;
-    border-radius: 80px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-
-*/
-
 .logoffButton {
   float: right;
-  /* width: 100px; */
   padding: 10px;
-  /* translate: transform; */
 }
 
 
@@ -201,12 +157,6 @@
   border: none;
 }
 
-/* The container <div> - needed to position the dropdown content */
-/* .dropdown {
-  position: relative;
-  display: inline-block;
-} */
-
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
   display: none;
@@ -214,34 +164,14 @@
   border: 1px dotted #777373;
   background-color: #f1f1f1;
   width: 5%;
-  /* min-width: 160px; */
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
   padding-top: 10px;
   padding-bottom: 10px;
   right: 1px;
-
-  /* My color is better than meetup text */
   color: black; 
-
-  /* Actual color from meetup text */
-  /* color: #a07574;  */
 }
-
-/* Links inside the dropdown */
-/* .dropdown-content a {
-  color: black;
-  padding: 16px 16px;
-  text-decoration: none;
-  display: block;
-} */
-
-/* Change color of dropdown links on hover */
-/* .dropdown-content a:hover {background-color: blue;} */
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {display: block;}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-/* .dropdown:hover .dropbtn {background-color: #fafafa;} */
 

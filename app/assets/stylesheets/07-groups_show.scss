@@ -6,33 +6,22 @@
 
 .header-stripe {
     border-top: 2px solid #e6e7e9;
-    // height: 377px;
     background-color: #ffffff;
-    // padding-bottom: 20px;
-
-    // border: 2px solid blue;
 }
 
 .header-inner {
     margin-top: 20px;
-    // padding-bottom: 300px;
-    // padding-top: 20px;
     width: 60%;
     display: flex;
     height: 356px;
     margin-left: auto;
     margin-right: auto;
     box-sizing: content-box;
-
-    // border: 2px solid blue;
 }
 
 .header-left {
-    // border: 2px solid blue;
-
     height: 377px;
     padding-right: 55px;
-    // width: 50%;
     width: 700px;
     display: flex;
     justify-content: center;
@@ -48,18 +37,14 @@
     padding-bottom: 10px;
 }
 
-// @media only screen and (max-width: 1024px) {
-// @media only screen and (min-width: 840px) {
-    .header-right {
-        line-height: 1.45;
-        font-family: "Graphik Meetup",helvetica,arial,sans-serif;
-        font-weight: 900;
-        font-size: 38px;
-        width: 50%;
-        height: 377px;
-        // border: 2px solid blue;
-    }
-// }
+.header-right {
+    line-height: 1.45;
+    font-family: "Graphik Meetup",helvetica,arial,sans-serif;
+    font-weight: 900;
+    font-size: 38px;
+    width: 50%;
+    height: 377px;
+}
 
 .header-right p {
     line-height: 1.45;
@@ -81,28 +66,16 @@
     height: 10px;
 }
 
-
-/* ---------------------------------------------------------------------------------------- */
-/* ---------------------------------------------------------------------------------------- */
-/* Menu Section  - color scheme for page selected menu item: #2e3e48
- - color scheme for non-selected menu item: #2aa8cb  */
-
-/* ---------------------------------------------------------------------------------------- */
-/* ---------------------------------------------------------------------------------------- */
 .menu-stripe {
     border-top: 1px solid #e6e7e9;
     height: 67px;
     background-color: #ffffff;
-
-
-    // border: 2px solid blue;
 }
 
 .menu-div {
     width: 60%;
     display: flex;
     align-items: center;
-
     margin-left: auto;
     margin-right: auto;
     height: 67px;
@@ -124,32 +97,27 @@
 .join-button {
     width: 100px;
     height: 20px;
-
     text-align: center;
     background-color: #f65858;
     border: 1px solid #f65858;
     color: white;
     font-size: 14px;
     text-decoration: none;
-
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
     padding: 10px 20px;
-//   padding: 4px 5px 3px 5px;
 }
 
 .delete-button {
     width: 120px;
     height: 20px;
-
     text-align: center;
     background-color: #f65858;
     border: 1px solid #f65858;
     color: white;
     font-size: 14px;
     text-decoration: none;
-
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
@@ -159,7 +127,6 @@
 .report-button {
     width: 20px;
     height: 20px;
-
     text-align: center;
     background-color: #ffffff;
     border: 1px solid #c5c4c4;
@@ -167,32 +134,21 @@
     font-size: 14px;
     font-weight: 900;
     text-decoration: none;
-
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
     padding: 10px 10px 10px 10px;
-    // margin: 0px 0px 10px 10px;
 }
 
 .grp-btn-spacer {
     padding: 0 0 0 18px;
 }
 
-// font for dots: 
-
-
-/* ---------------------------------------------------------------------------------------- */
-/* ---------------------------------------------------------------------------------------- */
-/* Wrapper Section - color scheme for page section #f6f7f8 */
-/* ---------------------------------------------------------------------------------------- */
-/* ---------------------------------------------------------------------------------------- */
 .page-wrapper {
     width: 60%;
     margin-left: auto;
     margin-right: auto;
     height: auto;
-    // border: 2px solid blue;
 }
 
 .page-wrapper h1 {
@@ -202,7 +158,6 @@
         font-size: 20px;
 }
 
-
 .page-wrapper p {
         line-height: 1.45;
         font-family: "Graphik Meetup",helvetica,arial,sans-serif;
@@ -210,19 +165,11 @@
         font-size: 16px;
 }
 
-/* ---------------------------------------------------------------------------------------- */
-/* ---------------------------------------------------------------------------------------- */
-/* Events Section - color scheme for page section #f6f7f8 */
-/* ---------------------------------------------------------------------------------------- */
-/* ---------------------------------------------------------------------------------------- */
 .related-events {
     height: 100px;
-    // border: 2px solid blue;
 }
 
 .fakeLink {
-    // align-items: center;
-    // padding: 10px 40px 10px 0;
     color: #2e3e48;
     cursor: pointer;
 }

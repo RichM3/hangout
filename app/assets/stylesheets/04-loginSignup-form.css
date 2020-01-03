@@ -79,7 +79,6 @@ h2.login-label {
   background-color: #3b5998;
   color: white;
   justify-content: left;
-  /* margin-left: 240px; */
   padding: 8px;
 }
 
@@ -105,12 +104,7 @@ h2.login-label {
 .session-submit:hover {
   background-color: #ca1635;
   transition: all 0.3s ease 0s
-    /* background-color: #b90b29; */
-    /* background-color: #de1a3c; */
 }
-
-
-
 
 .log-labels {
   font-family: helvetica, arial, sans-serif;
@@ -120,7 +114,6 @@ h2.login-label {
 }
 
 .login-input {
-  /* background-color: #fafafa; */
   background-color: rgba(0,0,0,.02);
   border-radius: 3px;
   border: 1px solid rgba(0,0,0,.12);
@@ -141,12 +134,6 @@ h2.login-label {
   background-color: white;
 }
 
-
-
-/* dimensions of login object - form  458 x 610  -- less 164 */
-/* 1px solid rgba(0,0,0,.12)!important; */
-
-
 .login-form-container {
    display: flex;
    justify-content: center;
@@ -165,42 +152,7 @@ h2.login-label {
    width: 100%;
    display: flex;
    align-items: baseline;
-   /* border: 1px solid black; */
-  /* border: 1px solid rgba(0,0,0,.12) !important;
-  border-bottom: 1px solid rgba(0,0,0,.26) !important; */
-  /* margin-left: 10px; */
-
 }
-
-/* h2.login-label {
-   font-size: 34px;
-   font-weight: 700;
-   padding-bottom: 8px;
-}
-
- .color-link {
-   color: #1F24CC;
-   font-weight: 600;
- }
-
- .small-bold {
-   font-size: 13px;
-   font-weight: 500;
- } */
-
- /* .login-input {
-    background-color: #fafafa;
-    border-radius: 3px;
-    border: 1px solid rgba(0,0,0,.12);
-    box-shadow: none;
-    box-sizing: border-box;
-    margin: 0 0 4px;
-    max-width: 100%;
-    padding: 8px;
-    width: 425.14px;
-    height: 39.2px;
-    margin-bottom: 50px;
- } */
 
 .top-login {
     border: 10px solid rgba(0,0,0,.12);
@@ -211,13 +163,6 @@ h2.login-label {
     border: 10px solid rgba(0,0,0,.12);
 }
 
-
-/* .padlock {
-  width: 16px;
-  height: auto;
-} */
-
-
 .login-form-box {
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
@@ -226,4 +171,3 @@ h2.login-label {
   margin-bottom: 10px; 
   padding: 16px;
 }
-

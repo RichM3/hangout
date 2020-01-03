@@ -14,11 +14,6 @@ body {
   border-bottom: 1px solid #ccc;
 }
 
-/* .header a {
-  display: block;
-  padding: 10px 20px;
-} */
-
 .header-nav {
   display: flex;
   justify-content: space-between;
@@ -64,15 +59,8 @@ body {
 .topRight {
   display: flexbox;
   justify-content: left;
-  /* margin-left: 10%; */
-  /* margin-left: 150px; */
 }
 
 .header-group {
   display: flexbox;
-  /* justify-content: left; */
-  /* margin-left: 100px; */
 }
-/* .body {
-  background-color: aqua;
-} */
