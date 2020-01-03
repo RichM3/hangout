@@ -64,6 +64,14 @@
   color: #0088a9;;
 }
 
+.experience-text {
+    font-size: 14px;
+    color: #818b92;
+    text-decoration: none;
+    padding-left: 18px;
+    border-left: 1px solid rgba(46,62,72,.12);
+}
+
 .myLinks {
     font-size: 14px;
     color: #0088a9;

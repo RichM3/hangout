@@ -86,11 +86,17 @@ class HomeIndex extends React.Component {
             );
         })
 
+        let noEventText = "";
+        if (listEvents.length <= 0) {
+            noEventText = <div className="noEventText">There are no events scheduled after the selected date.  Try joining more groups to increase the number of upcoming events</div>;
+        }
+
         const contentComp = this.state.calendarSelected ? (
             <>
             <div className="page-container">
                 <div className="page-events">
                     <ul className="box-ul">
+                        {noEventText}
                         {listEvents}
                     </ul>
                 </div>
@@ -113,12 +119,13 @@ class HomeIndex extends React.Component {
                         <div className="c-page-body">
                             <div className="find-navbar-wrap">
                                 <form action="" className="searchForm">
-                                    <div className="wrapper-magnify" >
+                                    {/* Commented for the time being until search can be implemented */}
+                                    {/* <div className="wrapper-magnify" >
                                         <input className="group-input" type="text" name="search" id="search" value="" onChange={this.update('search')} />
                                         <img className="magnify-icon" src={magnify} />
-                                    </div>                                    
+                                    </div> */}
 
-                                    <label htmlFor=""><div>Within 5 miles of NYC</div></label>
+                                    {/* <label htmlFor=""><div>Within 5 miles of NYC</div></label> */}
 
                                 </form>
                                 <div className="button-div">

@@ -173,7 +173,7 @@ class GroupsShow extends React.Component {
                     <div className="menu-choices" onClick={this.updateComponent} >
                         <p className={this.state.lowerComponent === "Events" ? "menu-selected" : "fakeLink"} >Events</p>
                     </div>
-                    <div className="menu-choices" onClick={this.updateComponent} >
+                    {/* <div className="menu-choices" onClick={this.updateComponent} >
                             <p className={this.state.lowerComponent === "Members" ? "menu-selected" : "fakeLink"} >Members</p>
                     </div>
                     <div className="menu-choices" onClick={this.updateComponent} >
@@ -184,6 +184,18 @@ class GroupsShow extends React.Component {
                     </div>
                     <div className="menu-choices" onClick={this.updateComponent} >
                             <p className={this.state.lowerComponent === "More" ? "menu-selected" : "fakeLink"} >More</p>
+                    </div> */}
+                    <div className="menu-choices" >
+                        <p className="fakeLink-text">Members</p>
+                    </div>
+                    <div className="menu-choices" >
+                        <p className="fakeLink-text">Photos</p>
+                    </div>
+                    <div className="menu-choices" >
+                        <p className="fakeLink-text">Discussions</p>
+                    </div>
+                    <div className="menu-choices" >
+                        <p className="fakeLink-text">More</p>
                     </div>
                 </div>
             </div>

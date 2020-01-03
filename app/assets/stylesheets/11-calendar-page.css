@@ -14,3 +14,9 @@
     margin-top: 20px;
     /* background-color: red; */
 }
+
+.noEventText {
+    font-family: "Graphik Meetup",helvetica,arial,sans-serif;
+    padding: 50px;
+    font-size: 20px;    
+}

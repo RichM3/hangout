@@ -38,13 +38,15 @@ class Navbar extends React.Component {
           <div className="nav__links">
             <Link to={`/groups/create`} className={hClass}><b>Start a new group</b></Link>
             &nbsp;&nbsp;&nbsp;
-            <a href="/" className="experience">Experiences</a>
+            {/* <a href="/" className="experience">Experiences</a> */}
+            <span className="experience-text">Experiences</span>
             &nbsp;&nbsp;&nbsp;
-            <a href="/" className="fakeButton">NEW</a>
+            {/* <a href="/" className="fakeButton">NEW</a> */}
+            <Link to={`/groups/create`} className="fakeButton">NEW</Link>
             &nbsp;&nbsp;&nbsp;
           </div>
           <div className="topRight">
-          <GreetingContainer sourceType={"splash"} />
+            <GreetingContainer sourceType={"splash"} />
           </div>
           </>;
         break;
@@ -54,15 +56,20 @@ class Navbar extends React.Component {
           <div className="nav__links">
             <Link to={`/groups/create`} className={hClass}><b>Start a new group</b></Link>
             &nbsp;&nbsp;&nbsp;
-            <a href="/" className="experience">Experiences</a>
+            {/* <a href="/" className="experience">Experiences</a> */}
+            <span className="experience-text">Experiences</span>
             &nbsp;&nbsp;&nbsp;
-            <a href="/" className="fakeButton">NEW</a>
+            {/* <a href="/" className="fakeButton">NEW</a> */}
+            <Link to={`/groups/create`} className="fakeButton">NEW</Link>
             &nbsp;&nbsp;&nbsp;
-            <a href="/" className="groups-index-links">Explore</a>
+            {/* <a href="/" className="groups-index-links">Explore</a> */}
+            <span className="groups-index-links-text">Explore</span>
             &nbsp;&nbsp;&nbsp;
-            <a href="/" className="groups-index-links">Messages</a>
+            {/* <a href="/" className="groups-index-links">Messages</a> */}
+            <span className="groups-index-links-text">Messages</span>
             &nbsp;&nbsp;&nbsp;
-            <a href="/" className="groups-index-links">Notifications</a>
+            {/* <a href="/" className="groups-index-links">Notifications</a> */}
+            <span className="groups-index-links-text">Notifications</span>
           </div>
           <div className="topRight">
             <GreetingContainer />
@@ -76,15 +83,20 @@ class Navbar extends React.Component {
           <div className="nav__links">
             <Link to={`/groups/create`} className={hClass}><b>Start a new group</b></Link>
             &nbsp;&nbsp;&nbsp;
-            <a href="/" className="experience">Experiences</a>
+            {/* <a href="/" className="experience">Experiences</a> */}
+            <span className="experience-text">Experiences</span>
             &nbsp;&nbsp;&nbsp;
-            <a href="/" className="fakeButton">NEW</a>
+            {/* <a href="/" className="fakeButton">NEW</a> */}
+            <Link to={`/groups/create`} className="fakeButton">NEW</Link>
             &nbsp;&nbsp;&nbsp;
-            <a href="/" className="groups-index-links">Explore</a>
+            {/* <a href="/" className="groups-index-links">Explore</a> */}
+            <span className="groups-index-links-text">Explore</span>
             &nbsp;&nbsp;&nbsp;
-            <a href="/" className="groups-index-links">Messages</a>
+            {/* <a href="/" className="groups-index-links">Messages</a> */}
+            <span className="groups-index-links-text">Messages</span>
             &nbsp;&nbsp;&nbsp;
-            <a href="/" className="groups-index-links">Notifications</a>
+            {/* <a href="/" className="groups-index-links">Notifications</a> */}
+            <span className="groups-index-links-text">Notifications</span>
           </div>
           <div className="topRight">
             <GreetingContainer />
@@ -96,15 +108,20 @@ class Navbar extends React.Component {
         renderRightLinks =
           <>
           <div className="nav__links">
-            <a href="/" className="experience">Experiences</a>
+            {/* <a href="/" className="experience">Experiences</a> */}
+            <span className="experience-text">Experiences</span>
             &nbsp;&nbsp;&nbsp;
-            <a href="/" className="fakeButton">NEW</a>
+            {/* <a href="/" className="fakeButton">NEW</a> */}
+            <Link to={`/groups/create`} className="fakeButton">NEW</Link>
             &nbsp;&nbsp;&nbsp;
-            <a href="/" className="groups-index-links">Explore</a>
+            {/* <a href="/" className="groups-index-links">Explore</a> */}
+            <span className="groups-index-links-text">Explore</span>
             &nbsp;&nbsp;&nbsp;
-            <a href="/" className="groups-index-links">Messages</a>
+            {/* <a href="/" className="groups-index-links">Messages</a> */}
+            <span className="groups-index-links-text">Messages</span>
             &nbsp;&nbsp;&nbsp;
-            <a href="/" className="groups-index-links">Notifications</a>
+            {/* <a href="/" className="groups-index-links">Notifications</a> */}
+            <span className="groups-index-links-text">Notifications</span>
           </div>
           <div className="topRight">
             <GreetingContainer />
