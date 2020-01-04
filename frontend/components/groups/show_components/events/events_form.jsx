@@ -65,16 +65,6 @@ class EventsCreate extends React.Component {
         }
     }
 
-
-
-
-
-
-
-
-
-    
-
     ensureEndGtrStart() {
         if (this.state.starttimevalue >= this.state.endtimevalue) {
             alert("End time is before start time");
