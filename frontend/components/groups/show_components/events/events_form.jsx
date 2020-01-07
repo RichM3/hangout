@@ -30,10 +30,6 @@ class EventsCreate extends React.Component {
         this.createEvent = this.createEvent.bind(this);
     }
 
-
-
-
-
     update(field) {
         return e => this.setState({
             [field]: e.target.value
