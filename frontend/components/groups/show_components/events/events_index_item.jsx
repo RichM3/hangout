@@ -5,7 +5,6 @@ const EventsIndexItem = props => {
 
     let map = window.mapMarkerURL;
 
-
     const dt = new Date(props.event.starttime);
     const currentTimeZoneOffsetInHours = dt.getTimezoneOffset() / 60;
     dt.setHours(dt.getHours() + currentTimeZoneOffsetInHours);
