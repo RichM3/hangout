@@ -103,9 +103,6 @@ class EventsCreate extends React.Component {
 
 
 
-
-
-    
     verifyDate() {
         if (typeof (this.state.date) === "undefined") {
             // alert("All events require a date ");
