@@ -171,3 +171,9 @@ h2.login-label {
   margin-bottom: 10px; 
   padding: 16px;
 }
+
+.error-red {
+  color:red;
+  font-weight: bolder;
+}
+

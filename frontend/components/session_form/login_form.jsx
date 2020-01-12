@@ -1,7 +1,8 @@
 import React from 'react';
 import NavbarContainer from "../navbar/navbar_container";
 import FooterContainer from "../footer/footer_container";
-    // ./footer/footer_container";
+import { Link } from 'react-router-dom';
+
 
 class LoginForm extends React.Component {
   constructor(props) {
@@ -44,7 +45,7 @@ class LoginForm extends React.Component {
     return(
       <ul>
         {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
+          <li className="error-red" key={`error-${i}`}>
             {error}
           </li>
         ))}
@@ -64,7 +65,10 @@ class LoginForm extends React.Component {
             </div>
             <div>
               <p className="small-bold">
-                Not registered with us yet? <a href="http://" className="color-link">Sign up</a>
+                Not registered with us yet?&nbsp;
+                <Link to="/signup" className="blue-link" >Sign up</Link>
+                {/* className={linkColors} */}
+                {/* <a href="http://" className="color-link">Sign up</a> */}
               </p>
             </div>
         </div>

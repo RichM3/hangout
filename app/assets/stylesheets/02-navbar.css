@@ -82,6 +82,16 @@
     text-decoration: none;
 }
 
+.blue-link {
+  color: #1F24CC;
+  font-weight: bold;
+}
+
+.blue-link:hover {
+  color: #1F24CC;
+  text-decoration: underline;
+}
+
 .myLinks_greet {
     font-size: 14px;
     color: #818b92;
