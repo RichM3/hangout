@@ -197,8 +197,7 @@ class EventsCreate extends React.Component {
 
     render() {
         let bannerText = "Create an Event";
-        let name = <input className="event-create-container-input" type="text" autoComplete="off" name="eventname" id="eventname" ref={(input) => { this.eventname = input; }}   onChange={this.update('eventname')} value={this.state.eventname} />;
-
+        let name = <input className="event-create-container-input" type="text" autoComplete="off" name="eventname" id="eventname" ref={(input) => { this.eventname = input; }} onChange={this.update('eventname')} value={this.state.eventname} />;
 
         if (this.props.formType === "UpdateEvent") {
             bannerText = "Update the Event";
