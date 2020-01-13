@@ -181,11 +181,11 @@ class EventsCreate extends React.Component {
         return fmTime;
     }
 
-
     componentDidMount() {
         if (this.props.event.starttime === "") {
             const newDt = new Date();
             this.formatDate(newDt);
+            this.eventname.focus();
         } else {
             this.formatDate(this.props.event.starttime);
             let st = this.formatTime(this.props.event.starttime);
@@ -197,7 +197,7 @@ class EventsCreate extends React.Component {
 
     render() {
         let bannerText = "Create an Event";
-        let name = <input className="event-create-container-input" type="text" autoComplete="off" name="eventname" id="eventname" onChange={this.update('eventname')} value={this.state.eventname} />;
+        let name = <input className="event-create-container-input" type="text" autoComplete="off" name="eventname" id="eventname" ref={(input) => { this.eventname = input; }}   onChange={this.update('eventname')} value={this.state.eventname} />;
 
 
         if (this.props.formType === "UpdateEvent") {
@@ -219,7 +219,6 @@ class EventsCreate extends React.Component {
                     <div className="event-inner-item-container" >
                         <label htmlFor="eventname">Event Name:</label>
                         {name}
-                        {/* <input className="event-create-container-input" type="text" autoComplete="off" name="eventname" id="eventname" onChange={this.update('eventname')} value={this.state.eventname} /> */}
                     </div>
 
                     {/* Event Description Section */}
