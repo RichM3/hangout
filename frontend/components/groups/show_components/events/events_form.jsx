@@ -58,9 +58,7 @@ class EventsCreate extends React.Component {
     }
 
     errorcheck() {
-        this.eventTimeB4CurrentTime();
-
-        if (this.verifyEventName() && this.verifyEventDesc() && this.verifyLocation() && this.verifyDate() && this.verifyStartTimeValue() && this.verifyEndTime() && this.ensureEndGtrStart() ) {
+        if (this.verifyEventName() && this.verifyEventDesc() && this.verifyLocation() && this.verifyDate() && this.verifyStartTimeValue() && this.verifyEndTime() && this.ensureEndGtrStart() && this.eventTimeB4CurrentTime() ) {
             return true;
         } else {
             return false
@@ -68,120 +66,26 @@ class EventsCreate extends React.Component {
     }
 
     eventTimeB4CurrentTime() {
-
         const newDate = new Date();
         const dateArr = newDate.toString().split(" ");
-        const currentDate = dateArr.slice(1, 4);
+        const currentDateArr = dateArr.slice(1, 4);
+        const currentDate = currentDateArr.join(" ");
         const currentTime = dateArr[4].slice(0, 5);
-        const stDateCompare = this.state.startDate.toString().split(" ").slice(1, 4);
-        debugger
+        const stDateCompareArr = this.state.startDate.toString().split(" ").slice(1, 4);
+        const stDateCompare = stDateCompareArr.join(" ");
 
-        // Wed Jan 12 2011 12:42:46 GMT-0800 (PST)
-
-        // debugger
-
-        const month = ('0' + (newDate.getMonth()+ 1)).slice(-2);
-        // alert(month);
-        // debugger
-
-        const day = ('0' + newDate.getDate()).slice(-2);
-        // alert(day);
-
-        debugger
-        alert(this.state.startDate);
-        alert(this.state.startDate.toString().split(" ").slice(1, 4));
-        // alert(this.state.startDate.slice(1, 4));
-        debugger
-
-        if (stDateCompare === currentDate) {
-            alert("they match");
+        if (JSON.stringify(stDateCompareArr) === JSON.stringify(currentDateArr) && this.state.starttimevalue < currentTime) {
+            alert("Can't create an event in the past");
+            return false;
         } else {
-            alert(" Not the same");
+            return true;
         }
 
-
-
-
-        
-        // debugger
-
-        // alert(dateArr);
-        // debugger
-
-        // let time = timeArr[4].split(":");
-        // debugger
-        // alert(time); // [hh, mm, ss]
-        // debugger
-
-        //Still need to test to ensure date value is today for time test
-
-        
-
-
-
-
-        if (this.state.starttimevalue >= currentTime ) {
-            // This is the error case
-            alert("start greater current time");
-        } else {
-            // This is ok
-            alert("start less than current time");
-        }
-
-        
-        
-        
-        //.getTime();
-        // const time = new Date(theDate);
-        // alert(date.toString()); // Wed Jan 12 2011 12:42:46 GMT-0800 (PST)
-        // alert(currentTime); // Wed Jan 12 2011 12:42:46 GMT-0800 (PST)
-        // alert(currentTime.toString()); // Wed Jan 12 2011 12:42:46 GMT-0800 (PST)
-
-
-
-            // let timeVar = time.split("T");
-            // let hour = timeVar[1].slice(0, 2);
-            // let mins = timeVar[1].slice(3, 5);
-            // let fmTime = hour + ":" + mins;
-            // return fmTime;
-
-
-
-
-        // var getTimeString = function (timeInMs) {
-        //     var delim = ":";
-        //     var hours = Math.ceil(timeInMs / (1000 * 60 * 60) % 60);
-        //     var minutes = Math.floor(timeInMs / (1000 * 60) % 60);
-        //     var seconds = Math.floor(timeInMs / 1000 % 60);
-
-        //     hours = hours < 10 ? '0' + hours : hours;
-        //     minutes = minutes < 10 ? '0' + minutes : minutes;
-        //     seconds = seconds < 10 ? '0' + seconds : seconds;
-        //     return hours + delim + minutes + delim + seconds;
-        // }
-
-        // alert(getTimeString(currentTime));
-
-
-
-
-
-
-        // const currentTime = new Date().getTime();
-        // // const time = new Date(theDate);
-        // // alert(date.toString()); // Wed Jan 12 2011 12:42:46 GMT-0800 (PST)
-        // alert(currentTime); // Wed Jan 12 2011 12:42:46 GMT-0800 (PST)
-
-        // debugger
-        // const currenttime = getTime();
-        // debugger
-        // if (this.state.statetimevalue > currenttime) {
-        //     // alert("Events can't start in the past");
-        //     alert(currenttime);
-        //     alert(this.state.starttimevalue);
+        // if (stDateCompare === currentDate && this.state.starttimevalue < currentTime) {
+        //     alert("Can't create an event in the past");
+        //     return false;
         // } else {
-        //     alert(currenttime);
-        //     alert(this.state.starttimevalue);
+        //     return true;
         // }
     }
 
