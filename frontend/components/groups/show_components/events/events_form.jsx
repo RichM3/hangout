@@ -69,11 +69,12 @@ class EventsCreate extends React.Component {
         const newDate = new Date();
         const dateArr = newDate.toString().split(" ");
         const currentDateArr = dateArr.slice(1, 4);
-        const currentDate = currentDateArr.join(" ");
+        // const currentDate = currentDateArr.join(" ");
         const currentTime = dateArr[4].slice(0, 5);
         const stDateCompareArr = this.state.startDate.toString().split(" ").slice(1, 4);
-        const stDateCompare = stDateCompareArr.join(" ");
+        // const stDateCompare = stDateCompareArr.join(" ");
 
+        // This allows me a dryer version of the code with less variables and steps
         if (JSON.stringify(stDateCompareArr) === JSON.stringify(currentDateArr) && this.state.starttimevalue < currentTime) {
             alert("Can't create an event in the past");
             return false;
