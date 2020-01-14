@@ -200,6 +200,13 @@ class GroupsShow extends React.Component {
                 </div>
             </div>
 
+
+
+
+
+
+
+
             <LowerSectionContainer type={this.state.lowerComponent} desc={this.props.group.description} leaderName={this.props.group.leaderName} groupId={this.state.groupId}/>
 
             <FooterContainer myType={"groups"} />
