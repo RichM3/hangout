@@ -13,21 +13,6 @@ class EventsShow extends React.Component {
         this.declineEvent = this.declineEvent.bind(this);
     }
 
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
     checkRsvps() {
         if (typeof (this.props.rsvp) !== "undefined") {
             if (this.props.rsvp.attending === true) {
