@@ -30,3 +30,5 @@ bundle.js
 bundle.js-map
 node_modules
 
+master.key__bkup
+credentials.yml.enc__bkup

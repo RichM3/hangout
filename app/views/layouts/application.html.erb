@@ -6,8 +6,13 @@
     <!--  <link rel="shortcut icon" href="https://previews.123rf.com/images/mtkang/mtkang1108/mtkang110800012/10232896-fire-alphabets-in-flame-letter-h.jpg" type="image/x-icon"> -->
 
     <!-- application.html.erb -->
-    <script type="text/javascript">
 
+    <!-- This is the code from Brian I may need later -->
+    <!-- <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{Rails.application.credentials.google[:api_key]}" %> --> 
+      
+    <script type="text/javascript">
+    
+      window.googleAPIKey = "<%= Rails.application.credentials.google[:api_key] %>"
       window.wafflesURL = "<%= image_url('wafflejoke.png') %>";
       window.magnifyURL = "<%= image_url('magnify.png') %>";
 
