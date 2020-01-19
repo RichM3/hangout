@@ -100,3 +100,8 @@ Ruby on Rails 5.2.3     -- rails -v
 PostgreSQL
 webpack 4.41.0          -- npm list webpack
 
+
+Added code to the master.key file and credentials.yml.enc by using command:
+bundle exec rails credentials:edit
+-- then save and close file at top "x" and the editor in the terminal should update
+
