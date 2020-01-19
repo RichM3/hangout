@@ -104,4 +104,5 @@ webpack 4.41.0          -- npm list webpack
 Added code to the master.key file and credentials.yml.enc by using command:
 bundle exec rails credentials:edit
 -- then save and close file at top "x" and the editor in the terminal should update
+-- Also updated heroku env vars to match the RAILS_MASTER_KEY value so the dev env and prod env match - in the heroku dashboard
 
