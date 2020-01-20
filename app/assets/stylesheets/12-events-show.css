@@ -176,3 +176,7 @@
     width: 35%;
 }
 
+.map-container {
+    width: 300px;
+    height: 300px;
+}

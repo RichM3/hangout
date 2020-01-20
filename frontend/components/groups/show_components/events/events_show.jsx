@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import NavbarContainer from '../../../navbar/navbar_container';
 import FooterContainer from '../../../footer/footer_container';
+import EventsMap from '../../../map_features/events_map';
 
 class EventsShow extends React.Component {
     constructor(props) {
@@ -197,7 +198,8 @@ class EventsShow extends React.Component {
                             <div className="event-data-title">Details</div>
                             <div>{this.props.event.description}</div>
                         </div>
-                        <div className="event-map-section">map goes here</div>
+                        {/* <div className="event-map-section">map goes here</div> */}
+                        <EventsMap />
                     </div>
                 </div>
 
