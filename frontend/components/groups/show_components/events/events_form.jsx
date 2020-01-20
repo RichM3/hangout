@@ -28,6 +28,7 @@ class EventsCreate extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.convertDates = this.convertDates.bind(this);
         this.createEvent = this.createEvent.bind(this);
+        this.setNewLocation = this.setNewLocation.bind(this);
     }
 
     update(field) {
@@ -182,6 +183,11 @@ class EventsCreate extends React.Component {
     }
 
     componentDidMount() {
+
+        // Testing for map location
+        this.locationFinder = new google.maps.places.Autocomplete(this.locationFinderNode);
+        this.locationFinder.addListener('place_changed', this.setNewLocation)
+
         if (this.props.event.starttime === "") {
             const newDt = new Date();
             this.formatDate(newDt);
@@ -193,6 +199,15 @@ class EventsCreate extends React.Component {
             let et = this.formatTime(this.props.event.endtime);
             this.setState({ endtimevalue: et })
         }
+    }
+
+    setNewLocation() {
+        const place = this.locationFinder.getPlace()
+        // this.setState({
+        //     address: place.formatted_address,
+        //     lat: place.geometry.location.lat(),
+        //     lng: place.geometry.location.lng()
+        // })
     }
 
     render() {
@@ -278,6 +293,13 @@ class EventsCreate extends React.Component {
                     <div className="event-inner-item-container-btn">
                         <input className="event-create-submit" type="submit" value="Submit" />
                     </div>
+
+                    {/* Event Location Section (Map API - Google Maps) ---- Testing */}
+                    <div className="event-inner-item-container">
+                        <label htmlFor="locationMapTesting">Location Map Testing:</label>
+                        <input className="event-create-container-input" type="text" autoComplete="off" name="locationMapTesting" id="locationMapTesting" onChange={this.update('locationMapTesting')} ref={locationFinderNode => this.locationFinderNode = locationFinderNode} />
+                    </div>
+
                 </div>
             </form>
         </div>

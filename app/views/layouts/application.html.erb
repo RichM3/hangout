@@ -8,8 +8,11 @@
     <!-- application.html.erb -->
 
     <!-- This is the code from Brian I may need later -->
-    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{Rails.application.credentials.google[:api_key]}" %>
-      
+    <!-- <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{Rails.application.credentials.google[:api_key]}" %> -->
+    <!-- must include the &libraries=places to include autofill -->
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{Rails.application.credentials.google[:api_key]}&libraries=places" %>
+
+
     <script type="text/javascript">
     
       window.googleAPIKey = "<%= Rails.application.credentials.google[:api_key] %>"
