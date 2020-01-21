@@ -62,11 +62,21 @@ const EventsIndexItem = props => {
                         <div className="event-data" >{props.event.description}</div>
                     </div>
 
+
+
+
+
+
+
+
+
+
+
                     <div className="event-box">
                         <div className="group_show_icons" >
                             <img src={map} />
                         </div>
-                        <div className="event-loc" >&nbsp;&nbsp;{props.event.location}</div>
+                        {/* <div className="event-loc" >&nbsp;&nbsp;{props.event.location}</div> */}
                     </div>
                 </div>
                 </Link>
