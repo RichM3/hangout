@@ -66,6 +66,8 @@ const EventsIndexItem = props => {
                         <div className="group_show_icons" >
                             <img src={map} />
                         </div>
+                            <div className="event-loc" >&nbsp;&nbsp;{props.event.lat}</div>
+                            <div className="event-loc" >&nbsp;&nbsp;{props.event.lng}</div>
                         {/* <div className="event-loc" >&nbsp;&nbsp;{props.event.location}</div> */}
                     </div>
                 </div>

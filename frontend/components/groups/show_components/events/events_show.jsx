@@ -171,7 +171,9 @@ class EventsShow extends React.Component {
                             <div className="event-show-icon" >
                                 <img src={map} />
                             </div>
-                            <div className="event-loc-img" >&nbsp;&nbsp;{this.props.event.location}</div>
+                            {/* <div className="event-loc-img" >&nbsp;&nbsp;{this.props.event.location}</div> */}
+                            <div className="event-loc-img" >&nbsp;&nbsp;{this.props.event.lat}</div>
+                            <div className="event-loc-img" >&nbsp;&nbsp;{this.props.event.lng}</div>
                         </div>
 
                         <div className="event-edit-link-div">Hosted by <Link to={`/groups/${this.props.group.id}/`} className="event-edit-link" >{this.props.group.groupname}</Link></div>
@@ -199,7 +201,8 @@ class EventsShow extends React.Component {
                             <div>{this.props.event.description}</div>
                         </div>
                         {/* <div className="event-map-section">map goes here</div> */}
-                        <EventsMap />
+                        <div className="event-map-section"><EventsMap /></div>
+                        
                     </div>
                 </div>
 

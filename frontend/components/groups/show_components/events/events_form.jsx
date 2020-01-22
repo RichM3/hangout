@@ -40,10 +40,14 @@ class EventsCreate extends React.Component {
     handleSubmit(e) {
         e.preventDefault()
 
-        // Error checking needs to use error on page not in alert format
-        if (this.errorcheck() ) {
-            this.convertDates();
-        }
+        // this.setState({ locationMapTesting: })
+
+        alert(this.state.locationMapTesting);
+
+        // // Error checking needs to use error on page not in alert format
+        // if (this.errorcheck() ) {
+        //     this.convertDates();
+        // }
     }
 
     createEvent() {
@@ -241,11 +245,17 @@ class EventsCreate extends React.Component {
                                 <textarea type="text" autoComplete="off" name="description" id="description" onChange={this.update('description')} value={this.state.description}/>
                     </div>
 
-                    {/* Event Location Section (Map API - Google Maps)  */}
+                    {/* Event Location Section (Map API - Google Maps) */}
                     <div className="event-inner-item-container">
+                        <label htmlFor="locationMapTesting">Location:</label>
+                                <input className="event-create-container-input" type="text" autoComplete="off" name="locationMapTesting" id="locationMapTesting" onChange={this.update('locationMapTesting')} onBlur={this.update('locationMapTesting')} ref={locationFinderNode => this.locationFinderNode = locationFinderNode} />
+                    </div>
+
+                    {/* Event Location Section -- Old text location  */}
+                    {/* <div className="event-inner-item-container">
                         <label htmlFor="location">Location:</label>
                                 <input className="event-create-container-input" type="text" autoComplete="off" name="location" id="location" onChange={this.update('location')} value={this.state.location}/>
-                    </div>
+                    </div> */}
 
                     <div className="spacer"> </div>
 
@@ -292,12 +302,6 @@ class EventsCreate extends React.Component {
 
                     <div className="event-inner-item-container-btn">
                         <input className="event-create-submit" type="submit" value="Submit" />
-                    </div>
-
-                    {/* Event Location Section (Map API - Google Maps) ---- Testing */}
-                    <div className="event-inner-item-container">
-                        <label htmlFor="locationMapTesting">Location Map Testing:</label>
-                        <input className="event-create-container-input" type="text" autoComplete="off" name="locationMapTesting" id="locationMapTesting" onChange={this.update('locationMapTesting')} ref={locationFinderNode => this.locationFinderNode = locationFinderNode} />
                     </div>
 
                 </div>
