@@ -251,22 +251,6 @@ class EventsCreate extends React.Component {
                                 <input className="event-create-container-input" type="text" autoComplete="off" name="locationMapTesting" id="locationMapTesting" onChange={this.update('locationMapTesting')} onBlur={this.update('locationMapTesting')} ref={locationFinderNode => this.locationFinderNode = locationFinderNode} />
                     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                     {/* Event Location Section -- Old text location  */}
                     {/* <div className="event-inner-item-container">
                         <label htmlFor="location">Location:</label>
