@@ -3,12 +3,15 @@ import EventsIndex from './events_index';
 import { fetchGroupEvents } from '../../../../actions/event_actions';
 
 const mapStateToProps = ({ session, entities: { users, groups, events } }, ownProps) => {
+
+    const allEvents = events ? Object.values(events) : [];
+    const sorted = allEvents.sort((a, b) => (a.starttime > b.starttime) ? 1 : -1);
+
     let currentUser = users[session.id];
     let groupId = ownProps.groupId;
-    const allEvents = events ? Object.values(events) : []
 
     return ({
-        allEvents: allEvents,
+        allEvents: sorted,
         currentUser: currentUser,
         groupId: groupId
     })

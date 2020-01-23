@@ -28,7 +28,9 @@ export const createEvent = (event) => {
             event: {
                 eventname: event.eventname,
                 description: event.description,
-                location: event.location,
+                // location: event.location,
+                lat: event.lat,
+                lng: event.lng,
                 starttime: event.starttime,
                 endtime: event.endtime,
                 // starttime: start,

@@ -31,6 +31,13 @@ class EventsCreate extends React.Component {
         this.setNewLocation = this.setNewLocation.bind(this);
     }
 
+    setLocation() {
+        // debugger
+        // const locValue = document.getElementById('location').value ? document.getElementById('location').value : "";
+        const locValue = document.getElementById('location').value;
+        this.setState({ location: locValue });
+    }
+
     update(field) {
         return e => this.setState({
             [field]: e.target.value
@@ -38,16 +45,31 @@ class EventsCreate extends React.Component {
     }
 
     handleSubmit(e) {
-        e.preventDefault()
+        e.preventDefault();
 
-        // this.setState({ locationMapTesting: })
-
-        alert(this.state.locationMapTesting);
-
-        // // Error checking needs to use error on page not in alert format
-        // if (this.errorcheck() ) {
-        //     this.convertDates();
+        // debugger
+        // if (this.state.location === this.state.address) {
+        //     alert("MATCH");
+        // } else {
+        //     alert("Fail to match");
         // }
+
+        // alert(this.state.location);
+        // alert(this.state.address);
+
+        // this.locationInvalid();
+
+
+
+        // // Map testing getting name and lat/lng
+        // alert(this.state.address);
+        // alert(this.state.lat);
+        // alert(this.state.lng);
+
+        // Error checking needs to use error on page not in alert format
+        if (this.errorcheck() ) {
+            this.convertDates();
+        }
     }
 
     createEvent() {
@@ -63,7 +85,7 @@ class EventsCreate extends React.Component {
     }
 
     errorcheck() {
-        if (this.verifyEventName() && this.verifyEventDesc() && this.verifyLocation() && this.verifyDate() && this.verifyStartTimeValue() && this.verifyEndTime() && this.ensureEndGtrStart() && this.eventTimeB4CurrentTime() ) {
+        if (this.verifyEventName() && this.verifyEventDesc() && this.verifyLocation() && this.verifyDate() && this.verifyStartTimeValue() && this.verifyEndTime() && this.ensureEndGtrStart() && this.eventTimeB4CurrentTime() && this.locationInvalid() ) {
             return true;
         } else {
             return false
@@ -81,7 +103,7 @@ class EventsCreate extends React.Component {
 
         // This allows me a dryer version of the code with less variables and steps
         if (JSON.stringify(stDateCompareArr) === JSON.stringify(currentDateArr) && this.state.starttimevalue < currentTime) {
-            alert("Can't create an event in the past");
+            alert("Can't create an event in the past, please check the date");
             return false;
         } else {
             return true;
@@ -95,10 +117,25 @@ class EventsCreate extends React.Component {
         // }
     }
 
+    locationInvalid() {
+        // alert('in locFail');
+        // debugger
+        if (this.state.location !== this.state.address) {
+        // if (this.state.location === this.state.address) {
+            alert("Please fill in a proper location");
+            document.getElementById("location").select();
+            // document.getElementById("location").focus();
+            return false;
+        } else {
+            return true;
+        }
+    }
+
     ensureEndGtrStart() {
         if (this.state.starttimevalue >= this.state.endtimevalue) {
             alert("End time is before start time");
-            document.getElementById("endtimevalue").focus();
+            document.getElementById("endtimevalue").select();
+            // document.getElementById("endtimevalue").focus();
             return false;
         } else {
             return true;
@@ -107,7 +144,9 @@ class EventsCreate extends React.Component {
     
     verifyEventName() {
         if (this.state.eventname.trim() === '') {
-            document.getElementById("eventname").focus();
+            alert("Event name may not be blank");
+            document.getElementById("eventname").select();
+            // document.getElementById("eventname").focus();
             return false;
         }
         return true;
@@ -115,7 +154,9 @@ class EventsCreate extends React.Component {
 
     verifyEventDesc() {
         if (this.state.description.trim() === '') {
-            document.getElementById("description").focus();
+            alert("Event description may not be blank");
+            document.getElementById("description").select();
+            // document.getElementById("description").focus();
             return false;
         }
         return true;
@@ -123,7 +164,9 @@ class EventsCreate extends React.Component {
 
     verifyLocation() {
         if (this.state.location.trim() === '') {
-            document.getElementById("location").focus();
+            alert("Event location may not be blank");
+            document.getElementById("location").select();
+            // document.getElementById("location").focus();
             return false;
         }
         return true;
@@ -131,8 +174,9 @@ class EventsCreate extends React.Component {
 
     verifyDate() {
         if (typeof (this.state.date) === "undefined") {
-            // alert("All events require a date ");
-            document.getElementById("eventdate").focus();
+            alert("All events require a date ");
+            document.getElementById("eventdate").select();
+            // document.getElementById("eventdate").focus();
             window.scrollTo(0, 300)
 
             return false;
@@ -142,8 +186,9 @@ class EventsCreate extends React.Component {
 
     verifyStartTimeValue() {
         if (this.state.starttimevalue.trim() === '') {            
-            // alert("All events require a start time");
-            document.getElementById("starttimevalue").focus();
+            alert("All events require a start time");
+            document.getElementById("starttimevalue").select();
+            // document.getElementById("starttimevalue").focus();
             return false;
         }
         return true;
@@ -151,8 +196,9 @@ class EventsCreate extends React.Component {
 
     verifyEndTime() {
         if (this.state.endtimevalue.trim() === '') {
-            // alert("All events require a start time");
-            document.getElementById("endtimevalue").focus();
+            alert("All events require a end time");
+            document.getElementById("endtimevalue").select();
+            // document.getElementById("endtimevalue").focus();
             return false;
         }
         return true;
@@ -207,11 +253,12 @@ class EventsCreate extends React.Component {
 
     setNewLocation() {
         const place = this.locationFinder.getPlace()
-        // this.setState({
-        //     address: place.formatted_address,
-        //     lat: place.geometry.location.lat(),
-        //     lng: place.geometry.location.lng()
-        // })
+        this.setState({
+            location: place.formatted_address, 
+            address: place.formatted_address,
+            lat: place.geometry.location.lat(),
+            lng: place.geometry.location.lng()
+        })
     }
 
     render() {
@@ -247,15 +294,9 @@ class EventsCreate extends React.Component {
 
                     {/* Event Location Section (Map API - Google Maps) */}
                     <div className="event-inner-item-container">
-                        <label htmlFor="locationMapTesting">Location:</label>
-                                <input className="event-create-container-input" type="text" autoComplete="off" name="locationMapTesting" id="locationMapTesting" onChange={this.update('locationMapTesting')} onBlur={this.update('locationMapTesting')} ref={locationFinderNode => this.locationFinderNode = locationFinderNode} />
-                    </div>
-
-                    {/* Event Location Section -- Old text location  */}
-                    {/* <div className="event-inner-item-container">
                         <label htmlFor="location">Location:</label>
-                                <input className="event-create-container-input" type="text" autoComplete="off" name="location" id="location" onChange={this.update('location')} value={this.state.location}/>
-                    </div> */}
+                                <input className="event-create-container-input" type="text" autoComplete="off" name="location" id="location" onChange={this.update('location')} ref={locationFinderNode => this.locationFinderNode = locationFinderNode} onBlur={() => this.setLocation('location')}/>
+                    </div>
 
                     <div className="spacer"> </div>
 
