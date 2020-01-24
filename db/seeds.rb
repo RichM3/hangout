@@ -240,7 +240,7 @@ UG20 = Usergroup.create!(
 Event1 = Event.create!(
     eventname: "Animations and keysframes",
     description: "Discussion of CSS animations and keyframes and other great tools; -- In software packages that support animation, especially 3D graphics, there are many parameters that can be changed for any one object. One example of such an object is a light (In 3D graphics, lights function similarly to real-world lights. They cause illumination, cast shadows, and create specular highlights). Lights have many parameters including light intensity, beam size, light color, and the texture cast by the light. Supposing that an animator wants the beam size to change smoothly from one value to another within a predefined period of time, that could be achieved by using keyframes. At the start of the animation, a beam size value is set. Another value is set for the end of the animation. Thus, the software program automatically interpolates the two values, creating a smooth transition.",
-    # location: "AWS downtown NYC",
+    location: "700-798 Oak St, San Francisco, CA 94117",
     lat: 37.773972,
     lng: -122.431297,
     starttime: '03/03/2020 09:30:00',
@@ -257,7 +257,7 @@ Rsvp1 = Rsvp.create!(
 Event2 = Event.create!(
     eventname: "Hover effects",
     description: "Hover effects and the many great uses; -- In computing, a mouseover, mouse hover or hover box is a graphical control element that is activated when the user moves or hovers the pointer over a trigger area, usually with a mouse, but also possible with a digital pen. Mouseover control elements are common in web browsers. For example, hovering over a hyperlink triggers the mouseover control element to display a URL on the status bar. Site designers can define their own mouseover events using JavaScript[1] or Cascading Style Sheets.",
-    # location: "Holiday Inn Conference Center on 8th Ave",
+    location: "700-798 Oak St, San Francisco, CA 94117",
     lat: 37.773972,
     lng: -122.431297,
     starttime: '04/04/2020 07:30:00',
@@ -274,7 +274,7 @@ Rsvp2 = Rsvp.create!(
 Event3 = Event.create!(
     eventname: "Coffee vs Espresso",
     description: "Espresso or Coffee, which one is better? -- Espresso is generally thicker than coffee brewed by other methods, has a higher concentration of suspended and dissolved solids, and has crema on top (a foam with a creamy consistency).[1] As a result of the pressurized brewing process, the flavors and chemicals in a typical cup of espresso are very concentrated. The three dispersed phases in espresso are what make this beverage so unique. The first dispersed phase is an emulsion of oil droplets. The second phase is suspended solids, while the third is the layer of gas bubbles or foam. The dispersion of very small oil droplets is perceived in the mouth as creamy. This characteristic of espresso contributes to what is known as the body of the beverage. These oil droplets preserve some of the aromatic compounds that are lost to the air in other coffee forms. This preserves the strong coffee flavor present in the espresso. [2] Espresso is also the base for other types of coffee, including caffè latte, cappuccino, caffè macchiato, caffè mocha, flat white, or caffè Americano.",
-    # location: "Starbucks on 5th",
+    location: "700-798 Oak St, San Francisco, CA 94117",
     lat: 37.773972,
     lng: -122.431297,
     starttime: '12/03/2020 05:30:00',
@@ -292,7 +292,7 @@ Rsvp3 = Rsvp.create!(
 Event4 = Event.create!(
     eventname: "Superbowl 2020",
     description: "For all those who want to watch even without the Broncos? -- Super Bowl LIV, the 54th Super Bowl and the 50th modern-era National Football League (NFL) championship game will decide the league champion for the league's 2019 and 100th season. The game is scheduled to be played on February 2, 2020 at Hard Rock Stadium in Miami Gardens, Florida, marking the seventh different decade for the Super Bowl. This will be the 11th Super Bowl hosted by the South Florida region and the sixth Super Bowl hosted in Miami Gardens, which hosted Super Bowl XLIV ten years earlier.",
-    # location: "Mile High Stadium",
+    location: "700-798 Oak St, San Francisco, CA 94117",
     lat: 37.773972,
     lng: -122.431297,
     starttime: '02/04/2020 18:30:00',
@@ -309,7 +309,7 @@ Rsvp4 = Rsvp.create!(
 Event5 = Event.create!(
     eventname: "After Superbowl 2020",
     description: "Nursing the hangover? A discussion of Superbowl 2020 events -- Super Bowl LIV, the 54th Super Bowl and the 50th modern-era National Football League (NFL) championship game will decide the league champion for the league's 2019 and 100th season. The game is scheduled to be played on February 2, 2020 at Hard Rock Stadium in Miami Gardens, Florida, marking the seventh different decade for the Super Bowl. This will be the 11th Super Bowl hosted by the South Florida region and the sixth Super Bowl hosted in Miami Gardens, which hosted Super Bowl XLIV ten years earlier.",
-    # location: "Mile High Stadium",
+    location: "700-798 Oak St, San Francisco, CA 94117",
     lat: 37.773972,
     lng: -122.431297,
     starttime: '02/05/2020 18:30:00',

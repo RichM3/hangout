@@ -12,10 +12,11 @@
 #  updated_at  :datetime         not null
 #  lat         :float            not null
 #  lng         :float            not null
+#  location    :string           not null
 #
 
 class Event < ApplicationRecord
-    validates :eventname, :description, :lat, :lng, :starttime, :endtime, :group_id, presence: true
+    validates :eventname, :description, :lat, :lng, :location, :starttime, :endtime, :group_id, presence: true
 
     belongs_to :group,
         primary_key: :id,

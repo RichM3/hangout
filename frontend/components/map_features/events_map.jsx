@@ -18,21 +18,44 @@ import React from 'react';
 
 
 class EventsMap extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+        };
+    }
+    
 // class MyMap extends React.Component {
     componentDidMount() {
         
         const mapOptions = {
             center: {
-                lat: 37.773972,
-                lng: -122.431297
-            }, // San Francisco coords
+                lat: this.props.lat,
+                lng: this.props.lng
+            },
             zoom: 13
         };
 
         var myLatLng = { 
-            lat: 37.773972,
-            lng: -122.431297
+            lat: this.props.lat,
+            lng: this.props.lng
         };
+
+
+
+        // const mapOptions = {
+        //     center: {
+        //         lat: 37.773972,
+        //         lng: -122.431297
+        //     }, // San Francisco coords
+        //     zoom: 13
+        // };
+
+        // var myLatLng = {
+        //     lat: 37.773972,
+        //     lng: -122.431297
+        // };
+
+
 
 
         // const map = this.refs.map;
@@ -41,7 +64,7 @@ class EventsMap extends React.Component {
         var marker = new google.maps.Marker({
             position: myLatLng,
             map: this.map,
-            title: 'Hello World!'
+            title: 'Event Location'
         });
 
 

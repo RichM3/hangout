@@ -28,7 +28,7 @@ export const createEvent = (event) => {
             event: {
                 eventname: event.eventname,
                 description: event.description,
-                // location: event.location,
+                location: event.location,
                 lat: event.lat,
                 lng: event.lng,
                 starttime: event.starttime,
@@ -69,12 +69,22 @@ export const updateEvent = (event) => {
         url: `api/events/${event.id}`,
         data: {
             event: {
+
                 eventname: event.eventname,
                 description: event.description,
                 location: event.location,
+                lat: event.lat,
+                lng: event.lng,
                 starttime: event.starttime,
                 endtime: event.endtime,
                 group_id: event.group_id
+
+                // eventname: event.eventname,
+                // description: event.description,
+                // location: event.location,
+                // starttime: event.starttime,
+                // endtime: event.endtime,
+                // group_id: event.group_id
             }
         }
     })

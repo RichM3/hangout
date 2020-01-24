@@ -5,6 +5,7 @@ import {fetchGroups} from '../../../../actions/group_actions';
 import {fetchAllRsvps, createRsvp, updateRsvp } from '../../../../actions/rsvp_actions';
 
 const msp = (state, ownProps) => {
+
     let currentUser = state.entities.users[state.session.id];
 
     let group = {};

@@ -32,7 +32,6 @@ class EventsCreate extends React.Component {
     }
 
     setLocation() {
-        // debugger
         // const locValue = document.getElementById('location').value ? document.getElementById('location').value : "";
         const locValue = document.getElementById('location').value;
         this.setState({ location: locValue });
@@ -47,7 +46,6 @@ class EventsCreate extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
 
-        // debugger
         // if (this.state.location === this.state.address) {
         //     alert("MATCH");
         // } else {
@@ -75,13 +73,35 @@ class EventsCreate extends React.Component {
     createEvent() {
         // Code if action is CreateEvent - Create an RSVP too
         // Code nothing new for an RSVP if edit event
+
+        // Old code from before map
         this.props.action(this.state)
             .then(() => this.props.history.push(`/events/show/${this.props.event.id}`));
+
+
+        // this.props.action(this.state)
+        //     .then(() => this.props.history.push({
+        //         pathname: `/events/show/${this.props.event.id}`,
+        //         eventProps: { lat:`${this.state.lat}`, lng:`${this.state.lng}` }
+        //     }));
+
+    //     this.props.history.push({
+    //         pathname: 'benches/new',
+    //         search: `lat=${coords.lat}&lng=${coords.lng}`
+    //     });
+
+
+
+
 
         // // this.props.createEvent(this.state)
         // this.props.action(this.state)
         //     .then(() => this.props.history.push(`/groups/${this.state.group_id}`));
         //     // .then(() => this.props.router.push(`/groups/${this.state.group_id}`));
+    }
+
+    selectAll() {
+        document.getElementById("location").select();
     }
 
     errorcheck() {
@@ -118,10 +138,7 @@ class EventsCreate extends React.Component {
     }
 
     locationInvalid() {
-        // alert('in locFail');
-        // debugger
         if (this.state.location !== this.state.address) {
-        // if (this.state.location === this.state.address) {
             alert("Please fill in a proper location");
             document.getElementById("location").select();
             // document.getElementById("location").focus();
@@ -238,6 +255,10 @@ class EventsCreate extends React.Component {
         this.locationFinder = new google.maps.places.Autocomplete(this.locationFinderNode);
         this.locationFinder.addListener('place_changed', this.setNewLocation)
 
+        if (this.state.location !== '') {
+            this.state.address = this.state.location;
+        }
+
         if (this.props.event.starttime === "") {
             const newDt = new Date();
             this.formatDate(newDt);
@@ -295,7 +316,7 @@ class EventsCreate extends React.Component {
                     {/* Event Location Section (Map API - Google Maps) */}
                     <div className="event-inner-item-container">
                         <label htmlFor="location">Location:</label>
-                                <input className="event-create-container-input" type="text" autoComplete="off" name="location" id="location" onChange={this.update('location')} ref={locationFinderNode => this.locationFinderNode = locationFinderNode} onBlur={() => this.setLocation('location')}/>
+                                <input className="event-create-container-input" type="text" autoComplete="off" name="location" id="location" value={this.state.location} onFocus={() => this.selectAll()} onChange={this.update('location')} ref={locationFinderNode => this.locationFinderNode = locationFinderNode} onBlur={() => this.setLocation('location')}/>
                     </div>
 
                     <div className="spacer"> </div>
