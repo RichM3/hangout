@@ -175,8 +175,10 @@ class EventsShow extends React.Component {
                                 <img src={map} />
                             </div>
                             <div className="event-loc-img" >&nbsp;&nbsp;{this.props.event.location}</div>
-                            {/* <div className="event-loc-img" >&nbsp;&nbsp;{this.props.event.lat}</div> */}
-                            {/* <div className="event-loc-img" >&nbsp;&nbsp;{this.props.event.lng}</div> */}
+
+                            {/* use these for idenifying lat n lng for seed data - don't display in production */}
+                            {/* <div className="event-loc-img" >&nbsp;&nbsp;{this.props.event.lat}</div>
+                            <div className="event-loc-img" >&nbsp;&nbsp;{this.props.event.lng}</div> */}
                         </div>
 
                         <div className="event-edit-link-div">Hosted by <Link to={`/groups/${this.props.group.id}/`} className="event-edit-link" >{this.props.group.groupname}</Link></div>
