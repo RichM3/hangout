@@ -65,8 +65,9 @@ const mdp = (dispatch) => {
         deleteEvent: (eventId) => dispatch(deleteEvent(eventId)),
         fetchAllRsvps: (eventId) => dispatch(fetchAllRsvps(eventId)),
         createRsvp: (rsvp) => dispatch(createRsvp(rsvp)),
-        updateRsvp: (rsvp) => dispatch(updateRsvp(rsvp)),
-        fetchGroups: () => dispatch(fetchGroups())
+        updateRsvp: (rsvp) => dispatch(updateRsvp(rsvp))
+        // ,
+        // fetchGroups: () => dispatch(fetchGroups())
     })
 }
 

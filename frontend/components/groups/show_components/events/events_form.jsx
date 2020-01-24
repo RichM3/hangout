@@ -2,6 +2,8 @@ import React from 'react';
 import NavbarContainer from '../../../navbar/navbar_container';
 import FooterContainer from '../../../footer/footer_container';
 
+import { withRouter } from 'react-router-dom';
+
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
 import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'react-dates';
@@ -40,6 +42,7 @@ class EventsCreate extends React.Component {
 
     createEvent() {
         this.props.action(this.state)
+            // .then(() => this.props.history.push(`/events/show/${this.props.event.id}`));
             .then(() => this.props.history.push(`/events/show/${this.props.event.id}`));
     }
 
@@ -301,4 +304,5 @@ class EventsCreate extends React.Component {
 
 }
 
-export default EventsCreate;
+// export default EventsCreate;
+export default withRouter(EventsCreate);
