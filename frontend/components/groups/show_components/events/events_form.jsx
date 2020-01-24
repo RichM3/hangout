@@ -14,17 +14,6 @@ class EventsCreate extends React.Component {
         super(props);
 
         this.state = this.props.event;
-        // this.state = {
-        //     eventname: '',
-        //     description: '',
-        //     location: '',
-        //     startDate: '',
-        //     starttimevalue: '',
-        //     endtimevalue: '',
-        //     starttime: '',  //this is for the db insert value - concat time and date
-        //     endtime: '',    //this is for the db insert value
-        //     groupId: ''
-        // }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.convertDates = this.convertDates.bind(this);
         this.createEvent = this.createEvent.bind(this);
@@ -32,7 +21,6 @@ class EventsCreate extends React.Component {
     }
 
     setLocation() {
-        // const locValue = document.getElementById('location').value ? document.getElementById('location').value : "";
         const locValue = document.getElementById('location').value;
         this.setState({ location: locValue });
     }
@@ -46,24 +34,6 @@ class EventsCreate extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
 
-        // if (this.state.location === this.state.address) {
-        //     alert("MATCH");
-        // } else {
-        //     alert("Fail to match");
-        // }
-
-        // alert(this.state.location);
-        // alert(this.state.address);
-
-        // this.locationInvalid();
-
-
-
-        // // Map testing getting name and lat/lng
-        // alert(this.state.address);
-        // alert(this.state.lat);
-        // alert(this.state.lng);
-
         // Error checking needs to use error on page not in alert format
         if (this.errorcheck() ) {
             this.convertDates();
@@ -71,33 +41,8 @@ class EventsCreate extends React.Component {
     }
 
     createEvent() {
-        // Code if action is CreateEvent - Create an RSVP too
-        // Code nothing new for an RSVP if edit event
-
-        // Old code from before map
         this.props.action(this.state)
             .then(() => this.props.history.push(`/events/show/${this.props.event.id}`));
-
-
-        // this.props.action(this.state)
-        //     .then(() => this.props.history.push({
-        //         pathname: `/events/show/${this.props.event.id}`,
-        //         eventProps: { lat:`${this.state.lat}`, lng:`${this.state.lng}` }
-        //     }));
-
-    //     this.props.history.push({
-    //         pathname: 'benches/new',
-    //         search: `lat=${coords.lat}&lng=${coords.lng}`
-    //     });
-
-
-
-
-
-        // // this.props.createEvent(this.state)
-        // this.props.action(this.state)
-        //     .then(() => this.props.history.push(`/groups/${this.state.group_id}`));
-        //     // .then(() => this.props.router.push(`/groups/${this.state.group_id}`));
     }
 
     selectAll() {
@@ -116,10 +61,8 @@ class EventsCreate extends React.Component {
         const newDate = new Date();
         const dateArr = newDate.toString().split(" ");
         const currentDateArr = dateArr.slice(1, 4);
-        // const currentDate = currentDateArr.join(" ");
         const currentTime = dateArr[4].slice(0, 5);
         const stDateCompareArr = this.state.startDate.toString().split(" ").slice(1, 4);
-        // const stDateCompare = stDateCompareArr.join(" ");
 
         // This allows me a dryer version of the code with less variables and steps
         if (JSON.stringify(stDateCompareArr) === JSON.stringify(currentDateArr) && this.state.starttimevalue < currentTime) {
@@ -128,20 +71,12 @@ class EventsCreate extends React.Component {
         } else {
             return true;
         }
-
-        // if (stDateCompare === currentDate && this.state.starttimevalue < currentTime) {
-        //     alert("Can't create an event in the past");
-        //     return false;
-        // } else {
-        //     return true;
-        // }
     }
 
     locationInvalid() {
         if (this.state.location !== this.state.address) {
             alert("Please fill in a proper location");
             document.getElementById("location").select();
-            // document.getElementById("location").focus();
             return false;
         } else {
             return true;
@@ -152,7 +87,6 @@ class EventsCreate extends React.Component {
         if (this.state.starttimevalue >= this.state.endtimevalue) {
             alert("End time is before start time");
             document.getElementById("endtimevalue").select();
-            // document.getElementById("endtimevalue").focus();
             return false;
         } else {
             return true;
@@ -162,8 +96,7 @@ class EventsCreate extends React.Component {
     verifyEventName() {
         if (this.state.eventname.trim() === '') {
             alert("Event name may not be blank");
-            document.getElementById("eventname").select();
-            // document.getElementById("eventname").focus();
+            document.getElementById("eventname").focus();
             return false;
         }
         return true;
@@ -172,8 +105,7 @@ class EventsCreate extends React.Component {
     verifyEventDesc() {
         if (this.state.description.trim() === '') {
             alert("Event description may not be blank");
-            document.getElementById("description").select();
-            // document.getElementById("description").focus();
+            document.getElementById("description").focus();
             return false;
         }
         return true;
@@ -182,8 +114,7 @@ class EventsCreate extends React.Component {
     verifyLocation() {
         if (this.state.location.trim() === '') {
             alert("Event location may not be blank");
-            document.getElementById("location").select();
-            // document.getElementById("location").focus();
+            document.getElementById("location").focus();
             return false;
         }
         return true;
@@ -193,7 +124,6 @@ class EventsCreate extends React.Component {
         if (typeof (this.state.date) === "undefined") {
             alert("All events require a date ");
             document.getElementById("eventdate").select();
-            // document.getElementById("eventdate").focus();
             window.scrollTo(0, 300)
 
             return false;
@@ -205,7 +135,6 @@ class EventsCreate extends React.Component {
         if (this.state.starttimevalue.trim() === '') {            
             alert("All events require a start time");
             document.getElementById("starttimevalue").select();
-            // document.getElementById("starttimevalue").focus();
             return false;
         }
         return true;
@@ -215,7 +144,6 @@ class EventsCreate extends React.Component {
         if (this.state.endtimevalue.trim() === '') {
             alert("All events require a end time");
             document.getElementById("endtimevalue").select();
-            // document.getElementById("endtimevalue").focus();
             return false;
         }
         return true;
@@ -226,16 +154,14 @@ class EventsCreate extends React.Component {
         let sDate = dt.getFullYear() + "-" +  (dt.getMonth() + 1) + "-" + dt.getDate();
         let sTime = sDate.concat("-").concat(this.state.starttimevalue).concat(":00");
         let eTime = sDate.concat("-").concat(this.state.endtimevalue).concat(":00");
-        // the setState takes a callback here this ensures the state is correct for the submission
+        // setState takes a callback here this ensures the state is correct for the submission
         this.setState({ starttime: sTime, endtime: eTime }, this.createEvent);
     }
 
 
     formatDate(date) {
         const dt = new Date(date);
-        // alert((dt.getMonth() + 1) + "/" + dt.getDate() + "/" + dt.getFullYear());
         let theDate = new Date((dt.getMonth() + 1) + "/" + dt.getDate() + "/" + dt.getFullYear());
-        // alert(theDate);
         this.setState({startDate: theDate})
         this.setState({ date: theDate })
     }
@@ -251,7 +177,7 @@ class EventsCreate extends React.Component {
 
     componentDidMount() {
 
-        // Testing for map location
+        // Sets the location to autofill with Map listings
         this.locationFinder = new google.maps.places.Autocomplete(this.locationFinderNode);
         this.locationFinder.addListener('place_changed', this.setNewLocation)
 
