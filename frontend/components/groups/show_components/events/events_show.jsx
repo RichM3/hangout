@@ -176,6 +176,17 @@ class EventsShow extends React.Component {
                             </div>
                             <div className="event-loc-img" >&nbsp;&nbsp;{this.props.event.location}</div>
 
+
+
+
+
+
+
+
+
+
+
+
                             {/* use these for idenifying lat n lng for seed data - don't display in production */}
                             {/* <div className="event-loc-img" >&nbsp;&nbsp;{this.props.event.lat}</div>
                             <div className="event-loc-img" >&nbsp;&nbsp;{this.props.event.lng}</div> */}
