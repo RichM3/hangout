@@ -19,6 +19,9 @@ class EventsShow extends React.Component {
 
 
 
+
+
+
     
     checkRsvps() {
         if (typeof (this.props.rsvp) !== "undefined") {
