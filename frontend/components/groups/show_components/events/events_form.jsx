@@ -201,6 +201,8 @@ class EventsCreate extends React.Component {
 
 
 
+
+
     
     setNewLocation() {
         const place = this.locationFinder.getPlace()
