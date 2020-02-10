@@ -106,3 +106,7 @@ bundle exec rails credentials:edit
 -- then save and close file at top "x" and the editor in the terminal should update
 -- Also updated heroku env vars to match the RAILS_MASTER_KEY value so the dev env and prod env match - in the heroku dashboard
 
+
+
+Added code for the AWS Migrations and setup the account information in the storage.yml, credentials.yml and added the environment files in config folder
+
