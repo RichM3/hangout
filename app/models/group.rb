@@ -15,6 +15,10 @@ class Group < ApplicationRecord
     validates :groupname, presence: true, uniqueness: true
     validates :leader_id, presence: true
 
+    # code to attach one photo from to the model
+    has_one_attached :photo
+
+
     has_many :events,
         primary_key: :id,
         foreign_key: :group_id,
