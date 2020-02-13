@@ -107,6 +107,5 @@ bundle exec rails credentials:edit
 -- Also updated heroku env vars to match the RAILS_MASTER_KEY value so the dev env and prod env match - in the heroku dashboard
 
 
-
 Added code for AWS Migrations and setup account information in the storage.yml, credentials.yml and added environment files in config folder
 
