@@ -108,4 +108,3 @@ bundle exec rails credentials:edit
 
 
 Added code for AWS Migrations and setup account information in the storage.yml, credentials.yml and added environment files in config folder
-
