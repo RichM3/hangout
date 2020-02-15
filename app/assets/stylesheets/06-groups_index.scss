@@ -94,7 +94,7 @@
     display: table;
 }
 
-.fillerImg {
+.groupItemStyle {
     float: left;
     padding-top: 10px;
     width: 300px;
@@ -105,13 +105,17 @@
     line-height: 1.45;
     font-family: "Graphik Meetup",helvetica,arial,sans-serif;
     font-weight: 900;
-    
+
+    background-size: contain;
+
     // This sets the background image to the image mapped in the window - application.html.erb in views layouts
     // Also must change file extension to scss from css
-    background: { image: asset_url("peopleHangout.png") }
-    background-size: contain;
+
+    // Removed this line on 02/14/2020 when adding code for AWS image source for groups
+    // background: { image: asset_url("peopleHangout.png") }
 }
  
+
 .button-div {
     padding: 10px;
     font-size: 16px;
