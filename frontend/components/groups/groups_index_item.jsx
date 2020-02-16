@@ -9,11 +9,6 @@ const GroupsIndexItem = props => {
         backgroundImage: 'url(' + fillerImg + ')'
     }
 
-
-
-
-
-    
     debugger
     // Can't figure out how to set photoUrl to null yet in JSON
     if (props.group.photoUrl !== "NA") {
