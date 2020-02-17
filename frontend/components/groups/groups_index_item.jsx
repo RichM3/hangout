@@ -2,8 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const GroupsIndexItem = props => {
-    // let fillerImg = window.wafflesURL;
-    
+
     let fillerImg = window.peopleHangoutURL;
 
     let bkImage = {
@@ -21,7 +20,6 @@ const GroupsIndexItem = props => {
 
     return (
 
-        // < div className = { theClass } >
         <div className="groupItemStyle" style={bkImage}>
             <li className="li-formatting">
                 <Link to={`/groups/${props.group.id}`}>{props.group.groupname}</Link>
@@ -35,6 +33,8 @@ export default GroupsIndexItem
 
 
 
+
+// Former production code to be removed after completing AWS testing - Here for reference
 
 
 // This is the production code ----------------------------------------------------
