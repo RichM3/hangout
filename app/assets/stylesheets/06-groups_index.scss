@@ -101,12 +101,19 @@
     height: 150px;
     color: #ffffff;
     margin-left: 15px;
+
+    border-radius: 6px;
+    border: #878787 solid 2px;
+    margin-bottom: 10px;
+
     font-size: 22px;
     line-height: 1.45;
     font-family: "Graphik Meetup",helvetica,arial,sans-serif;
     font-weight: 900;
 
-    background-size: contain;
+    // background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
 
     // This sets the background image to the image mapped in the window - application.html.erb in views layouts
     // Also must change file extension to scss from css

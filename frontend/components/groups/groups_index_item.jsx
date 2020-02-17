@@ -3,18 +3,19 @@ import { Link } from 'react-router-dom';
 
 const GroupsIndexItem = props => {
     // let fillerImg = window.wafflesURL;
+    
     let fillerImg = window.peopleHangoutURL;
 
     let bkImage = {
         backgroundImage: 'url(' + fillerImg + ')'
     }
 
-    debugger
+    // debugger
     // Can't figure out how to set photoUrl to null yet in JSON
     if (props.group.photoUrl !== "NA") {
         // debugger
         bkImage = {
-            backgroundImage: 'url(' + props.group.photo + ')'
+            backgroundImage: 'url(' + props.group.photoUrl + ')'
         }
     }
 
