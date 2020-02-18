@@ -93,6 +93,8 @@ class GroupsCreate extends React.Component {
                         />
                     </div>
 
+
+
                     <div className="inner-image-preview-container">
                         <label htmlFor="preview">Photo Preview:</label>
                         <div className="inner-image-preview-container-img">{preview}</div>
