@@ -18,6 +18,12 @@ class Group < ApplicationRecord
     # code to attach one photo from to the model
     has_one_attached :photo
 
+    # This code ensures a photo is attached to every group or an error will occur
+    def ensure_photo
+        unless self.photo.attached?
+            errors[:photo] << "must be attached"
+        end
+    end
 
     has_many :events,
         primary_key: :id,

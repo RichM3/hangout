@@ -35,27 +35,40 @@ class GroupsCreate extends React.Component {
         });
     }
 
+    validateGroup() {
+        if (this.state.photo) {
+            return true;
+        } else {
+            alert("Photo is required to create a group")
+            return false;
+        }
+    }
+
     handleSubmit(e) {
         e.preventDefault()
 
-        const formData = new FormData();
-        formData.append('group[groupname]', this.state.groupname);
-        formData.append('group[description]', this.state.description);
-        formData.append('group[location]', this.state.location);
-        formData.append('group[leader_id]', this.state.leaderId);
-        formData.append('group[photo]', this.state.photo);
-        
-        // Display the values
-        // for (var value of formData.values()) {
-        //     console.log(value);
-        // }
+        if (this.validateGroup()) { 
+            const formData = new FormData();
+            formData.append('group[groupname]', this.state.groupname);
+            formData.append('group[description]', this.state.description);
+            formData.append('group[location]', this.state.location);
+            formData.append('group[leader_id]', this.state.leaderId);
+            if (this.state.photoUrl) {
+                formData.append('group[photo]', this.state.photo);
+            }
+            
+            // Display the values
+            // for (var value of formData.values()) {
+            //     console.log(value);
+            // }
 
-        this.props.createGroup(formData)
-            .then(() => this.props.history.push('/my-groups'));
+            this.props.createGroup(formData)
+                .then(() => this.props.history.push('/my-groups'));
 
-            //Old data before adding photo -- Note this needs to push to my-groups not groups or the header and footer do not appear on page
-        // this.props.createGroup(this.state)
-        //     .then(() => this.props.history.push('/groups'));
+                //Old data before adding photo -- Note this needs to push to my-groups not groups or the header and footer do not appear on page
+            // this.props.createGroup(this.state)
+            //     .then(() => this.props.history.push('/groups'));
+        }
     }
 
 
