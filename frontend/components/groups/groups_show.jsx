@@ -22,7 +22,7 @@ class GroupsShow extends React.Component {
     deleteGroup(e) {
         e.preventDefault()
         this.props.deleteGroup(this.state.groupId)
-        .then(() => this.props.history.push('/groups'));
+        .then(() => this.props.history.push('/my-groups'));
     }
     
     leaveGroup(e) {

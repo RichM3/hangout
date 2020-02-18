@@ -9,11 +9,25 @@ class GroupsCreate extends React.Component {
             groupname: '',
             description: '',
             location: '',
-            leaderId: this.props.group.leaderId
+            leaderId: this.props.group.leaderId,
+            photo: null,
+            photoUrl: null
         }
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    handleFile(e) {
+        const file = e.currentTarget.files[0]
+        const fileReader = new FileReader();
+
+        fileReader.onloadend = () => {
+            this.setState({photo: file, photoUrl: fileReader.result});
+        }
+
+        if (file) {
+            fileReader.readAsDataURL(file);
+        }
+    }
     
     update(field) {
         return e => this.setState({
@@ -23,12 +37,32 @@ class GroupsCreate extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault()
-        this.props.createGroup(this.state)
-            .then(() => this.props.history.push('/groups'));
+
+        const formData = new FormData();
+        formData.append('group[groupname]', this.state.groupname);
+        formData.append('group[description]', this.state.description);
+        formData.append('group[location]', this.state.location);
+        formData.append('group[leader_id]', this.state.leaderId);
+        formData.append('group[photo]', this.state.photo);
+        
+        // Display the values
+        // for (var value of formData.values()) {
+        //     console.log(value);
+        // }
+
+        this.props.createGroup(formData)
+            .then(() => this.props.history.push('/my-groups'));
+
+            //Old data before adding photo -- Note this needs to push to my-groups not groups or the header and footer do not appear on page
+        // this.props.createGroup(this.state)
+        //     .then(() => this.props.history.push('/groups'));
     }
 
 
     render() {
+
+        const preview = this.state.photoUrl ? <img className="imgPreview" src={this.state.photoUrl} /> : null;
+
         return(
             <>
             <NavbarContainer navType={"groups_create"} myType={""} />
@@ -51,6 +85,19 @@ class GroupsCreate extends React.Component {
                         <label htmlFor="location">Location:</label>
                         <input type="text" autoComplete="off" name="location" id="location" onChange={this.update('location')} />
                     </div>
+
+                    <div className="inner-item-container">
+                        <label htmlFor="photo">Photo:</label>
+                        <input type="file" name="photo"
+                            onChange={this.handleFile.bind(this)}
+                        />
+                    </div>
+
+                    <div className="inner-image-preview-container">
+                        <label htmlFor="preview">Photo Preview:</label>
+                        <div className="inner-image-preview-container-img">{preview}</div>
+                    </div>
+
                     <div className="inner-item-container-btn">
                         <input className="create-submit" type="submit" value="Submit" />
                     </div>

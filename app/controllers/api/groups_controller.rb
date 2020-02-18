@@ -5,7 +5,6 @@ class Api::GroupsController < ApplicationController
 
     def create
         @group = Group.new(group_params)
-        
         if @group.save! 
             if @group.id
                 @usergroup = Usergroup.new('user_id': @group.leader_id, 'group_id': @group.id)
@@ -71,7 +70,7 @@ class Api::GroupsController < ApplicationController
 
     private
     def group_params
-        params.require(:group).permit(:groupname, :description, :location, :leader_id)
+        params.require(:group).permit(:groupname, :description, :location, :leader_id, :photo)
     end
 
 end
