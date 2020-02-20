@@ -25,6 +25,9 @@ class Group < ApplicationRecord
         end
     end
 
+
+
+    
     has_many :events,
         primary_key: :id,
         foreign_key: :group_id,
