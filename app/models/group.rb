@@ -28,6 +28,8 @@ class Group < ApplicationRecord
 
 
     
+
+
     has_many :events,
         primary_key: :id,
         foreign_key: :group_id,
