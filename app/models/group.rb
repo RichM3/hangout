@@ -20,6 +20,8 @@ class Group < ApplicationRecord
 
 
 
+
+
     
     # This code ensures a photo is attached to every group or an error will occur
     def ensure_photo
