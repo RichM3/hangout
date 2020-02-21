@@ -35,19 +35,20 @@ class GroupsCreate extends React.Component {
         });
     }
 
-    validateGroup() {
-        if (this.state.photo) {
-            return true;
-        } else {
-            alert("Photo is required to create a group")
-            return false;
-        }
-    }
+    // Initially wanted to group to require a photo but not requiring and using a default ensures that space on AWS is not used and saves $$$
+    // validateGroup() {
+    //     if (this.state.photo) {
+    //         return true;
+    //     } else {
+    //         alert("Photo is required to create a group")
+    //         return false;
+    //     }
+    // }
 
     handleSubmit(e) {
         e.preventDefault()
 
-        if (this.validateGroup()) { 
+        // if (this.validateGroup()) { 
             const formData = new FormData();
             formData.append('group[groupname]', this.state.groupname);
             formData.append('group[description]', this.state.description);
@@ -68,7 +69,7 @@ class GroupsCreate extends React.Component {
                 //Old data before adding photo -- Note this needs to push to my-groups not groups or the header and footer do not appear on page
             // this.props.createGroup(this.state)
             //     .then(() => this.props.history.push('/groups'));
-        }
+        // }
     }
 
 
