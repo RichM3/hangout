@@ -8,29 +8,21 @@ export const fetchGroups = () => {
 export const fetchGroup = (id) => {
     return $.ajax({
         method: "get",
-        // url: `api/groups/501`
         url: `api/groups/${id}`
     })
 }
 
 export const editGroup = (group) => {
-    debugger
 
     // Display the values
     // for (var value of group.values()) {
     //     console.log(value);
     // }
 
-    // console.log("HERE IS THE GROUP ID - Interpolated!!");
-    // console.log(`${group.id}`);
-    // console.log("HERE IS THE GROUP ID");
-
     const id = group.get('group[id]');
-    // console.log(test);
 
     return $.ajax({
         method: "patch",
-        // url: `api/groups/501`,
         url: `api/groups/${id}`,
         data: group,
         contentType: false,

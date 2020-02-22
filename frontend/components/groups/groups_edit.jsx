@@ -33,7 +33,7 @@ class GroupsEdit extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault()
-        debugger
+
         const formData = new FormData();
         formData.append('group[id]', this.state.id);
         formData.append('group[groupname]', this.state.groupname);
