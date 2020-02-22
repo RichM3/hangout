@@ -8,24 +8,54 @@ export const fetchGroups = () => {
 export const fetchGroup = (id) => {
     return $.ajax({
         method: "get",
+        // url: `api/groups/501`
         url: `api/groups/${id}`
     })
 }
 
 export const editGroup = (group) => {
+    debugger
+
+    // Display the values
+    // for (var value of group.values()) {
+    //     console.log(value);
+    // }
+
+    // console.log("HERE IS THE GROUP ID - Interpolated!!");
+    // console.log(`${group.id}`);
+    // console.log("HERE IS THE GROUP ID");
+
+    const id = group.get('group[id]');
+    // console.log(test);
+
     return $.ajax({
         method: "patch",
-        url: `api/groups/${group.id}`,
-        data: {
-            group: {
-                groupname: group.groupname,
-                description: group.description,
-                location: group.location,
-                leader_id: group.leaderId
-            }
-        }
-    })
+        // url: `api/groups/501`,
+        url: `api/groups/${id}`,
+        data: group,
+        contentType: false,
+        processData: false
+    });
 }
+
+
+// Code from before AWS inclusion
+// export const editGroup = (group) => {
+//     return $.ajax({
+//         method: "patch",
+//         url: `api/groups/${group.id}`,
+//         data: {
+//             group: {
+//                 groupname: group.groupname,
+//                 description: group.description,
+//                 location: group.location,
+//                 leader_id: group.leaderId,
+//                 photo: group.photo,
+//                 photoUrl: group.photoUrl
+//             }
+//         }
+//     })
+// }
 
 export const createGroup = (group) => {
 

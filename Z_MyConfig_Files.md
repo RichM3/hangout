@@ -72,6 +72,8 @@ rails s                         ==> start rails
 -- Heroku commands
 git push heroku master
 heroku run bundle exec rails db:seed
+heroku run bundle exec rails db:migrate
+heroku run bundle exec rails db:migrate:status
 
 
 -- Heroku debugging cmds

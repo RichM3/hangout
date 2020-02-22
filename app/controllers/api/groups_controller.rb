@@ -28,6 +28,7 @@ class Api::GroupsController < ApplicationController
     end
 
     def show
+        # debugger
         @group = Group.find(params[:id])
         # render "api/groups/show"
         render :show
@@ -38,11 +39,15 @@ class Api::GroupsController < ApplicationController
     # end
 
     def update
+        debugger
         @group = Group.find(params[:id])
-
+        # @group = Group.find(params[:group][:id])
+        debugger
         if @group.update_attributes(group_params)
+            debugger
             render "api/groups/show"
         else
+            debugger
             render json: @groups.errors.full_messages, status: 422
         end
     end
