@@ -110,6 +110,7 @@ class GroupsShow extends React.Component {
         //         backgroundImage: 'url(' + this.props.group.photoUrl + ')'
         //     }
         // }
+        
 
         // const preview = this.state.photoUrl !== "NA" ? <img className="imgPreview" src={this.state.photoUrl} /> : null;
 
