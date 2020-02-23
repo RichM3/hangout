@@ -104,13 +104,16 @@ class GroupsShow extends React.Component {
         // }
 
         // // Can't figure out how to set photoUrl to null yet in JSON
-        // // debugger
-        // if (this.props.group.photoUrl !== "NA") {
-        //     bkImage = {
-        //         backgroundImage: 'url(' + this.props.group.photoUrl + ')'
-        //     }
-        // }
-        
+        // debugger
+        if (this.props.group.photoUrl !== "NA") {
+            people = this.props.group.photoUrl;
+            // people = url(this.props.group.photoUrl);
+            // bkImage = {
+            //     backgroundImage: 'url(' + this.props.group.photoUrl + ')'
+            // }
+        }
+        // debugger
+
 
         // const preview = this.state.photoUrl !== "NA" ? <img className="imgPreview" src={this.state.photoUrl} /> : null;
 
