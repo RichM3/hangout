@@ -67,7 +67,23 @@ class GroupsEdit extends React.Component {
             return null
         }
 
-        const preview = this.state.photoUrl ? <img className="imgPreview" src={this.state.photoUrl} /> : null;
+        // Accounts for images with a NA listing (no photo)
+        // let fillerImg = window.peopleHangoutURL;
+
+        // let bkImage = {
+        //     backgroundImage: 'url(' + fillerImg + ')'
+        // }
+
+        // // Can't figure out how to set photoUrl to null yet in JSON
+        // if (props.group.photoUrl !== "NA") {
+        //     bkImage = {
+        //         backgroundImage: 'url(' + props.group.photoUrl + ')'
+        //     }
+        // }
+
+
+        // debugger
+        const preview = this.state.photoUrl !== "NA" ? <img className="imgPreview" src={this.state.photoUrl} /> : null;
         
         return (
             <>

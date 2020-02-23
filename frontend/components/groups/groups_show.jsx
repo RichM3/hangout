@@ -96,6 +96,23 @@ class GroupsShow extends React.Component {
             );
         }
 
+
+        // let fillerImg = window.peopleHangoutURL;
+
+        // let bkImage = {
+        //     backgroundImage: 'url(' + fillerImg + ')'
+        // }
+
+        // // Can't figure out how to set photoUrl to null yet in JSON
+        // // debugger
+        // if (this.props.group.photoUrl !== "NA") {
+        //     bkImage = {
+        //         backgroundImage: 'url(' + this.props.group.photoUrl + ')'
+        //     }
+        // }
+
+        // const preview = this.state.photoUrl !== "NA" ? <img className="imgPreview" src={this.state.photoUrl} /> : null;
+
         return(
             <>
             <NavbarContainer navType={"groups_show"} myType={""} />
@@ -103,7 +120,17 @@ class GroupsShow extends React.Component {
             <div className="header-stripe">
                 <div className="header-inner" >
                     <div className="header-left">
+                            {/* <div className="header-left" style={bkImage}> */}
+
+                            {/* <div className="groupItemStyle" style={bkImage}>
+                                <li className="li-formatting">
+                                    <Link to={`/groups/${props.group.id}`}>{props.group.groupname}</Link>
+                                    <p>{props.group.location}</p>
+                                </li>
+                            </div> */}
+
                         <img src={people} />
+                        {/* <img src={bkImage} /> */}
                     </div>
                     <div className="header-right">
 
