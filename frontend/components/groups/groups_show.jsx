@@ -58,10 +58,16 @@ class GroupsShow extends React.Component {
             return null
         }
 
-        let people = window.peopleHangoutURL;
         let map = window.mapMarkerURL;
         // let members = window.membersURL;
         let leader = window.groupLeaderURL;
+
+        // Logic for the img src value if it exists
+        let grpImgSrc = window.peopleHangoutURL;
+        // // Can't figure out how to set photoUrl to null yet in JSON
+        if (this.props.group.photoUrl !== "NA") {
+            grpImgSrc = this.props.group.photoUrl;
+        }
 
 
         ///////////////////////////////////////////////////////////////////////
@@ -96,27 +102,6 @@ class GroupsShow extends React.Component {
             );
         }
 
-
-        // let fillerImg = window.peopleHangoutURL;
-
-        // let bkImage = {
-        //     backgroundImage: 'url(' + fillerImg + ')'
-        // }
-
-        // // Can't figure out how to set photoUrl to null yet in JSON
-        // debugger
-        if (this.props.group.photoUrl !== "NA") {
-            people = this.props.group.photoUrl;
-            // people = url(this.props.group.photoUrl);
-            // bkImage = {
-            //     backgroundImage: 'url(' + this.props.group.photoUrl + ')'
-            // }
-        }
-        // debugger
-
-
-        // const preview = this.state.photoUrl !== "NA" ? <img className="imgPreview" src={this.state.photoUrl} /> : null;
-
         return(
             <>
             <NavbarContainer navType={"groups_show"} myType={""} />
@@ -124,17 +109,7 @@ class GroupsShow extends React.Component {
             <div className="header-stripe">
                 <div className="header-inner" >
                     <div className="header-left">
-                            {/* <div className="header-left" style={bkImage}> */}
-
-                            {/* <div className="groupItemStyle" style={bkImage}>
-                                <li className="li-formatting">
-                                    <Link to={`/groups/${props.group.id}`}>{props.group.groupname}</Link>
-                                    <p>{props.group.location}</p>
-                                </li>
-                            </div> */}
-
-                        <img src={people} />
-                        {/* <img src={bkImage} /> */}
+                        <img src={grpImgSrc} />
                     </div>
                     <div className="header-right">
 

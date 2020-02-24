@@ -32,6 +32,7 @@ class GroupsEdit extends React.Component {
     }
 
     handleSubmit(e) {
+        // debugger
         e.preventDefault()
 
         const formData = new FormData();
@@ -40,10 +41,14 @@ class GroupsEdit extends React.Component {
         formData.append('group[description]', this.state.description);
         formData.append('group[location]', this.state.location);
         formData.append('group[leader_id]', this.state.leader.id);
+
+        debugger
         if (this.state.photoUrl) {
+            debugger
             formData.append('group[photo]', this.state.photo);
         }
 
+        // alert("submitted");
         this.props.editGroup(formData)
             .then(() => this.props.history.push(`/groups/${this.props.match.params.groupId}`));
     }
@@ -62,6 +67,7 @@ class GroupsEdit extends React.Component {
     }
 
     render() {
+        // debugger
 
         if (!this.props.group) {
             return null
