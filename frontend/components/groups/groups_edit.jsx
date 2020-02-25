@@ -42,11 +42,6 @@ class GroupsEdit extends React.Component {
         formData.append('group[location]', this.state.location);
         formData.append('group[leader_id]', this.state.leader.id);
 
-
-
-
-
-        
         // debugger
         if (this.state.photoUrl) {
             // debugger
