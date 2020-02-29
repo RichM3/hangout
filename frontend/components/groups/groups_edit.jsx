@@ -31,8 +31,6 @@ class GroupsEdit extends React.Component {
         });
     }
 
-
-    
     handleSubmit(e) {
         // debugger
         e.preventDefault()
