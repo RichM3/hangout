@@ -86,8 +86,9 @@ class GroupsEdit extends React.Component {
         //         backgroundImage: 'url(' + props.group.photoUrl + ')'
         //     }
         // }
-
         
+
+
         // debugger
         const preview = this.state.photoUrl !== "NA" ? <img className="imgPreview" src={this.state.photoUrl} /> : null;
         
