@@ -39,6 +39,7 @@ class Navbar extends React.Component {
             <Link to={`/groups/create`} className={hClass}><b>Start a new group</b></Link>
             &nbsp;&nbsp;&nbsp;
             {/* <a href="/" className="experience">Experiences</a> */}
+            {/* Removed the experiences link since i t is dead and adds nothing */}
             {/* <span className="experience-text">Experiences</span> */}
             &nbsp;&nbsp;&nbsp;
             {/* <a href="/" className="fakeButton">NEW</a> */}
