@@ -39,7 +39,7 @@ class Navbar extends React.Component {
             <Link to={`/groups/create`} className={hClass}><b>Start a new group</b></Link>
             &nbsp;&nbsp;&nbsp;
             {/* <a href="/" className="experience">Experiences</a> */}
-            {/* Removed the experiences link since i t is dead and adds nothing */}
+            {/* Removed the "Experiences" text since it is really a dead link and adds nothing */}
             {/* <span className="experience-text">Experiences</span> */}
             &nbsp;&nbsp;&nbsp;
             {/* <a href="/" className="fakeButton">NEW</a> */}
@@ -58,7 +58,8 @@ class Navbar extends React.Component {
             <Link to={`/groups/create`} className={hClass}><b>Start a new group</b></Link>
             &nbsp;&nbsp;&nbsp;
             {/* <a href="/" className="experience">Experiences</a> */}
-            <span className="experience-text">Experiences</span>
+            {/* Removed the "Experiences" text since it is really a dead link and adds nothing */}
+            {/* <span className="experience-text">Experiences</span> */}
             &nbsp;&nbsp;&nbsp;
             {/* <a href="/" className="fakeButton">NEW</a> */}
             <Link to={`/groups/create`} className="fakeButton">NEW</Link>
@@ -85,7 +86,8 @@ class Navbar extends React.Component {
             <Link to={`/groups/create`} className={hClass}><b>Start a new group</b></Link>
             &nbsp;&nbsp;&nbsp;
             {/* <a href="/" className="experience">Experiences</a> */}
-            <span className="experience-text">Experiences</span>
+            {/* Removed the "Experiences" text since it is really a dead link and adds nothing */}
+            {/* <span className="experience-text">Experiences</span> */}
             &nbsp;&nbsp;&nbsp;
             {/* <a href="/" className="fakeButton">NEW</a> */}
             <Link to={`/groups/create`} className="fakeButton">NEW</Link>
@@ -110,7 +112,8 @@ class Navbar extends React.Component {
           <>
           <div className="nav__links">
             {/* <a href="/" className="experience">Experiences</a> */}
-            <span className="experience-text">Experiences</span>
+            {/* Removed the "Experiences" text since it is really a dead link and adds nothing */}
+            {/* <span className="experience-text">Experiences</span> */}
             &nbsp;&nbsp;&nbsp;
             {/* <a href="/" className="fakeButton">NEW</a> */}
             <Link to={`/groups/create`} className="fakeButton">NEW</Link>
