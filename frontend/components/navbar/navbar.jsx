@@ -38,11 +38,6 @@ class Navbar extends React.Component {
           <div className="nav__links">
             <Link to={`/groups/create`} className={hClass}><b>Start a new group</b></Link>
             &nbsp;&nbsp;&nbsp;
-            {/* <a href="/" className="experience">Experiences</a> */}
-            {/* Removed the "Experiences" text since it is really a dead link and adds nothing */}
-            {/* <span className="experience-text">Experiences</span> */}
-            &nbsp;&nbsp;&nbsp;
-            {/* <a href="/" className="fakeButton">NEW</a> */}
             <Link to={`/groups/create`} className="fakeButton">NEW</Link>
             &nbsp;&nbsp;&nbsp;
           </div>
@@ -57,21 +52,8 @@ class Navbar extends React.Component {
           <div className="nav__links">
             <Link to={`/groups/create`} className={hClass}><b>Start a new group</b></Link>
             &nbsp;&nbsp;&nbsp;
-            {/* <a href="/" className="experience">Experiences</a> */}
-            {/* Removed the "Experiences" text since it is really a dead link and adds nothing */}
-            {/* <span className="experience-text">Experiences</span> */}
-            &nbsp;&nbsp;&nbsp;
-            {/* <a href="/" className="fakeButton">NEW</a> */}
             <Link to={`/groups/create`} className="fakeButton">NEW</Link>
             &nbsp;&nbsp;&nbsp;
-            {/* <a href="/" className="groups-index-links">Explore</a> */}
-            <span className="groups-index-links-text">Explore</span>
-            &nbsp;&nbsp;&nbsp;
-            {/* <a href="/" className="groups-index-links">Messages</a> */}
-            <span className="groups-index-links-text">Messages</span>
-            &nbsp;&nbsp;&nbsp;
-            {/* <a href="/" className="groups-index-links">Notifications</a> */}
-            <span className="groups-index-links-text">Notifications</span>
           </div>
           <div className="topRight">
             <GreetingContainer />
@@ -85,21 +67,8 @@ class Navbar extends React.Component {
           <div className="nav__links">
             <Link to={`/groups/create`} className={hClass}><b>Start a new group</b></Link>
             &nbsp;&nbsp;&nbsp;
-            {/* <a href="/" className="experience">Experiences</a> */}
-            {/* Removed the "Experiences" text since it is really a dead link and adds nothing */}
-            {/* <span className="experience-text">Experiences</span> */}
-            &nbsp;&nbsp;&nbsp;
-            {/* <a href="/" className="fakeButton">NEW</a> */}
             <Link to={`/groups/create`} className="fakeButton">NEW</Link>
             &nbsp;&nbsp;&nbsp;
-            {/* <a href="/" className="groups-index-links">Explore</a> */}
-            <span className="groups-index-links-text">Explore</span>
-            &nbsp;&nbsp;&nbsp;
-            {/* <a href="/" className="groups-index-links">Messages</a> */}
-            <span className="groups-index-links-text">Messages</span>
-            &nbsp;&nbsp;&nbsp;
-            {/* <a href="/" className="groups-index-links">Notifications</a> */}
-            <span className="groups-index-links-text">Notifications</span>
           </div>
           <div className="topRight">
             <GreetingContainer />
@@ -110,23 +79,10 @@ class Navbar extends React.Component {
         logoCss = "logo-splash";
         renderRightLinks =
           <>
-          <div className="nav__links">
-            {/* <a href="/" className="experience">Experiences</a> */}
-            {/* Removed the "Experiences" text since it is really a dead link and adds nothing */}
-            {/* <span className="experience-text">Experiences</span> */}
-            &nbsp;&nbsp;&nbsp;
-            {/* <a href="/" className="fakeButton">NEW</a> */}
+          {/* <div className="nav__links">
             <Link to={`/groups/create`} className="fakeButton">NEW</Link>
             &nbsp;&nbsp;&nbsp;
-            {/* <a href="/" className="groups-index-links">Explore</a> */}
-            <span className="groups-index-links-text">Explore</span>
-            &nbsp;&nbsp;&nbsp;
-            {/* <a href="/" className="groups-index-links">Messages</a> */}
-            <span className="groups-index-links-text">Messages</span>
-            &nbsp;&nbsp;&nbsp;
-            {/* <a href="/" className="groups-index-links">Notifications</a> */}
-            <span className="groups-index-links-text">Notifications</span>
-          </div>
+          </div> */}
           <div className="topRight">
             <GreetingContainer />
           </div>
@@ -142,6 +98,7 @@ class Navbar extends React.Component {
           <>
           <div className="nav__links">
             <Link to={`/groups/create`} className={hClass}><b>Start a new group</b></Link>
+            &nbsp;&nbsp;&nbsp;
           </div>
           <div className="topRight">
             <GreetingContainer />
