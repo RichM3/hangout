@@ -191,7 +191,7 @@ class GroupsShow extends React.Component {
                     <div className="menu-choices" onClick={this.updateComponent} >
                             <p className={this.state.lowerComponent === "More" ? "menu-selected" : "fakeLink"} >More</p>
                     </div> */}
-                    <div className="menu-choices" >
+                    {/* <div className="menu-choices" >
                         <p className="fakeLink-text">Members</p>
                     </div>
                     <div className="menu-choices" >
@@ -202,7 +202,7 @@ class GroupsShow extends React.Component {
                     </div>
                     <div className="menu-choices" >
                         <p className="fakeLink-text">More</p>
-                    </div>
+                    </div> */}
                 </div>
             </div>
 
