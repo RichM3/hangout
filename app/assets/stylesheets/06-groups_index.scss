@@ -63,6 +63,7 @@
     position: sticky;
     top: 0;
     height: 69px;
+    height: 86px;
     background: transparent;
     opacity: 1;
     color: rgba(255,255,255,.7);
@@ -70,14 +71,18 @@
 
 .searchForm {
     width: 709px;
-    padding: 10px 10px 10px 10px;
+    padding: 5px 10px 10px 10px;
     background-color:#0e1721;
 }
 
-// .search-label {
-//     color: black;
-//     width: 30px;
-// }
+.search-label {
+    color: white;
+    font-size: 16px;
+    line-height: 1.45;
+    font-family: "Graphik Meetup",helvetica,arial,sans-serif;
+    font-weight: 600;
+    width: 30px;
+}
 
 .wrapper-magnify {
     // border: red 1px solid;
@@ -91,12 +96,12 @@
 }
 
 .magnify-icon {
-    border: 3px solid black;
+    border: 2px solid black;
 
     // padding-top: 10px;
     width: 28px;
     // height: auto;
-    height: 40px;
+    height: 48px;
 }
 
 .magnify-icon:hover {

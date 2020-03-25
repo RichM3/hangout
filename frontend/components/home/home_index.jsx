@@ -30,7 +30,7 @@ class HomeIndex extends React.Component {
         this.showCalendar = this.showCalendar.bind(this);
         this.showGroups = this.showGroups.bind(this);
         this.dateCallback = this.dateCallback.bind(this);
-        this.searchClick = this.searchClick.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     dateCallback(dataFromChild) {
@@ -60,7 +60,7 @@ class HomeIndex extends React.Component {
         }
     }
 
-    searchClick(e) {
+    handleSubmit(e) {
         e.preventDefault();
 
         this.props.fetchSearchInfo(this.state.search)
@@ -121,7 +121,6 @@ class HomeIndex extends React.Component {
         )
 
         let magnify = window.magnifyURL;
-        // const submitButton = <img className="magnify-icon" src={magnify} />;
         const submitButton = <img src={magnify} />;
         
         return (
@@ -133,28 +132,12 @@ class HomeIndex extends React.Component {
                         <div className="member-home-bounds"><label>Find your next event</label></div>
                         <div className="c-page-body">
                             <div className="find-navbar-wrap">
-                                <form onSubmit={this.searchClick} className="searchForm">
-                                    {/* Commented for the time being until search can be implemented */}
+                                <form onSubmit={this.handleSubmit} className="searchForm">
+                                    <label className="search-label">Search</label>
                                     <div className="wrapper-magnify" >
-                                        {/* <label className="search-label">Search</label> */}
                                         <input className="group-input" type="text" name="search" id="search" defaulvalue="" onChange={this.update('search')} />
-
-                                        {/* make on submit with image -- so user can press enter */}
-                                        {/* <input className="magnify-icon-button" type="submit" value={submitButton} value="press" /> */}
-
-                                        {/* <input type="submit" value={submitButton} className="delete-button" /> */}
-                                        {/* <input type="submit" value="Delete this group" className="delete-button" /> */}
-
                                         <input type="image" src={magnify} className="magnify-icon" alt="Submit" />
-
-                                        {/* <button className="magnify-icon-button" onClick={this.searchClick}><img className="magnify-icon" src={magnify} /></button> */}
-                                        
-                                        {/* <input className="magnify-icon-button" type="submit"><img className="magnify-icon" src={magnify} /></input> */}
-                                        {/* <input className="magnify-icon-button" type="submit">Submit</input> */}
                                     </div>
-
-                                    {/* <label htmlFor=""><div>Within 5 miles of NYC</div></label> */}
-
                                 </form>
                                 <div className="button-div">
                                     <div className={this.state.calendarSelected ? 'deselected-button-option' : 'selected-button-option'}><a href="#" onClick={this.showGroups} >Groups</a></div>
