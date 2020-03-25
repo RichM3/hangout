@@ -30,6 +30,7 @@ class HomeIndex extends React.Component {
         this.showCalendar = this.showCalendar.bind(this);
         this.showGroups = this.showGroups.bind(this);
         this.dateCallback = this.dateCallback.bind(this);
+        this.searchClick = this.searchClick.bind(this);
     }
 
     dateCallback(dataFromChild) {
@@ -57,6 +58,18 @@ class HomeIndex extends React.Component {
             this.setState({calendarSelected:true});
             this.setState({ listDataFromChild: new Date() }, () => this.props.fetchEvents(this.state.listDataFromChild));
         }
+    }
+
+    searchClick(e) {
+        e.preventDefault();
+
+        this.props.fetchSearchInfo(this.state.search)
+            .then(() => this.props.history.push({
+                pathname: '/search',
+                search: `?query=${this.state.search}`,
+                state: { search: this.state.search }
+            })
+        );
     }
 
     showGroups(e) {
@@ -108,6 +121,8 @@ class HomeIndex extends React.Component {
         )
 
         let magnify = window.magnifyURL;
+        // const submitButton = <img className="magnify-icon" src={magnify} />;
+        const submitButton = <img src={magnify} />;
         
         return (
             <>
@@ -115,15 +130,28 @@ class HomeIndex extends React.Component {
                     <NavbarContainer navType={"groups_index"} myType={"login"} />
 
                     <div className="c-page-lt">
-                        <div className="member-home-bounds"><label><a href="http://">Find your next event</a></label></div>
+                        <div className="member-home-bounds"><label>Find your next event</label></div>
                         <div className="c-page-body">
                             <div className="find-navbar-wrap">
-                                <form action="" className="searchForm">
+                                <form onSubmit={this.searchClick} className="searchForm">
                                     {/* Commented for the time being until search can be implemented */}
-                                    {/* <div className="wrapper-magnify" >
-                                        <input className="group-input" type="text" name="search" id="search" value="" onChange={this.update('search')} />
-                                        <img className="magnify-icon" src={magnify} />
-                                    </div> */}
+                                    <div className="wrapper-magnify" >
+                                        {/* <label className="search-label">Search</label> */}
+                                        <input className="group-input" type="text" name="search" id="search" defaulvalue="" onChange={this.update('search')} />
+
+                                        {/* make on submit with image -- so user can press enter */}
+                                        {/* <input className="magnify-icon-button" type="submit" value={submitButton} value="press" /> */}
+
+                                        {/* <input type="submit" value={submitButton} className="delete-button" /> */}
+                                        {/* <input type="submit" value="Delete this group" className="delete-button" /> */}
+
+                                        <input type="image" src={magnify} className="magnify-icon" alt="Submit" />
+
+                                        {/* <button className="magnify-icon-button" onClick={this.searchClick}><img className="magnify-icon" src={magnify} /></button> */}
+                                        
+                                        {/* <input className="magnify-icon-button" type="submit"><img className="magnify-icon" src={magnify} /></input> */}
+                                        {/* <input className="magnify-icon-button" type="submit">Submit</input> */}
+                                    </div>
 
                                     {/* <label htmlFor=""><div>Within 5 miles of NYC</div></label> */}
 

@@ -1,4 +1,3 @@
-
 json.groups do
         @groups.each do |group|
                 json.set! group.id do
@@ -12,4 +11,3 @@ json.groups do
                 end
         end
 end
-

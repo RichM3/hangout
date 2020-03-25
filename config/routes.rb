@@ -18,6 +18,9 @@ Rails.application.routes.draw do
 
     resources :rsvps, only: [:create, :index, :update]
 
+
+    get 'search', to: 'groups#search'
+
   end
 end
 

@@ -68,10 +68,27 @@ class Api::GroupsController < ApplicationController
         # render :show
     end
 
+    def search
+        # debugger
+        # @venues = Venue.where('name LIKE ?', "%#{@query}%")
+        query = get_search_value["searchCriteria"]
+        # debugger
+        @groups = Group.where('lower(groupname) LIKE ?', "%#{query.downcase}%")
+        # debugger
+
+        # render "api/groups/index"
+        render "api/groups/search"
+
+    end
+
 
     private
     def group_params
         params.require(:group).permit(:groupname, :description, :location, :leader_id, :photo)
+    end
+
+    def get_search_value
+        params.require(:search).permit(:searchCriteria)
     end
 
 end

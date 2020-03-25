@@ -15,6 +15,8 @@ import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
+import SearchPageContainer from "./search/search_page_container";
+
 import HomeIndexContainer from "./home/home_index_container";
 import CalendarContainer from "./groups/calendar";
 
@@ -24,8 +26,9 @@ const App = () => (
   <div>
 
     <Switch>
-      <ProtectedRoute exact path="/groups/calendar" component={CalendarContainer} />      
+      <ProtectedRoute exact path="/groups/calendar" component={CalendarContainer} />
       <ProtectedRoute exact path="/home" myType={"calendar"} component={HomeIndexContainer} />
+      <ProtectedRoute exact path="/search" component={SearchPageContainer} />
       <ProtectedRoute exact path="/my-calendar" myType={"calendar"} component={HomeIndexContainer} />
       <ProtectedRoute exact path="/my-groups" myType={"groups"} component={HomeIndexContainer} />
       <ProtectedRoute exact path="/events/create/:groupId" component={EventsCreateContainer} />

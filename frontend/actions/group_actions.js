@@ -7,6 +7,7 @@ export const CREATE_NEW_GROUP = 'CREATE_NEW_GROUP';
 export const REMOVE_GROUP = 'REMOVE_GROUP';
 export const SAVE_MEMBERSHIP = 'SAVE_MEMBERSHIP';
 export const REMOVE_MEMBERSHIP = 'REMOVE_MEMBERSHIP';
+export const SEARCH_INFO = 'SEARCH_INFO';
 
 
 const receiveGroups = (payload) => ({
@@ -56,6 +57,32 @@ const removeMembership = (payload) => {
     })
 }
 
+// const receiveSearchInfo = (payload) => {
+//     return ({
+//         type: SEARCH_INFO,
+//         payload: payload
+//     })
+// }
+
+const receiveSearchInfo = function(payload) {
+    // debugger
+
+    let search;
+
+    if (Object.keys(payload).length === 0) {
+        search = {}
+    } else {
+        search = payload.search
+    }
+    // debugger
+
+    return ({
+        type: SEARCH_INFO,
+        search: search
+        // search: payload.search
+    })
+};
+
 
 export const fetchGroups = () => (dispatch) => (
     GroupsApiUtil.fetchGroups().then(payload => dispatch(receiveGroups(payload)))
@@ -87,3 +114,6 @@ export const deleteMembership = (groupId) => (dispatch) => (
     GroupsApiUtil.deleteCurrMembership(groupId).then(id => dispatch(removeMembership(id)))
 );
 
+export const fetchSearchInfo = (searchCriteria) => (dispatch) => (
+    GroupsApiUtil.fetchSearchInfo(searchCriteria).then(payload => dispatch(receiveSearchInfo(payload)))
+);

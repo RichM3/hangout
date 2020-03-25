@@ -74,19 +74,45 @@
     background-color:#0e1721;
 }
 
+// .search-label {
+//     color: black;
+//     width: 30px;
+// }
+
 .wrapper-magnify {
-    width: 40%;
+    // border: red 1px solid;
+
+    width: 98%;
     height: 45px;
     display: flex;
-    align-items: baseline;
+    // align-items: baseline;
+    // align-items: inherit;
     background-color: #ffffff;
 }
 
 .magnify-icon {
-    padding-top: 10px;
-    width: 30px;
+    border: 3px solid black;
+
+    // padding-top: 10px;
+    width: 28px;
+    // height: auto;
+    height: 40px;
+}
+
+.magnify-icon:hover {
+    // transition: all 0.3s ease 0s;
+    box-shadow: 11px 12px 16px #0098ab;
+    box-shadow: 11px 12px 16px #c5c4c4;
+}
+
+.magnify-icon-button {
+    // border: 3px solid green;
+
+    // padding-top: 10px;
+    width: 29px;
     height: auto;
 }
+
 
 .clearfix {
     content: "";
@@ -189,6 +215,29 @@
     font-weight: 600;
 }
 
+.search-page-body {
+    margin: 0 auto;
+    color: rgba(0,0,0,.87);
+    font-size: 13px;
+    width: 986px;
+    min-height: 300px;
+    padding: 0 1em;
+    padding-top: 16px;
+    padding-bottom: 1.25em;
+}
+
+
+.my-search-no-results {
+    height: 28px;
+    color: rgba (0,0,0,0.87);
+    margin: 20px 0 16px 15px;
+    padding: 0 0 8px;
+    font-size: 32px;
+    line-height: 1.45;
+    font-family: "Graphik Meetup",helvetica,arial,sans-serif;
+    font-weight: 600;
+}
+
 .box-ul {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -249,14 +298,33 @@
 
 .group-input {
     color: black;
+    
+    // text-align: center;
+    // vertical-align: middle;
+    // align-items: center;
+
+    font-size: 32px;
+    // line-height: 1.45;
+    font-family: "Graphik Meetup",helvetica,arial,sans-serif;
+    // font-weight: 600;
+
+    // height: 45px;
+
+    // height: -10px;
+    // margin-top: -4500px;
+
+
+    // background-color: blue;
+
     background-color: #fafafa;
-    border-radius: 3px;
-    border: 0px solid rgba(0,0,0,.12);
-    box-shadow: none;
-    box-sizing: border-box;
-    margin: 0 0 4px;
-    max-width: 100%;
-    width: 280px;
-    margin-bottom: 50px;
+    // border-radius: 3px;
+    // border: 0px solid rgba(0,0,0,.12);
+    // box-shadow: none;
+    // box-sizing: border-box;
+    // // margin: 0 0 4px;
+    // max-width: 90%;
+    // width: 280px;
+    width: 100%;
+    // margin-bottom: 50px;
 }
 
