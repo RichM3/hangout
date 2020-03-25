@@ -15,7 +15,6 @@
     font-feature-settings: "liga","kern";
 }
 
-/* header link settings -- except one class experience */
 .groups-index-links {
     font-size: 14px;
     color: #8a8a8a;    
@@ -85,39 +84,26 @@
 }
 
 .wrapper-magnify {
-    // border: red 1px solid;
-
     width: 98%;
     height: 45px;
     display: flex;
-    // align-items: baseline;
-    // align-items: inherit;
     background-color: #ffffff;
 }
 
 .magnify-icon {
     border: 2px solid black;
-
-    // padding-top: 10px;
     width: 28px;
-    // height: auto;
     height: 48px;
 }
 
 .magnify-icon:hover {
-    // transition: all 0.3s ease 0s;
-    box-shadow: 11px 12px 16px #0098ab;
     box-shadow: 11px 12px 16px #c5c4c4;
 }
 
 .magnify-icon-button {
-    // border: 3px solid green;
-
-    // padding-top: 10px;
     width: 29px;
     height: auto;
 }
-
 
 .clearfix {
     content: "";
@@ -166,7 +152,7 @@
     width: 274px;
 }
 
-//This should be the Selected featuers
+//This should be the Selected feature
 .selected-button-option {
     color: #ffffff;
     border: #8a8a8a solid 1px;
@@ -178,8 +164,7 @@
     background-color:#3f454e;
 }
 
-//This should be the de-selected featuers
-//Need to toggle this like the code slacked the other week?
+//This should be the de-selected feature
 .deselected-button-option {
     border: #8a8a8a solid 1px;
     display: flex;
@@ -230,7 +215,6 @@
     padding-top: 16px;
     padding-bottom: 1.25em;
 }
-
 
 .my-search-no-results {
     height: 28px;
@@ -303,33 +287,9 @@
 
 .group-input {
     color: black;
-    
-    // text-align: center;
-    // vertical-align: middle;
-    // align-items: center;
-
     font-size: 32px;
-    // line-height: 1.45;
     font-family: "Graphik Meetup",helvetica,arial,sans-serif;
-    // font-weight: 600;
-
-    // height: 45px;
-
-    // height: -10px;
-    // margin-top: -4500px;
-
-
-    // background-color: blue;
-
     background-color: #fafafa;
-    // border-radius: 3px;
-    // border: 0px solid rgba(0,0,0,.12);
-    // box-shadow: none;
-    // box-sizing: border-box;
-    // // margin: 0 0 4px;
-    // max-width: 90%;
-    // width: 280px;
     width: 100%;
-    // margin-bottom: 50px;
 }
 
