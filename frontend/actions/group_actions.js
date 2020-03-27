@@ -68,7 +68,7 @@ const receiveSearchInfo = function(payload) {
     // debugger
 
     let search;
-
+    // debugger
     if (Object.keys(payload).length === 0) {
         search = {}
     } else {
