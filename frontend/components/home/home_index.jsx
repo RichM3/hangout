@@ -66,7 +66,9 @@ class HomeIndex extends React.Component {
         this.props.fetchSearchInfo(this.state.search)
             .then(() => this.props.history.push({
                 pathname: '/search',
-                search: `?query=${this.state.search}`,
+                //The search line causes errors when the user enters more than one word -- the white space between words is the issue.
+                //Not an issue to comment because also seach value is also passed via the location.state.search value a line below location.search
+                // search: `?query=${this.state.search}`,
                 state: { search: this.state.search }
             })
         );

@@ -10,10 +10,11 @@ class SearchPage extends React.Component {
         this.state = {}
     }
 
-
     render() {
+        // debugger
 
         if (!this.props.searchResults) {
+            // debugger
             return null;
         }
 
