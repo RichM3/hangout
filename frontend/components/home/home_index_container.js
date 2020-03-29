@@ -2,7 +2,6 @@ import { connect } from 'react-redux';
 import HomeIndex from './home_index';
 import { fetchEvents } from '../../actions/event_actions';
 import { fetchGroups } from '../../actions/group_actions';
-// import { fetchGroups, fetchSearchInfo } from '../../actions/group_actions';
 import { fetchUserInfo } from '../../actions/session_actions';
 import { fetchSearchInfo } from '../../actions/search_actions';
 

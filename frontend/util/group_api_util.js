@@ -104,16 +104,3 @@ export const deleteCurrMembership = (groupId) => {
         url: `api/groups/remove_membership/${groupId}`
     })
 }
-
-// export const fetchSearchInfo = (searchCriteria) => {
-//     // debugger
-//     return $.ajax({
-//         method: "get",
-//         url: `api/search`,
-//         data: {
-//             search: {
-//                 searchCriteria: searchCriteria
-//             }
-//         }
-//     })
-// }

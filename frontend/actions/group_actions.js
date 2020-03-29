@@ -8,9 +8,6 @@ export const REMOVE_GROUP = 'REMOVE_GROUP';
 export const SAVE_MEMBERSHIP = 'SAVE_MEMBERSHIP';
 export const REMOVE_MEMBERSHIP = 'REMOVE_MEMBERSHIP';
 
-// export const SEARCH_GROUP_NAMES_INFO = 'SEARCH_GROUP_NAMES_INFO';
-// export const SEARCH_EVENT_NAMES_INFO = 'SEARCH_EVENT_NAMES_INFO';
-
 
 const receiveGroups = (payload) => ({
     type: RECEIVE_GROUPS,
@@ -59,69 +56,6 @@ const removeMembership = (payload) => {
     })
 }
 
-// const receiveSearchInfo = (payload) => {
-//     return ({
-//         type: SEARCH_GROUP_NAMES_INFO,
-//         payload: payload
-//     })
-// }
-
-
-// const searchGroupNames = function(inGroupNames) {
-
-//     let groupNames;
-//     debugger
-//     if (Object.keys(inGroupNames).length === 0) {
-//         groupNames = {}
-//     } else {
-//         groupNames = inGroupNames
-//     }
-
-//     return ({
-//         type: SEARCH_GROUP_NAMES_INFO,
-//         groupNames: groupNames
-//     })
-
-// }
-
-
-// const receiveSearchInfo = function(payload) {
-
-//     debugger
-//     searchGroupNames(payload.groupNames);
-
-//     let groupNames;
-//     // debugger
-//     if (Object.keys(payload.groupNames).length === 0) {
-//         groupNames = {}
-//     } else {
-//         groupNames = payload.groupNames
-//     }
-
-
-//     // let eventNames;
-
-//     // if (Object.keys(payload.eventNames).length === 0) {
-//     //     eventNames = {}
-//     // } else {
-//     //     eventNames = payload.eventNames
-//     // }
-
-
-
-//     // debugger
-
-//     return ({
-//         type: SEARCH_GROUP_NAMES_INFO,
-//         groupNames: payload
-//         // groupNames: groupNames
-//         // ,
-//         // type: SEARCH_EVENT_NAMES_INFO,
-//         // eventNames: eventNames
-        
-//         // search: payload.search
-//     })
-// };
 
 
 export const fetchGroups = () => (dispatch) => (
@@ -153,7 +87,3 @@ export const createMembership = (groupId) => (dispatch) => (
 export const deleteMembership = (groupId) => (dispatch) => (
     GroupsApiUtil.deleteCurrMembership(groupId).then(id => dispatch(removeMembership(id)))
 );
-
-// export const fetchSearchInfo = (searchCriteria) => (dispatch) => (
-//     GroupsApiUtil.fetchSearchInfo(searchCriteria).then(payload => dispatch(receiveSearchInfo(payload)))
-// );

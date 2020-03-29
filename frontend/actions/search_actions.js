@@ -1,8 +1,6 @@
 import * as SearchApiUtil from '../util/search_api_util';
 
 export const SEARCH_RESULTS = 'SEARCH_RESULTS';
-// export const SEARCH_GROUP_NAMES_INFO = 'SEARCH_GROUP_NAMES_INFO';
-// export const SEARCH_EVENT_NAMES_INFO = 'SEARCH_EVENT_NAMES_INFO';
 
 const receiveSearchInfo = function (payload) {
 
