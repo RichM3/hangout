@@ -75,7 +75,7 @@ class Api::GroupsController < ApplicationController
         # debugger
         @groups = Group.where('lower(groupname) LIKE ?', "%#{query.downcase}%")
         # debugger
-        # @events = Event.where('lower(groupname) LIKE ?', "%#{query.downcase}%")
+        @events = Event.where('lower(eventname) LIKE ?', "%#{query.downcase}%")
 
         # render "api/groups/index"
         render "api/groups/search"

@@ -11,7 +11,7 @@ const entitiesReducer = combineReducers({
   groups: groupsReducer,
   events: eventsReducer,
   rsvps: rsvpsReducer,
-  search: searchReducer
+  searchResults: searchReducer
 });
 
 export default entitiesReducer;

@@ -6,12 +6,13 @@ const mapStateToProps = (state, ownProps) => {
     let searchValue = ownProps.location.state.search;
 
     // debugger
-    const searchResults = state.entities.search ? Object.values(state.entities.search) : [];
+    const searchGroupNames = state.entities.searchResults.groupNames ? Object.values(state.entities.searchResults.groupNames) : [];
+    const searchEventNames = state.entities.searchResults.eventNames ? Object.values(state.entities.searchResults.eventNames) : [];
     // debugger
 
     return ({
         searchValue: searchValue,
-        searchResults: searchResults
+        searchResults: searchGroupNames
     })
 };
 
