@@ -188,6 +188,8 @@
 }
 
 .unit-size5of7-full-width {
+    border: 3px solid green;
+
     width: 976px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -206,6 +208,8 @@
 }
 
 .search-page-body {
+    border: 3px solid red;
+
     margin: 0 auto;
     color: rgba(0,0,0,.87);
     font-size: 13px;

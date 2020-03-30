@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom';
 import NavbarContainer from "../navbar/navbar_container";
 import FooterContainer from "../footer/footer_container";
 import GroupsItemIndex from "../groups/groups_index_item";
+import EventsItemIndex from "../groups/show_components/events/events_index_item";
 
 class SearchPage extends React.Component {
     constructor(props) {
@@ -12,20 +13,26 @@ class SearchPage extends React.Component {
 
     render() {
 
-        if (!this.props.searchResults) {
-            return null;
-        }
+        // if (!this.props.searchGroupNames) {
+        //     return null;
+        // }
 
-        let results = this.props.searchResults.map(group => {
+        let groups = this.props.searchGroupNames.map(group => {
             return (
                 <GroupsItemIndex group={group} key={group.id} member={group.leader_id} />
             );
         })
 
+        let events = this.props.searchEventNames.map(event => {
+            return (
+                <EventsItemIndex event={event} key={event.id} />
+            );
+        })
+
+
         let searchPage;
 
-
-        if (results.length === 0) {
+        if (groups.length === 0) {
             searchPage = 
             <>
                     <div className="index-body">
@@ -47,13 +54,29 @@ class SearchPage extends React.Component {
                             <div className="unit-size5of7-full-width" >
                                 <h2 className="myheader">Search Results</h2>
                                 <ul className="box-ul">
-                                    {results}
+                                    {groups}
                                     <div className="clearfix"></div>
                                 </ul>
+                                <div>Test5</div>
+                                <div className="spacer"> </div>
+                                <div className="spacer"> </div>
+
+                                <ul className="box-ul">
+                                    {events}
+                                </ul>
+
                             </div>
+
+                            <div>Test4</div>
+
                         </div>
+                        <div>Test3</div>
+
                     </div>
+                    <div>Test2</div>
                 </div>
+
+                <div>Test1</div>
             </>
         }
 

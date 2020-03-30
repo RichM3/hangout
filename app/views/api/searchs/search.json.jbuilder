@@ -1,6 +1,6 @@
 
 json.groupNames do
-        @groups.each do |group|
+        @groupNames.each do |group|
                 json.set! group.id do
                         json.extract! group, :id, :groupname, :description, :location, :leader_id
                         if (group.photo.attached?)
@@ -14,7 +14,7 @@ json.groupNames do
 end
 
 json.eventNames do
-    @events.each do |event|
+    @eventNames.each do |event|
         json.set! event.id do
                 json.extract! event, :id, :eventname, :description, :starttime, :endtime, :group_id, :lat, :lng, :location
                 json.rsvpIds event.rsvps, :id, :user_id, :event_id, :attending
@@ -23,8 +23,8 @@ json.eventNames do
 end
 
 
-# json.groupDesc do
-#         @groupsDesc.each do |group|
+# json.groupDescs do
+#         @groupDescs.each do |group|
 #                 json.set! group.id do
 #                         json.extract! group, :id, :groupname, :description, :location, :leader_id
 #                         if (group.photo.attached?)
@@ -37,8 +37,8 @@ end
 #         end
 # end
 
-# json.eventDesc do
-#     @events.each do |event|
+# json.eventDescs do
+#     @eventDescs.each do |event|
 #         json.set! event.id do
 #                 json.extract! event, :id, :eventname, :description, :starttime, :endtime, :group_id, :lat, :lng, :location
 #                 json.rsvpIds event.rsvps, :id, :user_id, :event_id, :attending

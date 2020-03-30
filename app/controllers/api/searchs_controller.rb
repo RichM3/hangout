@@ -4,13 +4,16 @@ class Api::SearchsController < ApplicationController
 
         query = get_search_value["searchCriteria"]
 
-        @groups = Group.where('lower(groupname) LIKE ?', "%#{query.downcase}%")
-        # @groupsDesc = Group.where('lower(description) LIKE ?', "%#{query.downcase}%")
+        # @groupNames = Group.where('lower(groupname) LIKE ?', "%#{query.downcase}%")
+        # @groupDescs = Group.where('lower(description) LIKE ?', "%#{query.downcase}%")
+        # debugger
+        @groupNames = Group.where('lower(groupname) LIKE ? OR lower(description) LIKE ?', "%#{query.downcase}%", "%#{query.downcase}%")
+        # debugger
 
-        @events = Event.where('lower(eventname) LIKE ?', "%#{query.downcase}%")
-        # @eventsDesc = Event.where('lower(description) LIKE ?', "%#{query.downcase}%")
+        @eventNames = Event.where('lower(eventname) LIKE ? OR lower(description) LIKE ?', "%#{query.downcase}%", "%#{query.downcase}%")
+        # @eventNames = Event.where('lower(eventname) LIKE ?', "%#{query.downcase}%")
+        # @eventDescs = Event.where('lower(description) LIKE ?', "%#{query.downcase}%")
 
-        # render "api/groups/search"
         render "api/searchs/search"
     end
 
