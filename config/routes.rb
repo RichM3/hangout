@@ -20,7 +20,6 @@ Rails.application.routes.draw do
 
     # search route
     get 'search', to: 'searchs#search'
-    # get 'search', to: 'groups#search'
 
   end
 end
