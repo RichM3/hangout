@@ -231,6 +231,31 @@
     font-weight: 600;
 }
 
+.searchEventItemStyle {
+    display: flex;
+    // float: left;
+    // padding-top: 10px;
+    width: 300px;
+    height: 300px;
+    // color: #ffffff;
+    // margin-left: 15px;
+
+    border-radius: 6px;
+    border: #878787 solid 2px;
+    // margin-bottom: 10px;
+
+    // font-size: 22px;
+    // line-height: 1.45;
+    // font-family: "Graphik Meetup",helvetica,arial,sans-serif;
+    // font-weight: 900;
+
+    // background-size: cover;
+    // background-repeat: no-repeat;
+
+    border: 3px solid red;
+}
+
+
 .box-ul {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;

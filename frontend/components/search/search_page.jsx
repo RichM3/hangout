@@ -58,13 +58,17 @@ class SearchPage extends React.Component {
                                     <div className="clearfix"></div>
                                 </ul>
                                 <div>Test5</div>
-                                <div className="spacer"> </div>
-                                <div className="spacer"> </div>
 
+
+                            </div>
+
+                            <div className="spacer"> </div>
+                            <div className="spacer"> </div>
+
+                            <div className="searchEventItemStyle">
                                 <ul className="box-ul">
                                     {events}
                                 </ul>
-
                             </div>
 
                             <div>Test4</div>
