@@ -9,6 +9,7 @@ const mapStateToProps = (state, ownProps) => {
     const searchEventNames = state.entities.searchResults.eventNames ? Object.values(state.entities.searchResults.eventNames) : [];
 
 
+
     // const searchGroupDescs = state.entities.searchResults.groupDesc ? Object.values(state.entities.searchResults.groupDescs) : [];
     // const searchEventDescs = state.entities.searchResults.groupDesc ? Object.values(state.entities.searchResults.eventDescs) : [];
     // debugger
