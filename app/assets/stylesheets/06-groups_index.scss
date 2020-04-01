@@ -188,7 +188,7 @@
 }
 
 .unit-size5of7-full-width {
-    border: 3px solid green;
+    // border: 3px solid green;
 
     width: 976px;
     box-sizing: border-box;
@@ -207,8 +207,19 @@
     font-weight: 600;
 }
 
+.search-header {
+    height: 28px;
+    color: rgba (0,0,0,0.87);
+    margin: 20px 0 16px 15px;
+    padding: 0 0 8px;
+    font-size: 32px;
+    line-height: 1.45;
+    font-family: "Graphik Meetup",helvetica,arial,sans-serif;
+    font-weight: 600;
+}
+
 .search-page-body {
-    border: 3px solid red;
+    // border: 3px solid red;
 
     margin: 0 auto;
     color: rgba(0,0,0,.87);
@@ -252,7 +263,7 @@
     // background-size: cover;
     // background-repeat: no-repeat;
 
-    border: 3px solid red;
+    // border: 3px solid red;
 }
 
 
