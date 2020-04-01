@@ -38,7 +38,6 @@ class Api::GroupsController < ApplicationController
     # end
 
     def update
-        # debugger
         @group = Group.find(params[:id])
         # @group = Group.find(params[:group][:id])
         if @group.update_attributes(group_params)

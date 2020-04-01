@@ -13,8 +13,7 @@ export const fetchGroup = (id) => {
 }
 
 export const editGroup = (group) => {
-    // debugger
-    // Display the values
+    // Display the values in console
     // for (var value of group.values()) {
     //     console.log(value);
     // }
