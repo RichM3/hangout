@@ -7,7 +7,7 @@ Hangout implements the below technologies:
 
 <h2>Frontend</h2>
 <ul>
-<li>JavaScript ES 6</li>
+<li>JavaScript ES6</li>
 <li>Node 10.16.3</li>
 <li>Ruby 2.5.1</li>
 <li>React 16.10.2</li>
